@@ -30,7 +30,6 @@ public class CestoDeLembas
     
     public boolean podeDividirEmPares() 
     {
-        return (this.quantidadeDeLembas >= 1 && this.quantidadeDeLembas <= 100)
-                && (this.quantidadeDeLembas/2)%2 == 0;
+        return (this.quantidadeDeLembas > 2 && this.quantidadeDeLembas <= 100 && this.quantidadeDeLembas%2 == 0);
     }
 }
