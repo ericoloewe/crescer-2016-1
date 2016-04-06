@@ -40,6 +40,11 @@ public class Dwarf
         return this.nome;
     }
     
+    public int getVida()
+    {
+        return this.vida;
+    }
+    
     public void perdeVida() 
     {
         this.vida--;
