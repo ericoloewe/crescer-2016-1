@@ -52,6 +52,6 @@ public class ElfoTest
         String esperado = elfo.getNome() + " possui " + elfo.getFlechas() + " flechas e " + elfo.getExperiencia() + " níveis de experiência.";
         String obtido = elfo.toString();
         
-        assertEquals(obtido, esperado);
+        assertEquals(esperado, obtido);
     }
 }
