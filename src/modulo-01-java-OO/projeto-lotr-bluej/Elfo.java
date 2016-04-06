@@ -30,8 +30,8 @@ public class Elfo
     {
         // inicializa variáveis de instância
         this.nome = nome;
-		experiencia = 0;
-        flechas = 42;
+		this.experiencia = 0;
+        this.flechas = 42;
     }
     
     public boolean atirarFlechas()
@@ -44,7 +44,8 @@ public class Elfo
     	return false;
     }
     
-    public void atirarFlechas(Dwarf dwarf) {
+    public void atirarFlechas(Dwarf dwarf) 
+    {
         if(atirarFlechas()) {
             dwarf.perdeVida(10);
         }        
@@ -54,5 +55,20 @@ public class Elfo
     {
         experiencia++;
         flechas--;
+    }
+    
+    public String getNome()
+    {
+        return this.nome;
+    }
+    
+    public int getExperiencia()
+    {
+        return this.experiencia;
+    }
+    
+    public int getFlechas()
+    {
+        return this.flechas;
     }
 }
