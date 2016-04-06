@@ -20,6 +20,16 @@ public class Dwarf
         this.nome = "";
     }
     
+    /**
+     * Constructor for objects of class Anao
+     */
+    public Dwarf(String nome)
+    {
+        // initialise instance variables
+        this.vida = 110;
+        this.nome = nome;
+    }
+    
     public void perdeVida() {
         this.vida--;
     }
