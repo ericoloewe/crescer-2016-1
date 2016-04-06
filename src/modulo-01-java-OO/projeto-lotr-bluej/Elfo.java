@@ -44,9 +44,9 @@ public class Elfo
     	return false;
     }
     
-    public void atirarFlechas(Anao anao) {
+    public void atirarFlechas(Dwarf dwarf) {
         if(atirarFlechas()) {
-            anao.perdeVida(10);
+            dwarf.perdeVida(10);
         }        
     }
     
