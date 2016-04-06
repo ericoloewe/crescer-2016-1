@@ -8,7 +8,7 @@ public class Dwarf
 {
     // instance variables - replace the example below with your own
     private int vida;
-    public String nome;
+    private String nome;
 
     /**
      * Constructor for objects of class Anao
@@ -30,11 +30,23 @@ public class Dwarf
         this.nome = nome;
     }
     
-    public void perdeVida() {
+    public void setNome(String novoNome)
+    {
+        this.nome = novoNome;
+    }
+    
+    public String getNome()
+    {
+        return this.nome;
+    }
+    
+    public void perdeVida() 
+    {
         this.vida--;
     }
     
-    public void perdeVida(int quantidade) {
+    public void perdeVida(int quantidade)
+    {
         this.vida -= quantidade;
     }
 }
