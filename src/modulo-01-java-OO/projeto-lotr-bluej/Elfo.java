@@ -1,13 +1,58 @@
-public class Elfo {
+
+/**
+ * Escreva a descrição da classe Elfo aqui.
+ * 
+ * @author (seu nome) 
+ * @version (número de versão ou data)
+ */
+public class Elfo
+{
+    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
     private String nome;
-    private int experiencia, flechas = 42;
+    private int experiencia;
+    private int flechas;
     
-    public Elfo(String nome) {
-        this.nome = nome;
+    /**
+     * COnstrutor para objetos da classe Elfo
+     */
+    public Elfo()
+    {
+        // inicializa variáveis de instância
+        nome = "";
+        experiencia = 0;
+        flechas = 42;
     }
     
-    public void atirarFlecha() {
-        experiencia++;
+    /**
+     * COnstrutor para objetos da classe Elfo
+     */
+    public Elfo(String nome)
+    {
+        // inicializa variáveis de instância
+        this.nome = nome;
+		experiencia = 0;
+        flechas = 42;
+    }
+    
+    public boolean atirarFlechas()
+    {
+		if(this.flechas > 0) {
+        	this.experiencia++;
+        	this.flechas--;
+        	return true;
+    	}
+    	return false;
+    }
+    
+    public void atirarFlechas(Anao anao) {
+        if(atirarFlechas()) {
+            anao.perdeVida(10);
+        }        
+    }
+    
+    public void atirarFlechaRefactory()
+    {
+		experiencia++;
         flechas--;
     }
 }
