@@ -43,4 +43,15 @@ public class ElfoTest
         
         assertEquals(obtido, esperado);
     }
+    
+    @Test
+    public void retornoToStringCoerenteAoQueFoiSolicitado()
+    {
+        Elfo elfo = new Elfo("Alfredo");      
+        
+        String esperado = elfo.getNome() + " possui " + elfo.getFlechas() + " flechas e " + elfo.getExperiencia() + " níveis de experiência.";
+        String obtido = elfo.toString();
+        
+        assertEquals(obtido, esperado);
+    }
 }
