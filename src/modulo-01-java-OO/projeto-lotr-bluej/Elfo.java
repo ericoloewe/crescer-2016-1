@@ -49,10 +49,10 @@ public class Elfo
             dwarf.perdeVida(10);
         }        
     }
-    
+
     public void atirarFlechaRefactory()
     {
-		experiencia++;
+        experiencia++;
         flechas--;
     }
 }

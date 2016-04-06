@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class Anao here.
  * 
@@ -9,6 +8,7 @@ public class Dwarf
 {
     // instance variables - replace the example below with your own
     private int vida;
+    public String nome;
 
     /**
      * Constructor for objects of class Anao
@@ -17,6 +17,7 @@ public class Dwarf
     {
         // initialise instance variables
         this.vida = 110;
+        this.nome = "";
     }
     
     public void perdeVida() {
