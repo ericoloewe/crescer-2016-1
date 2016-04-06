@@ -30,4 +30,17 @@ public class ElfoTest
         
         assertEquals(obtido, esperado);
     }
+    
+    @Test
+    public void atirarFlechaEmUmDwarfEDiminuirAVidaDoMesmo()
+    {
+        Elfo elfo = new Elfo("Alfredo");
+        Dwarf dwarf = new Dwarf("Joaquim");        
+        
+        int esperado = dwarf.getVida() - 10;
+        elfo.atirarFlechas(dwarf);
+        int obtido = dwarf.getVida();
+        
+        assertEquals(obtido, esperado);
+    }
 }
