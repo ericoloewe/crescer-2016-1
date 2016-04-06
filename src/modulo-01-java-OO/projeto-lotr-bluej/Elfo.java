@@ -6,8 +6,9 @@ public class Elfo {
         this.nome = nome;
     }
     
-    public void atirarFlecha() {
+    public void atirarFlecha(Dwarf dwarf) {
         experiencia++;
         flechas--;
+        dwarf.perderVida();
     }
 }
