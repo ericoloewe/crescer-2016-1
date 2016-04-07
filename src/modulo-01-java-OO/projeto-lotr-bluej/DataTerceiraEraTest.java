@@ -25,6 +25,17 @@ public class DataTerceiraEraTest
     }
     
     @Test
+    public void ano2000EhBissexto()
+    {
+        DataTerceiraEra data = new DataTerceiraEra(01, 01, 2000);
+        
+        boolean esperado = true;
+        boolean obtido = data.ehBissexto();
+        
+        assertEquals(esperado, obtido);
+    }
+    
+    @Test
     public void ano2013NaoEhBissexto()
     {
         DataTerceiraEra data = new DataTerceiraEra(01, 01, 2013);
@@ -33,5 +44,25 @@ public class DataTerceiraEraTest
         boolean obtido = data.ehBissexto();
         
         assertEquals(esperado, obtido);
+    }
+    
+    @Test
+    public void ano1900NaoEhBissexto()
+    {
+        DataTerceiraEra data = new DataTerceiraEra(01, 01, 1900);
+        
+        boolean obtido = data.ehBissexto();
+        
+        assertFalse(obtido);
+    }
+    
+    @Test
+    public void ano2200NaoEhBissexto()
+    {
+        DataTerceiraEra data = new DataTerceiraEra(01, 01, 2200);
+        
+        boolean obtido = data.ehBissexto();
+        
+        assertFalse(obtido);
     }
 }
