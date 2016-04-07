@@ -12,6 +12,13 @@ import org.junit.Test;
 public class DwarfTest
 {
     @Test
+    public void dwarfNasceVivo() {
+        Dwarf dwarf = new Dwarf("Balin");
+        
+        assertEquals(Status.VIVO, dwarf.getStatus());
+    }
+    
+    @Test
     public void diminuirVidaDoDwarf()
     {
         Dwarf dwarf = new Dwarf("Joaquim");
@@ -32,6 +39,18 @@ public class DwarfTest
         dwarf.perdeVida(10);
         int obtido = dwarf.getVida();
                 
+        assertEquals(esperado, obtido);
+    }
+    
+    @Test
+    public void matarDwarf()
+    {
+        Dwarf dwarf = new Dwarf("Joaquim");
+        Status esperado = Status.MORTO;
+        
+        dwarf.perdeVida(dwarf.getVida());        
+        Status obtido = dwarf.getStatus();
+        
         assertEquals(esperado, obtido);
     }
 }
