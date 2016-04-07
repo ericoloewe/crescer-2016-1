@@ -1,5 +1,3 @@
-
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -49,7 +47,7 @@ public class ElfoTest
     {
         Elfo elfo = new Elfo("Alfredo");      
         
-        String esperado = elfo.getNome() + " possui " + elfo.getFlechas() + " flechas e " + elfo.getExperiencia() + " níveis de experiência.";
+        String esperado = "Alfredo possui " + elfo.getFlechas() + " flechas e " + elfo.getExperiencia() + " níveis de experiência.";
         String obtido = elfo.toString();
         
         assertEquals(esperado, obtido);
