@@ -53,9 +53,19 @@ public class Dwarf
         return this.status;
     }
     
+    public void setVida(int vida)
+    {
+        if(vida >= 0)
+        {
+            this.vida = vida;
+        } else {
+            this.vida = 0;
+        }
+    }
+    
     public void perdeVida() 
     {
-        this.vida--;
+        this.setVida(this.vida-1);
         if(this.vida == 0) {
             this.matarDwarf();
         }
@@ -63,7 +73,7 @@ public class Dwarf
     
     public void perdeVida(int quantidade)
     {
-        this.vida -= quantidade;
+        this.setVida(this.vida - quantidade);
         if(this.vida == 0) {
             this.matarDwarf();
         }
