@@ -14,7 +14,7 @@ import org.junit.Test;
 public class DataTerceiraEraTest
 {
     @Test
-    public void _2016EhAnoBissexto()
+    public void ano2016EhBissexto()
     {
         DataTerceiraEra data = new DataTerceiraEra(01, 01, 2016);
         
@@ -25,7 +25,7 @@ public class DataTerceiraEraTest
     }
     
     @Test
-    public void _2013NaoEhAnoBissexto()
+    public void ano2013NaoEhBissexto()
     {
         DataTerceiraEra data = new DataTerceiraEra(01, 01, 2013);
         
