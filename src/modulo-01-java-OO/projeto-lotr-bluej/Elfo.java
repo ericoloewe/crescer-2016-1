@@ -12,9 +12,6 @@ public class Elfo
     private int experiencia;
     private int flechas;
     
-    /**
-     * COnstrutor para objetos da classe Elfo
-     */
     public Elfo()
     {
         // inicializa variáveis de instância
@@ -23,15 +20,20 @@ public class Elfo
         flechas = 42;
     }
     
-    /**
-     * COnstrutor para objetos da classe Elfo
-     */
     public Elfo(String nome)
     {
         // inicializa variáveis de instância
         this.nome = nome;
 		this.experiencia = 0;
         this.flechas = 42;
+    }
+    
+    public Elfo(String nome, int flechas)
+    {
+        // inicializa variáveis de instância
+        this.nome = nome;
+		this.experiencia = 0;
+        this.flechas = flechas;
     }
     
     public boolean atirarFlechas()
