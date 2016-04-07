@@ -53,4 +53,16 @@ public class DwarfTest
         
         assertEquals(esperado, obtido);
     }
+    
+    @Test
+    public void dwarfComVidaMenos1()
+    {
+        Dwarf dwarf = new Dwarf("Joaquim");
+        int esperado = 0;
+        
+        dwarf.perdeVida(dwarf.getVida()+1);
+        int obtido = dwarf.getVida();
+        
+        assertEquals(esperado, obtido);
+    }
 }
