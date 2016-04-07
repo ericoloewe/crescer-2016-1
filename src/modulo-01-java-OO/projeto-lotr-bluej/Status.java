@@ -1,0 +1,12 @@
+public enum Status
+{
+    INCOSIENTE,
+    SANGRANDO,
+    ENVENENADO,
+    VIVO,
+    MORTO,
+    SEM_MANA,
+    INVENTARIO_CHEIO,
+    SEM_ESTAMINA,
+    CHATEADO
+}
