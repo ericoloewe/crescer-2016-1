@@ -33,4 +33,19 @@ public class Inventario
         
         return descricaoItens;
     }
+    
+    public Item itemComMaiorQuantidade()
+    {
+        Item itemComMaiorQuantidade = this.items.size() > 0 ? this.items.get(0) : null;
+        
+        for(Item item : this.items)
+        {
+            if(item.getQuantidade() > itemComMaiorQuantidade.getQuantidade())
+            {
+                itemComMaiorQuantidade = item;
+            }
+        }
+        
+        return itemComMaiorQuantidade;
+    }
 }
