@@ -49,7 +49,7 @@ public class Elfo
     public void atirarFlechas(Dwarf dwarf) 
     {
         if(atirarFlechas()) {
-            dwarf.perdeVida(10);
+            dwarf.perdeVida();
         }        
     }
 
