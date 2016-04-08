@@ -6,6 +6,30 @@ import org.junit.Test;
 public class DwarfTest
 {
     @Test
+    public void criarDwarf() 
+    {
+        Dwarf dwarf = new Dwarf("Joaquim");
+
+        assertEquals(dwarf.getVida(), 110);
+        assertEquals(dwarf.getNome(), "Joaquim");
+        assertEquals(dwarf.getExperiencia(), 0);
+        assertEquals(dwarf.getStatus(), Status.VIVO);
+    }
+    
+    @Test
+    public void criarDwarfComDataNasc() 
+    {
+        DataTerceiraEra data = new DataTerceiraEra(1,1,1996);
+        Dwarf dwarf = new Dwarf("Joaquim", data);
+
+        assertEquals(dwarf.getVida(), 110);
+        assertEquals(dwarf.getNome(), "Joaquim");
+        assertEquals(dwarf.getExperiencia(), 0);
+        assertEquals(dwarf.getStatus(), Status.VIVO);
+        assertEquals(dwarf.getDataNascimento(), data);
+    }
+    
+    @Test
     public void dwarfTentaSorteComSucesso() 
     {
         Dwarf dwarf = new Dwarf("Balin", new DataTerceiraEra(1,1,2000));
@@ -29,30 +53,6 @@ public class DwarfTest
         int obtido = dwarf.getVida();
         
         assertEquals(esperado, obtido);
-    }
-    
-    @Test
-    public void criarDwarf() 
-    {
-        Dwarf dwarf = new Dwarf("Joaquim");
-
-        assertEquals(dwarf.getVida(), 110);
-        assertEquals(dwarf.getNome(), "Joaquim");
-        assertEquals(dwarf.getExperiencia(), 0);
-        assertEquals(dwarf.getStatus(), Status.VIVO);
-    }
-    
-    @Test
-    public void criarDwarfComDataNasc() 
-    {
-        DataTerceiraEra data = new DataTerceiraEra(1,1,1996);
-        Dwarf dwarf = new Dwarf("Joaquim", data);
-
-        assertEquals(dwarf.getVida(), 110);
-        assertEquals(dwarf.getNome(), "Joaquim");
-        assertEquals(dwarf.getExperiencia(), 0);
-        assertEquals(dwarf.getStatus(), Status.VIVO);
-        assertEquals(dwarf.getDataNascimento(), data);
     }
     
     @Test
@@ -122,6 +122,17 @@ public class DwarfTest
     public void minhaSorte() 
     {
         Dwarf dwarf = new Dwarf("Balin");        
+        double esperado = 101.0;
+        
+        double obtido = dwarf.getNumeroSorte();
+        
+        assertTrue(esperado == obtido);
+    }
+    
+    @Test
+    public void minhaSorteComNomeNull() 
+    {
+        Dwarf dwarf = new Dwarf(null);        
         double esperado = 101.0;
         
         double obtido = dwarf.getNumeroSorte();
