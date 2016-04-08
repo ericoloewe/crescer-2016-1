@@ -106,7 +106,7 @@ public class Dwarf
         
         if(this.dataNascimento.ehBissexto() && this.vida <= 90 && this.vida >= 80) {
             theNumber *= -33;
-        } else if (!this.dataNascimento.ehBissexto() && (this.nome.equals("Seixas") || this.nome.equals("Meireles"))) {
+        } else if (!this.dataNascimento.ehBissexto() && ("Seixas".equals(this.nome) || "Meireles".equals(this.nome))) {
             theNumber *= 33;
             theNumber %= 100;
         }
