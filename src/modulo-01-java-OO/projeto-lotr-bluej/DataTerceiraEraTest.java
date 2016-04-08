@@ -14,6 +14,26 @@ import org.junit.Test;
 public class DataTerceiraEraTest
 {
     @Test
+    public void criarDataSemData()
+    {
+        DataTerceiraEra data = new DataTerceiraEra();
+                      
+        assertEquals(data.getDia(), 1);
+        assertEquals(data.getMes(), 1);
+        assertEquals(data.getAno(), 1);
+    }
+    
+    @Test
+    public void criarDataComData()
+    {
+        DataTerceiraEra data = new DataTerceiraEra(1, 1, 2016);
+        
+        assertEquals(data.getDia(), 1);
+        assertEquals(data.getMes(), 1);
+        assertEquals(data.getAno(), 2016);
+    }
+    
+    @Test
     public void ano2016EhBissexto()
     {
         DataTerceiraEra data = new DataTerceiraEra(01, 01, 2016);
