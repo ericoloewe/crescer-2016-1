@@ -57,6 +57,16 @@ public class DataTerceiraEraTest
     }
     
     @Test
+    public void ano1NaoEhBissexto()
+    {
+        DataTerceiraEra data = new DataTerceiraEra(1, 1, 1);
+        
+        boolean obtido = data.ehBissexto();
+        
+        assertFalse(obtido);
+    }
+    
+    @Test
     public void ano2200NaoEhBissexto()
     {
         DataTerceiraEra data = new DataTerceiraEra(01, 01, 2200);
