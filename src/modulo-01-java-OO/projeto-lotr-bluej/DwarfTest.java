@@ -6,6 +6,32 @@ import org.junit.Test;
 public class DwarfTest
 {
     @Test
+    public void dwarfTentaSorteComSucesso() 
+    {
+        Dwarf dwarf = new Dwarf("Balin", new DataTerceiraEra(1,1,2000));
+        int esperado = 1090;
+        
+        dwarf.perdeVida();
+        dwarf.perdeVida();
+        dwarf.tentarSorte();
+        int obtido = dwarf.getVida();
+        
+        assertEquals(esperado, obtido);
+    }
+    
+    @Test
+    public void dwarfTentaSorteSemSucesso() 
+    {
+        Dwarf dwarf = new Dwarf("Balin", new DataTerceiraEra(1,1,2000));
+        int esperado = 110;
+        
+        dwarf.tentarSorte();
+        int obtido = dwarf.getVida();
+        
+        assertEquals(esperado, obtido);
+    }
+    
+    @Test
     public void criarDwarf() 
     {
         Dwarf dwarf = new Dwarf("Joaquim");
