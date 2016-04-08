@@ -30,29 +30,47 @@ public class DwarfTest
     }
     
     @Test
+    public void dwarfTentaSorteComListaVazia() 
+    {
+        Dwarf dwarf = new Dwarf("Balin", new DataTerceiraEra(1,1,2000));
+        
+        dwarf.tentarSorte();
+        
+        assertTrue(dwarf.getInventario().getItens().size() == 0);
+    }
+    
+    @Test
     public void dwarfTentaSorteComSucesso() 
     {
         Dwarf dwarf = new Dwarf("Balin", new DataTerceiraEra(1,1,2000));
-        int esperado = 1090;
+        dwarf.adicionarItemAoInventario(new Item(10, "Vida"));
+        dwarf.adicionarItemAoInventario(new Item(10, "Espada"));
+        int esperado = 1010;
         
         dwarf.perdeVida();
         dwarf.perdeVida();
         dwarf.tentarSorte();
-        int obtido = dwarf.getVida();
         
-        assertEquals(esperado, obtido);
+        for(Item item : dwarf.getInventario().getItens())
+        {
+            assertEquals(item.getQuantidade(), esperado);
+        }
     }
     
     @Test
     public void dwarfTentaSorteSemSucesso() 
     {
         Dwarf dwarf = new Dwarf("Balin", new DataTerceiraEra(1,1,2000));
-        int esperado = 110;
+        dwarf.adicionarItemAoInventario(new Item(10, "Vida"));
+        dwarf.adicionarItemAoInventario(new Item(10, "Espada"));
+        int esperado = 10;
         
         dwarf.tentarSorte();
-        int obtido = dwarf.getVida();
         
-        assertEquals(esperado, obtido);
+        for(Item item : dwarf.getInventario().getItens())
+        {
+            assertEquals(item.getQuantidade(), esperado);
+        }
     }
     
     @Test
@@ -122,17 +140,6 @@ public class DwarfTest
     public void minhaSorte() 
     {
         Dwarf dwarf = new Dwarf("Balin");        
-        double esperado = 101.0;
-        
-        double obtido = dwarf.getNumeroSorte();
-        
-        assertTrue(esperado == obtido);
-    }
-    
-    @Test
-    public void minhaSorteComNomeNull() 
-    {
-        Dwarf dwarf = new Dwarf(null);        
         double esperado = 101.0;
         
         double obtido = dwarf.getNumeroSorte();
