@@ -19,6 +19,14 @@ public class DwarfTest
     }
     
     @Test
+    public void dwarfNasceComAniversario() {
+        DataTerceiraEra data = new DataTerceiraEra(1, 1, 2016);
+        Dwarf dwarf = new Dwarf("Balin", data);
+        
+        assertEquals(dwarf.getDataNascimento(), data);
+    }
+    
+    @Test
     public void diminuirVidaDoDwarf()
     {
         Dwarf dwarf = new Dwarf("Joaquim");
