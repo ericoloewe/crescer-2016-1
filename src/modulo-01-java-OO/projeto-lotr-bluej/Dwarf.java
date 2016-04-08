@@ -9,7 +9,6 @@ public class Dwarf
     
     public Dwarf(String nome)
     {
-        // initialise instance variables
         this.vida = 110;
         this.experiencia = 0;
         this.nome = nome;
@@ -20,7 +19,6 @@ public class Dwarf
     
     public Dwarf(String nome, DataTerceiraEra dataNascimento)
     {
-        // initialise instance variables
         this.vida = 110;
         this.experiencia = 0;
         this.nome = nome;
@@ -107,7 +105,7 @@ public class Dwarf
         
         if(this.dataNascimento.ehBissexto() && this.vida <= 90 && this.vida >= 80) {
             theNumber *= -33;
-        } else if (!this.dataNascimento.ehBissexto() && (this.nome == "Seixas" || this.nome == "Meireles")) {
+        } else if (!this.dataNascimento.ehBissexto() && (this.nome.equals("Seixas") || this.nome.equals("Meireles"))) {
             theNumber *= 33;
             theNumber %= 100;
         }
