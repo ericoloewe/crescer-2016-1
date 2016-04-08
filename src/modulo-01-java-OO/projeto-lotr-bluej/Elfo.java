@@ -13,15 +13,13 @@ public class Elfo
     
     public Elfo(String nome)
     {
+        this();
         this.nome = nome;
-		this.experiencia = 0;
-        this.flechas = 42;
     }
     
     public Elfo(String nome, int flechas)
     {
-        this.nome = nome;
-		this.experiencia = 0;
+        this(nome);
         this.flechas = flechas;
     }
     

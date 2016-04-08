@@ -19,11 +19,7 @@ public class Dwarf
     
     public Dwarf(String nome, DataTerceiraEra dataNascimento)
     {
-        this.vida = 110;
-        this.experiencia = 0;
-        this.nome = nome;
-        this.status = Status.VIVO;
-        this.inventario = new Inventario();
+        this(nome);
         this.dataNascimento = dataNascimento;
     }
     
