@@ -54,7 +54,12 @@ public class Dwarf
     
     public DataTerceiraEra getDataNascimento()
     {
-        return dataNascimento;
+        return this.dataNascimento;
+    }
+    
+    public Inventario getInventario()
+    {
+        return this.inventario;
     }
     
     private void setVida(int vida)
