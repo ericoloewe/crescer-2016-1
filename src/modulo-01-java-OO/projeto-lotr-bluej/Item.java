@@ -9,6 +9,11 @@ public class Item
         this.descricao = descricao;
     }
     
+    public void setQuantidade(int quantidade)
+    {
+        this.quantidade = quantidade;
+    }
+    
     public int getQuantidade()
     {
         return this.quantidade;
