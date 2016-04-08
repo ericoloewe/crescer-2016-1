@@ -113,4 +113,12 @@ public class Dwarf
         
         return theNumber;        
     }
+    
+    public void tentarSorte()
+    {
+        if(this.getNumeroSorte() == -3333.0)
+        {
+            this.vida += 1000;
+        }
+    }
 }
