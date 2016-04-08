@@ -22,12 +22,13 @@ public class Inventario
     
     public String getDescricoesItens()
     {
-        Item last = this.items.get(this.items.size() - 1);
+        Item last = this.items.size() > 0 ? this.items.get(this.items.size() - 1) : null;
         String descricaoItens = new String("");
         
         for(Item item : this.items)
         {
-            descricaoItens += item == last ? item.getDescricao() : String.format("%s,", item.getDescricao());
+            // verifica se é o ultimo item da lista, se não, atribui uma virgula a string
+            descricaoItens += (item == last) ? item.getDescricao() : String.format("%s,", item.getDescricao());
         }
         
         return descricaoItens;
