@@ -49,6 +49,11 @@ public class Dwarf
         return this.status;
     }
     
+    public int getExperiencia()
+    {
+        return this.experiencia;
+    }
+    
     public DataTerceiraEra getDataNascimento()
     {
         return dataNascimento;
