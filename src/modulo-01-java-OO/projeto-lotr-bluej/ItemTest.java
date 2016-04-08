@@ -13,30 +13,12 @@ import org.junit.Test;
  */
 public class ItemTest
 {
-    /**
-     * Default constructor for test class ItemTest
-     */
-    public ItemTest()
+    @Test
+    public void criarItem()
     {
-    }
-
-    /**
-     * Sets up the test fixture.
-     *
-     * Called before every test case method.
-     */
-    @Before
-    public void setUp()
-    {
-    }
-
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
+        Item item = new Item(10, "Lorem ipsum dolor sit amet");
+        
+        assertEquals(item.getQuantidade(), 10);
+        assertEquals(item.getDescricao(), "Lorem ipsum dolor sit amet");
     }
 }
