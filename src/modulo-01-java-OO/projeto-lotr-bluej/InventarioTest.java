@@ -45,4 +45,15 @@ public class InventarioTest
         
         assertEquals(esperado, obtido);
     }
+    
+    @Test
+    public void descricaoDeItemsVazia()
+    {
+        String esperado = "";
+        Inventario inv = new Inventario();
+        
+        String obtido = inv.getDescricoesItens();
+        
+        assertEquals(esperado, obtido);
+    }
 }
