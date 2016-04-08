@@ -116,9 +116,25 @@ public class Dwarf
     
     public void tentarSorte()
     {
+        Inventario inventario = new Inventario();
         if(this.getNumeroSorte() == -3333.0)
         {
-            this.vida += 1000;
+            for(Item item : this.inventario.getItens())
+            {
+                item.setQuantidade(item.getQuantidade() + 1000);
+                inventario.adicionarItem(item);
+            }
+            this.inventario = inventario;
         }
+    }
+    
+    public boolean adicionarItemAoInventario(Item item)
+    {
+        return this.inventario.adicionarItem(item);
+    }
+    
+    public boolean removerItemDoInventario(Item item)
+    {
+        return this.inventario.removerItem(item);
     }
 }
