@@ -13,10 +13,8 @@ public class InventarioTest
         
         inv.adicionarItem(item);
         
-        assertTrue(inv.containsItem(item));
+        assertTrue(inv.adicionarItem(item));
         
-        inv.removerItem(item);
-        
-        assertFalse(inv.containsItem(item));
+        assertTrue(inv.removerItem(item));
     }   
 }
