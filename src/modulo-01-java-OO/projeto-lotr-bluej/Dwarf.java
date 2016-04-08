@@ -1,25 +1,23 @@
-/**
- * Write a description of class Anao here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Dwarf
 {
-    // instance variables - replace the example below with your own
     private int vida;
+    private int experiencia;
     private String nome;
     private Status status;
+    private Inventario inventario;
+    private DataTerceiraEra dataNascimento;
     
     /**
      * Constructor for objects of class Anao
      */
     public Dwarf()
     {
-        // initialise instance variables
         this.vida = 110;
+        this.experiencia = 0;
         this.nome = "";
         this.status = Status.VIVO;
+        this.inventario = new Inventario();
+        this.dataNascimento = new DataTerceiraEra();
     }
     
     /**
@@ -29,8 +27,22 @@ public class Dwarf
     {
         // initialise instance variables
         this.vida = 110;
+        this.experiencia = 0;
         this.nome = nome;
         this.status = Status.VIVO;
+        this.inventario = new Inventario();
+        this.dataNascimento = new DataTerceiraEra();
+    }
+    
+    public Dwarf(String nome, DataTerceiraEra dataNascimento)
+    {
+        // initialise instance variables
+        this.vida = 110;
+        this.experiencia = 0;
+        this.nome = nome;
+        this.status = Status.VIVO;
+        this.inventario = new Inventario();
+        this.dataNascimento = dataNascimento;
     }
     
     public void setNome(String novoNome)
@@ -53,10 +65,14 @@ public class Dwarf
         return this.status;
     }
     
+    public DataTerceiraEra getDataNascimento()
+    {
+        return dataNascimento;
+    }
+    
     public void setVida(int vida)
     {
-        if(vida >= 0)
-        {
+        if(vida >= 0) {
             this.vida = vida;
         } else {
             this.vida = 0;
@@ -65,22 +81,53 @@ public class Dwarf
     
     public void perdeVida() 
     {
-        this.setVida(this.vida-1);
-        if(this.vida == 0) {
-            this.matarDwarf();
+        if(!this.sorteNaVida()) {
+            this.setVida(this.vida-1);
+            if(this.vida == 0) {
+                this.matarDwarf();
+            }
         }
     }
     
     public void perdeVida(int quantidade)
     {
-        this.setVida(this.vida - quantidade);
-        if(this.vida == 0) {
-            this.matarDwarf();
+        if(!this.sorteNaVida()) {
+            this.setVida(this.vida - quantidade);
+            if(this.vida == 0) {
+                this.matarDwarf();
+            }
+        }
+    }
+    
+    private boolean sorteNaVida()
+    {
+        double numSorte = this.getNumeroSorte();
+        if(numSorte < 0) {
+            this.experiencia += 2;
+            return true;
+        } else if(numSorte >= 0 && numSorte <= 100) {
+            return true;
+        } else {
+            return false;
         }
     }
     
     public void matarDwarf()
     {
         this.status = Status.MORTO;
+    }
+    
+    public double getNumeroSorte()
+    {
+        double theNumber = 101.0;
+        
+        if(this.dataNascimento.ehBissexto() && this.vida <= 90 && this.vida >= 80) {
+            theNumber *= -33;
+        } else if (!this.dataNascimento.ehBissexto() && (this.nome == "Seixas" || this.nome == "Meireles")) {
+            theNumber *= 33;
+            theNumber %= 100;
+        }
+        
+        return theNumber;        
     }
 }
