@@ -12,12 +12,38 @@ import org.junit.Test;
 public class DwarfTest
 {
     @Test
-    public void sorteNaPerdaDeVidaDoPedroQueNasceuNumAnoBissexto() 
+    public void criarDwarf() 
     {
-        Dwarf dwarf = new Dwarf(new String("Pedro"), new DataTerceiraEra(1,1,1996));
-        int vidaEsperada = 100;
+        Dwarf dwarf = new Dwarf("Joaquim");
+
+        assertEquals(dwarf.getVida(), 110);
+        assertEquals(dwarf.getNome(), "Joaquim");
+        assertEquals(dwarf.getExperiencia(), 0);
+        assertEquals(dwarf.getStatus(), Status.VIVO);
+    }
+    
+    @Test
+    public void criarDwarfComDataNasc() 
+    {
+        DataTerceiraEra data = new DataTerceiraEra(1,1,1996);
+        Dwarf dwarf = new Dwarf("Joaquim", data);
+
+        assertEquals(dwarf.getVida(), 110);
+        assertEquals(dwarf.getNome(), "Joaquim");
+        assertEquals(dwarf.getExperiencia(), 0);
+        assertEquals(dwarf.getStatus(), Status.VIVO);
+        assertEquals(dwarf.getDataNascimento(), data);
+    }
+    
+    @Test
+    public void sorteNaPerdaDeVidaDoPedroQueNasceuNumAnoBissextoEQuePerdeu20Vidas() 
+    {
+        Dwarf dwarf = new Dwarf("Pedro", new DataTerceiraEra(1,1,1996));
+        int vidaEsperada = 90;
         int experienciaEsperada = 2;
         
+        dwarf.perdeVida();
+        dwarf.perdeVida();
         dwarf.perdeVida();
         int vidaObtida = dwarf.getVida();
         int experienciaObitida = dwarf.getExperiencia();
@@ -30,7 +56,7 @@ public class DwarfTest
     @Test
     public void sorteNaPerdaDeVidaDoJoaquim() 
     {
-        Dwarf dwarf = new Dwarf(new String("Joaquim"));
+        Dwarf dwarf = new Dwarf("Joaquim");
         int vidaEsperada = 100;
         int experienciaEsperada = 0;
         
@@ -45,7 +71,7 @@ public class DwarfTest
     @Test
     public void sorteNaPerdaDeVidaDoSeixasQueNasceuNumAnoBissexto() 
     {
-        Dwarf dwarf = new Dwarf(new String("Seixas"), new DataTerceiraEra(1,1,1996));
+        Dwarf dwarf = new Dwarf("Seixas", new DataTerceiraEra(1,1,1996));
         int vidaEsperada = 100;
         int experienciaEsperada = 0;
         
@@ -60,7 +86,7 @@ public class DwarfTest
     @Test
     public void sorteNaPerdaDeVidaDoSeixas() 
     {
-        Dwarf dwarf = new Dwarf(new String("Seixas"));
+        Dwarf dwarf = new Dwarf("Seixas", new DataTerceiraEra(1,1,1995));
         int vidaEsperada = 110;
         int experienciaEsperada = 0;
         
