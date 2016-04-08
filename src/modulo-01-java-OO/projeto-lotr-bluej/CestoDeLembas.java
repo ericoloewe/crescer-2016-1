@@ -4,7 +4,7 @@ public class CestoDeLembas
 
     public CestoDeLembas()
     {
-        quantidadeDeLembas = 0;
+        this.quantidadeDeLembas = 0;
     }
     
     public CestoDeLembas(int quantidadeDeLembas)
