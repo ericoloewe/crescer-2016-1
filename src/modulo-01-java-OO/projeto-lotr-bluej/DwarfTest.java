@@ -12,6 +12,67 @@ import org.junit.Test;
 public class DwarfTest
 {
     @Test
+    public void sorteNaPerdaDeVidaDoPedroQueNasceuNumAnoBissexto() 
+    {
+        Dwarf dwarf = new Dwarf(new String("Pedro"), new DataTerceiraEra(1,1,1996));
+        int vidaEsperada = 100;
+        int experienciaEsperada = 2;
+        
+        dwarf.perdeVida();
+        int vidaObtida = dwarf.getVida();
+        int experienciaObitida = dwarf.getExperiencia();
+        
+        assertEquals(vidaEsperada, vidaObtida);
+        assertEquals(experienciaEsperada, experienciaObitida);
+        
+    }
+    
+    @Test
+    public void sorteNaPerdaDeVidaDoJoaquim() 
+    {
+        Dwarf dwarf = new Dwarf(new String("Joaquim"));
+        int vidaEsperada = 100;
+        int experienciaEsperada = 0;
+        
+        dwarf.perdeVida();
+        int vidaObtida = dwarf.getVida();
+        int experienciaObitida = dwarf.getExperiencia();
+        
+        assertEquals(vidaEsperada, vidaObtida);
+        assertEquals(experienciaEsperada, experienciaObitida);
+    }
+    
+    @Test
+    public void sorteNaPerdaDeVidaDoSeixasQueNasceuNumAnoBissexto() 
+    {
+        Dwarf dwarf = new Dwarf(new String("Seixas"), new DataTerceiraEra(1,1,1996));
+        int vidaEsperada = 100;
+        int experienciaEsperada = 0;
+        
+        dwarf.perdeVida();
+        int vidaObtida = dwarf.getVida();
+        int experienciaObitida = dwarf.getExperiencia();
+        
+        assertEquals(vidaEsperada, vidaObtida);
+        assertEquals(experienciaEsperada, experienciaObitida);
+    }
+    
+    @Test
+    public void sorteNaPerdaDeVidaDoSeixas() 
+    {
+        Dwarf dwarf = new Dwarf(new String("Seixas"));
+        int vidaEsperada = 110;
+        int experienciaEsperada = 0;
+        
+        dwarf.perdeVida();
+        int vidaObtida = dwarf.getVida();
+        int experienciaObitida = dwarf.getExperiencia();
+        
+        assertEquals(vidaEsperada, vidaObtida);
+        assertEquals(experienciaEsperada, experienciaObitida);
+    }
+    
+    @Test
     public void minhaSorte() 
     {
         Dwarf dwarf = new Dwarf("Balin");        
