@@ -8,11 +8,25 @@ public class ElfoTest
     @Test
     public void criarElfo()
     {
-        Elfo elfo = new Elfo("Alfredo");
-        
         String nomeEsperado = "Alfredo";
         int flechasEsperadas = 42;
         int experienciaEsperada = 0;
+        
+        Elfo elfo = new Elfo("Alfredo");
+        
+        assertEquals(nomeEsperado, elfo.getNome());
+        assertEquals(flechasEsperadas, elfo.getFlechas());
+        assertEquals(experienciaEsperada, elfo.getExperiencia());
+    }
+    
+    @Test
+    public void criarElfoComFlechas()
+    {
+        String nomeEsperado = "Alfredo";
+        int flechasEsperadas = 100;
+        int experienciaEsperada = 0;
+        
+        Elfo elfo = new Elfo("Alfredo", 100);   
         
         assertEquals(nomeEsperado, elfo.getNome());
         assertEquals(flechasEsperadas, elfo.getFlechas());
