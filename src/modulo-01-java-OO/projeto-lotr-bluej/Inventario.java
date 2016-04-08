@@ -14,4 +14,9 @@ public class Inventario
     {
         return this.items.remove(item);
     }
+    
+    public ArrayList<Item> getItens()
+    {
+        return this.items;
+    }
 }
