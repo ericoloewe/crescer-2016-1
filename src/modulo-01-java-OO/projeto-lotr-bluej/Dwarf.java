@@ -7,22 +7,6 @@ public class Dwarf
     private Inventario inventario;
     private DataTerceiraEra dataNascimento;
     
-    /**
-     * Constructor for objects of class Anao
-     */
-    public Dwarf()
-    {
-        this.vida = 110;
-        this.experiencia = 0;
-        this.nome = "";
-        this.status = Status.VIVO;
-        this.inventario = new Inventario();
-        this.dataNascimento = new DataTerceiraEra();
-    }
-    
-    /**
-     * Constructor for objects of class Anao
-     */
     public Dwarf(String nome)
     {
         // initialise instance variables
@@ -70,7 +54,7 @@ public class Dwarf
         return dataNascimento;
     }
     
-    public void setVida(int vida)
+    private void setVida(int vida)
     {
         if(vida >= 0) {
             this.vida = vida;
@@ -81,15 +65,10 @@ public class Dwarf
     
     public void perdeVida() 
     {
-        if(!this.sorteNaVida()) {
-            this.setVida(this.vida-1);
-            if(this.vida == 0) {
-                this.matarDwarf();
-            }
-        }
+        this.perdeVida(10);
     }
     
-    public void perdeVida(int quantidade)
+    private void perdeVida(int quantidade)
     {
         if(!this.sorteNaVida()) {
             this.setVida(this.vida - quantidade);
@@ -112,7 +91,7 @@ public class Dwarf
         }
     }
     
-    public void matarDwarf()
+    private void matarDwarf()
     {
         this.status = Status.MORTO;
     }
