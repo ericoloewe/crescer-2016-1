@@ -56,4 +56,28 @@ public class InventarioTest
         
         assertEquals(esperado, obtido);
     }
+    
+    @Test
+    public void numeroMaisPopular()
+    {
+        Inventario inv = new Inventario();
+        Item esperado = new Item(1000, "Bracelete");
+        inv.adicionarItem(new Item(10, "Adaga"));
+        inv.adicionarItem(new Item(100, "Escudo"));
+        inv.adicionarItem(esperado);
+        
+        Item obtido = inv.itemComMaiorQuantidade();
+        
+        assertEquals(esperado, obtido);
+    }
+    
+    @Test
+    public void numeroMaisPopularComListaVazia()
+    {
+        Inventario inv = new Inventario();
+        
+        Item obtido = inv.itemComMaiorQuantidade();
+        
+        assertEquals(obtido, null);
+    }
 }
