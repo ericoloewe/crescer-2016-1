@@ -1,3 +1,4 @@
+import java.util.*;
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -78,6 +79,58 @@ public class InventarioTest
         
         Item obtido = inv.itemComMaiorQuantidade();
         
-        assertEquals(obtido, null);
+        assertNull(obtido);
+    }
+    
+    @Test
+    public void ordenaLista()
+    {
+        Inventario inv = new Inventario();
+        ArrayList<Integer> esperado = new ArrayList<>(Arrays.asList(10, 100, 1000));
+        inv.adicionarItem(new Item(100, "Escudo"));
+        inv.adicionarItem(new Item(10, "Adaga"));
+        inv.adicionarItem(new Item(1000, "Bracelete"));
+        
+        inv.ordenarItens();
+        
+        ArrayList<Item> obtido = inv.getItens();
+        
+        for(int i = 0; i < obtido.size(); i++)
+        {
+            assertTrue(esperado.get(i).equals(obtido.get(i).getQuantidade()));
+        }
+    }
+    
+    @Test
+    public void ordenaListaCom100Elementos()
+    {
+        Inventario inv = new Inventario();
+        ArrayList<Integer> esperado = new ArrayList<>();
+        for(int i = 0; i < 100; i++)
+        {
+            esperado.add(i);
+            inv.adicionarItem(new Item(i, String.format("Item %d", i)));
+        }
+        
+        Collections.shuffle(Arrays.asList(inv));        
+        inv.ordenarItens();        
+        ArrayList<Item> obtido = inv.getItens();
+        
+        for(int i = 0; i < obtido.size(); i++)
+        {
+            assertTrue(esperado.get(i).equals(obtido.get(i).getQuantidade()));
+        }
+    }
+    
+    @Test
+    public void ordenaListaVazia()
+    {
+        Inventario inv = new Inventario();
+        
+        inv.ordenarItens();
+        
+        ArrayList<Item> obtido = inv.getItens();
+        
+        assertEquals(obtido.size(), 0);
     }
 }
