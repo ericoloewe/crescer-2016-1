@@ -48,4 +48,36 @@ public class Inventario
         
         return itemComMaiorQuantidade;
     }
+    
+    public void ordenarItens()
+    {
+        ordenarItens(0, this.items.size()-1);
+    }
+
+    // primeiro, seria o primeiro item da lista
+    // ultimo, seria o ultimo item da lista
+    private void ordenarItens(int primeiro, int ultimo)
+    {
+        if (primeiro >= ultimo)
+            return;
+        Item pivo = this.items.get((ultimo+primeiro)/2);
+        int i=primeiro, j=ultimo;
+        
+        while (i < j)
+        {
+            while (this.items.get(i).getQuantidade() < pivo.getQuantidade()) i++;
+            while (this.items.get(j).getQuantidade() > pivo.getQuantidade()) j--;
+            if (i <= j) {
+                Item aux=this.items.get(i);
+                this.items.set(i, this.items.get(j));
+                this.items.set(j, aux);
+                i++;
+                j--;
+            }                
+        }
+        
+        this.ordenarItens(primeiro, j);
+        this.ordenarItens(i, ultimo);
+
+    }
 }
