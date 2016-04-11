@@ -2,36 +2,36 @@ import java.util.*;
 
 public class HobbitContador
 {    
-    public Integer calcularDiferenca(ArrayList<ArrayList<Integer>> arrayDePares)
+    public Integer calcularDiferenca(ArrayList<ArrayList<Integer>> lista)
     {
-        Integer diferenca = arrayDePares != null ? 0 : null;
-        if(arrayDePares != null)
-        {
-            ArrayList<Integer> produtos = this.calculaProdutosDoArray(arrayDePares);
-            ArrayList<Integer> mmc = this.calculaMinimoMultiplosDoArray(arrayDePares);
-            
-            for(int i=0; i < produtos.size(); i++)
-            {
-                diferenca += produtos.get(i) - mmc.get(i);
-            }            
-                     
-        }
-        return diferenca; 
+        return lista != null ? this.calcularDiferencaV2(lista, 0) : null;
     }
+    
+    private Integer calcularDiferencaV2(ArrayList<ArrayList<Integer>> lista, int i)
+    {
+        if(i == lista.size()) 
+            return 0;        
+        return calcularDiferencaV2(lista, i + 1) + (calculaProduto(lista.get(i)) - calculaMinimoMultiplo(lista.get(i)));
+    }    
     
     private ArrayList<Integer> calculaProdutosDoArray(ArrayList<ArrayList<Integer>> arrayDePares)
     {
         ArrayList<Integer> produtos = new ArrayList<>(); 
         for(ArrayList<Integer> lista : arrayDePares)
         {
-            Integer produto = 1;
-            for(Integer i : lista)
-            {
-                produto *= i;
-            }
-            produtos.add(produto);
+            produtos.add(calculaProduto(lista));
         }
         return produtos;
+    }
+    
+    private Integer calculaProduto(ArrayList<Integer> lista)
+    {
+        Integer produto = 1;
+        for(Integer i : lista)
+        {
+            produto *= i;
+        }
+        return produto;
     }
     
     private ArrayList<Integer> calculaMinimoMultiplosDoArray(ArrayList<ArrayList<Integer>> arrayDePares)
@@ -40,13 +40,13 @@ public class HobbitContador
         
         for(ArrayList<Integer> lista : arrayDePares)
         {
-            mmcs.add(this.calculaMMC(lista));
+            mmcs.add(this.calculaMinimoMultiplo(lista));
         }
         
         return mmcs;
     }
     
-    private Integer calculaMMC(ArrayList<Integer> arrayDePares)
+    private Integer calculaMinimoMultiplo(ArrayList<Integer> arrayDePares)
     {
         int fator = 2, mmc = 1;
         ArrayList<Integer> listaDeFatores = new ArrayList<Integer>();
