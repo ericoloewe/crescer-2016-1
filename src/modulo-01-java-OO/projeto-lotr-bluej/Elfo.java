@@ -3,12 +3,14 @@ public class Elfo
     private String nome;
     private int experiencia;
     private int flechas;
+    private Inventario inventario;
     
     public Elfo()
     {
-        nome = "";
-        experiencia = 0;
-        flechas = 42;
+        this.nome = "";
+        this.experiencia = 0;
+        this.flechas = 42;
+        this.inventario = new Inventario();
     }
     
     public Elfo(String nome)
@@ -49,6 +51,11 @@ public class Elfo
     public String getNome()
     {
         return this.nome;
+    }
+    
+    public Inventario getInventario()
+    {
+        return this.inventario;
     }
     
     public int getExperiencia()
