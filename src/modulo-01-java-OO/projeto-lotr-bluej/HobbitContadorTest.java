@@ -7,6 +7,17 @@ import org.junit.Test;
 public class HobbitContadorTest
 {
     @Test
+    public void obterMaiorMultiploDeTresAte10()
+    {
+        HobbitContador contador = new HobbitContador();
+        int esperado = 9;
+        
+        int obtido = contador.obterMaiorMultiploDeTresAte(10);
+        
+        assertEquals(esperado, obtido);
+    }
+    
+    @Test
     public void calculaDiferencaDeveFuncionarComNull()
     {
         HobbitContador contador = new HobbitContador();
