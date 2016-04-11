@@ -24,6 +24,24 @@ public class HobbitContador
         return maiorMultiploDeTres;
     }
     
+    public ArrayList<Integer> obterMultiplosDeTresAte(int numero) 
+    {
+        /*
+         * Feita a analise do codigo e encontrado os seguintes erros:
+         * - No lugar do numero no for havia um limite, no qual o limite é o proprio numero.
+         * - Foi removido o break do cod, o qual é totalmente desnecessario.
+         */
+        ArrayList<Integer> multiplos = new ArrayList<>(Arrays.asList(0));
+        
+        for (int i = 1; i <= numero; i++) 
+        {
+            if (i % 3 == 0)
+                multiplos.add(i);
+        }
+        
+        return multiplos;
+    }
+    
     public Integer calcularDiferenca(ArrayList<ArrayList<Integer>> lista)
     {
         return lista != null ? this.calcularDiferenca(lista, 0) : null;
