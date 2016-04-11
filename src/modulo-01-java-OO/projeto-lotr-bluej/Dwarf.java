@@ -18,11 +18,6 @@ public class Dwarf extends PersonagemTerraMedia
         this.dataNascimento = dataNascimento;
     }
     
-    public void setNome(String novoNome)
-    {
-        this.nome = novoNome;
-    }
-    
     public int getVida()
     {
         return this.vida;
