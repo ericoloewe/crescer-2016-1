@@ -1,16 +1,11 @@
-public class Elfo
-{
-    private String nome;
-    private int experiencia;
+public class Elfo extends PersonagemTerraMedia
+{    
     private int flechas;
-    private Inventario inventario;
     
     public Elfo()
     {
-        this.nome = "";
-        this.experiencia = 0;
-        this.flechas = 42;
-        this.inventario = new Inventario();
+        super("");
+        this.flechas = 42;        
     }
     
     public Elfo(String nome)
@@ -46,17 +41,7 @@ public class Elfo
     {
         experiencia++;
         flechas--;
-    }
-    
-    public String getNome()
-    {
-        return this.nome;
-    }
-    
-    public Inventario getInventario()
-    {
-        return this.inventario;
-    }
+    }    
     
     public int getExperiencia()
     {

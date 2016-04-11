@@ -1,19 +1,14 @@
-public class Dwarf
+public class Dwarf extends PersonagemTerraMedia
 {
     private int vida;
-    private int experiencia;
-    private String nome;
     private Status status;
-    protected Inventario inventario;
     private DataTerceiraEra dataNascimento;
     
     public Dwarf(String nome)
     {
+        super(nome);
         this.vida = 110;
-        this.experiencia = 0;
-        this.nome = nome;
         this.status = Status.VIVO;
-        this.inventario = new Inventario();
         this.dataNascimento = new DataTerceiraEra();
     }
     
@@ -28,11 +23,6 @@ public class Dwarf
         this.nome = novoNome;
     }
     
-    public String getNome()
-    {
-        return this.nome;
-    }
-    
     public int getVida()
     {
         return this.vida;
@@ -43,19 +33,9 @@ public class Dwarf
         return this.status;
     }
     
-    public int getExperiencia()
-    {
-        return this.experiencia;
-    }
-    
     public DataTerceiraEra getDataNascimento()
     {
         return this.dataNascimento;
-    }
-    
-    public Inventario getInventario()
-    {
-        return this.inventario;
     }
     
     private void setVida(int vida)
