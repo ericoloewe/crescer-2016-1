@@ -49,6 +49,32 @@ public class HobbitContadorTest
     }
     
     @Test
+    public void calcularDiferencaDeveRetornar0()
+    {
+        Integer esperado = 0, obtido;
+        ArrayList<ArrayList<Integer>> arrayDePares = new ArrayList<>();
+        HobbitContador contador = new HobbitContador();        
+        arrayDePares.add(new ArrayList<>(Arrays.asList(0, 0)));    
+                
+        obtido = contador.calcularDiferenca(arrayDePares);
+                
+        assertEquals(esperado, obtido);
+    }
+    
+    @Test
+    public void calcularDiferencaDeveRetornar180()
+    {
+        Integer esperado = 180, obtido;
+        ArrayList<ArrayList<Integer>> arrayDePares = new ArrayList<>();
+        HobbitContador contador = new HobbitContador();        
+        arrayDePares.add(new ArrayList<>(Arrays.asList(15, 18)));    
+                
+        obtido = contador.calcularDiferenca(arrayDePares);
+                
+        assertEquals(esperado, obtido);
+    }
+    
+    @Test
     public void calcularDiferencaDeveRetornar840()
     {
         Integer esperado = 840, obtido;
