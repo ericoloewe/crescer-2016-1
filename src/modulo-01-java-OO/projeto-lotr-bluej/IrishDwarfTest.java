@@ -63,7 +63,7 @@ public class IrishDwarfTest
         IrishDwarf irishDwarf = new IrishDwarf("Balin", new DataTerceiraEra(1,1,2000));
         irishDwarf.adicionarItemAoInventario(new Item(5, "Chapeu"));
         irishDwarf.adicionarItemAoInventario(new Item(5, "Espada"));
-        int esperado = 120005;
+        int esperado = 15005;
         
         irishDwarf.perdeVida();
         irishDwarf.perdeVida();
