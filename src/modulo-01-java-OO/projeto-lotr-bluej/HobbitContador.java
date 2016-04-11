@@ -51,18 +51,8 @@ public class HobbitContador
     {
         if(i == lista.size()) 
             return 0;        
-        return calcularDiferenca(lista, i + 1) + (calculaProduto(lista.get(i)) - calculaMinimoMultiplo(lista.get(i)));
+        return this.calcularDiferenca(lista, i + 1) + (this.calculaProduto(lista.get(i)) - this.calculaMinimoMultiplo(lista.get(i)));
     }    
-    
-    private ArrayList<Integer> calculaProdutosDoArray(ArrayList<ArrayList<Integer>> arrayDePares)
-    {
-        ArrayList<Integer> produtos = new ArrayList<>(); 
-        for(ArrayList<Integer> lista : arrayDePares)
-        {
-            produtos.add(calculaProduto(lista));
-        }
-        return produtos;
-    }
     
     private Integer calculaProduto(ArrayList<Integer> lista)
     {
@@ -74,26 +64,16 @@ public class HobbitContador
         return produto;
     }
     
-    private ArrayList<Integer> calculaMinimoMultiplosDoArray(ArrayList<ArrayList<Integer>> arrayDePares)
-    {
-        ArrayList<Integer> mmcs = new ArrayList<>(); 
-        
-        for(ArrayList<Integer> lista : arrayDePares)
-        {
-            mmcs.add(this.calculaMinimoMultiplo(lista));
-        }
-        
-        return mmcs;
-    }
-    
     private Integer calculaMinimoMultiplo(ArrayList<Integer> arrayDePares)
     {
-        int fator = 2, mmc = 1;
-        ArrayList<Integer> listaDeFatores = new ArrayList<Integer>();
+        boolean existeZero = this.exiteZero(arrayDePares);
+        int fator = 2, mmc = existeZero ? 0 : 1;        
         
-        while(numDecomposto(arrayDePares))
+        ArrayList<Integer> listaDeFatores = new ArrayList<Integer>();
+    
+        while(this.numDecomposto(arrayDePares) && !existeZero)
         {
-            if(ehFator(arrayDePares, fator))
+            if(this.ehFator(arrayDePares, fator))
             {
                 listaDeFatores.add(fator);
                 for(Integer i : arrayDePares)
@@ -111,7 +91,7 @@ public class HobbitContador
         for(Integer i : listaDeFatores)
         {
             mmc *= i;
-        }
+        }  
         
         return mmc;
     }
@@ -139,4 +119,16 @@ public class HobbitContador
         }
         return false;
     }    
+    
+    private boolean exiteZero(ArrayList<Integer> arrayDePares)
+    {
+        for(int i : arrayDePares)
+        {
+            if(i == 0)
+            {
+                return true;
+            }
+        }
+        return false;
+    }   
 }
