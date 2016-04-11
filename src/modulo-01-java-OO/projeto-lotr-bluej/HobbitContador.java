@@ -13,11 +13,12 @@ public class HobbitContador
          */
         int maiorMultiploDeTres = 0;
         
-        for (int i = 1; i <= numero; i++) 
+        for (int i = numero; i >= 0; i--) 
         {
             if (i % 3 == 0) 
             {
                 maiorMultiploDeTres = i;
+                break;
             }
         }
         
