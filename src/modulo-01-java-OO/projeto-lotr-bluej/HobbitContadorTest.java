@@ -18,6 +18,17 @@ public class HobbitContadorTest
     }
     
     @Test
+    public void obterMultiplosDeTresAte10()
+    {
+        HobbitContador contador = new HobbitContador();
+        ArrayList<Integer> esperado = new ArrayList<Integer>(Arrays.asList(0, 3, 6, 9));
+        
+        ArrayList<Integer> obtido = contador.obterMultiplosDeTresAte(10);
+        
+        assertEquals(esperado, obtido);
+    }
+    
+    @Test
     public void calculaDiferencaDeveFuncionarComNull()
     {
         HobbitContador contador = new HobbitContador();
