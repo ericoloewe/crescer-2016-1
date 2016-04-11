@@ -130,12 +130,12 @@ public class IrishDwarf
     
     private int calculaRecompensaDoItem(int quantidade)
     {        
-        return fatorial(quantidade) * 1000 + quantidade;
+        return somaAte(quantidade) * 1000 + quantidade;
     }
     
-    private int fatorial(int n)
+    private int somaAte(int n)
     {
-        return n > 1 ? fatorial(n-1)*n : n;
+        return n > 1 ? somaAte(n-1)+n : n;
     }
     
     public boolean adicionarItemAoInventario(Item item)
