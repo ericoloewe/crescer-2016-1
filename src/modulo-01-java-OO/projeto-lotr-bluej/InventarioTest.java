@@ -109,10 +109,12 @@ public class InventarioTest
         for(int i = 0; i < 100; i++)
         {
             esperado.add(i);
+        }
+        for(int i = 99; i >= 0; i--)
+        {
             inv.adicionarItem(new Item(i, String.format("Item %d", i)));
         }
         
-        Collections.shuffle(Arrays.asList(inv));        
         inv.ordenarItens();        
         ArrayList<Item> obtido = inv.getItens();
         
