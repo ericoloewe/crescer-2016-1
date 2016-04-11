@@ -1,6 +1,6 @@
 public class Elfo extends PersonagemTerraMedia
 {    
-    private int flechas;
+    protected int flechas;
     
     public Elfo()
     {
@@ -51,6 +51,16 @@ public class Elfo extends PersonagemTerraMedia
     public int getFlechas()
     {
         return this.flechas;
+    }
+    
+    public boolean adicionarItemAoInventario(Item item)
+    {
+        return this.inventario.adicionarItem(item);
+    }
+    
+    public boolean removerItemDoInventario(Item item)
+    {
+        return this.inventario.removerItem(item);
     }
     
     public String toString()
