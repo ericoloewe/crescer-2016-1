@@ -1,4 +1,4 @@
-public class Dwarf extends PersonagemTerraMedia
+public class Dwarf extends Personagem
 {    
     private DataTerceiraEra dataNascimento;
     

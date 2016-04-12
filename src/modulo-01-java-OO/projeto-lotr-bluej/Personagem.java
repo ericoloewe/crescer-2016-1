@@ -1,4 +1,4 @@
-public class PersonagemTerraMedia
+public class Personagem
 {
     protected String nome;
     protected Inventario inventario;
@@ -6,7 +6,7 @@ public class PersonagemTerraMedia
     protected int vida;
     protected Status status;
     
-    public PersonagemTerraMedia(String nome)
+    public Personagem(String nome)
     {
         this.nome = nome;
         this.experiencia = 0;

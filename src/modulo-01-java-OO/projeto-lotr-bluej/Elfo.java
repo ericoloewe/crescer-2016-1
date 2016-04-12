@@ -1,4 +1,4 @@
-public class Elfo extends PersonagemTerraMedia
+public class Elfo extends Personagem
 {    
     protected int flechas;
     
