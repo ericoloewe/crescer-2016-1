@@ -24,6 +24,12 @@ public class Item
         return this.descricao;
     }
     
+    /*
+     * Metodo criado para comparar dois items
+     * Este metodo compara a quantidade dos items, alem de comparar sua descrição,
+     * e na comparação da descrição, vemos se a descrição é nulla, e caso não for, vemos se ela é igual a outra,
+     * e caso for nulla, vemos se a atual descrição tambem é nulla
+     */
     public boolean equals(Object obj)
     {
         return  ((Item) obj).getQuantidade() == this.quantidade &&
