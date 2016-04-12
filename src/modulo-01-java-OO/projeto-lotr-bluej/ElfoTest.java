@@ -33,6 +33,36 @@ public class ElfoTest
         assertEquals(experienciaEsperada, elfo.getExperiencia());
     }
     
+    @Before
+    public void zerarContadorDeElfos()
+    {
+        Elfo.zeraContadorDeElfos();
+    }
+    
+    @Test
+    public void contadorDeElfosSemElfos()
+    {
+        assertEquals(0, Elfo.getContadorDeElfos());
+    }
+    
+    @Test
+    public void criarEAnalisarContadorDeElfos()
+    {        
+        new Elfo("Alfredo");
+        
+        assertEquals(1, Elfo.getContadorDeElfos());
+    }
+    
+    @Test
+    public void criarEAnalisarContadorDeElfosCom3Elfos()
+    {        
+        new Elfo("Alfredo");
+        new Elfo("Alfredo");
+        new Elfo("Alfredo");
+        
+        assertEquals(3, Elfo.getContadorDeElfos());
+    }
+    
     @Test
     public void aumentaExperienciaAoAtirarUmaFlecha()
     {
