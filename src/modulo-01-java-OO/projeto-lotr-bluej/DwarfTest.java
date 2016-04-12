@@ -297,4 +297,36 @@ public class DwarfTest
         
         assertEquals(esperado, obtido);
     }
+    
+    @Test
+    public void dwarfComVidaMenosVidaComPrimeiroMenor()
+    {
+        Dwarf dwarf = new Dwarf("D1");
+        
+        dwarf.perdeVida();
+        Dwarf menor = Dwarf.descobrirMenosVida(dwarf, new Dwarf("D2"));
+        
+        assertEquals(dwarf, menor);
+    }
+    
+    @Test
+    public void dwarfComVidaMenosVidaComSegundoMenor()
+    {
+        Dwarf dwarf = new Dwarf("D1");
+        
+        dwarf.perdeVida();
+        Dwarf menor = Dwarf.descobrirMenosVida(new Dwarf("D2"), dwarf);
+        
+        assertEquals(dwarf, menor);
+    }
+    
+    @Test
+    public void dwarfComVidaMenosVidaComDoisIguais()
+    {
+        Dwarf dwarf = new Dwarf("D1");
+        
+        Dwarf menor = Dwarf.descobrirMenosVida(new Dwarf("D2"), dwarf);
+        
+        assertEquals(dwarf, menor);
+    }
 }
