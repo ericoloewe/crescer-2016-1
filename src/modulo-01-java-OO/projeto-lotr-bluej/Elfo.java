@@ -1,11 +1,13 @@
 public class Elfo extends Personagem
 {    
     protected int flechas;
+    private static int contadorDeElfos;
     
     public Elfo()
     {
         super("");
-        this.flechas = 42;        
+        this.flechas = 42;
+        Elfo.contadorDeElfos++;
     }
     
     public Elfo(String nome)
@@ -43,14 +45,19 @@ public class Elfo extends Personagem
         flechas--;
     }    
     
-    public int getExperiencia()
-    {
-        return this.experiencia;
-    }
-    
     public int getFlechas()
     {
         return this.flechas;
+    }
+    
+    public static void zeraContadorDeElfos()
+    {
+        Elfo.contadorDeElfos = 0;
+    }
+    
+    public static int getContadorDeElfos()
+    {
+        return Elfo.contadorDeElfos;
     }
     
     public boolean adicionarItemAoInventario(Item item)
