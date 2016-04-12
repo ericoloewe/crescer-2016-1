@@ -23,4 +23,13 @@ public class Item
     {
         return this.descricao;
     }
+    
+    public boolean equals(Object obj)
+    {
+        return  ((Item) obj).getQuantidade() == this.quantidade &&
+                (((Item) obj).getDescricao() != null &&
+                        ((Item) obj).getDescricao().equals(this.descricao) ||
+                   ((Item) obj).getDescricao() == null &&
+                        ((Item) obj).getDescricao() == this.descricao);
+    }
 }
