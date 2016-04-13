@@ -5,6 +5,26 @@ import org.junit.Test;
 
 public class ElfoVerdeTest
 {
+    @After
+    public void tearDown()
+    {
+        System.gc();
+    }
+    
+    @Test
+    public void contadorDeElfosSemElfosNumElfoFilho()
+    {
+        assertEquals(0, Elfo.getContadorDeElfos());
+    }
+    
+    @Test
+    public void criarEAnalisarContadorDeElfosNumElfoFilho()
+    {        
+        new Elfo("Alfredo");
+        
+        assertEquals(1, Elfo.getContadorDeElfos());
+    }
+    
     @Test
     public void addERemoverItemNaListaDeItemsComSucesso()
     {
