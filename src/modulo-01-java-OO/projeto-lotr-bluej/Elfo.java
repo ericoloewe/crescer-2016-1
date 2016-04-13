@@ -22,6 +22,11 @@ public class Elfo extends Personagem
         this.flechas = flechas;
     }
     
+    protected void finalize() throws Throwable {
+        Elfo.contadorDeElfos--;
+        super.finalize();
+    }
+    
     public boolean atirarFlechas()
     {
 		if(this.flechas > 0) {
@@ -48,11 +53,6 @@ public class Elfo extends Personagem
     public int getFlechas()
     {
         return this.flechas;
-    }
-    
-    public static void zeraContadorDeElfos()
-    {
-        Elfo.contadorDeElfos = 0;
     }
     
     public static int getContadorDeElfos()
