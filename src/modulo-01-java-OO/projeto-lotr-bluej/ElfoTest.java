@@ -5,6 +5,11 @@ import org.junit.Test;
 
 public class ElfoTest
 {
+    @After
+    public void tearDown()
+    {
+        System.gc();
+    }
     @Test
     public void criarElfo()
     {
@@ -33,12 +38,6 @@ public class ElfoTest
         assertEquals(experienciaEsperada, elfo.getExperiencia());
     }
     
-    @Before
-    public void zerarContadorDeElfos()
-    {
-        Elfo.zeraContadorDeElfos();
-    }
-    
     @Test
     public void contadorDeElfosSemElfos()
     {
@@ -48,7 +47,7 @@ public class ElfoTest
     @Test
     public void criarEAnalisarContadorDeElfos()
     {        
-        new Elfo("Alfredo");
+        Elfo elfo = new Elfo("Alfredo");
         
         assertEquals(1, Elfo.getContadorDeElfos());
     }
@@ -56,9 +55,9 @@ public class ElfoTest
     @Test
     public void criarEAnalisarContadorDeElfosCom3Elfos()
     {        
-        new Elfo("Alfredo");
-        new Elfo("Alfredo");
-        new Elfo("Alfredo");
+        Elfo elfo = new Elfo("Alfredo");
+        Elfo elfo2 = new Elfo("Alfredo");
+        Elfo elfo3 = new Elfo("Alfredo");
         
         assertEquals(3, Elfo.getContadorDeElfos());
     }
