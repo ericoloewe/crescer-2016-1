@@ -10,6 +10,7 @@ public class ElfoTest
     {
         System.gc();
     }
+    
     @Test
     public void criarElfo()
     {
@@ -47,7 +48,7 @@ public class ElfoTest
     @Test
     public void criarEAnalisarContadorDeElfos()
     {        
-        Elfo elfo = new Elfo("Alfredo");
+        new Elfo("Alfredo");
         
         assertEquals(1, Elfo.getContadorDeElfos());
     }
@@ -55,9 +56,9 @@ public class ElfoTest
     @Test
     public void criarEAnalisarContadorDeElfosCom3Elfos()
     {        
-        Elfo elfo = new Elfo("Alfredo");
-        Elfo elfo2 = new Elfo("Alfredo");
-        Elfo elfo3 = new Elfo("Alfredo");
+        new Elfo("Alfredo");
+        new Elfo("Alfredo");
+        new Elfo("Alfredo");
         
         assertEquals(3, Elfo.getContadorDeElfos());
     }
