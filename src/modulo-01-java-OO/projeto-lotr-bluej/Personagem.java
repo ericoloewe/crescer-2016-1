@@ -29,4 +29,9 @@ public abstract class Personagem
     {
         return this.experiencia;
     }
+    
+    public Status getStatus()
+    {
+        return this.status;
+    }
 }
