@@ -3,7 +3,17 @@ import java.util.*;
 public class Exercito
 {
     private HashMap<String, Elfo> exercito = new HashMap<>();
-    private HashMap<Status, Elfo> exercitoAgrupadoPorStatus = new HashMap<>();
+    private HashMap<Status, ArrayList<Elfo>> exercitoAgrupadoPorStatus = new HashMap<>();
+    
+    public HashMap<String, Elfo> getExercito()
+    {
+        return this.exercito;
+    }
+    
+    public HashMap<Status, ArrayList<Elfo>> getExercitoAgrupadoPorStatus()
+    {
+        return this.exercitoAgrupadoPorStatus;
+    }
     
     public boolean alistarElfo(Elfo elfo)
     {
