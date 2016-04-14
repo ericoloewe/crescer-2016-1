@@ -39,4 +39,6 @@ public abstract class Personagem
     {
         return this.vida;
     }
+    
+    public abstract void tentarSorte();
 }
