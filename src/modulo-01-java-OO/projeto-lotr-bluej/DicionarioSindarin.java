@@ -4,6 +4,36 @@ public class DicionarioSindarin
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Bem vindo ao tradutor Sindarin! Escolha a linguagem:");
+        System.out.println("[P]ortuguês [I]nglês");
+        String idioma = scanner.nextLine();
+        
+        TradutorSindarin tradutor = criarTradutor(idioma);
+        
+        System.out.println("Digite a palavra que você deseja traduzir");
+        String palavra = scanner.nextLine();
+        System.out.println(palavra.toUpperCase() + " significa: " + tradutor.traduzir(palavra));
+    }
+    
+    private static TradutorSindarin criarTradutor(String idioma)
+    {
+        TradutorSindarin tradutor = null;
+        
+        switch(idioma.toLowerCase()) {
+            case "i":
+                tradutor = new SindarinParaIngles();
+                break;
+            default:
+                tradutor = new SindarinParaPortugues();            
+                break;
+        }
+        
+        return tradutor;
+    }
+    
+    private static void rodarExemplosHashMap()
+    {
         HashMap<String, String> dicionarioSindarin = new HashMap<>();
         dicionarioSindarin.put("terra", "amar");
         dicionarioSindarin.put("fogo", "naur");
