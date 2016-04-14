@@ -74,4 +74,9 @@ public class Elfo extends Personagem
     {
         return this.nome + " possui " + this.flechas + " flechas e " + this.experiencia + " níveis de experiência.";
     }
+    
+    public void tentarSorte()
+    {
+        
+    }
 }
