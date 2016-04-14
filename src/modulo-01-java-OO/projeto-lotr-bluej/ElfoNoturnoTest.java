@@ -30,7 +30,7 @@ public class ElfoNoturnoTest
     {
         Float vidaEsperada = 100f;
         ElfoNoturno elfo = new ElfoNoturno("Atchim");
-        assertTrue(vidaEsperada.equals(elfo.getVida()));
+        assertTrue(vidaEsperada.equals(elfo.getVidaElfoNoturno()));
     }
     
     @Test
@@ -41,7 +41,7 @@ public class ElfoNoturnoTest
         
         elfo.atirarFlechas();
         
-        assertTrue(vidaEsperada.equals(elfo.getVida()));
+        assertTrue(vidaEsperada.equals(elfo.getVidaElfoNoturno()));
     }
     
     @Test
@@ -56,6 +56,6 @@ public class ElfoNoturnoTest
                 break;
         }
         
-        assertTrue(vidaEsperada.equals(elfo.getVida()));
+        assertTrue(vidaEsperada.equals(elfo.getVidaElfoNoturno()));
     }
 }
