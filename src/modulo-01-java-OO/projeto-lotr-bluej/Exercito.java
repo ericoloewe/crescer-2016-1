@@ -32,13 +32,14 @@ public class Exercito
     
     public void agruparPorStatus()
     {
+        this.exercitoAgrupadoPorStatus.clear();
         for (Elfo elfo : this.exercito.values()) 
         {
             if(this.exercitoAgrupadoPorStatus.containsKey(elfo.getStatus()))
                 this.exercitoAgrupadoPorStatus.get(elfo.getStatus()).add(elfo);
             else
                 this.exercitoAgrupadoPorStatus.put(elfo.getStatus(), new ArrayList<Elfo>(Arrays.asList(elfo)));
-       }
+        }
     }
     
     public ArrayList<Elfo> buscar(Status status)
