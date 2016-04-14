@@ -15,11 +15,6 @@ public class Dwarf extends Personagem
         this.dataNascimento = dataNascimento;
     }
     
-    public int getVida()
-    {
-        return this.vida;
-    }
-    
     public Status getStatus()
     {
         return this.status;
