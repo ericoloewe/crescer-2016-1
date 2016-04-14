@@ -40,13 +40,24 @@ public class ExercitoTest
     public void elfoEhAgrupadoPorStatus()
     {
         int tamanhoEsperado = 1;
-        int tamanhoArrayEsperado = 3;
-        Exercito exe = new Exercito();
+        int tamanhoArrayEsperado = 20;
+        Exercito exe = this.criarExercito();
         
-        exe.alistarElfo(new ElfoNoturno("Auriel"));
-        exe.alistarElfo(new ElfoVerde("Elfo2"));
-        exe.alistarElfo(new ElfoNoturno("Elfo3"));
+        exe.agruparPorStatus();
         
+        assertEquals(tamanhoArrayEsperado, exe.getExercitoAgrupadoPorStatus().get(Status.VIVO).size());
+        assertEquals(tamanhoEsperado, exe.getExercitoAgrupadoPorStatus().size());
+        assertTrue(exe.getExercitoAgrupadoPorStatus() != null);
+    }
+    
+    @Test
+    public void elfoEhAgrupadoPorStatus2Vzs()
+    {
+        int tamanhoEsperado = 1;
+        int tamanhoArrayEsperado = 20;
+        Exercito exe = this.criarExercito();
+        
+        exe.agruparPorStatus();
         exe.agruparPorStatus();
         
         assertEquals(tamanhoArrayEsperado, exe.getExercitoAgrupadoPorStatus().get(Status.VIVO).size());
@@ -68,12 +79,8 @@ public class ExercitoTest
     @Test
     public void buscarElfosVivos()
     {
-        int tamanhoEsperado = 3;
-        Exercito exe = new Exercito();
-        
-        exe.alistarElfo(new ElfoNoturno("Auriel"));
-        exe.alistarElfo(new ElfoVerde("Elfo2"));
-        exe.alistarElfo(new ElfoNoturno("Elfo3"));
+        int tamanhoEsperado = 20;
+        Exercito exe = this.criarExercito();
         
         ArrayList<Elfo> elfos = exe.buscar(Status.VIVO);
         
@@ -84,12 +91,49 @@ public class ExercitoTest
     @Test
     public void buscarElfosMortos()
     {
+        int tamanhoEsperado = 1;
+        Exercito exe = this.criarExercito();
+        
+        exe.alistarElfo(this.criarElfoMorto("Auriel"));
+        
+        ArrayList<Elfo> elfos = exe.buscar(Status.MORTO);
+        
+        assertEquals(tamanhoEsperado, elfos.size());
+        assertTrue(elfos != null);
+    }
+    
+    @Test
+    public void buscarElfosMortosSemMortos()
+    {
         Exercito exe = new Exercito();
         
         exe.alistarElfo(new ElfoNoturno("Auriel"));
         
         ArrayList<Elfo> elfos = exe.buscar(Status.MORTO);
         
-        assertTrue(elfos == null);
+        assertEquals(null, elfos);
+    }
+    
+    private Exercito criarExercito()
+    {
+        Exercito exe = new Exercito();
+        
+        for(int i = 0; i < 10; i++)
+        {
+            exe.alistarElfo(new ElfoVerde("ElfoVerde" + i));
+            exe.alistarElfo(new ElfoNoturno("ElfoNoturno" + i));
+        }
+        
+        return exe;
+    }
+    
+    private ElfoNoturno criarElfoMorto(String nome)
+    {
+        ElfoNoturno elfo = new ElfoNoturno(nome, 10000);
+        
+        while(elfo.getVidaElfoNoturno() != 0) 
+            elfo.atirarFlechas();
+        
+        return elfo;
     }
 }
