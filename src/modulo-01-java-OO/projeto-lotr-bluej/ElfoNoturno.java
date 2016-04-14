@@ -45,7 +45,7 @@ public class ElfoNoturno extends Elfo
         return this.status == Status.MORTO;
     }
     
-    public float getVida()
+    public float getVidaElfoNoturno()
     {
         return this.vida;
     }
