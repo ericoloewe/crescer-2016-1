@@ -114,6 +114,18 @@ public class ExercitoTest
         assertEquals(null, elfos);
     }
     
+    private ArrayList<Dwarf> criarExercitoDeDwarfs()
+    {
+        ArrayList<Dwarf> exe = new ArrayList<>();
+        
+        for(int i = 0; i < 10; i++)
+        {
+            exe.add(new Dwarf("Dwarf" + i));
+        }
+        
+        return exe;
+    }
+    
     private Exercito criarExercito()
     {
         Exercito exe = new Exercito();
