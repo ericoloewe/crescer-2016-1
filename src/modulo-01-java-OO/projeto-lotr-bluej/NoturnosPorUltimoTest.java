@@ -11,7 +11,6 @@ public class NoturnosPorUltimoTest
     {
         Estrategia exe = this.criarExercitoComEstrategiaArteDaGuerra();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
-        Estrategia exeEsperado = this.criarExercitoComEstrategiaArteDaGuerra();
         boolean elfosEstaoEmOrdem = true, acabouElfosVerdes = false;
         
         exe.atacar(exeDwarfs);
@@ -35,6 +34,34 @@ public class NoturnosPorUltimoTest
         }
         
         assertTrue(elfosEstaoEmOrdem);
+    }
+    
+    @Test
+    public void atacarDwarfsSemExercito()
+    {
+        Estrategia exe = new NoturnosPorUltimo(new Exercito());
+        ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
+        
+        exe.atacar(exeDwarfs);
+        
+        for(Dwarf dwarf : exeDwarfs)
+        {
+            assertEquals(dwarf.getVida(), 110);
+        }
+    }
+    
+    @Test
+    public void atacarDwarfsComNull()
+    {
+        Estrategia exe = new NoturnosPorUltimo(new Exercito());
+        ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
+        
+        exe.atacar(exeDwarfs);
+        
+        for(Dwarf dwarf : exeDwarfs)
+        {
+            assertEquals(dwarf.getVida(), 110);
+        }
     }
     
     private ArrayList<Dwarf> criarExercitoDeElfos(int n)
