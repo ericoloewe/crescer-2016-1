@@ -42,6 +42,34 @@ public class ArteDaGuerraTest
         }
     }
     
+    @Test
+    public void atacarDwarfsSemExercito()
+    {
+        Estrategia exe = new ArteDaGuerra(new Exercito());
+        ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
+        
+        exe.atacar(exeDwarfs);
+        
+        for(Dwarf dwarf : exeDwarfs)
+        {
+            assertEquals(dwarf.getVida(), 110);
+        }
+    }
+    
+    @Test
+    public void atacarDwarfsComNull()
+    {
+        Estrategia exe = new ArteDaGuerra(null);
+        ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
+        
+        exe.atacar(exeDwarfs);
+        
+        for(Dwarf dwarf : exeDwarfs)
+        {
+            assertEquals(dwarf.getVida(), 110);
+        }
+    }
+    
     private ArrayList<Dwarf> criarExercitoDeDwarfs(int n)
     {
         ArrayList<Dwarf> exe = new ArrayList<>();
