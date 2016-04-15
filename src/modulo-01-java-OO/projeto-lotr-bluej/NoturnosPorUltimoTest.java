@@ -53,7 +53,7 @@ public class NoturnosPorUltimoTest
     @Test
     public void atacarDwarfsComNull()
     {
-        Estrategia exe = new NoturnosPorUltimo(new Exercito());
+        Estrategia exe = new NoturnosPorUltimo(null);
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         
         exe.atacar(exeDwarfs);
