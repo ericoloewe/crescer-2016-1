@@ -22,13 +22,12 @@ public class ArteDaGuerra implements Estrategia
     
     public void atacar(ArrayList<Dwarf> hordaDeDwarfs)
     {
-        if(this.exercito != null)
-        {            
-            this.exercitoOrdenado = ordenarExercitoParaOAtaque(hordaDeDwarfs);
-            for (Elfo elfo : this.exercitoOrdenado) 
-            {
-                elfoAtacarDwarfs(elfo, hordaDeDwarfs);
-            }
+        if(this.exercito == null)
+            return;         
+        this.exercitoOrdenado = ordenarExercitoParaOAtaque(hordaDeDwarfs);
+        for (Elfo elfo : this.exercitoOrdenado) 
+        {
+            elfoAtacarDwarfs(elfo, hordaDeDwarfs);
         }
     }
     

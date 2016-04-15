@@ -22,6 +22,8 @@ public class NoturnosPorUltimo implements Estrategia
     
     public void atacar(ArrayList<Dwarf> hordaDeDwarfs)
     {
+        if(this.exercito == null)
+            return;
         ArrayList<Elfo> exercitoAAtacar = new ArrayList<>();
 
         exercitoAAtacar.addAll(this.exercito.getExercito().values());
