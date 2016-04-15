@@ -88,6 +88,34 @@ public class AtaqueIntercaladoTest
         assertTrue(elfosIntercalados);
     }
     
+    @Test
+    public void atacarDwarfsSemExercito()
+    {
+        Estrategia exe = new AtaqueIntercalado(new Exercito());
+        ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
+        
+        exe.atacar(exeDwarfs);
+        
+        for(Dwarf dwarf : exeDwarfs)
+        {
+            assertEquals(dwarf.getVida(), 110);
+        }
+    }
+    
+    @Test
+    public void atacarDwarfsComNull()
+    {
+        Estrategia exe = new AtaqueIntercalado(null);
+        ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
+        
+        exe.atacar(exeDwarfs);
+        
+        for(Dwarf dwarf : exeDwarfs)
+        {
+            assertEquals(dwarf.getVida(), 110);
+        }
+    }
+    
     private ArrayList<Dwarf> criarExercitoDeDwarfs(int n)
     {
         ArrayList<Dwarf> exe = new ArrayList<>();
