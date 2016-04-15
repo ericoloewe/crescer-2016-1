@@ -100,6 +100,7 @@ public class AtaqueIntercaladoTest
         {
             assertEquals(dwarf.getVida(), 110);
         }
+        assertEquals(new ArrayList<Elfo>(), exe.getOrdemDoUltimoAtaque());
     }
     
     @Test

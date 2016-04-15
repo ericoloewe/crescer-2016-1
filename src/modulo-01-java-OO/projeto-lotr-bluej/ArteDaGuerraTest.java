@@ -54,6 +54,7 @@ public class ArteDaGuerraTest
         {
             assertEquals(dwarf.getVida(), 110);
         }
+        assertEquals(new ArrayList<Elfo>(), exe.getOrdemDoUltimoAtaque());
     }
     
     @Test
