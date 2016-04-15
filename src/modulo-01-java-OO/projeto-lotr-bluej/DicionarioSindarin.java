@@ -13,7 +13,7 @@ public class DicionarioSindarin
         
         System.out.println("Digite a palavra que você deseja traduzir");
         String palavra = scanner.nextLine();
-        System.out.println(palavra.toUpperCase() + " significa: " + tradutor.traduzir(palavra));
+        System.out.println(palavra + " significa: " + tradutor.traduzir(palavra));
     }
     
     private static TradutorSindarin criarTradutor(String idioma)
