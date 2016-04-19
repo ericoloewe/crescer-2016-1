@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Pedido_Cliente_FK" directorySegmentName="seg_0" id="F88AC4F7-753A-27AD-5256-60AA32758284">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:01:04 UTC</createdTime>
+<generatorID>8AA1118A-C45F-58E9-B60F-F91B075F3139</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<sourcePk>976601BE-8357-BB9E-3BBC-B768A6C04591</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D2B91A58-656C-00F8-323C-03E623CFC8D0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EB763EC9-B400-B0FD-7AB0-01A8DEFC9A06</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

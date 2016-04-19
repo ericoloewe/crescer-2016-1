@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="728A545A-150D-48DB-36D2-7C016EDA14A3" name="Produto">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:41:02 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDProduto" id="B7474C06-BC6A-905C-0C92-6F8DD97AFF8C">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:41:24 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nome" id="2A65564F-70EB-3C1C-7759-F5025292A2BB">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:42:12 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="07EED3A7-ABB7-EE37-6138-41B65892D030" name="Produto PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:41:51 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B7474C06-BC6A-905C-0C92-6F8DD97AFF8C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

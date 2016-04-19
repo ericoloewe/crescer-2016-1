@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7A3A94FE-FC4D-D8FD-E0BF-3B5C5742992B" name="Contrato">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:17:19 UTC</createdTime>
+<generatorID>B27FC492-0E7A-A217-6E55-CCC1ECFDFE1E</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDContrato" id="FBBC88BA-08F5-366F-A884-ECF26E4ECDFD">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:17:19 UTC</createdTime>
+<generatorID>BB52E04C-8F05-FE4F-41DF-084D70F80215</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Clientes_IDCliente" id="F5A0F884-ABE3-DFBC-42AE-CD3932E8BBE0">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:17:19 UTC</createdTime>
+<generatorID>CF0837C3-CDA9-4C0C-4CB9-6879DD5A3501</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="40997506-F344-12DC-ABFF-756B7E42D3F0" referredColumn="CF84E800-1E17-1B93-81AD-6C7ED5ED1367"/>
+</associations>
+</Column>
+<Column name="Produto_IDProduto" id="B5E31897-1FAE-E85F-F582-CB3AA7476576">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:17:19 UTC</createdTime>
+<generatorID>DA986BB0-DBFC-D2B3-E08E-83821B85B776</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AB98A070-9F54-DE0C-8821-06FF823B645D" referredColumn="DA20207D-D055-8732-73B4-D22A8D5E8621"/>
+</associations>
+</Column>
+<Column name="DataInicio" id="F05C5B7B-BEF1-2CEF-3773-5D8C5E22F543">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:17:19 UTC</createdTime>
+<generatorID>799694F1-D6E9-FC8A-08D4-E1E92F977A15</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataFim" id="0F978C39-FE16-DAEE-196D-F255B0D6C8E2">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:21:11 UTC</createdTime>
+<ownerDesignName>seguradora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1C9281A4-31C7-83A1-955D-E62C2129EA7A" name="Contrato_PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:17:19 UTC</createdTime>
+<generatorID>AFFE97FB-FEEA-31C6-0DB5-E0274A61E631</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBBC88BA-08F5-366F-A884-ECF26E4ECDFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="89B52034-DB2E-781E-0C02-247959C7E708" name="Contrato_Clientes_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:17:19 UTC</createdTime>
+<generatorID>D710A1A0-DA88-DCDA-0800-77A4B7D184F5</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F5A0F884-ABE3-DFBC-42AE-CD3932E8BBE0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1AA096AD-B652-01A4-9B2D-68B813EBEA03" name="Contrato_Produto_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:17:19 UTC</createdTime>
+<generatorID>15810CE9-A26D-6107-E5C1-CC24B2E394DB</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5E31897-1FAE-E85F-F582-CB3AA7476576"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

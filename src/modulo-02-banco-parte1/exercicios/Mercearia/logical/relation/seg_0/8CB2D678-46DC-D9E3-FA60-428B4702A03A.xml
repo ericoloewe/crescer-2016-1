@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ItemPedido" directorySegmentName="seg_0" id="8CB2D678-46DC-D9E3-FA60-428B4702A03A">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:44:56 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>728A545A-150D-48DB-36D2-7C016EDA14A3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EB763EC9-B400-B0FD-7AB0-01A8DEFC9A06</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="Produto IDProduto" id="680F1259-E277-A79D-80EE-3691A8BEB508">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:54:47 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="Pedido IDPedido" id="3238B56F-6455-9F24-B5C1-A124AB8AB13A">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:54:47 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="Quantidade" id="DB63E4FE-855D-D935-A5FA-19D311FEF291">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:54:47 UTC</createdTime>
+<generatorID>F5CD3B4E-8FDE-B4C2-EC9D-763D16AE97A9</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,9,3</ownDataTypeParameters>
+</attribute>
+<attribute name="ValorUnitario" id="75FECEDC-E9F9-8DD2-DB7F-B256E540688B">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:54:47 UTC</createdTime>
+<generatorID>E90F19A2-43B3-4C7F-3857-064C59626B50</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,9,2</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

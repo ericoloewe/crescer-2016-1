@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="45AFC08D-75E3-14FC-0E64-2F9EDCC65020" name="Produto">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:17:19 UTC</createdTime>
+<generatorID>6E24A9C7-9761-6F48-D877-C02925C3B56D</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDProduto" id="DA20207D-D055-8732-73B4-D22A8D5E8621">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:17:19 UTC</createdTime>
+<generatorID>13D284FD-C970-79F7-75DF-172CC34BC46E</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo" id="CF7ACFBB-5E43-2536-315A-2C858BD8C06D">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:23:59 UTC</createdTime>
+<ownerDesignName>seguradora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<listOfValues>
+<valueDef value="Carro" description=""/>
+<valueDef value="Casa" description=""/>
+<valueDef value="Vida" description=""/>
+</listOfValues>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descricao" id="CBB48694-4D6D-DF85-5B08-888672F6EA44">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:27:09 UTC</createdTime>
+<ownerDesignName>seguradora</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>max</dataTypeSize>
+<ownDataTypeParameters>max,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5AA86A36-F936-7EEE-F789-7FA4DBC3FB28" name="Produto_PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:17:19 UTC</createdTime>
+<generatorID>DBF0211D-F990-B5A7-0ED3-969B07A07B53</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA20207D-D055-8732-73B4-D22A8D5E8621"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

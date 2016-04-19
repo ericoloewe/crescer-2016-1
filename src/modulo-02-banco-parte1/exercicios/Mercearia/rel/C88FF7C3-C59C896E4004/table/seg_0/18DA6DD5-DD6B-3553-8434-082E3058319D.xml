@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="18DA6DD5-DD6B-3553-8434-082E3058319D" name="Produto">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:45:45 UTC</createdTime>
+<generatorID>728A545A-150D-48DB-36D2-7C016EDA14A3</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDProduto" id="BAA6688B-E8BF-DFA3-7F66-8809E23A2C21">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:45:45 UTC</createdTime>
+<generatorID>B7474C06-BC6A-905C-0C92-6F8DD97AFF8C</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="2A5DDB6B-27FD-5622-7450-754980A1020C">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:45:45 UTC</createdTime>
+<generatorID>2A65564F-70EB-3C1C-7759-F5025292A2BB</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DCC58846-1263-91DC-DD3D-0976B09436FD" name="Produto_PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:45:45 UTC</createdTime>
+<generatorID>07EED3A7-ABB7-EE37-6138-41B65892D030</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BAA6688B-E8BF-DFA3-7F66-8809E23A2C21"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6E24A9C7-9761-6F48-D877-C02925C3B56D" name="Produto">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:12:34 UTC</createdTime>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDProduto" id="13D284FD-C970-79F7-75DF-172CC34BC46E">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:13:09 UTC</createdTime>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Tipo" id="A838565E-39D1-784C-8277-0F1EBFF55682">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:26:03 UTC</createdTime>
+<generatorID>CF7ACFBB-5E43-2536-315A-2C858BD8C06D</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<listOfValues>
+<valueDef value="Carro" description=""/>
+<valueDef value="Casa" description=""/>
+<valueDef value="Vida" description=""/>
+</listOfValues>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Descricao" id="B976472E-0B4D-CCA4-2357-D8A64E812EE3">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:27:30 UTC</createdTime>
+<generatorID>CBB48694-4D6D-DF85-5B08-888672F6EA44</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>max</dataTypeSize>
+<ownDataTypeParameters>max,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DBF0211D-F990-B5A7-0ED3-969B07A07B53" name="Produto PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:13:21 UTC</createdTime>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>13D284FD-C970-79F7-75DF-172CC34BC46E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

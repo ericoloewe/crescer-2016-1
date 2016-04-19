@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B27FC492-0E7A-A217-6E55-CCC1ECFDFE1E" name="Contrato">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:13:25 UTC</createdTime>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDContrato" id="BB52E04C-8F05-FE4F-41DF-084D70F80215">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:13:30 UTC</createdTime>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Clientes IDCliente" id="CF0837C3-CDA9-4C0C-4CB9-6879DD5A3501">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:14:15 UTC</createdTime>
+<generatorID>D710A1A0-DA88-DCDA-0800-77A4B7D184F5</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<referedAttribute>4EB3DDC3-F041-C4C8-90C6-C07327DD2E0D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Produto IDProduto" id="DA986BB0-DBFC-D2B3-E08E-83821B85B776">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:14:24 UTC</createdTime>
+<generatorID>15810CE9-A26D-6107-E5C1-CC24B2E394DB</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<referedAttribute>13D284FD-C970-79F7-75DF-172CC34BC46E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DataInicio" id="799694F1-D6E9-FC8A-08D4-E1E92F977A15">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:14:43 UTC</createdTime>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DataFim" id="F8994CF1-F82D-E686-10DF-0F8C473934A1">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:21:20 UTC</createdTime>
+<generatorID>0F978C39-FE16-DAEE-196D-F255B0D6C8E2</generatorID>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AFFE97FB-FEEA-31C6-0DB5-E0274A61E631" name="Contrato PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:13:49 UTC</createdTime>
+<ownerDesignName>seguradora</ownerDesignName>
+<engineerTo>
+<item key="A5DD7950-0396-A511-7F47-4135EA9F1722" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BB52E04C-8F05-FE4F-41DF-084D70F80215</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

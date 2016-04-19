@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EB763EC9-B400-B0FD-7AB0-01A8DEFC9A06" name="Pedido">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:43:06 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDPedido" id="FD1A69D3-A15F-CCE1-C66B-AA2EA12A8A3E">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:43:16 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DataPedido" id="E7F78672-8450-54E1-0E49-2B84127CD59D">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:43:30 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDCliente" id="B481D4CD-357D-800B-79FD-D29A9251A194">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:01:04 UTC</createdTime>
+<generatorID>F88AC4F7-753A-27AD-5256-60AA32758284</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<referedAttribute>E854C76A-E2F2-6516-C083-6F0E9CC9DC24</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="499DB12B-408A-3098-DC69-6D2EBB15EC58" name="Pedido PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:43:28 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<engineerTo>
+<item key="C88FF7C3-1B4C-6FEF-3985-C59C896E4004" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FD1A69D3-A15F-CCE1-C66B-AA2EA12A8A3E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

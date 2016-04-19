@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="84717EF2-BEFB-4B5B-D657-4189213AC060" name="Pedido">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:45:45 UTC</createdTime>
+<generatorID>EB763EC9-B400-B0FD-7AB0-01A8DEFC9A06</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDPedido" id="4D9DE306-F90E-2D66-998A-831BFD36FED7">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:45:45 UTC</createdTime>
+<generatorID>FD1A69D3-A15F-CCE1-C66B-AA2EA12A8A3E</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataPedido" id="004CDBB2-311E-FEB6-F4AD-EC77B738D43A">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:45:45 UTC</createdTime>
+<generatorID>E7F78672-8450-54E1-0E49-2B84127CD59D</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDCliente" id="6BAEB3B4-EEEF-CB8D-7D85-9A35EB865105">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:59:36 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8AA1118A-C45F-58E9-B60F-F91B075F3139" referredColumn="30C74358-5941-F73D-E0C4-451C42357CED"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="19EA1829-79C1-14BE-05BC-3AB27F632596" name="Pedido_PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:45:45 UTC</createdTime>
+<generatorID>499DB12B-408A-3098-DC69-6D2EBB15EC58</generatorID>
+<ownerDesignName>mercearia</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D9DE306-F90E-2D66-998A-831BFD36FED7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B2614599-E9E4-CC4A-74D1-9042EE106F23" name="Pedido_Cliente_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 20:00:31 UTC</createdTime>
+<ownerDesignName>mercearia</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BAEB3B4-EEEF-CB8D-7D85-9A35EB865105"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
