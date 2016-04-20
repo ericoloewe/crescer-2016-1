@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Mercearia" id="E816AB81-9EC0-E11F-312F-F2B563445BAC" version="3.5">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-19 19:38:10 UTC</createdTime>
+<ownerDesignName>Mercearia</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E816AB81-9EC0-E11F-312F-F2B563445BAC</designId>
+</OSDM_Design>
