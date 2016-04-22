@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5A6E93F3-5AD9-AE24-B091-FE5C7914BBBA" name="Acessorio">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:45:07 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDAcessorio" id="0A238018-B192-C7A9-7E77-F257F819BB9C">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:45:19 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDCarro" id="C1D71349-21D8-C6A5-75E4-E427115ECDC5">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:46:28 UTC</createdTime>
+<generatorID>734911A9-E7BA-F42D-3B1B-AFE3239BAFF9</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<referedAttribute>B3FC97C1-F46B-208A-4E32-DD5B5FC9604E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8EEA6773-C2CE-C031-73F3-49A1AD706E7D" name="Acessorio PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:45:27 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0A238018-B192-C7A9-7E77-F257F819BB9C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

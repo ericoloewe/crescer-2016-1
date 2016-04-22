@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="62FE8635-9368-1EC8-E963-AD2DCE84509D" name="Pessoa">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>9A4C3740-3709-D468-3310-7FEFE2E0A061</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDPessoa" id="EC50AAA7-EC48-72EA-273E-066370562C60">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>9684B96C-883C-F889-DEFD-31A6DC7BA1A5</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="645A0FCA-594F-950C-C762-C4F31C2C2E86">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>55E78363-49FC-C73A-C207-AE178ADEEC68</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CPF" id="10D20155-ABC6-F6FC-7F1E-AA04494E8571">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>92DE9EE2-17E1-F808-9EC0-64C39018FA5F</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TemCNHProvisoria" id="BFAF1B9E-5FA2-AD34-8CBC-ABB43D1B50D7">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>20968B11-BBA6-747D-F667-23951D5E3446</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="67AB240E-538E-C83D-814B-8F22FF70A902" name="Pessoa_PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>024087A0-0BA8-40B1-71B7-DB360602F48E</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC50AAA7-EC48-72EA-273E-066370562C60"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

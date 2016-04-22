@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9E6A1606-E95C-1391-2832-2BDB184DF9A7" name="Acessorio">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>5A6E93F3-5AD9-AE24-B091-FE5C7914BBBA</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDAcessorio" id="7F8B6A52-7EAE-B907-0DAA-890A2319A9E1">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>0A238018-B192-C7A9-7E77-F257F819BB9C</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Carro_IDCarro" id="12C0FA75-680C-8A59-C627-48C818923E74">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>C1D71349-21D8-C6A5-75E4-E427115ECDC5</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="66358D31-43FF-AC4E-A608-7CC50BC8E5BE" referredColumn="3929BF5D-1166-28CB-F705-0E273A684422"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="76FC70CF-1827-354F-081C-41A59B8F72AC" name="Acessorio_PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>8EEA6773-C2CE-C031-73F3-49A1AD706E7D</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F8B6A52-7EAE-B907-0DAA-890A2319A9E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3A6EDB4-5A40-7EEA-035D-E695EF2D0B64" name="Acessorio_Carro_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>734911A9-E7BA-F42D-3B1B-AFE3239BAFF9</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12C0FA75-680C-8A59-C627-48C818923E74"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

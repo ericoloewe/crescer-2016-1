@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="24AF9AB3-47C6-19A8-F837-FA56B8D94E82" name="Adicionais">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>F8EAB00E-3821-1DE9-93FA-C2E08E6184C3</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDAdicional" id="55FBE304-1A80-AAE9-BA13-E3D6EB1E6A6D">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:19:29 UTC</createdTime>
+<generatorID>BFC643BC-4B49-ED8A-7606-983DE521E58E</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Contrato_IDContrato" id="C935D8C5-B6C4-8AF8-7E67-D09B257E9B47">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>CB27ACB5-B114-E208-ED9F-02E7DA3A257F</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="378F76EC-0390-3F16-3942-65BC29586092" referredColumn="5DE540B4-12C5-374A-CFE9-BCAF13988C3C"/>
+</associations>
+</Column>
+<Column name="Nome" id="82875D55-5FEB-0309-27F2-984F5ECCD25D">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:22:29 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F927FEB9-331B-67CA-95D7-00A10E445209" name="Adicionais_Contrato_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>73FBC506-DAF4-38CB-CF8E-5F2443F60083</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C935D8C5-B6C4-8AF8-7E67-D09B257E9B47"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

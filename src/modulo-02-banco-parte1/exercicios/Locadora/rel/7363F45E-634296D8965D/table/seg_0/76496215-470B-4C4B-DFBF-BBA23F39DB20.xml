@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="76496215-470B-4C4B-DFBF-BBA23F39DB20" name="Cliente">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>AAB7BA73-B582-602A-3DD5-98645C828B72</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDCliente" id="C9739D94-1C00-B27F-BCAD-D4E8091BB75A">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>CCF2A070-B28B-65C9-0341-453DE4C92734</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Pessoa_IDPessoa" id="E141B82B-7530-C34E-70C0-5936D365BEEC">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>C99105DC-E8CC-2DC8-9959-8A1817A966D2</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="20422090-958C-821A-F980-11D47D19E534" referredColumn="EC50AAA7-EC48-72EA-273E-066370562C60"/>
+</associations>
+</Column>
+<Column name="Empresa_IDEmpresa" id="C7602BEB-C631-3C80-4283-B31D1A6DE373">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>2B11E30A-E938-9AA5-EBFE-6A3638F43A72</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D84FC58C-C65C-0F06-245B-E384567F3F9A" referredColumn="DF5ADE03-6BAF-A072-F1BD-1F8DE282B834"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="41EEF4F0-7615-38BD-B468-A54408E44180" name="Cliente_PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>5057A318-A4A1-F043-5200-B90AAD367BDA</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9739D94-1C00-B27F-BCAD-D4E8091BB75A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A9F05895-6463-49D2-B5FA-2CF69577A1B7" name="Cliente__IDX">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C021D45F-EEE0-0873-C98B-72C9EAD5520B</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="C7602BEB-C631-3C80-4283-B31D1A6DE373"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3EC1ECDD-AFB9-6B92-AF16-5DA5E025D3B8" name="Cliente__IDXv1">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>F61CD5D9-9051-B41F-5512-4871DB1E24BA</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="E141B82B-7530-C34E-70C0-5936D365BEEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66CB005C-2ECB-BC0D-9B1E-6532FA556118" name="Cliente_Empresa_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>C021D45F-EEE0-0873-C98B-72C9EAD5520B</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7602BEB-C631-3C80-4283-B31D1A6DE373"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3BB8424E-CEA1-9BC0-9221-0C65467222E3" name="Cliente_Pessoa_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>F61CD5D9-9051-B41F-5512-4871DB1E24BA</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E141B82B-7530-C34E-70C0-5936D365BEEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

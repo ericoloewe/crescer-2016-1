@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FA86EBE2-460D-CB16-8653-283CAADC28F3" name="Empresa">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:11:22 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDEmpresa" id="542CBBBF-0B93-030F-3CA5-C4D62F0D93FD">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:12:11 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nome" id="AB9D074F-0EFC-0C42-CAAE-F5831A6E681B">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:12:33 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CNPJ" id="D1C05F74-05E1-7AD9-AFFA-AD1EB53B05A6">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:12:45 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1F20F971-F894-C095-CF1E-23FFFE9D5E24" name="Empresa PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:12:22 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>542CBBBF-0B93-030F-3CA5-C4D62F0D93FD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

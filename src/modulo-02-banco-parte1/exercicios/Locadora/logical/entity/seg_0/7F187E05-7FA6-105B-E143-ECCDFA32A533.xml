@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7F187E05-7FA6-105B-E143-ECCDFA32A533" name="Carro">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:42:18 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDCarro" id="B3FC97C1-F46B-208A-4E32-DD5B5FC9604E">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:42:38 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDLocadora" id="7993DC3A-4A0A-F226-EE69-175DD7A1E18B">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:46:04 UTC</createdTime>
+<generatorID>311981FB-2619-C4CE-6E2E-A1A1F35EF456</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<referedAttribute>83C5F01E-C927-227C-C29F-D0453C5CBA85</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDFabricante" id="60A65B7E-A1ED-0B21-D7F2-00E4BA9E5D14">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:46:48 UTC</createdTime>
+<generatorID>B5D86F0F-F153-34E5-CFDB-7B70AED8BB39</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<referedAttribute>88C12266-75F3-5A26-E94F-F01F69F4A20A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDModelo" id="492AD3EC-AB8F-ED67-9CE1-CF46E42D3D76">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:47:12 UTC</createdTime>
+<generatorID>7FCD336B-D5FC-5692-263C-A8A8A652722F</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<referedAttribute>FBD447FF-DD05-15C0-BBBB-2D976953B360</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BD88F878-AAC6-3B38-A1BF-7679752EBE1B" name="Carro PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:44:18 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B3FC97C1-F46B-208A-4E32-DD5B5FC9604E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

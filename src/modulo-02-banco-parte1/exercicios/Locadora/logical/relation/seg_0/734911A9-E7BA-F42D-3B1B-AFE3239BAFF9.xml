@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="AcessoriosDoCarro" directorySegmentName="seg_0" id="734911A9-E7BA-F42D-3B1B-AFE3239BAFF9">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:46:28 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<sourcePk>BD88F878-AAC6-3B38-A1BF-7679752EBE1B</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7F187E05-7FA6-105B-E143-ECCDFA32A533</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5A6E93F3-5AD9-AE24-B091-FE5C7914BBBA</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

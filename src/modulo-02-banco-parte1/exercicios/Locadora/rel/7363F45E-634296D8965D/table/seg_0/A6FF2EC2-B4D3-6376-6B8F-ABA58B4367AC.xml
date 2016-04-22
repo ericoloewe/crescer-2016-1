@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A6FF2EC2-B4D3-6376-6B8F-ABA58B4367AC" name="Fabricante">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>7E4DE7F7-1EC9-FE0B-2A0F-69CD94A5B95C</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDFabricante" id="2570B1CB-0807-6E60-EEB3-475A4FDA6D16">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>88C12266-75F3-5A26-E94F-F01F69F4A20A</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="553B6CE7-A88D-9E00-A8C3-3484BE1AD58C">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:21:43 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C9A7D221-352F-4C0B-F4FF-D51A632C897F" name="Fabricante_PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>2D71F1F5-3C07-3799-CC9E-2E6D306ACE57</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2570B1CB-0807-6E60-EEB3-475A4FDA6D16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7B0EF5BF-E64F-2877-F3DC-07A3D523EB59" name="UsuarioDoVeiculo">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>706784A6-1581-0B05-A4B2-9AEC3E87E249</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDUsuarioDoVeiculo" id="03F8BE3A-D777-BCC4-5C5A-5D022A718F08">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>A6AB82D9-C457-29A5-D850-33722530F74F</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Pessoa_IDPessoa" id="318E8CCF-DD42-4748-06DC-CBFD8DE7375C">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>609DBC59-1CAD-0A59-5DEB-282F0AFAD831</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="195F4565-1767-65D2-5D67-921CEBF5900C" referredColumn="EC50AAA7-EC48-72EA-273E-066370562C60"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="49DF1144-4599-CE92-7D89-21B1A129D423" name="UsuarioDoVeiculo__IDX">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>34FA7D79-0971-6218-73C7-F2E3BEAFF802</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="318E8CCF-DD42-4748-06DC-CBFD8DE7375C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="839EE8D3-F992-8F75-4167-F2F7EE3B2D53" name="UsuarioDoVeiculo_Pessoa_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:16:51 UTC</createdTime>
+<generatorID>34FA7D79-0971-6218-73C7-F2E3BEAFF802</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="318E8CCF-DD42-4748-06DC-CBFD8DE7375C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

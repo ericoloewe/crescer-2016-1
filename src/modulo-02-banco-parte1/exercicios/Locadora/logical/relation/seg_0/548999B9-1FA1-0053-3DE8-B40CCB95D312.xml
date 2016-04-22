@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ContratosDaLocadora" directorySegmentName="seg_0" id="548999B9-1FA1-0053-3DE8-B40CCB95D312">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 19:55:21 UTC</createdTime>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<sourcePk>5D2660DA-E33A-A712-713F-89AD82DE8572</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0FC21BFF-60EE-B9D3-D643-EC8A0853E5B3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E460378C-1C36-6D41-EE4D-F6EB193F63F5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
