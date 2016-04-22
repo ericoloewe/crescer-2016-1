@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="IDLocadora" id="7993DC3A-4A0A-F226-EE69-175DD7A1E18B">
+<Attribute name="Locadora IDLocadora" id="7993DC3A-4A0A-F226-EE69-175DD7A1E18B">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 19:46:04 UTC</createdTime>
 <generatorID>311981FB-2619-C4CE-6E2E-A1A1F35EF456</generatorID>
@@ -41,7 +41,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="IDFabricante" id="60A65B7E-A1ED-0B21-D7F2-00E4BA9E5D14">
+<Attribute name="Fabricante IDFabricante" id="60A65B7E-A1ED-0B21-D7F2-00E4BA9E5D14">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 19:46:48 UTC</createdTime>
 <generatorID>B5D86F0F-F153-34E5-CFDB-7B70AED8BB39</generatorID>
@@ -55,7 +55,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="IDModelo" id="492AD3EC-AB8F-ED67-9CE1-CF46E42D3D76">
+<Attribute name="Modelo IDModelo" id="492AD3EC-AB8F-ED67-9CE1-CF46E42D3D76">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 19:47:12 UTC</createdTime>
 <generatorID>7FCD336B-D5FC-5692-263C-A8A8A652722F</generatorID>
@@ -69,18 +69,48 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Motor" id="A6227DE3-1941-B0D0-2B9D-9E5D95ECDE81">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:23:10 UTC</createdTime>
+<generatorID>C928EAA5-4CAC-CE09-79CB-509EAEFE389A</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDContrato" id="99E395C5-C76E-1596-B289-B2EEA3C97D30">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:23:10 UTC</createdTime>
+<generatorID>E8184479-1245-B623-A23F-1D318CB32731</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<referedAttribute>378C7EE7-7D2A-FC30-B286-854FAD47CC3D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="BD88F878-AAC6-3B38-A1BF-7679752EBE1B" name="Carro PK">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 19:44:18 UTC</createdTime>
 <ownerDesignName>Locadora</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>B3FC97C1-F46B-208A-4E32-DD5B5FC9604E</attributeRef>
+<attributeRef>99E395C5-C76E-1596-B289-B2EEA3C97D30</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

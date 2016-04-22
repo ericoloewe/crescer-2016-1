@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ClientePodeSerUmaEmpresa" directorySegmentName="seg_0" id="C021D45F-EEE0-0873-C98B-72C9EAD5520B">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Cliente Empresa FK" directorySegmentName="seg_0" id="C021D45F-EEE0-0873-C98B-72C9EAD5520B">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 20:11:41 UTC</createdTime>
 <ownerDesignName>Locadora</ownerDesignName>

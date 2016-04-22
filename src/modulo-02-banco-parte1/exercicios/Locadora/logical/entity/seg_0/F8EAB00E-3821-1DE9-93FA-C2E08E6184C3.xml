@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="IDContrato" id="CB27ACB5-B114-E208-ED9F-02E7DA3A257F">
+<Attribute name="Contrato IDContrato" id="CB27ACB5-B114-E208-ED9F-02E7DA3A257F">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 20:08:38 UTC</createdTime>
 <generatorID>73FBC506-DAF4-38CB-CF8E-5F2443F60083</generatorID>
@@ -41,6 +41,20 @@
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nome" id="3908A69E-5201-CB57-C73F-212B413C705D">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:23:10 UTC</createdTime>
+<generatorID>82875D55-5FEB-0309-27F2-984F5ECCD25D</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

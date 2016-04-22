@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Tipo_Locacao" id="FDC744E6-1C84-CC05-C73D-A3E7CBC84502">
+<Attribute name="Tipo Locacao" id="FDC744E6-1C84-CC05-C73D-A3E7CBC84502">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 19:52:51 UTC</createdTime>
 <ownerDesignName>Locadora</ownerDesignName>
@@ -46,7 +46,7 @@
 </listOfValues>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="IDCliente" id="7C749CF2-4D05-A6DA-78B9-018D244BF62B">
+<Attribute name="Cliente IDCliente" id="7C749CF2-4D05-A6DA-78B9-018D244BF62B">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 19:54:56 UTC</createdTime>
 <generatorID>3ED76833-9608-0EB5-EF75-5BF7FA62B858</generatorID>
@@ -60,7 +60,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="IDLocadora" id="4C23D31F-357D-439B-E136-76AB4BDB0A36">
+<Attribute name="Locadora IDLocadora" id="4C23D31F-357D-439B-E136-76AB4BDB0A36">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 19:55:21 UTC</createdTime>
 <generatorID>548999B9-1FA1-0053-3DE8-B40CCB95D312</generatorID>
@@ -80,8 +80,9 @@
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 19:52:49 UTC</createdTime>
 <ownerDesignName>Locadora</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

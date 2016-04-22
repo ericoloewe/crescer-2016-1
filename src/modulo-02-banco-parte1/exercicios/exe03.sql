@@ -61,3 +61,15 @@ Select UF, Nome, COUNT(1) as QuantidadeDeCidadeIguais
 From Cidade
 Group By UF, Nome
 HAVING COUNT(1) > 1;
+
+Begin Transaction
+Go
+Update Cidade
+Set Nome = '*' + Nome
+Where Exists
+(
+	Select 1 
+	From Cidade cAux
+	Where Nome = cAux.Nome
+		And IDCidade = cAux.IDCidade
+);

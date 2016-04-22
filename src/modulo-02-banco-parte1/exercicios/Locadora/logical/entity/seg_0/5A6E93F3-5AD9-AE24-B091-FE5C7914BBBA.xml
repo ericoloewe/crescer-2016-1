@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="IDCarro" id="C1D71349-21D8-C6A5-75E4-E427115ECDC5">
+<Attribute name="Carro IDCarro" id="C1D71349-21D8-C6A5-75E4-E427115ECDC5">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 19:46:28 UTC</createdTime>
 <generatorID>734911A9-E7BA-F42D-3B1B-AFE3239BAFF9</generatorID>
@@ -41,14 +41,29 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="IDContrato" id="8BAEBD2D-D2BD-3C88-AA3F-EE7A4CA514B7">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:23:10 UTC</createdTime>
+<generatorID>734911A9-E7BA-F42D-3B1B-AFE3239BAFF9</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<referedAttribute>99E395C5-C76E-1596-B289-B2EEA3C97D30</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="8EEA6773-C2CE-C031-73F3-49A1AD706E7D" name="Acessorio PK">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 19:45:27 UTC</createdTime>
 <ownerDesignName>Locadora</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

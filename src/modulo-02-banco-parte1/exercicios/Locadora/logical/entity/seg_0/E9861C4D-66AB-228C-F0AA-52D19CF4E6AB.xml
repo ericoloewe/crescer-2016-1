@@ -27,14 +27,43 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Nome" id="BA34C233-22A4-FC16-F6C1-875A799EC8AD">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:23:10 UTC</createdTime>
+<generatorID>A8420B30-ACD6-9FCE-C488-B404EB3BCB5C</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ano" id="4C349157-124B-D15D-7CA8-856920FB26F5">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-04-22 20:23:10 UTC</createdTime>
+<generatorID>2BB08594-CEEC-9EB7-C7C6-2A95A39A7622</generatorID>
+<ownerDesignName>Locadora</ownerDesignName>
+<engineerTo>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="23438BE7-75EA-C5C5-747B-54313C58215A" name="Modelo PK">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-04-22 19:43:51 UTC</createdTime>
 <ownerDesignName>Locadora</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="true"/>
+<item key="7363F45E-968E-ADB3-19D8-634296D8965D" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
