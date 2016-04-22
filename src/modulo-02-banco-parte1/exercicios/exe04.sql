@@ -36,10 +36,32 @@ From Associado a
 Left Join Cidade c
 On a.IDCidade = c.IDCidade;
 
--- Exe04
+-- Exe05
 -- listar nome do empregado, nome do gerente e o departamento de cada um
-Select e.NomeEmpregado as Nome_Empregado,
-	e.NomeEmpregado as Nome_Empregado
+Select e.NomeEmpregado as Nome_Empregado, de.NomeDepartamento as Departamento_Empregado,
+	   g.NomeEmpregado as Nome_Gerente, dg.NomeDepartamento as Departamento_Gerente
 From Empregado e
 Inner Join empregado g
-On g.IDEmpregado = e.IDGerente;
+On g.IDEmpregado = e.IDGerente
+Left Join Departamento de
+On de.IDDepartamento = e.IDDepartamento
+Left Join Departamento dg
+On dg.IDDepartamento = g.IDDepartamento;
+
+-- Exe06
+-- listar nome do empregado, nome do gerente e o departamento de cada um
+Select e.IDEmpregado,
+      e.NomeEmpregado,
+      e.Cargo,
+      e.IDGerente,
+      e.DataAdmissao,
+      e.Comissao,
+      e.IDDepartamento,
+	  Case 
+		when de.Localizacao = 'SAO PAULO'
+			then '***'
+		else e.Salario
+		End Salario
+From Empregado e
+Left Join Departamento de
+On de.IDDepartamento = e.IDDepartamento;
