@@ -4,6 +4,7 @@ public class Exercito
 {
     private HashMap<String, Elfo> exercito = new HashMap<>();
     private HashMap<Status, ArrayList<Elfo>> exercitoAgrupadoPorStatus = new HashMap<>();
+    private Estrategia estrategia = new NoturnosPorUltimo();
     
     public HashMap<String, Elfo> getExercito()
     {
@@ -46,5 +47,20 @@ public class Exercito
     {
         this.agruparPorStatus();
         return this.exercitoAgrupadoPorStatus.get(status);
+    }
+    
+    public void atacar(ArrayList<Dwarf> alvo)
+    {
+        if(estrategia != null)
+            this.estrategia.atacar(new ArrayList<Elfo>(this.exercito.values()), alvo);
+    }
+    
+    public void mudarEstrategia(Estrategia estrategia)
+    {
+        this.estrategia = estrategia;
+    }
+    
+    public ArrayList<Elfo> getOrdemDoUltimoAtaque() {
+        return this.estrategia.getOrdemDoUltimoAtaque();
     }
 }
