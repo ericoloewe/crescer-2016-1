@@ -9,7 +9,7 @@ public class NoturnosPorUltimoTest
     @Test
     public void atacarDwarfs()
     {
-        Estrategia exe = this.criarExercitoComEstrategiaArteDaGuerra();
+        Exercito exe = this.criarExercitoComEstrategiaNoturnosPorUltimo();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         boolean elfosEstaoEmOrdem = true, acabouElfosVerdes = false;
         
@@ -39,7 +39,8 @@ public class NoturnosPorUltimoTest
     @Test
     public void atacarDwarfsSemExercito()
     {
-        Estrategia exe = new NoturnosPorUltimo(new Exercito());
+        Exercito exe = new Exercito();
+        exe.mudarEstrategia(new NoturnosPorUltimo());
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         
         exe.atacar(exeDwarfs);
@@ -54,7 +55,8 @@ public class NoturnosPorUltimoTest
     @Test
     public void atacarDwarfsComNull()
     {
-        Estrategia exe = new NoturnosPorUltimo(null);
+        Exercito exe = new Exercito();
+        exe.mudarEstrategia(null);
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         
         exe.atacar(exeDwarfs);
@@ -89,7 +91,7 @@ public class NoturnosPorUltimoTest
         return exe;
     }
     
-    private NoturnosPorUltimo criarExercitoComEstrategiaArteDaGuerra()
+    private Exercito criarExercitoComEstrategiaNoturnosPorUltimo()
     {
         Exercito exe = new Exercito();
         
@@ -98,8 +100,8 @@ public class NoturnosPorUltimoTest
             exe.alistarElfo(new ElfoVerde("ElfoVerde" + i));
             exe.alistarElfo(new ElfoNoturno("ElfoNoturno" + i));
         }
-        
-        return new NoturnosPorUltimo(exe);
+        exe.mudarEstrategia(new NoturnosPorUltimo());
+        return exe;
     }
     
     private ElfoNoturno criarElfoMorto(String nome)

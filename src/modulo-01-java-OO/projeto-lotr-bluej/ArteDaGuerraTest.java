@@ -11,13 +11,13 @@ public class ArteDaGuerraTest
     {
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(2);
         Exercito exe = new Exercito();
+        exe.mudarEstrategia(new ArteDaGuerra());
         exe.alistarElfo(new ElfoVerde("EV1"));
         exe.alistarElfo(new ElfoNoturno("EN1"));
         exe.alistarElfo(new ElfoNoturno("EN2"));
         exe.alistarElfo(new ElfoNoturno("EN3"));
-        ArteDaGuerra adg = new ArteDaGuerra(exe);
         
-        adg.atacar(exeDwarfs);
+        exe.atacar(exeDwarfs);
         
         for(Dwarf dwarf : exeDwarfs)
         {
@@ -30,9 +30,9 @@ public class ArteDaGuerraTest
     @Test
     public void atacarDwarfs()
     {
-        ArteDaGuerra exe = this.criarExercitoComEstrategiaArteDaGuerra();
+        Exercito exe = this.criarExercitoComEstrategiaArteDaGuerra();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
-        exe.getExercito().alistarElfo(criarElfoMorto("Elfo00"));
+        exe.alistarElfo(criarElfoMorto("Elfo00"));
         
         exe.atacar(exeDwarfs);
         
@@ -45,7 +45,8 @@ public class ArteDaGuerraTest
     @Test
     public void atacarDwarfsSemExercito()
     {
-        Estrategia exe = new ArteDaGuerra(new Exercito());
+        Exercito exe = new Exercito();
+        exe.mudarEstrategia(new ArteDaGuerra());
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         
         exe.atacar(exeDwarfs);
@@ -60,7 +61,8 @@ public class ArteDaGuerraTest
     @Test
     public void atacarDwarfsComNull()
     {
-        Estrategia exe = new ArteDaGuerra(null);
+        Exercito exe = new Exercito();
+        exe.mudarEstrategia(null);
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         
         exe.atacar(exeDwarfs);
@@ -83,7 +85,7 @@ public class ArteDaGuerraTest
         return exe;
     }
     
-    private ArteDaGuerra criarExercitoComEstrategiaArteDaGuerra()
+    private Exercito criarExercitoComEstrategiaArteDaGuerra()
     {
         Exercito exe = new Exercito();
         
@@ -93,7 +95,8 @@ public class ArteDaGuerraTest
             exe.alistarElfo(new ElfoNoturno("ElfoNoturno" + i));
         }
         
-        return new ArteDaGuerra(exe);
+        exe.mudarEstrategia(new ArteDaGuerra());
+        return exe;
     }
     
     private ElfoNoturno criarElfoMorto(String nome)

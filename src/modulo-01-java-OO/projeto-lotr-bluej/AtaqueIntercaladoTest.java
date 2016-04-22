@@ -9,7 +9,7 @@ public class AtaqueIntercaladoTest
     @Test
     public void atacarDwarfs()
     {
-        AtaqueIntercalado exe = this.criarExercitoComEstrategiaAtaqueIntercalado();
+        Exercito exe = this.criarExercitoComEstrategiaAtaqueIntercalado();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         
         exe.atacar(exeDwarfs);
@@ -24,7 +24,7 @@ public class AtaqueIntercaladoTest
     public void atacarDwarfsComExercitoNaoIntercaladoComMaisElfosNoturnos()
     {
         // Arrange
-        AtaqueIntercalado exe = this.criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisNoturnos();
+        Exercito exe = this.criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisNoturnos();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         boolean elfoVerdeAtacou = false, elfoNoturnoAtacou = false, elfosIntercalados = true;
         
@@ -58,7 +58,7 @@ public class AtaqueIntercaladoTest
     public void atacarDwarfsComExercitoNaoIntercaladoComMaisElfosVerdes()
     {
         // Arrange
-        AtaqueIntercalado exe = this.criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisVerdes();
+        Exercito exe = this.criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisVerdes();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         boolean elfoVerdeAtacou = false, elfoNoturnoAtacou = false, elfosIntercalados = true;
         
@@ -91,7 +91,8 @@ public class AtaqueIntercaladoTest
     @Test
     public void atacarDwarfsSemExercito()
     {
-        Estrategia exe = new AtaqueIntercalado(new Exercito());
+        Exercito exe = new Exercito();
+        exe.mudarEstrategia(new AtaqueIntercalado());
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         
         exe.atacar(exeDwarfs);
@@ -106,7 +107,8 @@ public class AtaqueIntercaladoTest
     @Test
     public void atacarDwarfsComNull()
     {
-        Estrategia exe = new AtaqueIntercalado(null);
+        Exercito exe = new Exercito();
+        exe.mudarEstrategia(null);
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         
         exe.atacar(exeDwarfs);
@@ -129,7 +131,7 @@ public class AtaqueIntercaladoTest
         return exe;
     }
     
-    private AtaqueIntercalado criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisVerdes()
+    private Exercito criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisVerdes()
     {
         Exercito exe = new Exercito();
         
@@ -140,10 +142,12 @@ public class AtaqueIntercaladoTest
             exe.alistarElfo(new ElfoVerde("ElfoVerde" + i));
         }
         
-        return new AtaqueIntercalado(exe);
+        exe.mudarEstrategia(new AtaqueIntercalado());
+        
+        return exe;
     }
     
-    private AtaqueIntercalado criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisNoturnos()
+    private Exercito criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisNoturnos()
     {
         Exercito exe = new Exercito();
         
@@ -154,10 +158,12 @@ public class AtaqueIntercaladoTest
             exe.alistarElfo(new ElfoNoturno("ElfoNoturno" + i));
         }
         
-        return new AtaqueIntercalado(exe);
+        exe.mudarEstrategia(new AtaqueIntercalado());
+        
+        return exe;
     }
     
-    private AtaqueIntercalado criarExercitoComEstrategiaAtaqueIntercalado()
+    private Exercito criarExercitoComEstrategiaAtaqueIntercalado()
     {
         Exercito exe = new Exercito();
         
@@ -167,7 +173,9 @@ public class AtaqueIntercaladoTest
             exe.alistarElfo(new ElfoVerde("ElfoVerde" + i));
         }
         
-        return new AtaqueIntercalado(exe);
+        exe.mudarEstrategia(new AtaqueIntercalado());
+        
+        return exe;
     }
     
     private ElfoNoturno criarElfoMorto(String nome)
