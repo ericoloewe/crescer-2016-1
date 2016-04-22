@@ -1,76 +1,54 @@
 import java.util.*;
 
 public class AtaqueIntercalado implements Estrategia
-{
-    private Exercito exercito = new Exercito();
+{    
     private ArrayList<Elfo> exercitoOrdenado = new ArrayList<>();
-    
-    public AtaqueIntercalado(Exercito exercito)
-    {
-        this.exercito = exercito;
-    }
-    
-    public Exercito getExercito()
-    {
-        return this.exercito;
-    }
     
     public ArrayList<Elfo> getOrdemDoUltimoAtaque()
     {
         return this.exercitoOrdenado;
     }
     
-    public void atacar(ArrayList<Dwarf> hordaDeDwarfs)
+    public void atacar(ArrayList<Elfo> exercito, ArrayList<Dwarf> hordaDeDwarfs)
     {
-        if(this.exercito == null)
+        if(exercito == null)
             return;
-        int somaElfosVerdes = elfosVerdes().size();
-        int somaElfosNoturnos = elfosNoturnos().size();
+        this.manterCom(Status.VIVO, exercito);
+        int somaElfosVerdes = this.filtrarElfosPorTipo(exercito, ElfoVerde.class).size();
+        int somaElfosNoturnos = this.filtrarElfosPorTipo(exercito, ElfoNoturno.class).size();
         
-        int quantidadeDeElfosQuePodemAtacarDeCadaTipo = this.quantidadeDeElfosQuePodemAtacarDeCadaTipo(somaElfosVerdes, somaElfosNoturnos);
+        int quantidadeDeElfosQuePodemAtacarDeCadaTipo = somaElfosVerdes <= somaElfosNoturnos ? somaElfosVerdes : somaElfosNoturnos;
         
-        ArrayList<Elfo> elfos = this.organizarExercito(quantidadeDeElfosQuePodemAtacarDeCadaTipo);
+        this.organizarExercito(exercito, quantidadeDeElfosQuePodemAtacarDeCadaTipo);
         
-        for(Elfo elfo : elfos)
+        for(Elfo elfo : exercito)
         {
             this.elfoAtacarDwarfs(elfo, hordaDeDwarfs);
         }
         
-        this.exercitoOrdenado = elfos;
+        this.exercitoOrdenado = exercito;
     }
     
-    private ArrayList<Elfo> organizarExercito(int quantidadeDeElfosQuePodemAtacarDeCadaTipo)
+    private void organizarExercito(ArrayList<Elfo> exercito, int quantidadeDeElfosQuePodemAtacarDeCadaTipo)
     {
-        ArrayList<Elfo> elfosVerdes = this.elfosVerdes();
-        ArrayList<Elfo> elfosNoturnos = this.elfosNoturnos();
-        ArrayList<Elfo> exercito = new ArrayList<>();
-        boolean elfoVerdeAtacou = false, elfoNoturnoAtacou = false;
+        ArrayList<Elfo> elfos = new ArrayList<>();
+        elfos.addAll(this.filtrarElfosPorTipo(exercito, ElfoVerde.class));
+        elfos.addAll(this.filtrarElfosPorTipo(exercito, ElfoNoturno.class));
+        boolean elfoVerdeAtacou = false;
+        exercito.clear();
         
-        for(int i = 0; i < quantidadeDeElfosQuePodemAtacarDeCadaTipo; i++)
+        for(int i = 0, c = 0; i < quantidadeDeElfosQuePodemAtacarDeCadaTipo*2; i++)
         {
             if(!elfoVerdeAtacou)
             {
-                exercito.add(elfosVerdes.get(i));
+                exercito.add(elfos.get(c));
                 elfoVerdeAtacou = true;
             } else {
-                exercito.add(elfosNoturnos.get(i));
+                exercito.add(elfos.get(c + quantidadeDeElfosQuePodemAtacarDeCadaTipo));
                 elfoVerdeAtacou = false;
+                c++;
             }
         }
-        
-        for(int i = 0; i < quantidadeDeElfosQuePodemAtacarDeCadaTipo; i++)
-        {
-            if(!elfoNoturnoAtacou)
-            {
-                exercito.add(elfosNoturnos.get(i));
-                elfoNoturnoAtacou = true;
-            } else {
-                exercito.add(elfosVerdes.get(i));
-                elfoNoturnoAtacou = false;
-            }
-        }
-        
-        return exercito;
     }
     
     private void elfoAtacarDwarfs(Elfo elfo, ArrayList<Dwarf> hordaDeDwarfs)
@@ -81,45 +59,25 @@ public class AtaqueIntercalado implements Estrategia
         }
     }
     
-    private int quantidadeDeElfosQuePodemAtacarDeCadaTipo(int somaElfosVerdes, int somaElfosNoturnos)
+    private ArrayList<Elfo> filtrarElfosPorTipo(ArrayList<Elfo> exercito, Class elfoClass)
     {
-        int soma = 0;
-        
-        for(int i = somaElfosVerdes; i >= 0; i++)
+        ArrayList<Elfo> elfosDoTipo = new ArrayList<>();
+
+        for(Elfo elfo : exercito)
         {
-            if(somaElfosNoturnos >= i)
-            {
-                soma += i;
-                break;
-            }
+            if(elfo.getClass() == elfoClass)
+                elfosDoTipo.add(elfo);
         }
         
-        return soma;
+        return elfosDoTipo;
     }
     
-    private ArrayList<Elfo> elfosVerdes()
+    private void manterCom(Status status, ArrayList<Elfo> exercito)
     {
-        ArrayList<Elfo> elfosVerdes = new ArrayList<>();
-        
-        for(Elfo elfo : this.exercito.getExercito().values())
+        for(int i = 0; i < exercito.size(); i++)
         {
-            if(elfo instanceof ElfoVerde && !elfo.getStatus().equals(Status.MORTO))
-                elfosVerdes.add(elfo);
+            if(exercito.get(i).getStatus() != status)
+                exercito.remove(i);
         }
-        
-        return elfosVerdes;
-    }
-    
-    private ArrayList<Elfo> elfosNoturnos()
-    {
-        ArrayList<Elfo> elfosNoturnos = new ArrayList<>();
-        
-        for(Elfo elfo : this.exercito.getExercito().values())
-        {
-            if(elfo instanceof ElfoNoturno && !elfo.getStatus().equals(Status.MORTO))
-                elfosNoturnos.add(elfo);
-        }
-        
-        return elfosNoturnos;
     }
 }
