@@ -144,7 +144,7 @@ public class ExercitoTest
         ElfoNoturno elfo = new ElfoNoturno(nome, 10000);
         
         while(elfo.getVidaElfoNoturno() != 0) 
-            elfo.atirarFlechas();
+            elfo.atirarFlecha();
         
         return elfo;
     }

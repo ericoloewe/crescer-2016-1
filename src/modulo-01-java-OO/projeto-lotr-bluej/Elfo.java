@@ -27,7 +27,7 @@ public class Elfo extends Personagem
         super.finalize();
     }
     
-    public boolean atirarFlechas()
+    public boolean atirarFlecha()
     {
 		if(this.flechas > 0) {
         	this.experiencia++;
@@ -37,9 +37,9 @@ public class Elfo extends Personagem
     	return false;
     }
     
-    public void atirarFlechas(Dwarf dwarf) 
+    public void atirarFlecha(Dwarf dwarf) 
     {
-        if(atirarFlechas()) {
+        if(this.atirarFlecha()) {
             dwarf.perdeVida();
         }        
     }

@@ -69,7 +69,7 @@ public class ElfoTest
         Elfo elfo = new Elfo("Alfredo");
         
         int esperado = elfo.getExperiencia() + 1;
-        elfo.atirarFlechas();
+        elfo.atirarFlecha();
         int obtido = elfo.getExperiencia();
         
         assertEquals(obtido, esperado);
@@ -81,7 +81,7 @@ public class ElfoTest
         Elfo elfo = new Elfo("Alfredo");
         
         int esperado = elfo.getFlechas() - 1;
-        elfo.atirarFlechas();
+        elfo.atirarFlecha();
         int obtido = elfo.getFlechas();
         
         assertEquals(obtido, esperado);
@@ -94,7 +94,7 @@ public class ElfoTest
         Dwarf dwarf = new Dwarf("Joaquim");        
         
         int esperado = dwarf.getVida() - 10;
-        elfo.atirarFlechas(dwarf);
+        elfo.atirarFlecha(dwarf);
         int obtido = dwarf.getVida();
         
         assertEquals(obtido, esperado);

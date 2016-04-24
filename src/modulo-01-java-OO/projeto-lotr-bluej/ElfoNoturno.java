@@ -19,15 +19,20 @@ public class ElfoNoturno extends Elfo
         this.flechas = flechas;
     }
     
-    public boolean atirarFlechas()
+    public boolean atirarFlecha()
     {
         if(this.flechas > 0 && !this.morto()) {
-            this.experiencia += 3;
+            this.experiencia += 2;
             this.removerVida();
-            this.flechas--;
             return true;
         }
         return false;
+    }
+    
+    public void atirarFlecha(Dwarf dwarf) 
+    {
+        super.atirarFlecha(dwarf);
+        this.atirarFlecha();
     }
     
     private void removerVida()
