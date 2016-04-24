@@ -56,20 +56,77 @@ INSERT INTO CidadeAux
 		From Cidade;
 
 -- Exe11
--- Limpar CidadeAux
-Select UF, Nome, COUNT(1) as QuantidadeDeCidadeIguais
-From Cidade
-Group By UF, Nome
-HAVING COUNT(1) > 1;
-
+-- Alterar cidades duplicadas e acrescentar no inicio do nome um *
 Begin Transaction
 Go
 Update Cidade
 Set Nome = '*' + Nome
-Where Exists
+Where Nome In
 (
-	Select 1 
-	From Cidade cAux
-	Where Nome = cAux.Nome
-		And IDCidade = cAux.IDCidade
+	Select Nome
+	From Cidade
+	Group By UF, Nome
+	HAVING COUNT(1) > 1
 );
+Commit;
+
+Select * From Cidade;
+
+-- Exe12
+-- Listar associados mostrando o sexo por completo
+Select Nome, Case 
+			When Sexo = 'M'
+				Then 'Masculino'
+			When Sexo = 'F'
+				Then 'Feminino'
+			Else null
+			End Sexo
+From Associado;
+
+-- Exe13
+-- listar nome do empregado, salario e percentual descontado do imposto de renda, considerando:
+-- Até R$ 1.164,00 = 0%
+-- De R$ 1.164,00 a R$ 2.326,00 = 15%
+-- Acima de R$ 2.326,00 = 27,5%.
+Select NomeEmpregado, Salario, Case 
+								When Salario < 1164
+									Then '0%'
+								When Salario >= 1164 and Salario < 2326
+									Then '15%'
+								Else '27,5%'
+								End Percentual_A_Ser_Descontado
+From Empregado;
+
+-- Exe14
+-- Listar associados mostrando o sexo por completo
+Begin Transaction
+Go
+Delete From Cidade
+Where Nome In
+(
+	Select c.Nome
+	From Cidade c
+	Left Join Associado a
+	On c.IDCidade = a.IDCidade
+	Where a.IDCidade Is Null
+	Group By c.UF, c.Nome
+	HAVING COUNT(1) > 1
+)
+AND
+IDCidade Not In
+(
+	Select MIN(c.IDCidade)
+	From Cidade c	
+	Group By c.UF, c.Nome
+	HAVING COUNT(1) > 1
+);
+Commit;
+
+Select * From Cidade;
+
+-- Exe15
+-- Criar regra para não deixar add cidades repetidas
+Alter Table Cidade
+Add 
+Constraint Nao_Repetir_Cidade 
+UNIQUE(Nome, UF);
