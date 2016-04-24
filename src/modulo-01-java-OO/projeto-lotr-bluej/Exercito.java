@@ -49,7 +49,7 @@ public class Exercito
         return this.exercitoAgrupadoPorStatus.get(status);
     }
     
-    public void atacar(ArrayList<Dwarf> alvo)
+    public void atacar(ArrayList<Dwarf> alvo) throws NaoPodeAtacarException
     {
         if(estrategia != null)
             this.estrategia.atacar(new ArrayList<Elfo>(this.exercito.values()), alvo);
