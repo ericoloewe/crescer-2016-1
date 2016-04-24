@@ -7,7 +7,98 @@ import java.util.*;
 public class NoturnosPorUltimoTest
 {
     @Test
-    public void atacarDwarfs()
+    public void exercitoEmbaralhadoPriorizaAtaqueComElfosVerdes() throws NaoPodeAtacarException 
+    {
+        // Arrange
+        Exercito exercito = new Exercito();
+        exercito.mudarEstrategia(new NoturnosPorUltimo());
+        Elfo en1 = new ElfoNoturno("Night 1");
+        Elfo en2 = new ElfoNoturno("Night 2");
+        Elfo ev1 = new ElfoVerde("Green 1");
+        Elfo en3 = new ElfoNoturno("Night 3");
+        Elfo ev2 = new ElfoVerde("Green 2");
+        exercito.alistarElfo(en1);
+        exercito.alistarElfo(en2);
+        exercito.alistarElfo(ev1);
+        exercito.alistarElfo(en3);
+        exercito.alistarElfo(ev2);
+        ArrayList<Elfo> esperado = new ArrayList<>(Arrays.asList(ev2, ev1, en3, en2, en1));
+        // Act
+        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"), new Dwarf("D2"), new Dwarf("D3"))));
+        // Assert
+        assertEquals(esperado, exercito.getOrdemDoUltimoAtaque());
+    }
+
+    @Test
+    public void exercitoSóDeVerdes() throws NaoPodeAtacarException 
+    {
+        // Arrange
+        Exercito exercito = new Exercito();
+        exercito.mudarEstrategia(new NoturnosPorUltimo());
+        Elfo ev1 = new ElfoVerde("Green 1");
+        Elfo ev2 = new ElfoVerde("Green 2");
+        exercito.alistarElfo(ev1);
+        exercito.alistarElfo(ev2);
+        ArrayList<Elfo> esperado = new ArrayList<>(Arrays.asList(ev2, ev1));
+        // Act
+        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"), new Dwarf("D2"), new Dwarf("D3"))));
+        // Assert
+        assertEquals(esperado, exercito.getOrdemDoUltimoAtaque());
+    }
+
+    @Test
+    public void exercitoSóDeNoturnos() throws NaoPodeAtacarException 
+    {
+        // Arrange
+        Exercito exercito = new Exercito();
+        exercito.mudarEstrategia(new NoturnosPorUltimo());
+        Elfo en1 = new ElfoNoturno("EN1");
+        Elfo en2 = new ElfoNoturno("EN2");
+        exercito.alistarElfo(en1);
+        exercito.alistarElfo(en2);
+        ArrayList<Elfo> esperado = new ArrayList<>(Arrays.asList(en2, en1));
+        // Act
+        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"), new Dwarf("D2"), new Dwarf("D3"))));
+        // Assert
+        assertEquals(esperado, exercito.getOrdemDoUltimoAtaque());
+    }
+
+    @Test
+    public void ataqueComExercitoVazio() throws NaoPodeAtacarException 
+    {
+        Exercito exercito = new Exercito();
+        exercito.mudarEstrategia(new NoturnosPorUltimo());
+        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"), new Dwarf("D2"))));
+        List<Elfo> ordemAtaque = exercito.getOrdemDoUltimoAtaque();
+        assertTrue(ordemAtaque.isEmpty());
+    }
+
+    @Test
+    public void ataqueComVerdesENoturnoMorto() throws NaoPodeAtacarException 
+    {
+        // Arrange
+        Exercito exercito = new Exercito();
+        exercito.mudarEstrategia(new NoturnosPorUltimo());
+        Elfo en1 = new ElfoNoturno("Night 1");
+        Elfo en2 = new ElfoNoturno("Night 2");
+        Elfo ev1 = new ElfoVerde("Green 1");
+        Elfo en3 = new ElfoNoturno("Night 3");
+        Elfo ev2 = new ElfoVerde("Green 2");
+        for (int i = 0; i < 90; i++) en1.atirarFlecha(new Dwarf("D1"));
+        exercito.alistarElfo(en1);
+        exercito.alistarElfo(en2);
+        exercito.alistarElfo(ev1);
+        exercito.alistarElfo(en3);
+        exercito.alistarElfo(ev2);
+        ArrayList<Elfo> esperado = new ArrayList<>(Arrays.asList(ev2, ev1, en3, en2));
+        // Act
+        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"), new Dwarf("D2"), new Dwarf("D3"))));
+        // Assert
+        assertEquals(esperado, exercito.getOrdemDoUltimoAtaque());
+    }
+    
+    @Test
+    public void atacarDwarfs() throws NaoPodeAtacarException
     {
         Exercito exe = this.criarExercitoComEstrategiaNoturnosPorUltimo();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
@@ -37,7 +128,7 @@ public class NoturnosPorUltimoTest
     }
     
     @Test
-    public void atacarDwarfsSemExercito()
+    public void atacarDwarfsSemExercito() throws NaoPodeAtacarException
     {
         Exercito exe = new Exercito();
         exe.mudarEstrategia(new NoturnosPorUltimo());
@@ -53,7 +144,7 @@ public class NoturnosPorUltimoTest
     }
     
     @Test
-    public void atacarDwarfsComNull()
+    public void atacarDwarfsComNull() throws NaoPodeAtacarException
     {
         Exercito exe = new Exercito();
         exe.mudarEstrategia(null);
@@ -67,7 +158,7 @@ public class NoturnosPorUltimoTest
         }
     }
     
-    private ArrayList<Dwarf> criarExercitoDeElfos(int n)
+    private ArrayList<Dwarf> criarExercito(int n)
     {
         ArrayList<Dwarf> exe = new ArrayList<>();
         
@@ -109,7 +200,7 @@ public class NoturnosPorUltimoTest
         ElfoNoturno elfo = new ElfoNoturno(nome, 10000);
         
         while(elfo.getVidaElfoNoturno() != 0) 
-            elfo.atirarFlechas();
+            elfo.atirarFlecha();
         
         return elfo;
     }
