@@ -7,7 +7,7 @@ import java.util.*;
 public class ArteDaGuerraTest
 {
     @Test
-    public void ataqueCom3Noturnos1Verde2Dwarves() throws NaoPodeAtacarException {
+    public void ataqueCom3Noturnos1Verde2Dwarves() throws NaoPodeAlistarException, NaoPodeAtacarException {
         Exercito exercito = new Exercito();
         Elfo elfoNoturno1 = new ElfoNoturno("EN1");
         Elfo elfoNoturno2 = new ElfoNoturno("EN2");
@@ -27,7 +27,7 @@ public class ArteDaGuerraTest
     }
 
     @Test
-    public void ataqueCom3Noturnos4Dwarves() throws NaoPodeAtacarException {
+    public void ataqueCom3Noturnos4Dwarves() throws NaoPodeAlistarException, NaoPodeAtacarException {
         Exercito exercito = new Exercito();
         Elfo elfoNoturno1 = new ElfoNoturno("EN1");
         Elfo elfoNoturno2 = new ElfoNoturno("EN2");
@@ -44,7 +44,7 @@ public class ArteDaGuerraTest
     }
 
     @Test
-    public void ataqueCom3VerdesApenas() throws NaoPodeAtacarException {
+    public void ataqueCom3VerdesApenas() throws NaoPodeAlistarException, NaoPodeAtacarException {
         Exercito exercito = new Exercito();
         Elfo elfoVerde1 = new ElfoVerde("EV1");
         Elfo elfoVerde2 = new ElfoVerde("EV2");
@@ -63,7 +63,7 @@ public class ArteDaGuerraTest
     }
 
     @Test
-    public void ataqueComExercitoVazio() throws NaoPodeAtacarException {
+    public void ataqueComExercitoVazio() throws NaoPodeAlistarException, NaoPodeAtacarException {
         Exercito exercito = new Exercito();
         ArrayList<Dwarf> dwarves = new ArrayList<>(Arrays.asList(new Dwarf("D1"), new Dwarf("D2")));
         exercito.atacar(dwarves);
@@ -72,7 +72,7 @@ public class ArteDaGuerraTest
     }
 
     @Test
-    public void ataque1VerdeOutroMorto() throws NaoPodeAtacarException {
+    public void ataque1VerdeOutroMorto() throws NaoPodeAlistarException, NaoPodeAtacarException {
         Exercito exercito = new Exercito();
         Elfo elfoVerde1 = new ElfoVerde("EV1");
         Elfo en1 = new ElfoNoturno("EN1");
@@ -87,7 +87,7 @@ public class ArteDaGuerraTest
     }
     
     @Test
-    public void atacarDwarfsComElfosNoturnos() throws NaoPodeAtacarException
+    public void atacarDwarfsComElfosNoturnos() throws NaoPodeAlistarException, NaoPodeAtacarException
     {
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(2);
         Exercito exe = new Exercito();
@@ -108,7 +108,7 @@ public class ArteDaGuerraTest
     }
     
     @Test
-    public void atacarDwarfs() throws NaoPodeAtacarException
+    public void atacarDwarfs() throws NaoPodeAlistarException, NaoPodeAtacarException
     {
         Exercito exe = this.criarExercitoComEstrategiaArteDaGuerra();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
@@ -123,7 +123,7 @@ public class ArteDaGuerraTest
     }
     
     @Test
-    public void atacarDwarfsSemExercito() throws NaoPodeAtacarException
+    public void atacarDwarfsSemExercito() throws NaoPodeAlistarException, NaoPodeAtacarException
     {
         Exercito exe = new Exercito();
         exe.mudarEstrategia(new ArteDaGuerra());
@@ -139,7 +139,7 @@ public class ArteDaGuerraTest
     }
     
     @Test
-    public void atacarDwarfsComNull() throws NaoPodeAtacarException
+    public void atacarDwarfsComNull() throws NaoPodeAlistarException, NaoPodeAtacarException
     {
         Exercito exe = new Exercito();
         exe.mudarEstrategia(null);
@@ -165,7 +165,7 @@ public class ArteDaGuerraTest
         return exe;
     }
     
-    private Exercito criarExercitoComEstrategiaArteDaGuerra()
+    private Exercito criarExercitoComEstrategiaArteDaGuerra() throws NaoPodeAlistarException
     {
         Exercito exe = new Exercito();
         

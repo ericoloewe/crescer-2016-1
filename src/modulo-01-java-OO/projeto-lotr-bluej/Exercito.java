@@ -16,14 +16,14 @@ public class Exercito
         return this.exercitoAgrupadoPorStatus;
     }
     
-    public boolean alistarElfo(Elfo elfo)
+    public void alistarElfo(Elfo elfo) throws NaoPodeAlistarException
     {
         if(elfo instanceof ElfoNoturno || elfo instanceof ElfoVerde)
         {          
             this.exercito.put(elfo.getNome(), elfo);
-            return true;
+        } else {
+            throw new NaoPodeAlistarException();
         }
-        return false;
     }
     
     public Elfo buscarElfo(String nome)

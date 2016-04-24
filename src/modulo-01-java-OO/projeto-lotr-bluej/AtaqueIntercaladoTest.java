@@ -7,7 +7,7 @@ import java.util.*;
 public class AtaqueIntercaladoTest
 {
     @Test
-    public void exercitoIntercaladoComeçandoComElfoNoturno() throws NaoPodeAtacarException {
+    public void exercitoIntercaladoComeçandoComElfoNoturno() throws NaoPodeAtacarException, NaoPodeAlistarException {
         // Arrange
         Exercito exercito = new Exercito();
         exercito.mudarEstrategia(new AtaqueIntercalado());
@@ -32,7 +32,7 @@ public class AtaqueIntercaladoTest
     }
 
     @Test
-    public void exercitoIntercaladoComeçandoComElfoVerde() throws NaoPodeAtacarException {
+    public void exercitoIntercaladoComeçandoComElfoVerde() throws NaoPodeAtacarException, NaoPodeAlistarException {
         // Arrange
         Exercito exercito = new Exercito();
         exercito.mudarEstrategia(new AtaqueIntercalado());
@@ -53,7 +53,7 @@ public class AtaqueIntercaladoTest
     }
 
     @Test(expected=NaoPodeAtacarException.class)
-    public void exercitoDesproporcionalNãoAtaca() throws NaoPodeAtacarException {
+    public void exercitoDesproporcionalNãoAtaca() throws NaoPodeAtacarException, NaoPodeAlistarException {
         // Arrange
         Exercito exercito = new Exercito();
         exercito.mudarEstrategia(new AtaqueIntercalado());
@@ -71,7 +71,7 @@ public class AtaqueIntercaladoTest
     }
 
     @Test(expected=NaoPodeAtacarException.class)
-    public void exercitoSoDeUmTipoNãoAtaca() throws NaoPodeAtacarException {
+    public void exercitoSoDeUmTipoNãoAtaca() throws NaoPodeAtacarException, NaoPodeAlistarException {
         // Arrange
         Exercito exercito = new Exercito();
         exercito.mudarEstrategia(new AtaqueIntercalado());
@@ -87,7 +87,7 @@ public class AtaqueIntercaladoTest
     }
 
     @Test
-    public void ataqueComExercitoVazio() throws NaoPodeAtacarException {
+    public void ataqueComExercitoVazio() throws NaoPodeAtacarException, NaoPodeAlistarException {
         Exercito exercito = new Exercito();
         exercito.mudarEstrategia(new AtaqueIntercalado());
         exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"), new Dwarf("D2"))));
@@ -96,7 +96,7 @@ public class AtaqueIntercaladoTest
     }
 
     @Test(expected=NaoPodeAtacarException.class)
-    public void exercitoIntercaladoComElfoNoturnoMortoDesproporcional() throws NaoPodeAtacarException {
+    public void exercitoIntercaladoComElfoNoturnoMortoDesproporcional() throws NaoPodeAtacarException, NaoPodeAlistarException {
         // Arrange
         Exercito exercito = new Exercito();
         exercito.mudarEstrategia(new AtaqueIntercalado());
@@ -116,7 +116,7 @@ public class AtaqueIntercaladoTest
     }
 
     @Test
-    public void exercitoIntercaladoComElfoNoturnoMortoProporcional() throws NaoPodeAtacarException {
+    public void exercitoIntercaladoComElfoNoturnoMortoProporcional() throws NaoPodeAtacarException, NaoPodeAlistarException {
         // Arrange
         Exercito exercito = new Exercito();
         exercito.mudarEstrategia(new AtaqueIntercalado());
@@ -139,7 +139,7 @@ public class AtaqueIntercaladoTest
     }
     
     @Test
-    public void atacarDwarfs() throws NaoPodeAtacarException
+    public void atacarDwarfs() throws NaoPodeAtacarException, NaoPodeAlistarException
     {
         Exercito exe = this.criarExercitoComEstrategiaAtaqueIntercalado();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
@@ -153,10 +153,10 @@ public class AtaqueIntercaladoTest
     }
     
     @Test
-    public void atacarDwarfsComExercitoNaoIntercaladoComMaisElfosNoturnos() throws NaoPodeAtacarException
+    public void atacarDwarfsComExercitoNaoIntercaladoComMaisElfosNoturnos() throws NaoPodeAtacarException, NaoPodeAlistarException
     {
         // Arrange
-        Exercito exe = this.criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisNoturnos();
+        Exercito exe = this.criarExercitoComEstrategiaAtaqueIntercaladoComMaisNoturnos();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         boolean elfoVerdeAtacou = false, elfoNoturnoAtacou = false, elfosIntercalados = true;
         
@@ -187,10 +187,10 @@ public class AtaqueIntercaladoTest
     }
     
     @Test
-    public void atacarDwarfsComExercitoNaoIntercaladoComMaisElfosVerdes() throws NaoPodeAtacarException
+    public void atacarDwarfsComExercitoNaoIntercaladoComMaisElfosVerdes() throws NaoPodeAtacarException, NaoPodeAlistarException
     {
         // Arrange
-        Exercito exe = this.criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisVerdes();
+        Exercito exe = this.criarExercitoComEstrategiaAtaqueIntercaladoComMaisVerdes();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
         boolean elfoVerdeAtacou = false, elfoNoturnoAtacou = false, elfosIntercalados = true;
         
@@ -221,7 +221,7 @@ public class AtaqueIntercaladoTest
     }
     
     @Test
-    public void atacarDwarfsSemExercito() throws NaoPodeAtacarException
+    public void atacarDwarfsSemExercito() throws NaoPodeAtacarException, NaoPodeAlistarException
     {
         Exercito exe = new Exercito();
         exe.mudarEstrategia(new AtaqueIntercalado());
@@ -237,7 +237,7 @@ public class AtaqueIntercaladoTest
     }
     
     @Test
-    public void atacarDwarfsComNull() throws NaoPodeAtacarException
+    public void atacarDwarfsComNull() throws NaoPodeAtacarException, NaoPodeAlistarException
     {
         Exercito exe = new Exercito();
         exe.mudarEstrategia(null);
@@ -263,7 +263,7 @@ public class AtaqueIntercaladoTest
         return exe;
     }
     
-    private Exercito criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisVerdes()
+    private Exercito criarExercitoComEstrategiaAtaqueIntercaladoComMaisVerdes() throws NaoPodeAlistarException
     {
         Exercito exe = new Exercito();
         
@@ -279,7 +279,7 @@ public class AtaqueIntercaladoTest
         return exe;
     }
     
-    private Exercito criarExercitoComEstrategiaAtaqueNaoIntercaladoComMaisNoturnos()
+    private Exercito criarExercitoComEstrategiaAtaqueIntercaladoComMaisNoturnos() throws NaoPodeAlistarException
     {
         Exercito exe = new Exercito();
         
@@ -295,7 +295,7 @@ public class AtaqueIntercaladoTest
         return exe;
     }
     
-    private Exercito criarExercitoComEstrategiaAtaqueIntercalado()
+    private Exercito criarExercitoComEstrategiaAtaqueIntercalado() throws NaoPodeAlistarException
     {
         Exercito exe = new Exercito();
         

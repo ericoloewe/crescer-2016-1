@@ -12,32 +12,32 @@ public class ExercitoTest
         System.gc();
     }
     
-    @Test
-    public void addElfoAoExercito()
+    @Test(expected=NaoPodeAlistarException.class)
+    public void addElfoAoExercito() throws NaoPodeAlistarException
     {
         Exercito exe = new Exercito();
-        
-        assertFalse(exe.alistarElfo(new Elfo("Auriel")));
+        exe.alistarElfo(new Elfo("Auriel"));
+        assertEquals(exe.getExercito().size(), 0);
     }
     
     @Test
-    public void addElfoVerdeAoExercito()
+    public void addElfoVerdeAoExercito() throws NaoPodeAlistarException
     {
         Exercito exe = new Exercito();
-        
-        assertTrue(exe.alistarElfo(new ElfoVerde("Auriel")));
+        exe.alistarElfo(new ElfoVerde("Auriel"));
+        assertEquals(exe.getExercito().size(), 1);
     }
     
     @Test
-    public void addElfoNoturnoAoExercito()
+    public void addElfoNoturnoAoExercito() throws NaoPodeAlistarException
     {
         Exercito exe = new Exercito();
-        
-        assertTrue(exe.alistarElfo(new ElfoNoturno("Auriel")));
+        exe.alistarElfo(new ElfoNoturno("Auriel"));
+        assertEquals(exe.getExercito().size(), 1);
     }
     
     @Test
-    public void elfoEhAgrupadoPorStatus()
+    public void elfoEhAgrupadoPorStatus() throws NaoPodeAlistarException
     {
         int tamanhoEsperado = 1;
         int tamanhoArrayEsperado = 20;
@@ -51,7 +51,7 @@ public class ExercitoTest
     }
     
     @Test
-    public void elfoEhAgrupadoPorStatus2Vzs()
+    public void elfoEhAgrupadoPorStatus2Vzs() throws NaoPodeAlistarException
     {
         int tamanhoEsperado = 1;
         int tamanhoArrayEsperado = 20;
@@ -77,7 +77,7 @@ public class ExercitoTest
     }
     
     @Test
-    public void buscarElfosVivos()
+    public void buscarElfosVivos() throws NaoPodeAlistarException
     {
         int tamanhoEsperado = 20;
         Exercito exe = this.criarExercito();
@@ -89,7 +89,7 @@ public class ExercitoTest
     }
     
     @Test
-    public void buscarElfosMortos()
+    public void buscarElfosMortos() throws NaoPodeAlistarException
     {
         int tamanhoEsperado = 1;
         Exercito exe = this.criarExercito();
@@ -103,7 +103,7 @@ public class ExercitoTest
     }
     
     @Test
-    public void buscarElfosMortosSemMortos()
+    public void buscarElfosMortosSemMortos() throws NaoPodeAlistarException
     {
         Exercito exe = new Exercito();
         
@@ -126,7 +126,7 @@ public class ExercitoTest
         return exe;
     }
     
-    private Exercito criarExercito()
+    private Exercito criarExercito() throws NaoPodeAlistarException
     {
         Exercito exe = new Exercito();
         

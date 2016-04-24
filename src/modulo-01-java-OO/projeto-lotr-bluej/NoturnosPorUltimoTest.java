@@ -7,7 +7,7 @@ import java.util.*;
 public class NoturnosPorUltimoTest
 {
     @Test
-    public void exercitoEmbaralhadoPriorizaAtaqueComElfosVerdes() throws NaoPodeAtacarException 
+    public void exercitoEmbaralhadoPriorizaAtaqueComElfosVerdes() throws NaoPodeAtacarException, NaoPodeAlistarException 
     {
         // Arrange
         Exercito exercito = new Exercito();
@@ -30,7 +30,7 @@ public class NoturnosPorUltimoTest
     }
 
     @Test
-    public void exercitoSóDeVerdes() throws NaoPodeAtacarException 
+    public void exercitoSóDeVerdes() throws NaoPodeAtacarException, NaoPodeAlistarException 
     {
         // Arrange
         Exercito exercito = new Exercito();
@@ -47,7 +47,7 @@ public class NoturnosPorUltimoTest
     }
 
     @Test
-    public void exercitoSóDeNoturnos() throws NaoPodeAtacarException 
+    public void exercitoSóDeNoturnos() throws NaoPodeAtacarException, NaoPodeAlistarException 
     {
         // Arrange
         Exercito exercito = new Exercito();
@@ -64,7 +64,7 @@ public class NoturnosPorUltimoTest
     }
 
     @Test
-    public void ataqueComExercitoVazio() throws NaoPodeAtacarException 
+    public void ataqueComExercitoVazio() throws NaoPodeAtacarException, NaoPodeAlistarException 
     {
         Exercito exercito = new Exercito();
         exercito.mudarEstrategia(new NoturnosPorUltimo());
@@ -74,7 +74,7 @@ public class NoturnosPorUltimoTest
     }
 
     @Test
-    public void ataqueComVerdesENoturnoMorto() throws NaoPodeAtacarException 
+    public void ataqueComVerdesENoturnoMorto() throws NaoPodeAtacarException, NaoPodeAlistarException 
     {
         // Arrange
         Exercito exercito = new Exercito();
@@ -98,7 +98,7 @@ public class NoturnosPorUltimoTest
     }
     
     @Test
-    public void atacarDwarfs() throws NaoPodeAtacarException
+    public void atacarDwarfs() throws NaoPodeAtacarException, NaoPodeAlistarException 
     {
         Exercito exe = this.criarExercitoComEstrategiaNoturnosPorUltimo();
         ArrayList<Dwarf> exeDwarfs = criarExercitoDeDwarfs(10);
@@ -128,7 +128,7 @@ public class NoturnosPorUltimoTest
     }
     
     @Test
-    public void atacarDwarfsSemExercito() throws NaoPodeAtacarException
+    public void atacarDwarfsSemExercito() throws NaoPodeAtacarException, NaoPodeAlistarException 
     {
         Exercito exe = new Exercito();
         exe.mudarEstrategia(new NoturnosPorUltimo());
@@ -144,7 +144,7 @@ public class NoturnosPorUltimoTest
     }
     
     @Test
-    public void atacarDwarfsComNull() throws NaoPodeAtacarException
+    public void atacarDwarfsComNull() throws NaoPodeAtacarException, NaoPodeAlistarException 
     {
         Exercito exe = new Exercito();
         exe.mudarEstrategia(null);
@@ -182,7 +182,7 @@ public class NoturnosPorUltimoTest
         return exe;
     }
     
-    private Exercito criarExercitoComEstrategiaNoturnosPorUltimo()
+    private Exercito criarExercitoComEstrategiaNoturnosPorUltimo() throws NaoPodeAlistarException 
     {
         Exercito exe = new Exercito();
         
