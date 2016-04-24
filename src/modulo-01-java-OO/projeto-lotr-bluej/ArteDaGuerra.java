@@ -9,28 +9,27 @@ public class ArteDaGuerra implements Estrategia
         return this.exercitoOrdenado;
     }
     
-    public void atacar(ArrayList<Elfo> exercito, ArrayList<Dwarf> hordaDeDwarfs)
+    public void atacar(ArrayList<Elfo> exercito, ArrayList<Dwarf> hordaDeDwarfs) throws NaoPodeAtacarException
     {
         if(exercito == null)
-            return;         
+            throw new NaoPodeAtacarException("Você não pode atacar sem um exercito!");
         
-        this.exercitoOrdenado = ordenarExercitoParaOAtaque(exercito, hordaDeDwarfs);
+        ordenarExercitoParaOAtaque(exercito, hordaDeDwarfs);
         
-        for (Elfo elfo : this.exercitoOrdenado) 
+        for (Elfo elfo : exercito) 
         {
+            this.exercitoOrdenado.add(elfo);
             elfoAtacarDwarfs(elfo, hordaDeDwarfs);
         }
     }
     
-    private ArrayList<Elfo> ordenarExercitoParaOAtaque(ArrayList<Elfo> exercito, ArrayList<Dwarf> hordaDeDwarfs)
+    private void ordenarExercitoParaOAtaque(ArrayList<Elfo> exercito, ArrayList<Dwarf> hordaDeDwarfs)
     {
         this.manterCom(Status.VIVO, exercito);
         this.removeElfosNoturnosQueNaoPodemAtacar(exercito, hordaDeDwarfs.size());
-        
-        return exercito;
     }
     
-    private ArrayList<Elfo> removeElfosNoturnosQueNaoPodemAtacar(ArrayList<Elfo> exercito, int numDeDwarfs)
+    private void removeElfosNoturnosQueNaoPodemAtacar(ArrayList<Elfo> exercito, int numDeDwarfs)
     {
         int numDeElfosNoturnosQuePodemAtacar = (int)(exercito.size() * numDeDwarfs * 0.3);
         int numDeElfosNoturnosJaVistos = 0;
@@ -45,15 +44,13 @@ public class ArteDaGuerra implements Estrategia
                     exercito.remove(i);
             }
         }
-        
-        return exercito;
     }
     
     private void elfoAtacarDwarfs(Elfo elfo, ArrayList<Dwarf> hordaDeDwarfs)
     {
         for(Dwarf dwarf : hordaDeDwarfs)
         {
-            elfo.atirarFlechas(dwarf);
+            elfo.atirarFlecha(dwarf);
         }
     }
     

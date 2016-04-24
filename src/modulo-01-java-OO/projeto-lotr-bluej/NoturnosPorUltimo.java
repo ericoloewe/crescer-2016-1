@@ -9,10 +9,11 @@ public class NoturnosPorUltimo implements Estrategia
         return this.exercitoOrdenado;
     }
     
-    public void atacar(ArrayList<Elfo> exercito, ArrayList<Dwarf> hordaDeDwarfs)
+    public void atacar(ArrayList<Elfo> exercito, ArrayList<Dwarf> hordaDeDwarfs) throws NaoPodeAtacarException
     {
         if(exercito == null)
-            return;
+            throw new NaoPodeAtacarException("Você não pode atacar sem um exercito!");
+        this.exercitoOrdenado.clear();
         
         this.manterCom(Status.VIVO, exercito);        
         
@@ -27,15 +28,16 @@ public class NoturnosPorUltimo implements Estrategia
         
         for (Elfo elfo : exercito) 
         {
+            this.exercitoOrdenado.add(elfo);
             elfoAtacarDwarfs(elfo, hordaDeDwarfs);
-        }
+        }        
     }
     
     private void elfoAtacarDwarfs(Elfo elfo, ArrayList<Dwarf> hordaDeDwarfs)
     {
         for(Dwarf dwarf : hordaDeDwarfs)
         {
-            elfo.atirarFlechas(dwarf);
+            elfo.atirarFlecha(dwarf);
         }
     }
     
