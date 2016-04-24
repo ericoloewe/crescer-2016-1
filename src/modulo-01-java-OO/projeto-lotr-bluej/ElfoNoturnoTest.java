@@ -39,7 +39,7 @@ public class ElfoNoturnoTest
         Float vidaEsperada = 95f;
         ElfoNoturno elfo = new ElfoNoturno("Atchim");
         
-        elfo.atirarFlechas();
+        elfo.atirarFlecha();
         
         assertTrue(vidaEsperada.equals(elfo.getVidaElfoNoturno()));
     }
@@ -52,7 +52,7 @@ public class ElfoNoturnoTest
         
         while(true)
         {
-            if(!elfo.atirarFlechas())
+            if(!elfo.atirarFlecha())
                 break;
         }
         
