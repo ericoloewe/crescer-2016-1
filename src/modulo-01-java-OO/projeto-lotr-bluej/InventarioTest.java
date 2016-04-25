@@ -11,14 +11,14 @@ public class InventarioTest
     {
         Item item = new Item(10, "");
         Inventario inv = new Inventario();
-        
-        inv.adicionarItem(item);
-        
-        assertTrue(inv.adicionarItem(item));
-        
-        assertTrue(inv.removerItem(item));
+
+        inv.adicionarItem(item);        
+        assertEquals(1, inv.getItens().size());
+
+        inv.removerItem(item);
+        assertEquals(0, inv.getItens().size());
     }
-    
+
     @Test
     public void descricaoDeItems()
     {
@@ -27,12 +27,12 @@ public class InventarioTest
         inv.adicionarItem(new Item(10, "Adaga"));
         inv.adicionarItem(new Item(100, "Escudo"));
         inv.adicionarItem(new Item(100, "Bracelete"));
-        
+
         String obtido = inv.getDescricoesItens();
-        
+
         assertEquals(esperado, obtido);
     }
-    
+
     @Test
     public void descricaoDeItemsComNull()
     {
@@ -41,23 +41,23 @@ public class InventarioTest
         inv.adicionarItem(new Item(10, "Adaga"));
         inv.adicionarItem(new Item(100, "Escudo"));
         inv.adicionarItem(new Item(100, null));
-        
+
         String obtido = inv.getDescricoesItens();
-        
+
         assertEquals(esperado, obtido);
     }
-    
+
     @Test
     public void descricaoDeItemsVazia()
     {
         String esperado = "";
         Inventario inv = new Inventario();
-        
+
         String obtido = inv.getDescricoesItens();
-        
+
         assertEquals(esperado, obtido);
     }
-    
+
     @Test
     public void numeroMaisPopular()
     {
@@ -66,22 +66,22 @@ public class InventarioTest
         inv.adicionarItem(new Item(10, "Adaga"));
         inv.adicionarItem(new Item(100, "Escudo"));
         inv.adicionarItem(esperado);
-        
+
         Item obtido = inv.itemComMaiorQuantidade();
-        
+
         assertEquals(esperado, obtido);
     }
-    
+
     @Test
     public void numeroMaisPopularComListaVazia()
     {
         Inventario inv = new Inventario();
-        
+
         Item obtido = inv.itemComMaiorQuantidade();
-        
+
         assertNull(obtido);
     }
-    
+
     @Test
     public void ordenaLista()
     {
@@ -90,17 +90,17 @@ public class InventarioTest
         inv.adicionarItem(new Item(100, "Escudo"));
         inv.adicionarItem(new Item(10, "Adaga"));
         inv.adicionarItem(new Item(1000, "Bracelete"));
-        
+
         inv.ordenarItens();
-        
+
         ArrayList<Item> obtido = inv.getItens();
-        
+
         for(int i = 0; i < obtido.size(); i++)
         {
             assertTrue(esperado.get(i).equals(obtido.get(i).getQuantidade()));
         }
     }
-    
+
     @Test
     public void ordenaListaCom100Elementos()
     {
@@ -114,25 +114,25 @@ public class InventarioTest
         {
             inv.adicionarItem(new Item(i, String.format("Item %d", i)));
         }
-        
+
         inv.ordenarItens();        
         ArrayList<Item> obtido = inv.getItens();
-        
+
         for(int i = 0; i < obtido.size(); i++)
         {
             assertTrue(esperado.get(i).equals(obtido.get(i).getQuantidade()));
         }
     }
-    
+
     @Test
     public void ordenaListaVazia()
     {
         Inventario inv = new Inventario();
-        
+
         inv.ordenarItens();
-        
+
         ArrayList<Item> obtido = inv.getItens();
-        
+
         assertEquals(obtido.size(), 0);
     }
 }
