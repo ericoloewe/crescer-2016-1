@@ -20,10 +20,9 @@ public class ElfoVerde extends Elfo
         return false;
     }
     
-    public boolean adicionarItemAoInventario(Item item)
+    public void adicionarItemAoInventario(Item item)
     {
         if(item.getDescricao() == "Espada de aço valiriano" || item.getDescricao() == "Arco e Flecha de Vidro")
-            return this.inventario.adicionarItem(item);
-        return false;
+            this.inventario.adicionarItem(item);
     }
 }

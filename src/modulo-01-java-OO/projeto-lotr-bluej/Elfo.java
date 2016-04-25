@@ -60,14 +60,14 @@ public class Elfo extends Personagem
         return Elfo.contadorDeElfos;
     }
     
-    public boolean adicionarItemAoInventario(Item item)
+    public void adicionarItemAoInventario(Item item)
     {
-        return this.inventario.adicionarItem(item);
+        this.inventario.adicionarItem(item);
     }
     
-    public boolean removerItemDoInventario(Item item)
+    public void removerItemDoInventario(Item item)
     {
-        return this.inventario.removerItem(item);
+        this.inventario.removerItem(item);
     }
     
     public String toString()
