@@ -6,6 +6,12 @@ import java.util.*;
 
 public class NoturnosPorUltimoTest
 {
+    @After
+    public void tearDown()
+    {
+        System.gc();
+    }
+    
     @Test
     public void exercitoEmbaralhadoPriorizaAtaqueComElfosVerdes() throws NaoPodeAtacarException, NaoPodeAlistarException 
     {

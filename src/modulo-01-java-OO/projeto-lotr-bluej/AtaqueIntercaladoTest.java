@@ -6,6 +6,12 @@ import java.util.*;
 
 public class AtaqueIntercaladoTest
 {
+    @After
+    public void tearDown()
+    {
+        System.gc();
+    }
+    
     @Test
     public void exercitoIntercaladoComeçandoComElfoNoturno() throws NaoPodeAtacarException, NaoPodeAlistarException {
         // Arrange

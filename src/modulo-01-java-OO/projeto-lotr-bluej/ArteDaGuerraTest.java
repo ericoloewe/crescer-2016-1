@@ -6,6 +6,12 @@ import java.util.*;
 
 public class ArteDaGuerraTest
 {
+    @After
+    public void tearDown()
+    {
+        System.gc();
+    }
+    
     @Test
     public void ataqueCom3Noturnos1Verde2Dwarves() throws NaoPodeAlistarException, NaoPodeAtacarException {
         Exercito exercito = new Exercito();
