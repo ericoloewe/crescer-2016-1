@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    top: 0;
+    background: gray;    
+}
+
+.pai {
+    margin: 30px;
+    background: darkcyan;
+}
+
+    .pai > .filho {
+        display: inline-block;      
+    }
+    
+    .pai > .filho.f3 {
+        position: relative;
+        left: -448px;
+    }
+    
+    .pai > .filho.f1 {
+        position: relative;
+        left: 448px;
+    }
+    
+.pai2 {
+    margin: 30px;
+    background: darkcyan;
+}
+
+    .pai2 > .filho {
+        float: left;       
+    }
+    
+    .filho {
+        margin: 10px;
+        width: 200px;
+        height: 100px;
+        background: aqua;        
+    }
+    
+.clear-fix {
+    clear: both;
+}
