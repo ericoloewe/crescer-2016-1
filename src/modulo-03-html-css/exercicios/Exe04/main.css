@@ -1,3 +1,4 @@
+/* Exe 03 */
 body {
     margin: 0;
 }
@@ -10,7 +11,14 @@ body {
     background: gray;    
 }
 
+/* Exe 01 */
 .pai {
+    margin: 30px;
+    background: darkcyan;
+}
+
+/* Exe 02 */
+.pai2 {
     margin: 30px;
     background: darkcyan;
 }
@@ -22,20 +30,21 @@ body {
     .pai > .filho.f3 {
         position: relative;
         left: -448px;
+        background: salmon;
     }
     
     .pai > .filho.f1 {
         position: relative;
         left: 448px;
+        background: rebeccapurple;
     }
-    
-.pai2 {
-    margin: 30px;
-    background: darkcyan;
-}
 
     .pai2 > .filho {
         float: left;       
+    }
+    
+    .pai2 > .filho:nth-of-type(4n - 3) {
+        clear: both;
     }
     
     .filho {
