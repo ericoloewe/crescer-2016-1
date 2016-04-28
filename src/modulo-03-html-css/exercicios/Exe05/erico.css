@@ -1,0 +1,67 @@
+/*
+ * Especificações:
+ * - body > header > h1 > span:first-child = "Titulo"
+ * - .content > .personagens > h2:last-child = "Titulo da lista de digimons"
+ * - .content > .personagens > ul:last-child = "Lista de digimons"
+ * - .digiescolhidos = "Digiescolhidos"
+ */
+
+
+
+.content {
+    width: 900px;
+    margin: 0 auto;
+}
+
+    .content > .personagens {
+        float: right;
+        height: 360px;
+        padding: 10px 40px;
+        overflow-y: auto;
+    }
+    
+        .content > .personagens > h2 {
+            text-align: center;
+        }
+        
+        .content > .personagens > ul {
+        }
+        
+    .content > .digiescolhidos {
+        float: left;
+        height: 360px;
+        padding: 10px 40px;
+        overflow-y: auto;
+    }
+    
+        .content > .digiescolhidos > h2 {
+            text-align: center;
+        }
+        
+        .content > .digiescolhidos > ul {
+        }   
+    
+    .content ul,
+    .content .personagens,
+    .content .digiescolhidos {
+        border: 1px solid #000;
+    }
+    
+    .content ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+footer {
+    clear: both;
+}
+    
+    
+    
+/* remover pokemons */
+body > header > h1 > span:last-child,
+.content > .personagens > h2:first-child,
+.content > .personagens > ul:first-child,
+.treinadores {
+    display: none;
+}
