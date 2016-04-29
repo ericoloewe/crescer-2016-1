@@ -7,9 +7,57 @@
  */
 
 
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+    position: relative;
+    width: 1000px;
+    margin: 10px auto 30px;
+    border: 1px solid #000;
+}
+
+    header > h1 {
+        position: absolute;
+        display: inline-block;
+        font-weight: normal;
+        margin: 50px 0 50px 260px;
+    }
+    
+        header > h1 > span {
+            font-weight: bold;
+        }
+
+    header > .imagem-fundo {
+        background: url("http://www.infomegablog.com.br/wp-content/uploads/2012/05/digimon3.gif") no-repeat center 0;
+        background-size: 246px 150px;
+        width: 246px;
+        height: 150px;
+    }
+    
+    header > .perfil {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -21px;
+    }
+    
+        header > .perfil > a {
+            text-decoration: none;
+        }
+    
+        header > .perfil > a:first-child {
+            float: left;
+        }
+        
+        header > .perfil > a:last-child {
+            float: left;
+            clear: both;
+        }
 
 .content {
-    width: 900px;
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -25,6 +73,7 @@
         }
         
         .content > .personagens > ul {
+            width: 550px;
         }
         
     .content > .digiescolhidos {
@@ -39,6 +88,7 @@
         }
         
         .content > .digiescolhidos > ul {
+            width: 250px;
         }   
     
     .content ul,
@@ -54,6 +104,13 @@
     
 footer {
     clear: both;
+    text-align: center;
+    border: 1px solid #000;
+    width: 1000px;
+    margin: 20px auto;
+    padding: 23px 0;
+    position: relative;
+    bottom: -25px;
 }
     
     
@@ -61,7 +118,7 @@ footer {
 /* remover pokemons */
 body > header > h1 > span:last-child,
 .content > .personagens > h2:first-child,
-.content > .personagens > ul:first-child,
+.content > .personagens > ul:first-of-type,
 .treinadores {
     display: none;
 }
