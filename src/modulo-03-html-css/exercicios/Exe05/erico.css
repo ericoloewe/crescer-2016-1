@@ -15,14 +15,14 @@ header {
     position: relative;
     width: 1000px;
     margin: 10px auto 30px;
-    border: 1px solid #000;
 }
 
     header > h1 {
         position: absolute;
         display: inline-block;
         font-weight: normal;
-        margin: 50px 0 50px 260px;
+        margin: 65px 0 0 275px;
+        animation: carregar 2s;
     }
     
         header > h1 > span {
@@ -34,17 +34,37 @@ header {
         background-size: 246px 150px;
         width: 246px;
         height: 150px;
+        margin: 10px;
+        animation: largar 2s;
     }
     
     header > .perfil {
         position: absolute;
         right: 20px;
         top: 50%;
-        margin-top: -21px;
+        margin-top: -50px;
     }
     
         header > .perfil > a {
+            width: 84px;
+            margin: 10px auto;
             text-decoration: none;
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
         }
     
         header > .perfil > a:first-child {
@@ -74,7 +94,7 @@ header {
         
         .content > .personagens > ul {
             width: 550px;
-        }
+        } 
         
     .content > .digiescolhidos {
         float: left;
@@ -89,12 +109,39 @@ header {
         
         .content > .digiescolhidos > ul {
             width: 250px;
+        }
+        
+        .content > .digiescolhidos > ul > li:nth-of-type(even),
+        .content > .personagens > ul > li:nth-of-type(even)  {
+            background-color: #f9f9f9;
         }   
+    
+    .content ul {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: all .2s ease-in-out;
+    }
     
     .content ul,
     .content .personagens,
-    .content .digiescolhidos {
-        border: 1px solid #000;
+    .content .digiescolhidos,
+    footer,
+    header {
+        border: 1px solid #ddd;
+    }
+    
+    .content .personagens,
+    .content .digiescolhidos,
+    footer,
+    header {
+        box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.5);
+    }
+    
+    .content .personagens:hover,
+    .content .digiescolhidos:hover,
+    footer:hover,
+    header:hover {
+        transform: scale(1.05);
     }
     
     .content ul {
@@ -102,10 +149,17 @@ header {
         padding-left: 0;
     }
     
+    .content ul > li:nth-child(2n) {
+        animation: carregarDaEsquerda 2s;
+    }
+    
+    .content ul > li:nth-child(2n - 1) {
+        animation: carregarDaDireita 2s;
+    }
+    
 footer {
     clear: both;
     text-align: center;
-    border: 1px solid #000;
     width: 1000px;
     margin: 20px auto;
     padding: 23px 0;
@@ -121,4 +175,52 @@ body > header > h1 > span:last-child,
 .content > .personagens > ul:first-of-type,
 .treinadores {
     display: none;
+}
+
+@keyframes largar {
+    0% {
+        transform: translateY(-150px);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-40px);
+    }
+    60% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes carregarDaEsquerda {
+    0% {
+        transform: translateX(-300px);
+    }    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes carregarDaDireita {
+    0% {
+        transform: translateX(700px);
+    }    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes carregar {
+    from {
+        transform: translateX(500px) rotateY(45deg);
+    }
+    to {
+        transform: translateX(0) rotateY(0);
+    }
 }
