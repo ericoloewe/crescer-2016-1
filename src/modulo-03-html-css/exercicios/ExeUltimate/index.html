@@ -51,12 +51,145 @@
                             </ul>
                         </li>
                         <li>
-                            <img class="imagem-usuario" src="" alt="imagem usuario">
+                            <img class="user-picture" src="" alt="imagem usuario">
                         </li>
                     </ul>
                 </div>
         </nav>
     </header>
+    
+    <nav class="sidebar">
+        <div class="info">
+            <img class="user-picture" src="" alt="Imagem do usuario">
+            <div class="user-description">
+                <h4 class="name">Érico de Souza Loewe</h4>    
+                <a class="mail" href="">ed-lowe@hotmail.com</a>
+            </div>          
+            <div class="clear-fix"></div>  
+            <ul class="icons">
+                <li>
+                    <a href="" class="glyphicon glyphicon-off"></a>
+                </li>
+                <li>
+                    <a href="" class="glyphicon glyphicon-user"></a>
+                </li>
+                <li>
+                    <a href="" class="glyphicon glyphicon-wrench"></a>
+                </li>
+                <li>
+                    <a href="" class="glyphicon glyphicon-cog"></a>
+                </li>
+            </ul>            
+        </div>
+        
+        <div class="menu">
+            <ul class="menu-list">
+                <li>
+                    <h4 class="title">DASHBOARDS</h4>
+                    <ul class="sub-menu">
+                        <li class="active">
+                            <a href="">
+                                <i class="glyphicon glyphicon-th-large"></i>Administrativo
+                            </a>                    
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="title">Cadastros</h4>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="">
+                                <i class="glyphicon glyphicon-th-list"></i>Contato
+                            </a>                    
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="glyphicon glyphicon-user"></i>Usuario
+                            </a>                    
+                        </li>
+                    </ul>
+                </li>
+            </ul>            
+        </div>
+    </nav>
+    
+    <article class="content">
+        <header class="page-header">
+            <h1>Cadastro</h1>   
+            <h4>Usuário</h4>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Library</a>
+                </li>
+                <li class="active">
+                    Data
+                </li>
+            </ol>
+            <div class="clear-fix"></div>
+        </header>
+        <section class="container">
+            <h2 class="title">Cadastro de Usuário</h2>
+            
+            <form class="row">
+                <div class="form-group col-sm-12">
+                    <label for="nome">Nome <strong>Pessoa Fisica</strong></label>
+                    <input type="text" class="form-control" id="nome" placeholder="Nome">      
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="cpf">CPF</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="Nome">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Nome">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="disabled">Disabled</label>
+                    <input type="text" class="form-control" id="disabled" placeholder="Nome" disabled>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="help">Help Block</label>
+                    <input type="text" class="form-control" id="help" placeholder="Nome">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="textarea">Text Area <strong>Write some text</strong></label>
+                    <textarea class="form-control" name="textarea" id="textarea" cols="30" rows="2" placeholder="placeholder"></textarea>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="select">Select <strong>List of items</strong></label>
+                    <input type="text" class="form-control" id="select" placeholder="Nome">
+                </div>
+                <div class="clear-fix"></div>
+                <div class="form-group col-sm-3">
+                    <label for="default">Default</label>
+                    <select class="form-control" name="" id="">
+                        <option>Option 1</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="multiple">Multiple</label>
+                    <select class="form-control" name="" id="multiple">
+                        <option>Option 1</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="group">Group</label>
+                    <select class="form-control" name="" id="group">
+                        <option>Option 1</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="search">Search</label>
+                    <select class="form-control" name="" id="search">
+                        <option>Option 1</option>
+                    </select>
+                </div>
+            </form>
+        </section>
+    </article>
     
     
     <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
