@@ -13,21 +13,108 @@
             font-family: "Comic Sans MS", cursive, sans-serif;
             font-size: 24px;
             line-height: 24px;
+            font-weight: bold;                
         }
-        
-    .navbar-right {}
     
-        .navbar-nav > li > a {
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
+    .navbar-collapse {}
+       
+    .navbar-collapse.collapse.in {
+        background: #fff;
+        overflow: hidden;
+    }
+    
+    .navbar-collapse[aria-expanded="true"] {
+        border-bottom: 1px solid #e7e7e7;
+    }
+    
+        .navbar-right {}
         
-        .navbar-nav > li > .imagem-usuario {
-            position: relative;
-            width: 60px;
-            height: 45px;
-            top: 8px;
-            margin-right: 25px;
-        }
+        .navbar-nav {}
         
+                .navbar-nav > li > a {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+                
+                .navbar-nav > li > a {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+                
+                .navbar-nav > li .badge-notify{
+                    background:#FF5252;
+                    position:relative;
+                    top: -15px;
+                    left: -15px;
+                    border-radius: 5px;
+                }
         
+            .navbar-nav > li.dropdown {
+                padding: 0 15px;
+            }
+        
+                .navbar-nav > li.dropdown > a.logout {
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: #bbb;
+                    text-transform: uppercase;
+                }
+                
+                .navbar-right > li > .imagem-usuario {
+                    position: relative;
+                    width: 60px;
+                    height: 45px;
+                    top: 8px;
+                    margin-right: 25px;
+                }
+        
+            .navbar-collapse.collapse.in > .navbar-right > li {
+                padding-left: 10px;
+            }
+        
+                .navbar-collapse.collapse.in > .navbar-right > li > .imagem-usuario {
+                    display: none;
+                }
+                
+/* sidebar */
+.sidebar {
+    height: 100%;
+    background: #2C2C31;
+}
+
+
+
+/* minimo lg (large) */
+@media (min-width: 1200px) {
+}
+
+/* maximo lg (large) */
+@media (max-width: 1200px) {   
+}
+
+/* minimo md (medium) */
+@media (min-width: 992px) {
+}
+
+/* maximo md (medium) */
+@media (max-width: 992px) {   
+}
+        
+/* minimo sm (small) */
+@media (min-width: 768px) {
+    .navbar > .container-fluid > .navbar-header {
+        margin-left: 20px;
+    }
+}
+
+/* maximo sm (small) */
+@media (max-width: 768px) {   
+}
+
+/* minimo xs (extra small) */
+@media (min-width: 480px) {
+}
+
+/* maximo xs (extra small) */
+@media (max-width: 480px) {   
+}
