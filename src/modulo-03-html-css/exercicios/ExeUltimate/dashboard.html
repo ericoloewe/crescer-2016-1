@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Administrativo - Dashboard</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <!--header-->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Projeto Crescer</a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!--right-->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" class="glyphicon glyphicon-search"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="glyphicon glyphicon-th"></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-globe"></i>
+                                <span class="badge badge-notify">10</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle logout" data-toggle="dropdown">
+                                LOGOUT <span class="glyphicon glyphicon-chevron-down"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Action</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img class="user-picture" src="" alt="imagem usuario">
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+    
+    <nav class="sidebar">
+        <div class="info">
+            <img class="user-picture" src="" alt="Imagem do usuario">
+            <div class="user-description">
+                <h4 class="name">Érico de Souza Loewe</h4>    
+                <a class="mail" href="">ed-lowe@hotmail.com</a>
+            </div>          
+            <div class="clear-fix"></div>  
+            <ul class="icons">
+                <li>
+                    <a href="" class="glyphicon glyphicon-off"></a>
+                </li>
+                <li>
+                    <a href="" class="glyphicon glyphicon-user"></a>
+                </li>
+                <li>
+                    <a href="" class="glyphicon glyphicon-wrench"></a>
+                </li>
+                <li>
+                    <a href="" class="glyphicon glyphicon-cog"></a>
+                </li>
+            </ul>            
+        </div>
+        
+        <div class="menu">
+            <ul class="menu-list">
+                <li>
+                    <h4 class="title">DASHBOARDS</h4>
+                    <ul class="sub-menu">
+                        <li class="active">
+                            <a href="">
+                                <i class="glyphicon glyphicon-th-large"></i>Administrativo
+                            </a>                    
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="title">Cadastros</h4>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="">
+                                <i class="glyphicon glyphicon-th-list"></i>Contato
+                            </a>                    
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="glyphicon glyphicon-user"></i>Usuario
+                            </a>                    
+                        </li>
+                    </ul>
+                </li>
+            </ul>            
+        </div>
+    </nav>
+    
+    <article class="content">
+        <header class="page-header">
+            <h1>Dashboard</h1>   
+            <h4>Administrativo</h4>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li class="active">
+                    Administrativo
+                </li>
+            </ol>
+            <div class="clear-fix"></div>
+        </header>
+        <section class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="statistics-numbers">
+                        <span class="icon icon-blue">
+                            <i class="glyphicon glyphicon-usd"></i>
+                        </span>
+                        <h3 class="description">31,570</h3>
+                        <p class="description-title">Total Lucro</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="statistics-numbers">
+                        <span class="icon icon-red">
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                        </span>
+                        <h3 class="description">31,570</h3>
+                        <p class="description-title">Total Lucro</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="statistics-numbers">
+                        <span class="icon icon-purple">
+                            <i class="glyphicon glyphicon-stats"></i>
+                        </span>
+                        <h3 class="description">31,570</h3>
+                        <p class="description-title">Total Lucro</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="statistics-numbers">
+                        <span class="icon icon-green">
+                            <i class="glyphicon glyphicon-eye-open"></i>
+                        </span>
+                        <h3 class="description">31,570</h3>
+                        <p class="description-title">Total Lucro</p>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="statistics-calendar">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h4 class="name">Eventos</h4>
+                                <p class="description">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    Hoje <br>
+                                    <strong class="number">300</strong>
+                                </p>                                
+                            </div>
+                            <div class="col-sm-3">
+                                <h4 class="name">Recrutamentos</h4>
+                                <p class="description">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    Ultimo Ano <br>
+                                    <strong class="number">8,790</strong>
+                                </p>                                
+                            </div>
+                            <div class="col-sm-3">
+                                <h4 class="name">Revenue</h4>
+                                <p class="description">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    Lucro Liquido <br>
+                                    <strong class="number">$ 93,880</strong>
+                                </p>                                
+                            </div>
+                            <div class="col-sm-3">
+                                <h4 class="name">Media de Vendas</h4>
+                                <p class="description">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    Ultimos 6 Meses <br>
+                                    <strong class="number">64,570</strong>
+                                </p>                                
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+    </article>
+    
+    
+    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+
+</html>
