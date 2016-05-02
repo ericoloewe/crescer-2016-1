@@ -46,3 +46,32 @@ body {
                 float: left;
                 margin-right: 15px;
             }
+            
+/* maximo md (medium) */
+@media (max-width: 992px) {
+    .conteudo {
+        width: 100%;
+    }   
+}
+
+/* maximo sm (small) */
+@media (max-width: 768px) {
+    .corpo > .descricao {
+        float: left;
+    }
+}
+
+/* maximo xs (extra small) */
+@media (max-width: 480px) {
+    .menu > .item {
+        display: block;
+    }
+    .corpo > .imagem-descricao {
+        width: 100%;
+    }   
+}
+
+/* mixins */
+.clear-fix {
+    clear: both;
+}
