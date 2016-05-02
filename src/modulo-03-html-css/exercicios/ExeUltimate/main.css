@@ -10,7 +10,6 @@
  .content {
     position: relative;
     top: -20px;
-    margin-left: 250px;
     background: #E4E9F0;
  }
  
@@ -22,11 +21,12 @@
     }
     
         .page-header > h1 {
-            
+            font-size: 25px;
         }
     
         .page-header > h4 {
             display: inline;
+            font-size: 16px;
         }
     
         .page-header > .breadcrumb {
@@ -172,10 +172,13 @@
     width: 250px;
     height: 100%;
     top: 0;
+    left: -250px;
     padding-top: 62px;
     z-index: 999;
     background: #2C2C31;    
     box-shadow: .5px 0 10px .1px rgba(0,0,0,0.1);
+    animation: esconderSlidebar 2s;
+    transition: 1s linear;
 }
 
     .sidebar > .info {   
@@ -281,6 +284,31 @@
     .sidebar ul {
         padding-left: 0;
     }
+    
+    .sidebar::after {
+        content: "\21E0";
+        position: absolute;
+        font-size: 30px;
+        right: -40px;
+        background: #FAFAFA;
+        box-shadow: .5px 0 10px .1px rgba(0,0,0,0.1);
+        width: 40px;
+        height: 45px;
+        padding: 0;
+        border-bottom-right-radius: 16px;
+        border-top-right-radius: 16px;
+        transition: 1s linear;
+    }
+    
+    .sidebar:hover::after {
+        content: "\21E2";
+        transition: 1s linear;
+    }
+    
+    .sidebar:hover {
+        left: 0;
+        transition: 1s linear;
+    }
 
 
 
@@ -322,4 +350,13 @@
 /* mixins */
 .clear-fix {
     clear: both;
+}
+
+@keyframes esconderSlidebar {
+    from {
+        left: 0;
+    }
+    to {
+        left: -250px;
+    }
 }
