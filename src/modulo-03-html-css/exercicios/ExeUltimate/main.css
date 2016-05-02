@@ -1,90 +1,57 @@
-
 /*
- * Page Styles
+ * All pages styles
  */
- 
- body {
-     background: #E4E9F0;
- }
- 
- .content {
-    position: relative;
-    top: -20px;
+body {
     background: #E4E9F0;
- }
+}
+    /* content */
+    .content {
+        position: relative;
+        top: -20px;
+        background: #E4E9F0;
+    }
+        /* page-header */
+        .content > .page-header {
+            margin: 0 0 20px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 .5px 10px .1px rgba(0,0,0,0.1);
+        }
+            /* titles */
+            .page-header > h1 {
+                font-size: 25px;
+            }
+        
+            .page-header > h4 {
+                display: inline;
+                font-size: 16px;
+            }            
+            /* breadcrumb */
+            .page-header > .breadcrumb {
+                float: right;
+                background: transparent;
+            }
+                .page-header > .breadcrumb li {
+                
+                }
+                
+                    .page-header > .breadcrumb li > a {
+                        color: #333;
+                    }
+                    
+                    .page-header > .breadcrumb li.active > a {
+                        color: #888;
+                    }
+            
+                .page-header > .breadcrumb > li + li:before {
+                    content: "\02C3";
+                }
+                
+        .content .form-control {
+            background: #FAFAFA;
+            border: 1px solid #eee;
+        }
  
-    .content > .page-header {
-        margin: 0 0 20px;
-        padding: 20px;
-        background: #fff;
-        box-shadow: 0 .5px 10px .1px rgba(0,0,0,0.1);
-    }
-    
-        .page-header > h1 {
-            font-size: 25px;
-        }
-    
-        .page-header > h4 {
-            display: inline;
-            font-size: 16px;
-        }
-    
-        .page-header > .breadcrumb {
-            float: right;
-            background: transparent;
-        }
-            .page-header > .breadcrumb li {
-            
-            }
-            
-                .page-header > .breadcrumb li > a {
-                    color: #333;
-                }
-                
-                .page-header > .breadcrumb li.active > a {
-                    color: #888;
-                }
-        
-            .page-header > .breadcrumb > li + li:before {
-                content: "\02C3";
-            }
-        
-    .content > .container {
-        border-radius: 5px;
-        background: #fff;
-        color: #454545;
-    }
-    
-        .content > .container > .title {
-            margin: 25px 0 30px;
-            font-weight: 500;
-            color: #A59999;            
-        }
-        
-        .content > .container > form {
-            padding-bottom: 20px;
-        }
-        
-            .container > form > .form-group {
-                margin: 10px 0;
-            }        
-            
-                .container > form > .form-group label {
-                    text-transform: uppercase;
-                    font-weight: 600;
-                }
-                
-                .container > form > .form-group label strong {
-                    color: #999;
-                    font-weight: 500;
-                }
-        
-    .content .form-control {
-        background: #FAFAFA;
-        border: 1px solid #eee;
-    }
-
-
 /*
  * Navbar styles
  */

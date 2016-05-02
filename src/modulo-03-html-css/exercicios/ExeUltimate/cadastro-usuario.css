@@ -1,0 +1,32 @@
+/*
+ * Page Styles
+ */
+.content > .container {
+    border-radius: 5px;
+    background: #fff;
+    color: #454545;
+}
+
+    .content > .container > .title {
+        margin: 25px 0 30px;
+        font-weight: 500;
+        color: #A59999;            
+    }
+    
+    .content > .container > form {
+        padding-bottom: 20px;
+    }
+    
+        .container > form > .form-group {
+            margin: 10px 0;
+        }        
+        
+            .container > form > .form-group label {
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+            
+            .container > form > .form-group label strong {
+                color: #999;
+                font-weight: 500;
+            }
