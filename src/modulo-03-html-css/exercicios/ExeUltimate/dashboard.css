@@ -103,3 +103,66 @@
                     font-weight: 300;
                     color: #6C9BD6;
                 }
+                
+        .statistics-accesses {            
+            text-align: center;
+        }
+        
+            .statistics-accesses > .title {
+                font-size: 16px;
+                margin: 0 0 16px;
+                text-transform: uppercase;
+                text-align: left;
+                color: #797979;
+            }
+            
+            .statistics-accesses > .graph {}
+            
+            
+/* minimo lg (large) */
+@media (min-width: 1200px) {
+}
+
+/* maximo lg (large) */
+@media (max-width: 1200px) {   
+}
+
+/* minimo md (medium) e maximo lg (large) */
+@media (min-width: 992px) and (max-width: 1200px) {  
+    .statistics-accesses > .graph {
+        width: 390px;
+    }  
+}
+
+/* minimo md (medium) */
+@media (min-width: 992px) {
+}
+
+/* maximo md (medium) */
+@media (max-width: 992px) {   
+}
+        
+/* minimo sm (small) */
+@media (min-width: 768px) {
+    .navbar > .container-fluid > .navbar-header {
+        margin-left: 20px;
+    }
+}
+
+/* maximo sm (small) */
+@media (max-width: 768px) {
+    .statistics-accesses > .graph {
+        width: 390px;
+    }      
+}
+
+/* minimo xs (extra small) */
+@media (min-width: 480px) {
+}
+
+/* maximo xs (extra small) */
+@media (max-width: 480px) {
+    .statistics-accesses > .graph {
+        width: 100%;
+    }
+}
