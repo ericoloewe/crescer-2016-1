@@ -54,15 +54,14 @@ function fibonacci(n) {
 
 // exe06
 function queroCafe(numero, listaDeNumeros) {
-    var numerosMenores = "";
+    var numerosMenores = new Array();
     if(Array.isArray(listaDeNumeros)) {
         listaDeNumeros.forEach(function(num) {
             if(num <= numero)
-                numerosMenores += num + ",";
+                numerosMenores.push(num);
         });
-        numerosMenores =  numerosMenores.substring(0, numerosMenores.length - 1);
     }        
-    return numerosMenores;
+    return numerosMenores.sort().toString();
 }
 
 // exe07
