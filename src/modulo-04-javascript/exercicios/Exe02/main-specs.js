@@ -39,7 +39,7 @@ describe('Ex 2. Canivete suíço', function () {
 });
 
 /*
- * Exercício 2
+ * Exercício 3
  */
 describe('Ex 3. Aniversários', function () {
     it("quando chamar a função deve retornar Março, Maio e Novembro", function () {
@@ -48,6 +48,64 @@ describe('Ex 3. Aniversários', function () {
         
         // act
         var obtido = obterMesesComMaisAniversarios();        
+        
+        // assert
+        expect(esperado).toEqual(obtido);
+    });
+});
+
+/*
+ * Exercício 4
+ */
+describe('Ex 4. Altura média', function () {
+    it("quando chamar a função deve retornar 1,85", function () {
+        // arrange
+        var esperado = 1.85;
+        
+        // act
+        var obtido = obterAlturaMedia();        
+        
+        // assert
+        expect(esperado).toEqual(obtido);
+    });
+});
+
+/*
+ * Exercício 5
+ */
+describe('Ex 5. Altura mediana', function () {
+    it("quando chamar a função deve retornar 1,84", function () {
+        // arrange
+        var esperado = 1.84;
+        
+        // act
+        var obtido = obterAlturaMediana();        
+        
+        // assert
+        expect(esperado).toEqual(obtido);
+    });
+});
+
+/*
+ * Exercício 6
+ */
+describe('Ex 6. Peso médio', function () {
+    it("A - quando chamar a função deve retornar 84,27", function () {
+        // arrange
+        var esperado = 84.27;
+        
+        // act
+        var obtido = obterPesoMedio();        
+        
+        // assert
+        expect(esperado).toEqual(obtido);
+    });    
+    it("B - quando chamar a função deve retornar 80,67", function () {
+        // arrange
+        var esperado = 80.67;
+        
+        // act
+        var obtido = obterPesoMedioDoadores();        
         
         // assert
         expect(esperado).toEqual(obtido);
