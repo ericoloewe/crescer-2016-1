@@ -68,12 +68,14 @@ function obterMesesComMaisAniversarios() {
  */
 function obterAlturaMedia() {
     var soma = 0;
+    var alturaMedia = 0;
     
     goldSaints.forEach(function(cavaleiro) {
         soma += cavaleiro.alturaCm;
     });
     
-    return parseFloat(((soma / goldSaints.length) / 100).toFixed(2));
+    alturaMedia = ((soma / goldSaints.length) / 100);
+    return Math.round(alturaMedia * 100) / 100;
 }
 
 /*
@@ -81,6 +83,7 @@ function obterAlturaMedia() {
  */
 function obterAlturaMediana() {
     var alturas = new Array();
+    var medianaEmM = 0;
     var mediana = function(numeros) {
         // ordenado os numeros
         numeros.sort(function(a, b) {
@@ -97,7 +100,8 @@ function obterAlturaMediana() {
         alturas.push(cavaleiro.alturaCm);
     });
     
-    return parseFloat((mediana(alturas) / 100).toFixed(2));
+    medianaEmM = (mediana(alturas) / 100);
+    return Math.round(medianaEmM * 100) / 100;
 }
 
 /*
@@ -105,7 +109,7 @@ function obterAlturaMediana() {
  */
 function obterPesoMedio() {
     var calcularPesoMedio = function(cavaleiros) {
-        var soma = 0, i = 0;
+        var soma = 0, i = 0, pesoMedioEmKg = 0;
     
         cavaleiros.forEach(function(cavaleiro) {
             if(cavaleiro.pesoLb !== undefined) {
@@ -114,7 +118,8 @@ function obterPesoMedio() {
             }            
         });
         
-        return parseFloat(((soma / i) / 2.20462).toFixed(2)); 
+        pesoMedioEmKg = ((soma / i) / 2.20462);
+        return Math.round(pesoMedioEmKg * 100) / 100;
     }
     
     return calcularPesoMedio(goldSaints);
@@ -125,7 +130,7 @@ function obterPesoMedio() {
  */
 function obterPesoMedioDoadores() {
     var calcularPesoMedio = function(cavaleiros) {
-        var soma = 0, i = 0;
+        var soma = 0, i = 0, pesoMedioEmKg = 0;
     
         cavaleiros.forEach(function(cavaleiro) {
             if(cavaleiro.pesoLb !== undefined) {
@@ -134,7 +139,8 @@ function obterPesoMedioDoadores() {
             }            
         });
         
-        return parseFloat(((soma / i) / 2.20462).toFixed(2)); 
+        pesoMedioEmKg = ((soma / i) / 2.20462);
+        return Math.round(pesoMedioEmKg * 100) / 100;
     }
     
     return calcularPesoMedio(obterDoadores());
@@ -150,8 +156,8 @@ function obterIMC() {
         if(cavaleiro.pesoLb !== undefined) {
             var pesoEmKg = cavaleiro.pesoLb / 2.20462;
             var alturaEmM = cavaleiro.alturaCm / 100;
-            
-            imcs.push(parseFloat((pesoEmKg / (alturaEmM * alturaEmM)).toFixed(2)));
+            var imc = (pesoEmKg / (alturaEmM * alturaEmM));
+            imcs.push(Math.round(imc * 100) / 100);
         }
     });
     
@@ -170,7 +176,7 @@ function obterSobrepeso() {
         if(cavaleiro.pesoLb !== undefined) {
             var pesoEmKg = cavaleiro.pesoLb / 2.20462;
             var alturaEmM = cavaleiro.alturaCm / 100;
-            var imc = parseFloat((pesoEmKg / (alturaEmM * alturaEmM)).toFixed(2));
+            var imc = (Math.round(pesoEmKg / (alturaEmM * alturaEmM) * 100) / 100);
             cavalerosComImc.set(imc, cavaleiro);
         }
     });
