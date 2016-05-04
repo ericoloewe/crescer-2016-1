@@ -9,9 +9,8 @@ console.log(goldSaints);
 function obterDoadores() {
     var doadores = new Array();
     
-    goldSaints.forEach(function(cavaleiro) {
-        if(cavaleiro.tipoSanguineo === "O")
-            doadores.push(cavaleiro);
+    doadores = goldSaints.filter(function(cavaleiro) {
+        return (cavaleiro.tipoSanguineo === "O");
     });
     
     return doadores;
@@ -36,47 +35,30 @@ function obterCavaleiroComMaisGolpes() {
  */
 function obterMesesComMaisAniversarios() {
     function getMes(mes) {
-        var meses = new Array();
-        meses[0] = "Janeiro";
-        meses[1] = "Fevereiro";
-        meses[2] = "Março";
-        meses[3] = "Abril";
-        meses[4] = "Maio";
-        meses[5] = "Junho";
-        meses[6] = "Julho";
-        meses[7] = "Agosto";
-        meses[8] = "Setembro";
-        meses[9] = "Outubro";
-        meses[10] = "Novembro";
-        meses[11] = "Dezembro";
+        var meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
         return meses[mes];
     }
-    var mesesComQuantPorMes = new Array();
+    var mesesComQuantPorMes = new Map();
     var mesesComMaisAniversarios = new Array();
     var maxQuantPorMes = 0;
     
     goldSaints.forEach(function(cavaleiro) {
         var dataNascimento = new Date(cavaleiro.dataNascimento);
-        mesesComQuantPorMes.push({
-            mes: dataNascimento.getMonth(),
-            quantPorMes: goldSaints.filter(function(cav) {
-                return new Date(cav.dataNascimento).getMonth() === dataNascimento.getMonth();
-            }).length
-        });        
+        var quantPorMes = goldSaints.filter(function(cav) {
+                            return new Date(cav.dataNascimento).getMonth() === dataNascimento.getMonth();
+                        }).length;
+        
+        mesesComQuantPorMes.set(dataNascimento.getMonth(), quantPorMes);
     });
     
-    
-    mesesComQuantPorMes.forEach(function(m) {
-       if(m.quantPorMes > maxQuantPorMes)
-           maxQuantPorMes = m.quantPorMes; 
+    mesesComQuantPorMes.forEach(function(quantPorMes, mes) {
+       if(quantPorMes > maxQuantPorMes)
+           maxQuantPorMes = quantPorMes; 
     });
     
-    mesesComQuantPorMes.filter(function(m) {
-        return m.quantPorMes === maxQuantPorMes;
-    })
-    .forEach(function(m) {
-        if(mesesComMaisAniversarios.indexOf(getMes(m.mes)) === -1)
-            mesesComMaisAniversarios.push(getMes(m.mes));
+    mesesComQuantPorMes.forEach(function(quantPorMes, mes) {
+        if(maxQuantPorMes === quantPorMes && mesesComMaisAniversarios.indexOf(getMes(mes)) === -1)
+            mesesComMaisAniversarios.push(getMes(mes));
     });
     
     return mesesComMaisAniversarios;
