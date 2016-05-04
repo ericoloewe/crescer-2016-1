@@ -38,8 +38,7 @@ function obterMesesComMaisAniversarios() {
     var mesesComMaisAniversarios = new Array();
     var maxQuantPorMes = 0;
     var getMes = function(mes) {
-        var meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
-        return meses[mes];
+        return new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")[mes];
     }    
     
     goldSaints.forEach(function(cavaleiro) {
@@ -145,5 +144,40 @@ function obterPesoMedioDoadores() {
  * Exercício 7
  */
 function obterIMC() {
+    var imcs = new Array();
     
+    goldSaints.forEach(function (cavaleiro){
+        if(cavaleiro.pesoLb !== undefined) {
+            var pesoEmKg = cavaleiro.pesoLb / 2.20462;
+            var alturaEmM = cavaleiro.alturaCm / 100;
+            
+            imcs.push(parseFloat((pesoEmKg / (alturaEmM * alturaEmM)).toFixed(2)));
+        }
+    });
+    
+    return imcs;
+}
+
+/*
+ * Exercício 8
+ */
+function obterSobrepeso() {
+    var imcs = obterIMC();
+    var cavalerosComImc = new Map();
+    var cavaleirosAcimaDoPeso = new Array();
+    
+    goldSaints.forEach(function (cavaleiro){
+        if(cavaleiro.pesoLb !== undefined) {
+            var pesoEmKg = cavaleiro.pesoLb / 2.20462;
+            var alturaEmM = cavaleiro.alturaCm / 100;
+            var imc = parseFloat((pesoEmKg / (alturaEmM * alturaEmM)).toFixed(2));
+            cavalerosComImc.set(imc, cavaleiro);
+        }
+    });
+    
+    return imcs.filter(function(imc) {
+        return imc >= 25;
+    }).map(function (imc) {
+        return cavalerosComImc.get(imc);
+    });
 }
