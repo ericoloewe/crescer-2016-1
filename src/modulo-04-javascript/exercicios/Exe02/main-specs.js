@@ -111,3 +111,37 @@ describe('Ex 6. Peso médio', function () {
         expect(esperado).toEqual(obtido);
     });
 });
+
+/*
+ * Exercício 7
+ */
+describe('Ex 7. IMC', function () {
+    it("quando chamar a função deve retornar um array com 22.64, 29.48, 24.62, 24.22, 24.84, 20.53, 24.54, 24.31, 23.99, 22.45 e 21.5", function () {
+        // arrange
+        var esperado = [22.64, 29.48, 24.62, 24.22, 24.84, 20.53, 24.54, 24.31, 23.99, 22.45, 21.5];
+        
+        // act
+        var obtido = obterIMC();        
+        
+        // assert
+        expect(esperado).toEqual(obtido);
+    });
+});
+
+/*
+ * Exercício 8
+ */
+describe('Ex 8. Sobrepeso', function () {
+    it("quando chamar a função deve retornar o Aldebaran", function () {
+        // arrange
+        var nomeEsperado = "Aldebaran";
+        var idEsperado = 2;
+        
+        // act
+        var obtido = obterSobrepeso();
+        
+        // assert
+        expect(nomeEsperado).toEqual(obtido[0].nome);
+        expect(idEsperado).toEqual(obtido[0].id);
+    });
+});
