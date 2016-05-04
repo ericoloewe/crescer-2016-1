@@ -95,12 +95,8 @@ function obterAlturaMediana() {
         // se não, ele retorna o valor do meio.
         return (numeros.length % 2) ? numeros[meio] : (numeros[meio-1] + numeros[meio]) / 2;
     }    
-    
-    goldSaints.forEach(function(cavaleiro) {
-        alturas.push(cavaleiro.alturaCm);
-    });
-    
-    medianaEmM = (mediana(alturas) / 100);
+
+    medianaEmM = (mediana(goldSaints.map(function(c) {return c.alturaCm;})) / 100);
     return Math.round(medianaEmM * 100) / 100;
 }
 
