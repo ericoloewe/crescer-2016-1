@@ -34,13 +34,13 @@ function obterCavaleiroComMaisGolpes() {
  * Exercício 3
  */
 function obterMesesComMaisAniversarios() {
-    function getMes(mes) {
-        var meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
-        return meses[mes];
-    }
     var mesesComQuantPorMes = new Map();
     var mesesComMaisAniversarios = new Array();
     var maxQuantPorMes = 0;
+    var getMes = function(mes) {
+        var meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+        return meses[mes];
+    }    
     
     goldSaints.forEach(function(cavaleiro) {
         var dataNascimento = new Date(cavaleiro.dataNascimento);
@@ -62,4 +62,88 @@ function obterMesesComMaisAniversarios() {
     });
     
     return mesesComMaisAniversarios;
+}
+
+/*
+ * Exercício 4
+ */
+function obterAlturaMedia() {
+    var soma = 0;
+    
+    goldSaints.forEach(function(cavaleiro) {
+        soma += cavaleiro.alturaCm;
+    });
+    
+    return parseFloat(((soma / goldSaints.length) / 100).toFixed(2));
+}
+
+/*
+ * Exercício 5
+ */
+function obterAlturaMediana() {
+    var alturas = new Array();
+    var mediana = function(numeros) {
+        // ordenado os numeros
+        numeros.sort(function(a, b) {
+            return a - b;
+        });
+        // pego o meio do array, onde estara os valores para fazer a mediana
+        var meio = Math.floor(numeros.length/2);
+        // é visto se o tamanho do array é par, se sim, ele retorna os dois valores do meio do array,
+        // se não, ele retorna o valor do meio.
+        return (numeros.length % 2) ? numeros[meio] : (numeros[meio-1] + numeros[meio]) / 2;
+    }    
+    
+    goldSaints.forEach(function(cavaleiro) {
+        alturas.push(cavaleiro.alturaCm);
+    });
+    
+    return parseFloat((mediana(alturas) / 100).toFixed(2));
+}
+
+/*
+ * Exercício 6 - A
+ */
+function obterPesoMedio() {
+    var calcularPesoMedio = function(cavaleiros) {
+        var soma = 0, i = 0;
+    
+        cavaleiros.forEach(function(cavaleiro) {
+            if(cavaleiro.pesoLb !== undefined) {
+                soma += cavaleiro.pesoLb;
+                i++;
+            }            
+        });
+        
+        return parseFloat(((soma / i) / 2.20462).toFixed(2)); 
+    }
+    
+    return calcularPesoMedio(goldSaints);
+}
+
+/*
+ * Exercício 6 - B
+ */
+function obterPesoMedioDoadores() {
+    var calcularPesoMedio = function(cavaleiros) {
+        var soma = 0, i = 0;
+    
+        cavaleiros.forEach(function(cavaleiro) {
+            if(cavaleiro.pesoLb !== undefined) {
+                soma += cavaleiro.pesoLb;
+                i++;
+            }            
+        });
+        
+        return parseFloat(((soma / i) / 2.20462).toFixed(2)); 
+    }
+    
+    return calcularPesoMedio(obterDoadores());
+}
+
+/*
+ * Exercício 7
+ */
+function obterIMC() {
+    
 }
