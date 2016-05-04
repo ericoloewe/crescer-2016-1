@@ -58,9 +58,9 @@ describe('Ex 3. Aniversários', function () {
  * Exercício 4
  */
 describe('Ex 4. Altura média', function () {
-    it("quando chamar a função deve retornar 1,85", function () {
+    it("quando chamar a função deve retornar 1,86", function () {
         // arrange
-        var esperado = 1.85;
+        var esperado = 1.86;
         
         // act
         var obtido = obterAlturaMedia();        
@@ -74,9 +74,9 @@ describe('Ex 4. Altura média', function () {
  * Exercício 5
  */
 describe('Ex 5. Altura mediana', function () {
-    it("quando chamar a função deve retornar 1,84", function () {
+    it("quando chamar a função deve retornar 1,85", function () {
         // arrange
-        var esperado = 1.84;
+        var esperado = 1.85;
         
         // act
         var obtido = obterAlturaMediana();        
