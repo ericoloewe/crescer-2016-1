@@ -24,18 +24,18 @@
         
         criarListaDeCavaleiros: function() {
             var self = this;
-            var $listaDeImagens = $("<ul>").addClass("lista-de-cavaleiros");
+            var $listaDeImagens = $("<div>").addClass("lista-de-cavaleiros").addClass("row");
 
             this.goldSaints.forEach(function(cavaleiro) {
                 $listaDeImagens.append(self.criarLiCavaleiro(cavaleiro));
             });
 
-            $("body").append($listaDeImagens);
+            $("body > .container").append($listaDeImagens);
         },
         
         vincularEventos: function() {
             var self = this;
-            this.$listaDeCavaleiros.find("li").hover(function() {
+            this.$listaDeCavaleiros.find(".cavaleiro").hover(function() {
                 var idCavaleiro = $(this).data("id-cavaleiro");
                 
                /*console.log($(this).data("id-cavaleiro"), "-", self.goldSaints.filter(function(cav) {
@@ -60,12 +60,14 @@
         },
         
         criarLiCavaleiro: function(cavaleiro) {
-            var $liCavaleiro = $("<li>").attr("data-id-cavaleiro", cavaleiro.id)
-                                .addClass("cavaleiro");
+            var $liCavaleiro = $("<div>").attr("data-id-cavaleiro", cavaleiro.id)
+                                            .addClass("col-sm-2")
+                                            .addClass("cavaleiro");
                                 
             cavaleiro.imagens.forEach(function(imagem) {
                 $liCavaleiro.append($("<img>").attr("alt", cavaleiro.nome)
-                                                .attr("src", imagem.url));
+                                                .attr("src", imagem.url))
+                                                .addClass("img-thumbnail");
             });
             
             return $liCavaleiro;                                
@@ -87,6 +89,7 @@
             this.$form.submit(function(e) {
                 e.preventDefault();
                 self.cadastrarCavaleiro($(this));
+                self.clearForm();
                 return e.preventDefault();
             });
         },
@@ -101,15 +104,26 @@
             App.ListaDeCavaleiros.addCavaleiro(cavaleiro);
         },
         
+        clearForm: function() {
+            this.$form[0].reset();
+        },
+        
         getCavaleiroDoForm: function($cavaleiro) {
             // Obtém o objeto nativo Form através da posição 0 no objeto jQuery e cria um FormData a partir dele
             var cavaleiro = new FormData($cavaleiro[0]);
             
             return {
+                id: App.ListaDeCavaleiros.goldSaints.length,
                 nome: cavaleiro.get("nome"),
                 tipoSanguineo: cavaleiro.get("tipoSanguineo"),
-                imagens: [{url: cavaleiro.get("url"), isThumb:true}]
+                imagens: [{url: cavaleiro.get("url"), isThumb:true}],
+                dataNascimento: this.getDataFormatada(cavaleiro.get("dataNascimento"))
             };
+        },
+        
+        getDataFormatada: function(data) {
+            var dia = data.substr(0, 2), mes = data.substr(3, 2), ano = data.substr(6, 4);
+            return new Date(Date.parse(mes + "/" + dia + "/" + ano)).toISOString();
         }
     };
     
