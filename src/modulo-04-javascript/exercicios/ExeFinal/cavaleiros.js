@@ -97,6 +97,8 @@
         cadastrarCavaleiro: function($cavaleiro) {
             var cavaleiros = JSON.parse(localStorage["cavaleiros"]);
             var cavaleiro = this.getCavaleiroDoForm($cavaleiro);
+            if(!this.cavaleiroNoPadrao(cavaleiro))
+                return;
             cavaleiros.push(cavaleiro);
             
             localStorage["cavaleiros"] = JSON.stringify(cavaleiros);
@@ -117,13 +119,53 @@
                 nome: cavaleiro.get("nome"),
                 tipoSanguineo: cavaleiro.get("tipoSanguineo"),
                 imagens: [{url: cavaleiro.get("url"), isThumb:true}],
-                dataNascimento: this.getDataFormatada(cavaleiro.get("dataNascimento"))
+                dataNascimento: this.getDataFormatada(cavaleiro.get("dataNascimento")),
+                alturaCm: this.metrosParaCentimetros(cavaleiro.get("altura"))
             };
         },
         
         getDataFormatada: function(data) {
             var dia = data.substr(0, 2), mes = data.substr(3, 2), ano = data.substr(6, 4);
             return new Date(Date.parse(mes + "/" + dia + "/" + ano)).toISOString();
+        },
+        
+        metrosParaCentimetros: function(altura) {
+            return parseFloat(altura * 100);
+        },
+        
+        cavaleiroNoPadrao: function(cavaleiro) {
+            if(cavaleiro.alturaCm < 0) {
+                App.Message.error("Você não pode adicionar uma data negativa");
+                return false;
+            }
+            
+            return true;
+        }
+    };
+    
+    App.Message = {
+        message: function(message) {
+            $("body > .container > .page-header").after($("<div>").addClass("alert")
+                                        .addClass("alert-info")
+                                        .prepend("<p>" + message + "</p>"));
+        },
+
+        error: function (message) {
+            $("body > .container > .page-header").after($("<div>").addClass("alert")
+                            .addClass("alert-danger")
+                            .prepend("<p>" + message + "</p>"));
+        },
+
+        success: function (message) {
+            $("body > .container > .page-header").after($("<div>").addClass("alert")
+                            .addClass("alert-success")
+                            .prepend("<p>" + message + "</p>"));
+        },
+
+        warning: function (message) {
+            $("body > .container > .page-header").after($("<div>").addClass("alert")
+                            .addClass("alert-warning")
+                            .prepend("<p>" + message + "</p>"));
         }
     };
     
