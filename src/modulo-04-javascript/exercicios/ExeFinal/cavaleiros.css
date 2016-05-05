@@ -1,0 +1,31 @@
+.lista-de-cavaleiros {
+    list-style: none;
+    padding: 0;
+}
+
+    .lista-de-cavaleiros > .cavaleiro {
+        display: inline-block;
+    }
+    
+.cadastro-de-cavaleiros {}
+
+    form > .grupo {
+        display: table;
+        margin: 10px;
+    }
+    
+        .grupo > label {
+            
+        }
+    
+        .grupo > input, .grupo > select {
+            margin: 5px;
+            padding: 2px;
+            border-radius: 3px;
+            border: 1px solid #bbb;
+        }
+        
+        .grupo > button {
+            margin: 0 auto;
+            text-align: center;
+        }
