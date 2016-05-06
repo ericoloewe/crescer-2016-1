@@ -145,6 +145,10 @@
                 );              
                 return e.preventDefault();
             });
+            
+            this.$form.find("#dataNascimento").datepicker({
+                format: "dd/mm/yyyy"
+            });
         },
         
         cadastrarCavaleiro: function($cavaleiro) {
