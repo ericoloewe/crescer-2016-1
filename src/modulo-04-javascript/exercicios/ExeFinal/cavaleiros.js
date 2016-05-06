@@ -25,29 +25,37 @@
         criarListaDeCavaleiros: function() {
             var self = this;
             var $listaDeImagens = $("<div>").addClass("lista-de-cavaleiros").addClass("row");
-
-            this.goldSaints.forEach(function(cavaleiro) {
-                $listaDeImagens.append(self.criarLiCavaleiro(cavaleiro));
-            });
-
             $("body > .container").append($listaDeImagens);
+            
+            this.buscarElementos();
+            
+            this.goldSaints.forEach(function(cavaleiro) {
+                self.criarDivCavaleiro(cavaleiro);
+            });
         },
         
         vincularEventos: function() {
             var self = this;
-            this.$listaDeCavaleiros.find(".cavaleiro").hover(function() {
-                var idCavaleiro = $(this).data("id-cavaleiro");
-                
-               /*console.log($(this).data("id-cavaleiro"), "-", self.goldSaints.filter(function(cav) {
-                   return cav.id === idCavaleiro;
-               }));*/
-            });
+            
+            this.$listaDeCavaleiros.find("[deletar-cavaleiro]").click(function(e) {
+                if(confirm("Voce deseja realmente deletar esse cavaleiro?")) {
+                    self.deletarCavaleiro($(this).parent().data("id-cavaleiro"));
+                    $(this).parents().find("[data-id-cavaleiro=" + $(this).parent().data("id-cavaleiro") + "]").remove();
+                }                
+                return e.preventDefault();
+            })
         },
         
         addCavaleiro: function (cavaleiro) {
             this.atualizarLista();
             
-            this.$listaDeCavaleiros.append(this.criarLiCavaleiro(cavaleiro));
+            this.criarDivCavaleiro(cavaleiro);
+        },
+        
+        deletarCavaleiro: function(idCavaleiro) {
+            localStorage["cavaleiros"] = JSON.stringify(this.goldSaints.filter(function(cavaleiro) {
+                return cavaleiro.id !== idCavaleiro;
+            }))
         },
         
         atualizarLista: function () {
@@ -59,18 +67,26 @@
             console.log(this.goldSaints);
         },
         
-        criarLiCavaleiro: function(cavaleiro) {
-            var $liCavaleiro = $("<div>").attr("data-id-cavaleiro", cavaleiro.id)
-                                            .addClass("col-sm-2")
-                                            .addClass("cavaleiro");
-                                
-            cavaleiro.imagens.forEach(function(imagem) {
-                $liCavaleiro.append($("<img>").attr("alt", cavaleiro.nome)
-                                                .attr("src", imagem.url))
-                                                .addClass("img-thumbnail");
-            });
-            
-            return $liCavaleiro;                                
+        criarDivCavaleiro: function(cavaleiro) {        
+            var self = this;                        
+            cavaleiro.imagens.forEach(function(imagem, i) {
+                self.$listaDeCavaleiros.append($("<div>").attr("data-id-cavaleiro", cavaleiro.id)
+                                                            .addClass("col-sm-2")
+                                                            .addClass("cavaleiro")
+                                                            .prepend($("<a>").addClass("glyphicon")
+                                                                            .addClass("glyphicon-remove")
+                                                                            .attr("deletar-cavaleiro", "")
+                                                                            .attr("href", ""))
+                                                            .append($("<img>").attr("alt", cavaleiro.nome)
+                                                                    .attr("src", imagem.url).addClass("img-thumbnail"))                                                            
+                                                )
+            });                  
+        },
+        
+        getCavaleiroPorId: function(idCavaleiro) {
+            return this.goldSaints.filter(function(cavaleiro) {
+                return cavaleiro.id === idCavaleiro;
+            })
         }
     };
     
@@ -87,16 +103,53 @@
         vincularEventos:  function() {
             var self = this;
             this.$form.submit(function(e) {
-                e.preventDefault();
+                e.preventDefault(); // remover isso
+                
                 self.cadastrarCavaleiro($(this));
                 self.clearForm();
+                return e.preventDefault();
+            });
+            
+            this.$form.find(".add-golpe").click(function(e) {
+                $(".golpes").prepend(
+                    $("<div>").addClass("col-sm-4")
+                                .prepend(
+                                    $("<input>").attr("type", "text")
+                                                    .addClass("form-control")
+                                                    .attr("name", "golpes[]")
+                                )
+                );
+                return e.preventDefault();
+            });
+            
+            this.$form.find(".add-imagem").click(function(e) {
+                var $inputText = $("<div>").addClass("col-sm-8");
+                var $inputCheck = $("<div>").addClass("col-sm-4");
+                $inputText.prepend(
+                    $("<input>").attr("type", "text")
+                                    .addClass("form-control")
+                                    .attr("name", "urls[]")
+                );
+                
+                $inputCheck.prepend(
+                    $("<label>").prepend("É thumbnail?").prepend(
+                            $("<input>").attr("type", "checkbox").attr("name", "isThumb[]")
+                    )
+                );
+                
+                $(".imagens").prepend($("<div>")
+                                .addClass("imagem")
+                                .addClass("col-sm-6")
+                                .prepend($inputCheck)
+                                .prepend($inputText)
+                );              
                 return e.preventDefault();
             });
         },
         
         cadastrarCavaleiro: function($cavaleiro) {
             var cavaleiros = JSON.parse(localStorage["cavaleiros"]);
-            var cavaleiro = this.getCavaleiroDoForm($cavaleiro);
+            var cavaleiro = App.Converte.doFormParaUmCavaleiro($cavaleiro);
             if(!this.cavaleiroNoPadrao(cavaleiro))
                 return;
             cavaleiros.push(cavaleiro);
@@ -110,32 +163,14 @@
             this.$form[0].reset();
         },
         
-        getCavaleiroDoForm: function($cavaleiro) {
-            // Obtém o objeto nativo Form através da posição 0 no objeto jQuery e cria um FormData a partir dele
-            var cavaleiro = new FormData($cavaleiro[0]);
-            
-            return {
-                id: App.ListaDeCavaleiros.goldSaints.length,
-                nome: cavaleiro.get("nome"),
-                tipoSanguineo: cavaleiro.get("tipoSanguineo"),
-                imagens: [{url: cavaleiro.get("url"), isThumb:true}],
-                dataNascimento: this.getDataFormatada(cavaleiro.get("dataNascimento")),
-                alturaCm: this.metrosParaCentimetros(cavaleiro.get("altura"))
-            };
-        },
-        
-        getDataFormatada: function(data) {
-            var dia = data.substr(0, 2), mes = data.substr(3, 2), ano = data.substr(6, 4);
-            return new Date(Date.parse(mes + "/" + dia + "/" + ano)).toISOString();
-        },
-        
-        metrosParaCentimetros: function(altura) {
-            return parseFloat(altura * 100);
-        },
-        
         cavaleiroNoPadrao: function(cavaleiro) {
             if(cavaleiro.alturaCm < 0) {
-                App.Message.error("Você não pode adicionar uma data negativa");
+                App.Mensagem.erro("Você não pode adicionar uma altura negativa");
+                return false;
+            }
+            
+            if(cavaleiro.pesoLb < 0) {
+                App.Mensagem.erro("Você não pode adicionar um peso negativo");
                 return false;
             }
             
@@ -143,29 +178,66 @@
         }
     };
     
-    App.Message = {
-        message: function(message) {
-            $("body > .container > .page-header").after($("<div>").addClass("alert")
-                                        .addClass("alert-info")
-                                        .prepend("<p>" + message + "</p>"));
+    App.Mensagem = {
+        informativa: function(mensagem) {
+            this.apresentarMensagem(mensagem, "alert-info");
         },
 
-        error: function (message) {
-            $("body > .container > .page-header").after($("<div>").addClass("alert")
-                            .addClass("alert-danger")
-                            .prepend("<p>" + message + "</p>"));
+        erro: function (mensagem) {
+            this.apresentarMensagem(mensagem, "alert-danger");
         },
 
-        success: function (message) {
-            $("body > .container > .page-header").after($("<div>").addClass("alert")
-                            .addClass("alert-success")
-                            .prepend("<p>" + message + "</p>"));
+        sucesso: function (mensagem) {
+            this.apresentarMensagem(mensagem, "alert-success");
         },
 
-        warning: function (message) {
-            $("body > .container > .page-header").after($("<div>").addClass("alert")
-                            .addClass("alert-warning")
-                            .prepend("<p>" + message + "</p>"));
+        aviso: function (mensagem) {
+            this.apresentarMensagem(mensagem, "alert-warning");
+        },
+        
+        apresentarMensagem: function(mensagem, tipo) {
+            $("body > .container > .page-header").after(
+                $("<div>").addClass("alert")
+                            .addClass(tipo)
+                            .prepend(mensagem));
+        }
+    };
+    
+    App.Converte = {
+        deDataBrParaPadraoISO: function(data) {
+            var dia = data.substr(0, 2), mes = data.substr(3, 2), ano = data.substr(6, 4);
+            return new Date(Date.parse(mes + "/" + dia + "/" + ano)).toISOString();
+        },
+        
+        deMetrosParaCentimetros: function(altura) {
+            return parseFloat(altura) * 100;
+        },
+        
+        deKgParaLibras: function(peso) {
+            return parseFloat(peso) * 2,20462;
+        },
+        
+        doFormParaUmCavaleiro: function($cavaleiro) {
+            // Obtém o objeto nativo Form através da posição 0 no objeto jQuery e cria um FormData a partir dele
+            var cavaleiro = new FormData($cavaleiro[0]);
+            var imagens = new Array();
+            $cavaleiro.find(".imagens .imagem").each(function() {
+                imagens.push({url: $(this).find("input[type=text]").val(), isThumb:$(this).find("input[type=checkbox]").is(":checked")})
+            });
+            
+            return {
+                id: App.ListaDeCavaleiros.goldSaints.length+1,
+                nome: cavaleiro.get("nome"),
+                tipoSanguineo: cavaleiro.get("tipoSanguineo"),
+                dataNascimento: App.Converte.deDataBrParaPadraoISO(cavaleiro.get("dataNascimento")),
+                alturaCm: App.Converte.deMetrosParaCentimetros(cavaleiro.get("altura")),
+                pesoLb: App.Converte.deKgParaLibras(cavaleiro.get("peso")),
+                signo: cavaleiro.get("signo"),
+                localNascimento: cavaleiro.get("localNascimento"),
+                localTreinamento: cavaleiro.get("localTreinamento"),
+                golpes: cavaleiro.getAll("golpes[]"),
+                imagens: imagens
+            };
         }
     };
     

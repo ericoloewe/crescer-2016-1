@@ -4,7 +4,16 @@
 
     .lista-de-cavaleiros > .cavaleiro {
         height: 207px;
+        position: relative;
     }
+    
+        .cavaleiro > a {
+            position: absolute;
+            left: 25px;
+            top: 15px;
+            color: #EA3835;
+            text-decoration: none;
+        }
     
         .cavaleiro > img {
             max-width: 100%;
@@ -17,4 +26,16 @@
     
 .cadastro-de-cavaleiros {}
 
+    .cadastro-de-cavaleiros .golpes {}
+    
+        .cadastro-de-cavaleiros .golpes > div {
+            margin-bottom: 10px;
+        }
+        
+    .cadastro-de-cavaleiros .imagens {}
+        
+        .cadastro-de-cavaleiros .imagens > div {
+            margin-bottom: 10px;
+        }
+        
     
