@@ -1,0 +1,4 @@
+B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\Megaman\Megaman\bin\Debug\Megaman.dll
+B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\Megaman\Megaman\bin\Debug\Megaman.pdb
+B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\Megaman\Megaman\obj\Debug\Megaman.dll
+B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\Megaman\Megaman\obj\Debug\Megaman.pdb

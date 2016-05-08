@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bass.cs" />
+    <Compile Include="Bot.cs" />
     <Compile Include="Megaman.cs" />
     <Compile Include="Robo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
