@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Megaman
+﻿namespace Megaman
 {
-    class Megaman : Robo
+    public class Megaman : Robo
     {
-        public override string Nome
+        public Megaman()
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            Ataque = 6;
+        }
+
+        public override void Atacar(Robo robo)
+        {
+            if (Vida < 30)
+                robo.RealizarAtaque(Ataque + 3);
+            else
+                robo.RealizarAtaque(Ataque);
         }
     }
 }

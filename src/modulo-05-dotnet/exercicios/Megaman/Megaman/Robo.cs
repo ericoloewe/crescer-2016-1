@@ -1,27 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Megaman
+﻿namespace Megaman
 {
-    abstract class Robo
+    public abstract class Robo
     {
-        public abstract string Nome { get; }
-        public int Vida { get; protected set; }
+        public virtual int Vida { get; protected set; }
         protected int Ataque { get; set; }
         protected int Defesa { get; set; }
 
-        public Robo()
+        protected Robo()
         {
             Vida = 100;
             Ataque = 5;
         }
 
-        public void Atacar(Robo robo)
+        public virtual void Atacar(Robo robo)
         {
+            robo.RealizarAtaque(Ataque);
+        }
 
+        protected internal void RealizarAtaque(int ataque)
+        {
+            Vida -= (ataque - Defesa);
+        }
+
+        public override string ToString()
+        {
+            return $"Nome: Vida: {Vida}, Ataque: {Ataque}, Defesa: {Defesa}";
         }
     }
 }
