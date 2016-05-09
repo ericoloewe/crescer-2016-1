@@ -29,11 +29,11 @@ namespace Megaman.Test
         public void AtacarOutroProtomanDeveReduzir3NaVida()
         {
             var protoman = new Protoman();
-            var outroBot = new Protoman();
+            var outroRobo = new Protoman();
 
-            protoman.Atacar(outroBot);
+            protoman.Atacar(outroRobo);
 
-            Assert.AreEqual(97, outroBot.Vida);
+            Assert.AreEqual(97, outroRobo.Vida);
         }
 
         [TestMethod]
@@ -50,6 +50,15 @@ namespace Megaman.Test
             outroRobo.Atacar(protoman);
 
             Assert.AreEqual(20, protoman.Vida);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(System.NullReferenceException))]
+        public void AtacarComNull()
+        {
+            var protoman = new Megaman();
+
+            protoman.Atacar(null);
         }
     }
 }

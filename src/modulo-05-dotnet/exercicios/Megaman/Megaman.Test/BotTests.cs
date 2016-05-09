@@ -25,5 +25,14 @@ namespace Megaman.Test
 
             Assert.AreEqual(95, outroBot.Vida);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(System.NullReferenceException))]
+        public void AtacarComNull()
+        {
+            var bot = new Bot();
+
+            bot.Atacar(null);
+        }
     }
 }
