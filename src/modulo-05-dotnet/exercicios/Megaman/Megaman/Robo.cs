@@ -1,10 +1,14 @@
-﻿namespace Megaman
+﻿using System;
+using System.Collections.Generic;
+
+namespace Megaman
 {
     public abstract class Robo
     {
         public virtual int Vida { get; protected set; }
         protected int Ataque { get; set; }
         protected int Defesa { get; set; }
+        protected List<IUpgrade> ListaDeUpgrades { get; set; }
 
         protected Robo()
         {
@@ -20,6 +24,20 @@
         protected internal void RealizarAtaque(int ataque)
         {
             Vida -= (ataque - Defesa);
+        }
+
+        public void EquiparUpgrade(IUpgrade upgrade)
+        {
+            ListaDeUpgrades.Add(upgrade);
+            if (upgrade is UpgradeDeAtaque)
+                Ataque += upgrade.Quantidade;
+            else if (upgrade is UpgradeDeDefesa)
+                Defesa += upgrade.Quantidade;
+            else if (upgrade is UpgradeLendario)
+            {
+                Ataque += upgrade.Quantidade;
+                Defesa += upgrade.Quantidade;
+            }
         }
 
         public override string ToString()
