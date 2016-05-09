@@ -8,7 +8,7 @@ namespace Megaman
         public virtual int Vida { get; protected set; }
         protected int Ataque { get; set; }
         protected int Defesa { get; set; }
-        protected List<IUpgrade> ListaDeUpgrades { get; set; }
+        protected List<IUpgrade> ListaDeUpgrades = new List<IUpgrade>();
 
         protected Robo()
         {
@@ -28,6 +28,8 @@ namespace Megaman
 
         public void EquiparUpgrade(IUpgrade upgrade)
         {
+            if (upgrade == null)
+                throw new NullReferenceException("O upgrade não pode ser null");
             ListaDeUpgrades.Add(upgrade);
             if (upgrade is UpgradeDeAtaque)
                 Ataque += upgrade.Quantidade;
