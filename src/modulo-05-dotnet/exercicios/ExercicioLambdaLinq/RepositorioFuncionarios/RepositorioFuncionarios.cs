@@ -139,16 +139,19 @@ namespace Repositorio
         {
             var vogais = new List<string> { "a", "e", "i", "o", "u" };
             int maximoDeVogaisEmUmFuncionario = Funcionarios.Where(f => f.Cargo.Titulo != "Desenvolvedor Júnior" && f.TurnoTrabalho != TurnoTrabalho.Tarde).Max(f => f.Nome.Count(fn => vogais.Contains(fn.ToString())));
-            var funcionarioMaisComplexo = Funcionarios.FirstOrDefault(f => f.Nome.Count(fn => vogais.Contains(fn.ToString())) == maximoDeVogaisEmUmFuncionario);
 
-            return new
-            {
-                funcionarioMaisComplexo.Nome,
-                DataNascimento = funcionarioMaisComplexo.DataNascimento.ToString("dd/M/yyyy"),
-                SalarioRS = string.Format("{0:C2}", funcionarioMaisComplexo.Cargo.Salario),
-                SalarioUS = string.Format(new CultureInfo("en-US", false), "{0:C2}", funcionarioMaisComplexo.Cargo.Salario),
-                QuantidadeMesmoCargo = BuscarPorCargo(funcionarioMaisComplexo.Cargo).Count
-            };
+            return
+                Funcionarios.Where(
+                    f => f.Nome.Count(fn => vogais.Contains(fn.ToString())) == maximoDeVogaisEmUmFuncionario)
+                    .Select(f => new
+                    {
+                        f.Nome,
+                        DataNascimento = f.DataNascimento.ToString("dd/M/yyyy"),
+                        SalarioRS = string.Format("{0:C2}", f.Cargo.Salario),
+                        SalarioUS = string.Format(new CultureInfo("en-US", false), "{0:C2}", f.Cargo.Salario),
+                        QuantidadeMesmoCargo = BuscarPorCargo(f.Cargo).Count
+                    })
+                    .FirstOrDefault();
         }
     }
 }
