@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Dynamic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Repositorio
 {
@@ -85,47 +79,59 @@ namespace Repositorio
 
         public IList<Funcionario> BuscarPorCargo(Cargo cargo)
         {
-            throw new NotImplementedException();
+            return Funcionarios.Where(f => f.Cargo.Equals(cargo)).ToList();
         }
 
         public IList<Funcionario> OrdenadosPorCargo()
         {
-            throw new NotImplementedException();
+            return Funcionarios.OrderBy(f => f.Cargo.Titulo).ThenBy(f => f.Nome).ToList();
         }
 
         public IList<Funcionario> BuscarPorNome(string nome)
         {
-            throw new NotImplementedException();
+            return Funcionarios.Where(f => f.Nome.IndexOf(nome, StringComparison.CurrentCultureIgnoreCase) >= 0).ToList();
         }        
 
         public IList<Funcionario> BuscarPorTurno(params TurnoTrabalho[] turnos)
         {
-            throw new NotImplementedException();
+            return (turnos.Length > 0) ? Funcionarios.Where(f => turnos.Contains(f.TurnoTrabalho)).ToList() : Funcionarios;
         }        
 
         public IList<Funcionario> FiltrarPorIdadeAproximada(int idade)
         {
-            throw new NotImplementedException();
+            return
+                Funcionarios.Where(f => {
+                                        var idadeF = (DateTime.Now.Subtract(f.DataNascimento).TotalDays/364.5);
+                                        return idadeF >= (idade - 5) && idadeF <= (idade + 5);
+                                    }).ToList();
         }        
 
         public double SalarioMedio(TurnoTrabalho? turno = null)
         {
-            throw new NotImplementedException();
+            return turno == null ? Funcionarios.Average(f => f.Cargo.Salario) : Funcionarios.Where(f => f.TurnoTrabalho.Equals(turno)).Average(f => f.Cargo.Salario);
         }
 
         public IList<Funcionario> AniversariantesDoMes()
         {
-            throw new NotImplementedException();
+            return Funcionarios.Where(f => f.DataNascimento.Month.Equals(DateTime.Now.Month)).ToList();
         }
 
         public IList<dynamic> BuscaRapida()
         {
-            throw new NotImplementedException();
+            return Funcionarios.Select(f => new
+            {
+                NomeFuncionario = f.Nome,
+                TituloCargo = f.Cargo.Titulo
+            }).ToArray();
         }
 
         public IList<dynamic> QuantidadeFuncionariosPorTurno()
         {
-            throw new NotImplementedException();
+            return Funcionarios.GroupBy(f => f.TurnoTrabalho).Select(f => new
+            {
+                Turno = f.Key,
+                Quantidade = f.Count()
+            }).ToArray();
         }
 
         public dynamic FuncionarioMaisComplexo()
