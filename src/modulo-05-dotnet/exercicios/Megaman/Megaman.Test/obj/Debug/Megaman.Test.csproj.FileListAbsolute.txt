@@ -1,7 +1,0 @@
-B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\Megaman\Megaman.Test\bin\Debug\Megaman.Test.dll
-B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\Megaman\Megaman.Test\bin\Debug\Megaman.Test.pdb
-B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\Megaman\Megaman.Test\bin\Debug\Megaman.dll
-B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\Megaman\Megaman.Test\bin\Debug\Megaman.pdb
-B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\Megaman\Megaman.Test\obj\Debug\Megaman.Test.csprojResolveAssemblyReference.cache
-B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\Megaman\Megaman.Test\obj\Debug\Megaman.Test.dll
-B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\Megaman\Megaman.Test\obj\Debug\Megaman.Test.pdb
