@@ -138,7 +138,7 @@ namespace Repositorio
         public dynamic FuncionarioMaisComplexo()
         {
             var vogais = new List<string> { "a", "e", "i", "o", "u" };
-            int maximoDeVogaisEmUmFuncionario = Funcionarios.Where(f => f.Cargo.Titulo != "Desenvolvedor Júnior").Max(f => f.Nome.Count(fn => vogais.Contains(fn.ToString())));
+            int maximoDeVogaisEmUmFuncionario = Funcionarios.Where(f => f.Cargo.Titulo != "Desenvolvedor Júnior" && f.TurnoTrabalho != TurnoTrabalho.Tarde).Max(f => f.Nome.Count(fn => vogais.Contains(fn.ToString())));
             var funcionarioMaisComplexo = Funcionarios.FirstOrDefault(f => f.Nome.Count(fn => vogais.Contains(fn.ToString())) == maximoDeVogaisEmUmFuncionario);
 
             return new
