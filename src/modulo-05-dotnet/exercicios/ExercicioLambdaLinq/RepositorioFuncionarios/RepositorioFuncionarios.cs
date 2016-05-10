@@ -136,7 +136,16 @@ namespace Repositorio
 
         public dynamic FuncionarioMaisComplexo()
         {
-            throw new NotImplementedException();
+            var listaVogais = new List<string> { "a", "e", "i", "o", "u" };
+            var max = Funcionarios.Where(f => f.Cargo.Titulo != "Desenvolvedor Júnior").Max(f => f.Nome.Count(fn => listaVogais.Contains(fn.ToString())));
+            var funcionarioMaisComplexo = Funcionarios.FirstOrDefault(f => f.Nome.Count(fn => listaVogais.Contains(fn.ToString())) == max);
+            return new
+            {
+                funcionarioMaisComplexo.Nome,
+                DataNascimento = funcionarioMaisComplexo.DataNascimento.ToString("dd/M/yyyy"),
+                SalarioRS = string.Format("R$ {0:F2}", funcionarioMaisComplexo.Cargo.Salario),
+                SalarioUS = string.Format("${0:F2}", funcionarioMaisComplexo.Cargo.Salario)
+            };
         }
     }
 }
