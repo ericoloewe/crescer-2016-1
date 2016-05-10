@@ -102,9 +102,9 @@ namespace Repositorio
         {
             return
                 Funcionarios.Where(f => {
-                                        var idadeF = (DateTime.Now.Subtract(f.DataNascimento).TotalDays/364.5);
-                                        return idadeF >= (idade - 5) && idadeF <= (idade + 5);
-                                    }).ToList();
+                    var idadeF = Math.Round(DateTime.Now.Subtract(f.DataNascimento).TotalDays / 364.5);
+                    return idadeF >= (idade - 5) && idadeF <= (idade + 5);
+                }).ToList();
         }        
 
         public double SalarioMedio(TurnoTrabalho? turno = null)
