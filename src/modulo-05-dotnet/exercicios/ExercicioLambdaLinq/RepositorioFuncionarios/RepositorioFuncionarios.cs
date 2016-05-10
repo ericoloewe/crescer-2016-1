@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace Repositorio
@@ -136,15 +137,17 @@ namespace Repositorio
 
         public dynamic FuncionarioMaisComplexo()
         {
-            var listaVogais = new List<string> { "a", "e", "i", "o", "u" };
-            var max = Funcionarios.Where(f => f.Cargo.Titulo != "Desenvolvedor Júnior").Max(f => f.Nome.Count(fn => listaVogais.Contains(fn.ToString())));
-            var funcionarioMaisComplexo = Funcionarios.FirstOrDefault(f => f.Nome.Count(fn => listaVogais.Contains(fn.ToString())) == max);
+            var vogais = new List<string> { "a", "e", "i", "o", "u" };
+            int maximoDeVogaisEmUmFuncionario = Funcionarios.Where(f => f.Cargo.Titulo != "Desenvolvedor Júnior").Max(f => f.Nome.Count(fn => vogais.Contains(fn.ToString())));
+            var funcionarioMaisComplexo = Funcionarios.FirstOrDefault(f => f.Nome.Count(fn => vogais.Contains(fn.ToString())) == maximoDeVogaisEmUmFuncionario);
+
             return new
             {
                 funcionarioMaisComplexo.Nome,
                 DataNascimento = funcionarioMaisComplexo.DataNascimento.ToString("dd/M/yyyy"),
-                SalarioRS = string.Format("R$ {0:F2}", funcionarioMaisComplexo.Cargo.Salario),
-                SalarioUS = string.Format("${0:F2}", funcionarioMaisComplexo.Cargo.Salario)
+                SalarioRS = string.Format("{0:C2}", funcionarioMaisComplexo.Cargo.Salario),
+                SalarioUS = string.Format(new CultureInfo("en-US", false), "{0:C2}", funcionarioMaisComplexo.Cargo.Salario),
+                QuantidadeMesmoCargo = BuscarPorCargo(funcionarioMaisComplexo.Cargo).Count
             };
         }
     }
