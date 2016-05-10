@@ -26,7 +26,7 @@ namespace Megaman
             Vida -= (ataque - Defesa);
         }
 
-        public void EquiparUpgrade(IUpgrade upgrade)
+        public virtual void EquiparUpgrade(IUpgrade upgrade)
         {
             if (upgrade == null)
                 throw new NullReferenceException("O upgrade não pode ser null");
