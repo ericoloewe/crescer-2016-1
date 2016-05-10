@@ -70,12 +70,12 @@ namespace Testes
 
         //FiltrarPorIdadeAproximada
         [TestMethod]
-        public void BuscarFuncionariosProximosDe30AnosRetorna4Registros()
+        public void BuscarFuncionariosProximosDe30AnosRetorna5Registros()
         {
             var repositorioFuncionarios = new RepositorioFuncionarios();
             IList<Funcionario> funcionariosIdadeAprox = repositorioFuncionarios.FiltrarPorIdadeAproximada(30);
 
-            Assert.AreEqual(4, funcionariosIdadeAprox.Count);
+            Assert.AreEqual(5, funcionariosIdadeAprox.Count);
         }
 
         //SalarioMedio
