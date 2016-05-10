@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using MVC.Models;
 
 namespace MVC.Controllers
 {
@@ -11,6 +9,19 @@ namespace MVC.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Sobre()
+        {
+            var sobreMim = new SobreMimModel()
+            {
+                Nome = "Érico de Souza Loewe",
+                EstadoCivil = EstadoCivil.Solteiro,
+                DataNascimento = new DateTime(1996, 9, 16),
+                Altura = 180,
+                Peso = 78
+            };
+            return View(sobreMim);
         }
     }
 }

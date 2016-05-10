@@ -1,0 +1,18 @@
+﻿@model SobreMimModel
+
+@{
+    ViewBag.Title = "Sobre Mim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Érico</h2>
+
+<img src="~/Content/Imagens/minha_foto.jpg" class="imagem-descricao" alt="minha foto"/>
+
+<p class="descricao">
+    <strong>Nome completo:</strong> @Model.Nome<br>
+    <strong>Estado civil:</strong> @Model.EstadoCivil<br>
+    <strong>Nascimento:</strong> @Model.DataNascimento.ToShortDateString()<br>
+    <strong>Altura:</strong> @Model.Altura cm.<br>
+    <strong>Peso:</strong> @Model.Peso kg.<br>
+</p>
