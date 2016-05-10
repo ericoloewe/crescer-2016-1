@@ -1,8 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Repositorio;
 using Newtonsoft.Json;
 
@@ -77,7 +75,7 @@ namespace Testes
             var repositorioFuncionarios = new RepositorioFuncionarios();
             IList<Funcionario> funcionariosIdadeAprox = repositorioFuncionarios.FiltrarPorIdadeAproximada(30);
 
-            Assert.AreEqual(5, funcionariosIdadeAprox.Count);
+            Assert.AreEqual(4, funcionariosIdadeAprox.Count);
         }
 
         //SalarioMedio
