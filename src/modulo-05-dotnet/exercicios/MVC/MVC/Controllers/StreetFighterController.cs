@@ -16,6 +16,7 @@ namespace MVC.Controllers
             var sobreMim = new SobreMimModel()
             {
                 Nome = "Érico de Souza Loewe",
+                Foto = "/Content/Imagens/minha_foto.jpg",
                 EstadoCivil = EstadoCivil.Solteiro,
                 DataNascimento = new DateTime(1996, 9, 16),
                 Altura = 180,
