@@ -1,0 +1,151 @@
+body{
+  background-color: black;
+  margin: 0px;
+}
+
+header{
+  height: 100px;
+  background-color: #ffe463;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+header > h1{
+  float: left;
+  position: relative;
+  left: 110px;
+  bottom: -5px;
+  font-weight: 100;
+}
+
+header > h1 > span{
+  font-weight: bold;
+}
+
+.imagem-fundo{
+  background-image: url('http://imageshack.com/a/img921/9409/XyLJ4k.jpg');
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  position: absolute;
+}
+
+.imagem-fundo:hover{
+    background-image: url('http://imageshack.com/a/img921/3666/5mn9g5.png');
+}
+
+header{
+  background-image: url('http://imageshack.com/a/img921/9424/hDgEtR.png');
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-color: #ffe463;
+  background-position: top right;
+}
+
+.content{
+  color: white;
+  height: 645px;
+  background-image: url('http://www.wallpaperfo.com/thumbnails/detail/20120628/pokemon%20gengar%20haunter%20gastly%20black%20background%201920x1200%20wallpaper_www.wallpaperfo.com_21.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 200px;
+}
+
+.perfil {
+  position: relative;
+  top: 37px;
+  right: 62px;
+  float: right;
+}
+
+.perfil > a{
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.perfil :first-child{
+  display: block;
+}
+
+h1 > span:first-child{
+  display:none;
+}
+
+.personagens > h2:last-of-type{
+  display:none;
+}
+
+.digiescolhidos{
+  display: none;
+}
+
+.personagens > ul:last-child{
+  display:none;
+}
+
+article {
+  display: inline-block;
+  border: black 2px solid;
+  border-radius: 20px;
+  padding: 0px 25px 0px 25px;
+  margin: 50px 100px;
+  position: absolute;
+  height: 350px;
+  margin-bottom: 10px;
+  top: 120px;
+}
+
+.personagens{
+  background-image: url('http://imageshack.com/a/img921/9352/aGVJ87.png');
+  background-repeat: no-repeat;
+  background-color: #C1272D;
+  background-size: contain;
+  width: 500px;
+  left: 80px;
+}
+
+h2{
+  text-align: center;
+}
+
+ul{
+  color: black;
+  border: black 2px solid;
+  margin: 20px;
+  background-color: white;
+  list-style-type: none;
+  padding: 10px;
+  height: 250px;
+  position: relative;
+  bottom: 10px;
+}
+
+.personagens ul > li:nth-last-of-type(even){
+  background-color: rgba(228, 228, 228, 0.89);
+}
+
+.treinadores ul > li:nth-last-of-type(odd){
+  background-color: rgba(228, 228, 228, 0.89);
+}
+
+.personagens > ul{
+    overflow-y: scroll;
+}
+
+.treinadores{
+  background-color: #5ba8ce;;
+  width: 270px;
+  left: 750px;
+}
+
+footer{
+  border: white 1px solid;
+  color: white;
+  text-align: center;
+  position: bottom;
+  float: bottom;
+}

@@ -1,0 +1,217 @@
+.personagens ul:nth-of-type(1), .personagens h2:nth-of-type(1), .treinadores , h1 span:nth-of-type(2){
+  display: none;
+}
+
+.perfil{
+  display:inline;
+  position: relative;
+  top:-260px;
+  left:1100px;
+  height:50px;
+}
+
+.perfil a:nth-of-type(2){
+  display:block;
+}
+
+header{
+  position: relative;
+  background-color: #6666ff;
+  width:1200px;
+  height:275px;
+  left:5%;
+}
+
+h1{
+  position: relative;
+  display: inline;
+  top:200px;
+  left:20px;
+  color: white;
+  font-size: 40px;
+}
+
+a{
+  color:white;
+  margin-left: 20px;
+}
+
+.imagem-fundo{
+  height:230px;
+  width: 1200px;
+  background-color: #6666ff;
+  background-image: url(http://img02.deviantart.net/a13d/i/2015/209/5/c/digimon_adventure_by_x0lis-d935h9w.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 450px 230px,contain;
+}
+
+li{
+  float: left;
+  margin-left: 20px;
+  height:140px;
+  width:120px;
+  margin-top:10px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position:bottom;
+  text-align: center;
+}
+
+h2{
+  position: relative;
+  color:white;
+  top:20px;
+  left:500px;
+}
+
+body{
+  font-family: arial;
+}
+
+footer{
+  background-color:#6666ff;
+  text-align: center;
+  height: 50px;
+  width: 1200px;
+  position: relative;
+  left:5%;
+  top:10px;
+  color:white;
+}
+
+li:hover{
+  opacity: 0.5;
+  background-image:
+}
+
+ul{
+  list-style-type: none;
+  position: absolute;
+  left:5%;
+}
+
+.personagens, .digiescolhidos{
+  position: relative;
+  left:5%;
+  background-color:orange;
+  height:400px;
+  width:1200px;
+}
+
+.digiescolhidos li{
+  height:155px;
+}
+
+.digiescolhidos ul{
+  top:40px;
+}
+
+.personagens ul{
+  top:45px;
+}
+
+.personagens li:nth-of-type(1){
+  background-image:url(http://wikimon.net/images/thumb/a/a8/Agumon_crusader2.jpg/120px-Agumon_crusader2.jpg);
+}
+
+.personagens li:nth-of-type(2){
+  background-image:url(http://wikimon.net/images/thumb/0/04/Gabumon_re.jpg/120px-Gabumon_re.jpg);
+}
+
+.personagens li:nth-of-type(3){
+  background-image:url(http://www.capsulecomputers.com.au/wp-content/uploads/2014/08/Biyomon-Digimon-All-Stars-Rumble-Art-120x120.jpg);
+}
+
+.personagens li:nth-of-type(4){
+  background-image:url(http://images4.fanpop.com/image/photos/23400000/Gomamon-gomamon-23494596-120-120.jpg);
+}
+
+.personagens li:nth-of-type(5){
+  background-image:url(http://s.pacn.ws/120/ob/digimon-plush-gatomon-437681.1.jpg?o2s6a2);
+}
+
+.personagens li:nth-of-type(6){
+  background-image:url(http://vignette3.wikia.nocookie.net/kirby/images/5/56/Veemon.gif/revision/latest/scale-to-width-down/120?cb=20100623223522&path-prefix=en);
+}
+
+.personagens li:nth-of-type(7){
+  background-image:url(http://wikimon.net/images/thumb/9/9a/Hawkmon_collectors.jpg/120px-Hawkmon_collectors.jpg);
+}
+
+.personagens li:nth-of-type(8){
+  background-image:url(http://vignette3.wikia.nocookie.net/digimon/images/7/76/Armadillomon_b.jpg/revision/latest/scale-to-width-down/120?cb=20130402185937);
+}
+
+.personagens li:nth-of-type(9){
+  background-image:url(http://vignette4.wikia.nocookie.net/legendsofthemultiuniverse/images/b/be/02_wormmon.jpg/revision/latest/scale-to-width-down/120?cb=20140530163244);
+}
+
+.personagens li:nth-of-type(10){
+  background-image:url(http://wikimon.net/images/thumb/9/9f/Palmon_cs.jpg/120px-Palmon_cs.jpg);
+}
+
+.personagens li:nth-of-type(11){
+  background-image:url(https://lh3.googleusercontent.com/-fAJV54VvmIo/AAAAAAAAAAI/AAAAAAAAACA/CCCQ931Mx6Y/s120-c/photo.jpg);
+}
+
+.personagens li:nth-of-type(12){
+  background-image:url(https://lh3.googleusercontent.com/-hVs4S4BzdS0/AAAAAAAAAAI/AAAAAAAAAAs/YZO_gMUAtn0/s120-c/photo.jpg);
+}
+
+.personagens li:nth-of-type(13){
+  background-image:url(http://images.uncyc.org/pt/thumb/5/59/Lalamon_s.jpg/120px-Lalamon_s.jpg);
+}
+
+.personagens li:nth-of-type(14){
+  background-image:url(http://vignette3.wikia.nocookie.net/digimon/images/b/b4/Falcomon_b.jpg/revision/20101022054816/scale-to-width-down/120);
+}
+
+.personagens li:nth-of-type(7n+1), .digiescolhidos li:nth-of-type(7n+1){
+  clear:left;
+}
+
+.digiescolhidos li:nth-of-type(1){
+  background-image:url(http://www.manga-news.com/public/images/characters/yamagi-taichi.jpg);
+}
+
+.digiescolhidos li:nth-of-type(2){
+  background-image:url(http://www.manga-news.com/public/images/characters/yamato-ichida-digimon.jpg);
+}
+.digiescolhidos li:nth-of-type(3){
+  background-image:url(http://www.manga-news.com/public/images/characters/takenouchi-sora-digimon.jpg);
+}
+.digiescolhidos li:nth-of-type(4){
+  background-image:url(http://www.manga-news.com/public/images/characters/kido-jyou-digimon.jpg);
+}
+.digiescolhidos li:nth-of-type(5){
+  background-image:url(http://www.manga-news.com/public/images/characters/kari-kamiya-digimon.jpg);
+}
+.digiescolhidos li:nth-of-type(6){
+  background-image:url(http://www.manga-news.com/public/images/characters/daisuke-motomiya-digimon.jpg);
+}
+.digiescolhidos li:nth-of-type(7){
+  background-image:url(http://www.manga-news.com/public/images/characters/miyako-inoue-digimon.jpg);
+}
+.digiescolhidos li:nth-of-type(8){
+  background-image:url(http://www.manga-news.com/public/images/characters/hida-iori-digimon.jpg);
+}
+.digiescolhidos li:nth-of-type(9){
+  background-image:url(https://lh3.googleusercontent.com/-TFk9_V1bnPc/AAAAAAAAAAI/AAAAAAAAAB8/N50oNR0jHAg/s120-c/photo.jpg);
+}
+.digiescolhidos li:nth-of-type(10){
+  background-image:url(http://www.manga-news.com/public/images/characters/mimi-tachikawa.jpg);
+}
+.digiescolhidos li:nth-of-type(11){
+  background-image:url(http://www.manga-news.com/public/images/characters/ruki-makino-digimon.jpg);
+}
+.digiescolhidos li:nth-of-type(12){
+  background-image:url(http://www.manga-news.com/public/images/characters/takato-matsuda-digimon.jpg);
+}
+.digiescolhidos li:nth-of-type(13){
+  background-image:url(https://lh3.googleusercontent.com/-Ni9NFCl_Wzo/AAAAAAAAAAI/AAAAAAAAABI/mRUypcYDMYc/s120-c/photo.jpg);
+}
+.digiescolhidos li:nth-of-type(14){
+  background-image:url(http://www.anime-planet.com/images/characters/ikuto_digimon_season_12238.jpg);
+  background-size: 100px 120px;
+}

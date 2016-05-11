@@ -1,0 +1,182 @@
+header h1 span:first-of-type{
+	display: none;
+}
+
+body{
+	background: url("https://coinarcade.files.wordpress.com/2013/08/006-charizard.jpg");
+	background-repeat: no-repeat;
+}
+
+.content .personagens h2:last-of-type{
+	display: none;
+}
+
+.content .personagens ul:last-of-type{
+	display: none;
+}
+
+.content .digiescolhidos {
+	display: none;
+}
+
+header{
+	border: solid;
+	overflow-x: auto;
+	border-radius: 15px;
+	border-color: #3466ae;
+	background:red;
+	padding: 20px;
+}
+
+.imagem-fundo {
+	content: url("http://goo.gl/ITXXVD");
+	position: absolute;
+	left: 440px;
+	top: 100px;
+	z-index: 40;
+	-webkit-transition: all 500ms ease;
+-moz-transition: all 500ms ease;
+-ms-transition: all 500ms ease;
+-o-transition: all 500ms ease;
+transition: all 500ms ease;
+}
+
+.imagem-fundo:hover{
+-moz-transform: scale(1.1) rotate(360deg) translateX(1px) translateY(1px) skewX(1deg) skewY(1deg);
+-webkit-transform: scale(1.1) rotate(360deg) translateX(1px) translateY(1px) skewX(1deg) skewY(1deg);
+-o-transform: scale(1.1) rotate(360deg) translateX(1px) translateY(1px) skewX(1deg) skewY(1deg);
+-ms-transform: scale(1.1) rotate(360deg) translateX(1px) translateY(1px) skewX(1deg) skewY(1deg);
+transform: scale(1.1) rotate(360deg) translateX(1px) translateY(1px) skewX(1deg) skewY(1deg);
+}
+
+header h1 {
+	font-family: arial;
+	text-align: center;
+	color:#3466ae;
+	background: orange;
+	border:solid;
+	border-radius: 20px;
+	position: relative;
+	top: 50%;
+	left: 30%;
+	width: 40%;
+}
+
+.perfil a {
+	color: black;
+	border: solid;
+	border-color: #3466ae;
+	border-radius: 40px;
+	width: 80px;
+	margin-bottom: 10px;
+	display: inline-flex;
+	float: right;
+	clear:right;
+	text-decoration: none;
+	font-family: arial;
+	color: white;
+	padding: 10px;
+
+}
+
+.perfil a:hover {
+	color:#3466ae;
+}
+
+
+.content .personagens{
+	border: solid;
+	border-color: #3466ae;
+	border-radius: 15px;
+	background: red;
+	opacity: 0.9;
+	width: 800px;
+	float: left;
+	position: absolute;
+}
+
+.content .personagens h2 {
+	margin-left: 70px;
+	font-family: arial;
+	border: solid;
+	border-radius: 20px;
+	margin-right: 80px;
+	color: #3466ae;
+	background: orange;
+	opacity: 1;
+	font-size: 40px;
+	text-align: center;
+}
+
+.content ul {
+	border: solid;
+	background: orange;
+	border-radius: 15px;
+	overflow:auto;
+	margin: 50px;
+	height: 200px;
+	width: 80%;
+}
+
+footer{
+	border: solid;
+	border-radius: 10px;
+	background: red;
+	opacity: 1;
+	margin-top: 100px;
+}
+
+.content .personagens ul  li:hover{
+	color: #3466ae;
+}
+
+.content .personagens ul li {
+	font-family: arial;
+	border: solid;
+	border-color:#3466ae;
+	font-size: 50px;
+	color: white;
+}
+
+.content .treinadores{
+	border: solid;
+	opacity: 0.9;
+	background: red;
+	border-radius: 15px;
+	margin-top: 40px;
+	margin-left: 850px;
+	height: 390px;
+	border-color: #3466ae;
+}
+
+.content .treinadores ul{
+	font-family: arial;
+	font-size: 50px;
+}
+
+.content .treinadores ul  li{
+		font-family: arial;
+		font-size: 50px;
+		border: solid;
+		border-color: #3466ae;
+			color: white;
+}
+
+.content .treinadores h2 {
+	font-family: arial;
+	text-align: center;
+	position: relative;
+	border: solid;
+	border-radius: 20px;
+	color:  #3466ae ;
+	background: orange;
+	opacity: 1;
+	font-size: 40px;
+	text-align: center;
+	margin: 20px;
+	margin-top: 35px;
+}
+
+.content .treinadores ul  li:hover{
+	color: #3466ae;
+}

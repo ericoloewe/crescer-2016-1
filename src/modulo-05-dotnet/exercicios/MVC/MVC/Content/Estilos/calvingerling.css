@@ -1,0 +1,106 @@
+/*Ocultar coisas de pokémon*/
+.treinadores {
+  display: none;
+}
+
+.personagens > h2:first-of-type {
+  display: none;
+}
+
+.personagens > ul:first-of-type {
+  display: none;
+}
+
+header > h1 {
+  display: none;
+}
+
+/*------------------------------*/
+/*BODY*/
+body {
+  font-family: Arial, sans-serif;
+
+  background-image: url("http://s32.postimg.org/6ncdh8clx/6578_digimon_hd_wallpapers.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  margin: 0px;
+}
+
+/*HEADER*/
+header {
+  background-color: #FB7F31;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  z-index: 2;
+}
+
+.logo {
+  content: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Digimon_Logo.svg/200px-Digimon_Logo.svg.png");
+  height: 100%;
+  margin: auto;
+}
+
+.perfil {
+  background-color: #f5f5f5;
+  position: relative;
+  top: -50px;
+  left: 90%;
+  border: 2px solid #10677E;
+  width: 75px;
+  padding-left: 5px;
+}
+
+.perfil > a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0C7187;
+  display: block;
+}
+
+/*CONTENT*/
+.content {
+  margin: 65px auto 0px auto;
+  height: 90%;
+}
+
+.personagens {
+  display: inline-block;
+  border: 1px solid #000;
+  background-color: #ccc;
+  padding: 0px 10px;
+  margin: 0px 10px;
+  width: 35%;
+}
+
+.personagens > ul{
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.digiescolhidos {
+  display: inline-block;
+  border: 1px solid #000;
+  background-color: #B2DBE1;
+  padding: 0px 14px;
+  margin: 50px 10% 0px 0px;
+  width: 45%;
+}
+
+.digiescolhidos > ul {
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+/*FOOTER*/
+footer {
+  background-color: #10677E;
+  color: #000;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: 20px;
+  padding: 2px;
+}

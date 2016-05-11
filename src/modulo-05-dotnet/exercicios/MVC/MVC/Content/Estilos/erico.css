@@ -1,0 +1,228 @@
+/*
+ * Especificações:
+ * - body > header > h1 > span:first-child = "Titulo"
+ * - .content > .personagens > h2:last-child = "Titulo da lista de digimons"
+ * - .content > .personagens > ul:last-child = "Lista de digimons"
+ * - .digiescolhidos = "Digiescolhidos"
+ */
+
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: url("http://www.pageresource.com/wallpapers/wallpaper/digimon-adventure-group-graphics-code_184125.jpg") center 0;
+}
+
+header {
+    position: relative;
+    width: 1000px;
+    margin: 10px auto 30px;
+}
+
+    header > h1 {
+        position: absolute;
+        display: inline-block;
+        font-weight: normal;
+        margin: 65px 0 0 275px;
+        animation: carregar 2s;
+    }
+    
+        header > h1 > span {
+            font-weight: bold;
+        }
+
+    header > .imagem-fundo {
+        background: url("http://www.infomegablog.com.br/wp-content/uploads/2012/05/digimon3.gif") no-repeat center 0;
+        background-size: 246px 150px;
+        width: 246px;
+        height: 150px;
+        margin: 10px;
+        animation: largar 2s;
+    }
+    
+    header > .perfil {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -50px;
+    }
+    
+        header > .perfil > a {
+            width: 84px;
+            margin: 10px auto;
+            text-decoration: none;
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+    
+        header > .perfil > a:first-child {
+            float: left;
+        }
+        
+        header > .perfil > a:last-child {
+            float: left;
+            clear: both;
+        }
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+    .content > .personagens {
+        float: right;
+        height: 360px;
+        padding: 10px 40px;
+        overflow-y: auto;
+    }
+    
+        .content > .personagens > h2 {
+            text-align: center;
+        }
+        
+        .content > .personagens > ul {
+            width: 550px;
+        } 
+        
+    .content > .digiescolhidos {
+        float: left;
+        height: 360px;
+        padding: 10px 40px;
+        overflow-y: auto;
+    }
+    
+        .content > .digiescolhidos > h2 {
+            text-align: center;
+        }
+        
+        .content > .digiescolhidos > ul {
+            width: 250px;
+        }
+        
+        .content > .digiescolhidos > ul > li:nth-of-type(even),
+        .content > .personagens > ul > li:nth-of-type(even)  {
+            background-color: #f9f9f9;
+        }   
+    
+    .content ul {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: all .2s ease-in-out;
+    }
+    
+    .content ul,
+    .content .personagens,
+    .content .digiescolhidos,
+    footer,
+    header {
+        border: 1px solid #ddd;
+    }
+    
+    .content .personagens,
+    .content .digiescolhidos,
+    footer,
+    header {
+        box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.5);
+        background: rgba(238,238,238,0.8);
+    }
+    
+    .content .personagens:hover,
+    .content .digiescolhidos:hover,
+    footer:hover,
+    header:hover {
+        transform: scale(1.05);
+    }
+    
+    .content ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .content ul > li:nth-child(2n) {
+        animation: carregarDaEsquerda 2s;
+    }
+    
+    .content ul > li:nth-child(2n - 1) {
+        animation: carregarDaDireita 2s;
+    }
+    
+footer {
+    clear: both;
+    text-align: center;
+    width: 1000px;
+    margin: 20px auto;
+    padding: 23px 0;
+    position: relative;
+    bottom: -25px;
+}
+    
+    
+    
+/* remover pokemons */
+body > header > h1 > span:last-child,
+.content > .personagens > h2:first-child,
+.content > .personagens > ul:first-of-type,
+.treinadores {
+    display: none;
+}
+
+@keyframes largar {
+    0% {
+        transform: translateY(-150px);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-40px);
+    }
+    60% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes carregarDaEsquerda {
+    0% {
+        transform: translateX(-300px);
+    }    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes carregarDaDireita {
+    0% {
+        transform: translateX(700px);
+    }    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes carregar {
+    from {
+        transform: translateX(500px) rotateY(45deg);
+    }
+    to {
+        transform: translateX(0) rotateY(0);
+    }
+}

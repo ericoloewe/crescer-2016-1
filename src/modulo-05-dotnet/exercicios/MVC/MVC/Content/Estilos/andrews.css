@@ -1,0 +1,112 @@
+h1 > span:first-child{
+   display: none;
+}
+body{
+   background-color: #003749;
+}
+.personagens > h2:nth-child(2){
+   display: none;
+}
+.digiescolhidos{
+   display: none;
+}
+header{
+   background-color: #004C63;
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   text-align:center
+}
+.personagens > ul:nth-of-type(2){
+     display: none;
+}
+?
+header h1{
+    display:inline-block;  
+    margin-top:30px;
+    color: #00AAE6;
+    font-size: 3vw;
+}
+.logo{
+    
+    background-image: url(http://orig11.deviantart.net/ba9c/f/2013/093/0/5/pokeball_vector_by_jacko4d-d609ym6.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 8%;
+    height: 0;
+    padding-bottom:8%;
+    float: left;
+    display: inline-block;
+    
+}
+.perfil{
+   float: right; 
+   margin-right: 15px;
+   margin-top: 30px;
+   
+}
+.perfil a{
+    display: block;
+    text-decoration: none;
+}
+.personagens{
+    
+    margin-top: 10%;
+    margin-right: 27px;
+    margin-left: 47px;
+    width: 60%;
+    background-color: #F85F5A;
+    float: left;
+}
+.personagens h2{
+    text-align: center;
+    color: white;
+}
+.treinadores h2{
+    text-align: center;
+    color: white;
+}
+.personagens > ul{
+    border: 1px solid white;
+    margin: 6px;
+    height:300px;
+    width: 78%;
+    margin: 5%;
+    background-color: white;
+    margin-left: 70px;
+    overflow-y: auto;
+    list-style-type:none;
+}
+footer{
+   text-align: center;
+   position:fixed;
+   bottom:0;
+   left: 0px;
+   height:30px;
+   width:100%;
+   background:#004C63;
+}
+.treinadores{
+    margin-top: 10%;
+    width: 30%;
+    background-color: #00B1EA;
+    float: left;
+}
+.treinadores > ul{
+    border: 1px solid black;
+    margin: 6px;
+    height:300px;
+    margin: 10%;
+    overflow-y: auto;
+    list-style-type:none;
+    background-color: white;
+}
+li{
+    margin: 0;
+     padding: 10px;
+}
+li:nth-child(odd){
+    background-color: lightgreen;
+    color: white;
+}

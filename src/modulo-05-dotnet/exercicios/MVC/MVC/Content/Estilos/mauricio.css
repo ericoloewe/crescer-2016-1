@@ -1,0 +1,160 @@
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+/*parametros para animação do logo*/
+@keyframes rotacaolLogo {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+/*parametros para animação do Titulo principal*/
+@keyframes corTitulo{
+  from{
+    color: rgba(254,203,62,1);
+  }
+  to{
+    color: rgba(254,203,62,0.5);
+  }
+}
+/*retira o subtitulo de pokemon*/
+.personagens h2:first-child{
+  display: none;
+}
+/*retira a ul referente aos pokemons*/
+.personagens ul:first-of-type{
+  display: none;
+}
+/*retira treinadores referentes ao pokemon*/
+.treinadores{
+  display: none;
+}
+
+/*retira o segundo e ultimo spam referente a pokemon*/
+header h1 span:last-child{
+  display: none;
+}
+/*background geral*/
+body{
+  background: url(http://wallpoper.com/images/00/36/38/80/digimon_00363880.png) no-repeat top;
+  background-size: cover;
+  font-family: 'Audiowide', cursive;
+  color: #FECB3E;
+  cursor: default;
+}
+/*layout do h1 dentro do header*/
+header h1:first-child{
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 80px;
+  width: auto;
+  text-transform: uppercase;
+  text-align:left;
+  text-indent: 345px;
+  margin: 70px 100px 30px 100px;
+  padding-top: 35px;
+  border-radius: 20px 20px 90px 90px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.6);
+  border-style: outset;
+  border-color: #C24F48;
+  font-size: 30px;
+  animation: corTitulo 1s infinite;
+}
+/*imagem logo*/
+.imagem-fundo{
+  position: absolute;
+  background: url(http://1.bp.blogspot.com/-HMipAHfiQ6k/TrA882_ivvI/AAAAAAAAASY/nBKI7Vcyb6o/s1600/digilogo.png) no-repeat;
+  width: 300px;
+  height: 200px;
+  background-size: contain;
+  top: 60px;
+  left: 155px;
+  animation: rotacaolLogo 10s linear infinite;
+}
+/*painel lista de digimons*/
+.personagens{
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-right: 170px;
+  margin-top: 70px;
+  height: auto;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.6);
+  border-style: outset;
+  border-color: #C24F48;
+  float: right;
+}
+/*painel digiescolhidos*/
+.digiescolhidos{
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-left: 170px;
+  margin-top: 70px;
+  height: auto;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.6);
+  border-style: outset;
+  border-color: #C24F48;
+  float: left;
+}
+/*rodape*/
+footer{
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 30px;
+  position: relative;
+  top: 500px;
+  width: auto;
+  margin: 30px 200px;
+  border-radius: 15px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.6);
+  border-style: outset;
+  border-color: #C24F48;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 10px;
+}
+/*links de acesso usuário*/
+.perfil a{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 10px 20px;
+  float: right;
+  text-decoration: none;
+  font-size: 15px;
+  color: #074B88;
+  border-radius: 15px;
+  border-style: ridge;
+  border-color: #C24F48;
+}
+/*posição login*/
+.perfil a:first-child{
+  padding: 5px 10px;
+  top: 75px;
+  right: 187px;
+}
+/*posição cadastro*/
+.perfil a:last-child{
+  padding: 5px 10px;
+  top: 130px;
+  right: 170px;
+}
+/*formatação subtitulo article*/
+.content h2{
+  text-align: center;
+  font-style: italic;
+}
+/*retirar marcações de lista*/
+.content ul li{
+  display: block;
+  cursor: pointer;
+}
+/*efeito transição lista*/
+.content ul li:hover{
+  background-color: rgba(255, 0, 0, 0.4);
+  transform: scale(1.25);
+  width: 300px;
+  border-radius: 5px;
+}
+/*mudança cor letra dos icones de perfil*/
+.perfil a:hover{
+  color:#FECB3E;
+}

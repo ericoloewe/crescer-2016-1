@@ -1,0 +1,167 @@
+/* Elimina não necessário */
+body > header > h1 > span:nth-of-type(1) {
+  display: none;
+}
+
+div > article > h2:nth-of-type(2) {
+  display: none;
+}
+
+div > article > ul:nth-of-type(2) {
+  display: none;
+}
+
+aside {
+  display: none;
+}
+
+/* body */
+body {
+  background-image:  url("https://imageshack.com/i/poBo0dm5j");
+  background-color: #1879D5;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  box-sizing: border-box;
+}
+
+/* header */
+header {
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 20px;
+  margin-top: 30px;
+  background-color: red;
+}
+
+header > h1 > span:nth-of-type(2) {
+  position: absolute;
+  float: right;
+  background:url("https://imageshack.com/i/pmOMmubJp") left top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width:300px;
+  height:110px;
+  color: transparent;
+  top: -40px;
+  left: 260px;
+  transform: rotate(10deg);
+}
+
+.imagem-fundo {
+  background: url("https://imageshack.com/i/pmISKvJKp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  transition: transform 2s;
+}
+
+.imagem-fundo:hover {
+  transform: rotate(360deg);
+}
+
+header > h1 {
+  color: white;
+  position: relative;
+  left: 170px;
+  font-size: 30px;
+  display: table;
+}
+
+.perfil {
+  float: right;
+  position: relative;
+  top: -60px;
+  left: -30px;
+}
+
+.perfil a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.perfil a:hover {
+  color: blue;
+}
+
+/* content */
+.content {
+  width: 100%;
+  float: left;
+  box-sizing: content-box;
+  display: inline-block;
+  position: relative;
+  min-height: 2500px;
+}
+
+h1, h2, li, footer {
+    text-shadow: 0 0 10px blue;
+}
+
+span {
+  text-shadow: 0 0 0 transparent;
+}
+
+article {
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 20px;
+  background-color: red;
+  float: left;
+  position: relative;
+  padding-left: 20px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.personagens {
+  width: 60%;
+  background-image: url("https://imageshack.com/i/pol482xSp");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.treinadores {
+  position: absolute;
+  float: right;
+  width: 39%;
+  margin-left: 61%;
+  background-image: url("https://imageshack.com/i/pn3Tnsj8p");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+ul{
+  width: 40%;
+}
+
+li:hover {
+  font-size: 30px;
+  color: yellow;
+}
+
+/* footer */
+footer {
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: red;
+  float: left;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}

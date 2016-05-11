@@ -1,0 +1,15 @@
+.box p:first-of-type { 
+   color: pink;
+}
+
+.box p:last-of-type { 
+   color: blue;
+}
+
+.box p:nth-of-type(4) {
+   background: yellow;
+}
+
+.box p + h2 + p {
+   background: red;   
+}

@@ -1,0 +1,206 @@
+header > h1 > span,
+.content > article > h2:nth-child(2),
+.content > article > ul:nth-of-type(2),
+.content > aside {
+    display: none;
+}
+
+body{
+    margin: 0px;
+    width: 800px;
+    margin: 0px auto;
+    font-family: sans-serif;
+    background-image: url("https://cloud.githubusercontent.com/assets/18291019/14917560/18b7065c-0df6-11e6-8e05-ab4c7184f3ed.png");
+}
+
+header {
+    height: 127px;
+    border-radius: 30px 40px 40px 30px;
+    margin: 10px auto;
+    position: relative;
+    top: -5px;
+    background-color: rgb(55, 55, 55);
+    background-image: url("https://cloud.githubusercontent.com/assets/18291019/14917576/331c3c24-0df6-11e6-922f-7b6e9024ae0b.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+header > h1 {
+  position:relative;
+  color: #fff;
+  top: -8px;
+  font-size: 30px;
+  padding: 15px 0px 0px 280px;
+  z-index: 1;
+  height: 50px;
+  width: 330px;
+}
+
+.logo {
+  position: absolute;
+  top:30px;
+  left: 270px;
+  height:115px;
+  width: 310px;
+  background-image: url("https://cloud.githubusercontent.com/assets/18291019/14917592/464f4494-0df6-11e6-98fd-0778aa97d11d.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+nav {
+  width: 100px;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 672px;
+}
+
+nav > a {
+  display: block;
+  width: 108px;
+  padding: 19px 10px;
+  border-radius:  0px 0px 20px 0px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(55, 55, 55);
+  border-top: 2px rgb(40, 40, 40) solid;
+  border-left: 2px rgb(40, 40, 40) solid;
+  border-bottom: 6px rgb(27, 83, 186) solid;
+}
+
+nav > a:first-child {
+  border-bottom: 1px rgb(40, 40, 40) solid;
+  border-top: 6px rgb(77, 173, 91) solid;
+  border-radius: 0px 20px 0px 0px;
+}
+
+nav > a:hover {
+  background-color: rgb(27, 83, 186);
+  transition: background-color 0.5s;
+}
+
+nav > a:first-child:hover {
+  background-color: rgb(77, 173, 91);
+  transition: background-color 0.5s;
+}
+
+.content {
+    height:400px;
+    margin: 15px auto;
+    background-image: url("https://cloud.githubusercontent.com/assets/18291019/14917606/57f202a4-0df6-11e6-8d1c-14f2dbaed08b.png");
+    background-size: 350px;
+    background-position: 53.5% -5%;
+    background-repeat: no-repeat;
+}
+
+.content > article {
+    position: relative;
+    top:50px;
+    left:3px;
+    height: 380px;
+    background-color: rgb(55, 55, 55);
+    border-radius: 15px 0px 15px 15px;
+    border-right: 8px rgb(238, 107, 47) solid;
+}
+
+.content > article:first-child{
+  height: 380px;
+  background-color: rgb(55, 55, 55);
+  border-radius: 0px 15px 15px 15px;
+  border-left: 8px rgb(230, 188, 47) solid;
+  border-right: 0px;
+}
+
+.personagens {
+    padding: 0px;
+    float: left;
+    width: 330px;
+}
+
+.treinadores {
+  background-image: url("https://cloud.githubusercontent.com/assets/18291019/14917627/6ffa04be-0df6-11e6-9e80-6790ae07165a.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: 50% 195%;
+    width: 300px;
+    float: right;
+}
+
+h2{
+    position: relative;
+    margin: 0px;
+    padding: 10px;
+    left:8px;
+    top: -48px;
+    float:right;
+    width:260px;
+    border-radius: 20px 20px 0px 0px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(238, 107, 47);
+}
+
+.personagens > h2 {
+  width: 230px;
+    float: left;
+    left: -8px;
+    background-color: rgb(230, 188, 47);
+}
+
+ul {
+    width: 200px;
+    position: absolute;
+    margin:0px;
+    padding: 20px;
+    left: 20px;
+    top:20px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+}
+
+.personagens ul {
+  height: 300px;
+  width: 250px;
+  overflow-y: scroll;
+}
+
+.treinadores ul{
+  width: 220px;
+  z-index: 0;
+}
+
+footer {
+    position: relative;
+    top:35px;
+    left: 2px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    height: 20px;
+    border-radius: 10px;
+    margin: 10px auto 0px auto;
+    z-index: 2;
+    background-color: rgb(55, 55, 55);
+}
+
+li {
+  padding: 0px;
+  text-align: center;
+  list-style-type: none;
+}
+
+ul li:nth-of-type(even){
+  background-color: rgb(193, 193, 193);
+}
+
+ul li:nth-of-type(even):hover{
+  color:white;
+  background-color: rgb(55, 55, 55);
+}
+
+li:hover{
+  color:white;
+  background-color: rgb(55, 55, 55);
+  transition: background-color 0.6s;
+}

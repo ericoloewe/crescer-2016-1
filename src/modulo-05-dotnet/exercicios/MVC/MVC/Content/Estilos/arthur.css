@@ -1,0 +1,120 @@
+header{
+  text-align: center;
+  font-family: comic sans ms;
+  background-image: url("http://imageshack.com/a/img923/7342/E5qdUg.png");
+  background-repeat: no-repeat;
+  background-size: 250px 60px;
+  background-position: left;
+  border: solid 2px black;
+}
+
+header > h1{
+  color: transparent;
+  background-image: url("http://imagizer.imageshack.us/a/img924/8046/orPbxl.png");
+  background-repeat: no-repeat;
+  background-size: 600px 60px;
+  background-position: center;
+  overflow: auto;
+}
+
+footer{
+  position: absolute;
+  top: 3300px;
+  left: 10px;
+  margin-bottom: 10px;
+  border: solid 2px black;
+  padding: 20px 500px 20px 500px;
+  background-image: url("http://rs421.pbsrc.com/albums/pp291/nin10dogirl/pikachu.gif~c200");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.personagens{
+  position: absolute;
+  top: 150px;
+  left: 10px;
+  border: solid 2px black;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.personagens > ul > li{
+  display: block;
+  border: solid 1px black;
+  margin-left: -40px;
+}
+
+.personagens > ul > li:nth-child(even){
+  background-color: grey;
+}
+
+.treinadores{
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  border: solid 2px black;
+  padding: 5px;
+}
+
+.treinadores > ul > li{
+  display: block;
+  border: solid 1px black;
+  margin-left: -40px;
+}
+
+.treinadores > ul > li:nth-child(even){
+  background-color: grey;
+}
+
+.perfil{
+  float: right;
+}
+
+.perfil a:nth-child(1){
+  color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  width: 100px;
+  background-image: url("http://imagizer.imageshack.us/a/img922/6634/Qi09uR.png");
+  background-size: contain;
+  background-size: 80px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.perfil a:nth-child(2){
+    position: absolute;
+    top: 55px;
+    right: 30px;
+    width: 100px;
+    color: transparent;
+    background-image: url("http://imagizer.imageshack.us/a/img924/7250/uhZjGn.png");
+    background-size: 100px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: auto;
+}
+
+body{
+  background-image: url("http://www.pageresource.com/wallpapers/wallpaper/pokemon_136497.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 span:nth-child(1){
+  display: none;
+}
+
+.personagens h2:last-of-type{
+  display: none;
+}
+
+.personagens ul:last-of-type{
+  display: none;
+}
+
+.digiescolhidos{
+  display: none;
+}

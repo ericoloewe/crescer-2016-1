@@ -1,0 +1,339 @@
+@font-face {
+    font-family: pokemon;
+    src: url(Ketchum.otf);
+}
+
+@font-face {
+    font-family: poketitulo;
+    src: url(PokemonSolid.ttf);
+}
+
+@font-face {
+    font-family: Bebas Neue;
+    src: url(BebasNeue.otf);
+}
+
+::-webkit-scrollbar
+{
+  width: 12px;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(255, 2, 1, 0.1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(255, 2, 1, 0.5);
+}
+
+span:first-of-type {
+  display: none;
+}
+
+.personagens h2:nth-child(2) {
+  display: none;
+}
+
+.personagens ul:last-child  {
+  display: none;
+}
+
+.digiescolhidos {
+  display: none;
+}
+header:first-of-type > h1:first-of-type {
+  padding-top: 62px;
+  font-family: Bebas Neue;
+  position: absolute;
+  left: 25%;
+}
+
+header:first-of-type > h1:first-of-type > span:last-of-type {
+    font-family: poketitulo;
+    font-size: 3em;
+    color: #FFCB05;
+    text-shadow: #3C5AA6 -4px 4px;
+    -webkit-animation: fadein 4s;
+}
+
+.perfil {
+  position: absolute;
+  left: 92.6%;
+  width: 100px;
+  height: 96px;
+  border-bottom-left-radius: 10px;
+  background-color: rgba(0,0,0,0.5);
+  background-size: 40px 40px;
+}
+
+.perfil a {
+  font-family: Bebas Neue;
+  color: white;
+  text-decoration: none;
+}
+
+.perfil a:first-child {
+  display: inline-block;
+  padding-top: 12%;
+  padding-left:25%;
+  font-size: 1.9em;
+  width: auto;
+  height: auto;
+}
+
+
+.perfil a:last-child {
+  display: inline-block;
+  padding-left:18%;
+  padding-top: 5%;
+  font-size: 1.4em;
+}
+
+
+.personagens > ul:first-of-type {
+  margin-left: 8px;
+  width: 390px;
+  height: 240px;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  list-style-image: url(http://bit.ly/1VEc8Fu);
+}
+
+.personagens > ul:first-of-type > li {
+  color: white;
+  height: 30px;
+  position: relative;
+  font-family: pokemon;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.personagens > ul:first-of-type > li:hover {
+    background-color: rgb(124,2,1);
+    transition: background-color 1000ms linear;
+}
+
+.personagens > h2:first-of-type {
+  position: relative;
+  display: inline;
+  top: 10px;
+  left: 20px;
+  font-family:Bebas Neue;
+  color: white;
+}
+.personagens {
+  background-color: rgba(124,2,1,0.5);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width:445px;
+  height: 310px;
+  top: 75%;
+  left: 12%;
+}
+
+.treinadores {
+  top: 73%;
+  width: 400px;
+  position: absolute;
+  font-family: Bebas Neue;
+  color: white;
+  left: 55%;
+  background-color: rgba(142, 2, 1, 0.5);
+}
+
+.treinadores > ul:first-of-type {
+  font-size: 1em;
+  padding-right: 38px;
+  list-style-image: url(http://orig11.deviantart.net/c89b/f/2007/134/8/2/diamond___pearl_pokedex_by_ace_goldstar.png);
+}
+
+.treinadores > ul:first-of-type > li:hover {
+    color: black;
+    transition: color 1000ms linear;
+}
+
+header:first-of-type {
+  background-image: url(https://images.alphacoders.com/235/235203.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 280px;
+}
+
+body {
+  background-image: url(http://img03.deviantart.net/0e98/i/2013/320/4/b/all_pokemon_starters_inflated_by_selphy6-d6ufyo6.png);
+  margin: 0;
+}
+
+footer {
+  float: right;
+  background-color: #FEE8B8;
+  position: relative;
+  top: 100%;
+}
+
+.treinadores > ul:first-of-type > li:first-of-type:hover::after {
+  background-image: url(http://bit.ly/1TznW8p);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-left: 120px;
+  margin-top:20px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > ul:first-of-type > li:nth-of-type(2):hover::after {
+  background-image: url(http://bit.ly/1NEzQ1D);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-left: 145px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > ul:first-of-type > li:nth-of-type(3):hover::after {
+  background-image: url(http://bit.ly/1Wu2S5K);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 130px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > ul:first-of-type > li:nth-of-type(4):hover::after {
+  background-image: url(http://bit.ly/1NEAgFf);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-top: -45px;
+  margin-left: 85px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > ul:first-of-type > li:nth-of-type(5):hover::after {
+  background-image: url(http://bit.ly/1NYIFhL);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-top: -70px;
+  margin-left: 130px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > ul:first-of-type > li:nth-of-type(6):hover::after {
+  background-image: url(http://bit.ly/21iqc7i);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-top: -70px;
+  margin-left: 110px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > ul:first-of-type > li:nth-of-type(7):hover::after {
+  background-image: url(http://bit.ly/247W0AZ);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 120px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > ul:first-of-type > li:nth-of-type(8):hover::after {
+  background-image: url(http://bit.ly/1r2v6sl);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-top: -120px;
+  margin-left: 120px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > ul:first-of-type > li:nth-of-type(9):hover::after {
+  background-image: url(http://bit.ly/1SUouch);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-top: -140px;
+  margin-left: 140px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > ul:first-of-type > li:nth-of-type(10):hover::after {
+  background-image: url(http://bit.ly/26zbpcf);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-top: -160px;
+  margin-left: 120px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > ul:first-of-type > li:nth-of-type(11):hover::after {
+  background-image: url(http://bit.ly/1SUoIQw);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-top: -170px;
+  margin-left: 120px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > ul:first-of-type > li:nth-of-type(12):hover::after {
+  background-image: url(http://bit.ly/1pOUalQ);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  margin-top: -195px;
+  margin-left: 120px;
+  width: 210px;
+  height: 220px;
+  content:"";
+}
+
+.treinadores > h2:first-of-type {
+  padding-left: 50%;
+}

@@ -1,0 +1,120 @@
+header span:first-of-type {
+    display: none;
+}
+.personagens h2:last-of-type {
+    display: none;
+}
+.personagens ul:last-of-type {
+    display: none;
+}
+.digiescolhidos {
+    display: none;
+}
+body {
+    background-image: url("http://www.pokemon20.com/assets/img/global/bg_pattern.jpg");
+    font-family: Verdana;
+    color: #888888;
+    margin: 0px;
+}
+header {
+    color: white;
+    font-size: 0.8vw;
+    width: 100%;
+    background-color: #ff5252;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    position: fixed;
+    overflow: auto;
+    padding: auto;
+    z-index: 1;
+    box-shadow: 2px 2px;
+}
+header h1 {
+    float: left;
+    width: 18%;
+    margin: 60px;
+    position: absolute;
+}
+.perfil {
+    width: 18%;
+    position: relative;
+    display: inline;
+    float: right;
+}
+.perfil a {
+    margin-top: 30px;
+    margin-right: 20px;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fc6464;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 2vw;
+}
+.perfil a:hover{
+  background-color: #ff9999;
+}
+.content {
+    position: relative;
+    overflow: auto;
+    padding: 10%;
+}
+.personagens {
+    position: static;
+    width: 40%;
+    height: auto;
+    overflow-y: auto;
+    float: left;
+    display: inline;
+    margin-top: 170px
+}
+.treinadores {
+    display: static;
+    width: 30%;
+    height: auto;
+    float: right;
+    overflow-y: auto;
+    margin-top: 170px
+}
+.imagem-fundo {
+    content: url("http://goo.gl/E2makM");
+    display: inline;
+    position: relative;
+    left: 50em;
+    bottom: 12px
+}
+ul{
+  background-color: #fc6464;
+  padding: 20px;
+  border-radius: 5px;
+}
+ul li {
+    text-align: left;
+    color: black;
+    padding: 5px;
+    background: #ff9999;
+    margin: 5px;
+    margin-left: 35px;
+    border-radius: 5px;
+}
+.personagens ul{
+  list-style-image: url('http://orig02.deviantart.net/4791/f/2014/355/e/4/pokeball_on_by_pa_kazushige-d8aoyqx.png');
+}
+.treinadores ul{
+  list-style-image: url('http://i11.servimg.com/u/f11/17/99/56/17/projec10.png');
+  text-align: top;
+}
+article{
+  background-color: #eeeeee;
+  padding: 40px;
+  border-radius:10px;
+  box-sizing: border-box;
+}
+footer {
+  height:5%;
+  text-align: center;
+  background: #fff;
+}

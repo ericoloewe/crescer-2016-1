@@ -1,0 +1,131 @@
+span:first-of-type{
+    display: none;
+}
+
+.personagens>h2:nth-of-type(2){
+    display:none;
+}
+
+.personagens>ul:nth-of-type(2){
+    display:none;
+}
+
+.digiescolhidos{
+    display:none;
+}
+
+.personagens > ul > li:nth-child(10){
+
+}
+
+li:hover{
+  background-color: rgba(140, 140, 140, 0.3);
+}
+
+body{
+   background-image: url(https://mfiles.alphacoders.com/611/611922.png);
+   background-repeat: no-repeat;
+   background-size: 1400px;
+   font-family: sans-serif;
+}
+
+.personagens{
+  position: absolute;
+  border-radius: 10px;
+  min-width:700px;
+}
+
+article{
+    background-color: rgb(254,232,183);
+    box-shadow: 0 0 14px 5px rgba(255,205,0,0.5);
+    border-radius: 20px;
+    padding: 0px 30px 30px 30px;
+    top: 135px;
+}
+
+.treinadores{
+  position: absolute;
+  left:800px;
+  min-width: 350px;
+}
+
+ul{
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid;
+    height: 250px;
+    overflow: auto;
+    list-style-image: url(http://vignette2.wikia.nocookie.net/mylegonetwork/images/7/7f/Pokeball_icon.png/revision/latest?cb=20130710214658);
+}
+
+.treinadores > ul:first-of-type{
+   border-radius: 10px;
+}
+
+header{
+    box-shadow: 0 0 14px 5px rgba(255,205,0,0.5);
+    background-color: white;
+    background-image: url(http://covermyfb.com/media/covers/16324-pokemon.jpg);
+    background-repeat: no-repeat;
+    background-size: 950px 150px;
+    width: 1175px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+footer{
+    background-color: rgb(254,232,183);
+    box-shadow: 0 0 14px 5px rgba(255,205,0,0.5);
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+    border-radius: 20px;
+    margin-top: 450px;
+    height: 50px;
+    width: 1175px;
+    padding: 15px;
+}
+
+h2{
+   text-align: center;
+}
+
+header > h1{
+    margin-left: 200px;
+    text-shadow: 0 0 5px rgba(254,232,183,0.8) ;
+}
+
+.perfil > a{
+  position: absolute;
+  left: 1050px;
+  text-decoration: initial;
+  color: black;
+}
+
+.perfil > a:first-of-type{
+    left: 1060px;
+    top: 45px;
+}
+
+.treinadores > h2:first-of-type::before{
+  content:url(http://cdn.bulbagarden.net/upload/thumb/7/78/Earth_Badge.png/50px-Earth_Badge.png);
+}
+
+.treinadores > h2:first-of-type::after{
+  content:url(http://cdn.bulbagarden.net/upload/thumb/4/48/Fog_Badge.png/50px-Fog_Badge.png);
+}
+
+.personagens > h2:first-of-type::before{
+  content:url(http://orig11.deviantart.net/f500/f/2014/114/5/e/jolteon_avatar_free_to_use__by_deidarasasori123-d7fumk0.gif);
+}
+
+.personagens > h2:first-of-type::after{
+  content:url(http://a.deviantart.net/avatars/d/a/daneisthebest.gif?1);
+}
+
+.perfil > a:nth-of-type(2){
+    top: 65px;
+}

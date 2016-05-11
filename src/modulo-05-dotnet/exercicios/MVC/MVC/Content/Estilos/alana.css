@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+
+/* Ocultar elementos de pokemon */
+
+h1 span:last-child {
+	display: none;
+}
+
+.personagens h2:first-child {
+	display: none;
+}
+
+.personagens ul:first-of-type {
+	display: none;
+}
+
+.treinadores h2:first-child {
+	display: none;
+}
+
+.treinadores ul:first-of-type {
+	display: none;
+}
+
+/* Elementos principais */
+
+body {
+	width: 100%;
+	background: #00ACE3 url("https://i.gyazo.com/432460b34ad8665533b3526e37382c35.png") no-repeat;
+	background-position: left bottom;
+	background-attachment: scroll;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+	font-family: 'Montserrat';
+}
+
+header {
+	background-color: #1b1e35;
+	width: 100%;
+	overflow: auto;
+	border-bottom: 5px solid #fff;
+}
+
+header h1 {
+	color: #fff;
+	position: absolute;
+	top: 40px;
+	left: 300px; 
+	width: 50%;
+	font-family: 'Audiowide', cursive;
+	font-weight: 300;
+	text-align: center;
+}
+
+.logo {
+  	content: url("https://i.gyazo.com/289d74f62c725b8634242add08b692ae.png"); 
+ 	width: 250px;
+  	margin: 20px 40px;
+  	float: left;
+}
+
+footer {
+	display: none;
+}
+
+/* Listas */
+
+div li:nth-child(even) {
+    background-color: #CCC;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+div li:nth-child(odd) {
+    background-color: #FFF;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+div li:nth-child(even):hover,
+div li:nth-child(odd):hover{
+	color: #3260a6;
+}
+
+li {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+/* Botões */
+
+nav {
+	position: absolute;
+	top: 25px;
+	right: 30px;
+}
+
+nav a {
+	display: block;
+	margin: 10px;
+	text-decoration: initial;
+	background-color: #f79a1a;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+	border-radius: 10px;
+	font-family: 'Audiowide', cursive;
+	font-weight: 300;
+	font-size: 18px;
+}
+
+nav a:hover {
+	background-color: #2777b1;
+}
+
+/* Colunas de conteúdo */
+
+.content {
+	width: 100%;
+	margin: 50 auto;
+}
+
+.personagens,
+.digiescolhidos {
+	width: 40%;
+	height: 100px;
+	position: absolute;
+	background-color: #fff;
+	padding: 20px 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.personagens {
+	left: 5%;
+	float: left;
+}
+
+.digiescolhidos{
+	right: 5%;
+	float: right;
+}
+
+.personagens ul,
+.digiescolhidos ul {
+	width: 96%;
+	height: 90px;
+	margin-left: -10px;
+	margin-top: -10px;
+	background-color: #fff;
+	overflow-y: scroll;
+}
+
+.digiescolhidos h2,
+.personagens h2{
+	font-family: 'Audiowide', cursive;
+	background-color: #3260A6;
+	color: #fff;
+	margin-top: -50px;
+	margin-left: -20px;
+	padding: 10px 20px;
+	width: 100%;
+	font-size: 18px;
+	font-weight: 300;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}

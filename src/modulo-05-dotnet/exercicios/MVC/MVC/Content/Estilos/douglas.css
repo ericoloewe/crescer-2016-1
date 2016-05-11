@@ -1,0 +1,117 @@
+header > h1 > span:last-child{
+  display: none;
+}
+
+.personagens h2:first-child{
+  display: none;
+}
+
+.personagens ul:nth-of-type(1){
+  display: none;
+}
+
+.treinadores{
+  display: none;
+}
+
+.content{
+  width: 100%;
+  margin: 0 auto;
+}
+body{
+  background-image: url("http://cdn.idigitaltimes.com/sites/idigitaltimes.com/files/styles/image_embed/public/2015/03/10/digimon-adventure.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+header{
+  position: relative;
+  height: 150px;
+  text-align: center;
+  color: black;
+  margin-bottom: 0;
+}
+
+header h1{
+  position: relative;
+  top: 30px;
+}
+
+.imagem-header{
+  content: url("http://www.infomegablog.com.br/wp-content/uploads/2012/05/digimon3.gif");
+  position: absolute;
+  display: inline-flex;
+  left: 30px;
+  top:1;
+  width: 200px;
+}
+
+
+footer{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom:0;
+  left: 0;
+}
+
+
+.personagens, .digiescolhidos{
+  position: absolute;
+  background-color: rgba(0,0,139,0.5);
+  border: solid black;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.personagens{
+  left: 200px;
+}
+
+.digiescolhidos{
+  left: 800px;
+}
+
+.digiescolhidos h2:first-child,
+.personagens h2:nth-of-type(2){
+  color: silver;
+  text-align: center;
+}
+.digiescolhidos ul:nth-of-type(1),
+.personagens ul:nth-of-type(2){
+  color: white;
+  list-style-type: circle;
+  line-height: 25px;
+}
+
+.digiescolhidos{
+  background-color: rgba(0,0,139,0.5);
+  float: right;
+  border: solid black;
+}
+
+.perfil{
+  position: relative;
+  display: inline;
+  float: right;
+  top:-30px;
+  right: 20px;
+}
+.perfil a{
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 25;
+  margin-right: 10px;
+  border: solid black;
+  border-radius: 10px;
+  background: silver;
+  margin-bottom: 5px;
+}
+
+.content{
+  overflow: auto;
+  position: relative;
+  display: inline;
+}

@@ -1,0 +1,166 @@
+/*----------------------Body------*/
+body{
+  margin: 10px;
+  position: relative;
+  background-image: url(http://imageshack.com/a/img923/7589/bCzfQV.png);
+  background-size: 100%;
+  background-repeat: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* ------------------- Header----*/
+header {
+  margin-top: 80px;
+  width: 100%;
+  height: 70px;
+  background-color: dimgray;
+  border-radius: 25px;
+  box-shadow: 2px 2px 3px midnightblue, -2px 2px 3px midnightblue, 2px -2px 3px midnightblue, -2px -2px 3px midnightblue;
+}
+header h1{
+  position: absolute;
+  left: 370px;
+  top: 7px;
+  color: white;
+  font-size: 22px;
+  font-weight: normal;
+}
+header span{
+  position: absolute;
+  top: -8px;
+  left: 245px;
+  color: goldenrod;
+  text-shadow: 1px 1px 2px midnightblue, -1px -1px 2px midnightblue, 1px -1px 2px midnightblue, -1px -1px 2px midnightblue;
+  font-style: italic;
+  font-size: 35px;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+header span:hover{
+  font-size: 50px;
+  top: -17px;
+}
+header span:nth-of-type(2){
+  display: none;
+}
+.perfil {
+  float: right;
+  margin-top: 13px;
+  margin-right: 10px;
+}
+.perfil a{
+  text-decoration: none;
+  color: goldenrod;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.perfil a:hover{
+  color: white;
+}
+.imagem-fundo{
+  width: 345px;
+  height: 213px;
+  background-image: url(http://imageshack.com/a/img923/9550/jy9vAf.gif);
+  float: left;
+  margin-left: 15px;
+  margin-top: -75px;
+  position: absolute;
+}
+/*-------------- Digimons ----*/
+.personagens {
+ box-shadow: 2px 2px 3px midnightblue, -2px 2px 3px midnightblue, 2px -2px 3px midnightblue, -2px -2px 3px midnightblue;
+ background-color: cornflowerblue;
+ width: 60%;
+ margin-top: 75px;
+ float: right;
+ border-radius: 15px;
+}
+.personagens h2:nth-of-type(2){
+  color: goldenrod;
+  text-shadow: 1px 1px 2px midnightblue, -1px 1px 2px midnightblue, 1px -1px 2px midnightblue, -1px -1px 2px midnightblue;
+  text-align: center;
+}
+.personagens h2:nth-of-type(1){
+  display: none;
+}
+.personagens ul:nth-of-type(1){
+  display: none;
+}
+.personagens ul{
+  background-color: white;
+  margin-left: 20px;
+  padding-left: 0px;
+  margin-right: 20px;
+  list-style-type: none;
+}
+.personagens ul li{
+  padding-left: 15px;
+  color: midnightblue;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.personagens ul li:hover{
+  padding-left: 45px;
+  color: orangered;
+  font-size: 18px;
+}
+.personagens ul li:nth-of-type(2n){
+  background-color: moccasin;
+}
+.treinadores{
+  display: none;
+}
+/*------------Digiescolhidos------*/
+.digiescolhidos{
+  box-shadow: 2px 2px 3px midnightblue, -2px 2px 3px midnightblue, 2px -2px 3px midnightblue, -2px -2px 3px midnightblue;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+  width: 37%;
+  margin-top: 75px;
+  float: left;
+}
+.digiescolhidos h2{
+  color: goldenrod;
+  text-shadow: 1px 1px 2px midnightblue, -1px 1px 2px midnightblue, 1px -1px 2px midnightblue, -1px -1px 2px midnightblue;
+  text-align: center;
+}
+.digiescolhidos ul{
+  border: 1px solid black;
+  background-color: white;
+  margin-left: 20px;
+  padding-left: 0px;
+  margin-right: 20px;
+  list-style-type: none;
+}
+.digiescolhidos ul li{
+  padding-left: 15px;
+  color: midnightblue;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.digiescolhidos ul li:hover{
+  padding-left: 45px;
+  color: orangered;
+  font-size: 18px;
+}
+.digiescolhidos ul li:nth-of-type(2n){
+  background-color: moccasin;
+}
+/*--------Footer---*/
+footer {
+  box-shadow: 2px 2px 3px midnightblue, -2px 2px 3px midnightblue, 2px -2px 3px midnightblue, -2px -2px 3px midnightblue;
+  border-radius: 40px;
+  background-color: dimgray;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  position: absolute;
+  top: 520px;
+  padding-top: 15px;
+  color: white;
+}

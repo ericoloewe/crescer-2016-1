@@ -1,0 +1,124 @@
+body  {
+	font-family: arial;
+	margin: 30px;
+}
+
+/*header*/
+
+header {
+	position: relative;
+	border: 2px solid rgba(0, 8, 255, 0.59);
+    border-radius: 10px;
+    padding: 0 30px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 38px black;
+}
+
+header > h1 {
+	margin-top: 24px;
+    margin-left: 280px;
+}
+
+.logo {
+	background: url(http://orig06.deviantart.net/82dc/f/2015/262/5/9/digimon_logo_vector_by_3prsta-d9a4yb9.png) no-repeat;
+    height: 119px;
+    width: 500px;
+    background-size: 245px;
+    position: absolute;
+    left: 30px;
+    top: -21px;
+}
+
+header > h1 > span:nth-of-type(2) {
+	display: none;
+}
+
+header > h1 > span:first-of-type {
+	color: rgba(8, 9, 18, 0.7);
+    text-shadow: 8px 8px 21px rgba(45, 143, 255, 1);
+    font-style: italic;
+}
+
+.perfil {
+	position: absolute;
+    right: 22px;
+    top: 16px;
+}
+
+.perfil a {
+	display: block;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 5px;
+}
+
+/*corpo*/
+
+.content {
+    overflow: auto;
+}
+
+.treinadores {
+    display: none;
+}
+
+article {
+	border: 2px solid silver;
+	border-radius: 10px;
+    float: right;
+    width: 60%;
+    box-sizing: border-box; /* EXPLICAR ISSO DAQUI */
+    min-height: 400px;
+}
+
+article > ul {
+    padding-right: 40px;
+}
+
+aside {
+    border: 2px solid silver;
+	border-radius: 10px;
+    float: left;
+    width: 37%;
+    box-sizing: border-box; /* EXPLICAR ISSO DAQUI */
+    min-height: 400px;
+}
+
+h2 {
+    padding: 0 20px 20px 20px;
+    border-bottom: 2px solid silver;
+    font-family: monospace;
+    font-style: italic;
+    font-size: 29px;
+    color: #4A4A4A;
+}
+
+.personagens > h2:first-of-type {
+    display: none;
+}
+
+.personagens > ul:first-of-type {
+    display: none;
+}
+
+.personagens > ul > li {
+    list-style-type: none;
+}
+
+.personagens > ul > li:nth-child(even){ 
+    background-color: silver;
+}
+
+/*footer*/
+footer {
+    margin-top: 30px;
+    border-top: 1px solid #919191;
+    padding-top: 14px;
+    font-size: 12px;
+}
+
+.perfil:after {
+    content: "LALALALA";
+    color: red;
+}

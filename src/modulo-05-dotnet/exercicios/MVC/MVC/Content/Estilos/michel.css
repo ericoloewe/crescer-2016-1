@@ -1,0 +1,131 @@
+body{
+  font-family: cursive;
+  margin: 0;
+  position: relative;
+  background: url(https://nerdicesemdebate.files.wordpress.com/2016/04/new-digimon-adventure-tri-poster-original-cast-ret_zzdn-1920.jpg) no-repeat;
+  background-position: center top;
+  top: 110px;
+}
+header h1 span:nth-child(2){
+  display:none;
+}
+.personagens h2:first-child{
+  display: none;
+}
+.personagens  ul:nth-of-type(1){
+  display: none;
+}
+.treinadores{
+  display:none;
+}
+
+header{
+  position: relative;
+  width: 800px;
+  height: 90px;
+  margin: 80px auto;
+  border: solid black;
+  border-radius: 10px;
+  background-color: rgba(255, 128, 0, 0.9);;
+}
+.logo{
+  display: block;
+  position: absolute;
+  background: url(http://orig06.deviantart.net/82dc/f/2015/262/5/9/digimon_logo_vector_by_3prsta-d9a4yb9.png) no-repeat;
+  background-size:contain;
+  background-position: center;
+  overflow: auto;
+  width: 200px;
+  height: 200px;
+  top: -55px;
+}
+header h1{
+  position: absolute;
+  left:220px;
+  color:black;
+}
+nav a:first-child{
+  position: absolute;
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px 2px black;
+  left:725px;
+  top: 20px;
+}
+nav a:last-child{
+  position: absolute;
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px 2px black;
+  left:725px;
+  top: 50px;
+}
+.content{
+  position: relative;
+  width: 850px;
+  height: 410px;
+  margin: 20px auto;
+}
+.digiescolhidos{
+  position: absolute;
+  display: inline;
+  width: 400px;
+  border-radius: 10px;
+  border:solid silver;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.personagens {
+  position: absolute;
+  display: inline;
+  width: 400px;
+  border-radius: 10px;
+  border:solid silver;
+  background-color: rgba(255, 255, 255, 0.5);
+  left: 450px;
+}
+.personagens h2:nth-of-type(2){
+  text-shadow: 2px 0px 2px black, -2px 0px 2px black, 0px 1px 2px black, 0px -1px 2px black; color:orange; font-weight: bold;
+  position: relative;
+  left:107px;
+}
+.digiescolhidos h2{
+  text-shadow: 2px 0px 2px black, -2px 0px 2px black, 0px 1px 2px black, 0px -1px 2px black; color:orange; font-weight: bold;
+  position: relative;
+  left:107px;
+}
+.digiescolhidos ul li:hover{
+  background-color: white;
+   cursor: pointer;
+}
+.personagens ul li:hover{
+  background-color: white;
+   cursor: pointer;
+}
+footer{
+  position: relative;
+  width: 378px;
+  padding: 5px;
+  border: solid black;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #ff8000;
+  top:100px;
+  z-index: -1;
+}
+li:nth-child(2n+1){
+  float: left;
+  margin-left: 0px;
+  list-style-type: none;
+  clear: both;
+  background-color: #FC6;
+  border: solid black;
+  border-radius: 10px;
+}
+li:nth-child(2n+2){
+  float: left;
+  list-style-type: none;
+  clear: both;
+  background-color: #F96;
+  border: solid black;
+  border-radius: 10px;
+}

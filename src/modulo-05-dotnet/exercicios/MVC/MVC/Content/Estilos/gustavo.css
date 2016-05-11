@@ -1,0 +1,115 @@
+/*escondendo*/
+header h1 span:last-child {
+    display: none;
+}
+
+.personagens h2:first-child {
+    display: none;
+}
+
+.personagens ul:nth-of-type(1) {
+    display: none;
+}
+
+.treinadores {
+    display: none;
+}
+/*fim escondendo */
+
+body {
+    background:rgba(171, 163, 163, 0.2);
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0px;
+}
+
+header {
+    width: 100%;
+    height: 450px;
+}
+
+header h1 {
+    position: relative;
+    float: right;
+    padding-left: 400px;
+    top: 110px;
+    font-size: 48px;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+}
+
+.imagem-fundo {
+    position: relative;
+    float: left;
+    height: 300px;
+    width: 480px;
+    top: -120px;
+    background-repeat: no-repeat;
+    background-image: url(http://www.infomegablog.com.br/wp-content/uploads/2012/05/digimon3.gif);
+}
+
+.perfil {
+    position: relative;
+    float: right;
+    bottom: 80px;
+    right: 40px;
+}
+
+.perfil a {
+    display: block;
+    color: black;
+}
+
+.content {
+    overflow: auto;
+    width: 50%;
+    margin: 0px auto;
+}
+
+.personagens {
+    float:right;
+    width: 40%;
+}
+
+.personagens ul {
+    padding-left: 40px;
+}
+
+.personagens h2 {
+    text-align: left;
+}
+.digiescolhidos {
+    width: 60%;
+    margin-top: 0px;
+}
+
+.digiescolhidos h2 {
+    text-align: left;
+}
+
+.digiescolhidos ul {
+    padding-left: 40px;
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* imagem nos marcadores */
+ul {
+    list-style-type: none;
+}
+
+li:before {
+  content: "";
+  background-image: url(http://www.programagratis.com/fotos/d/i/digimon-master-online_1.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;  
+  width: 25px;
+  height: 50px;
+}
+/* fim imagem nos marcadores */
