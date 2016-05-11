@@ -23,5 +23,10 @@ namespace MVC.Controllers
             };
             return View(sobreMim);
         }
+
+        public ActionResult FichaTecnica()
+        {
+            return View();
+        }
     }
 }
