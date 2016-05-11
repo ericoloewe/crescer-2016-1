@@ -7,7 +7,7 @@ namespace MVC.Controllers
         // GET: Desafio
         public ActionResult Index(string aluno)
         {
-            ViewBag.cssAtual = aluno;
+            ViewBag.cssAtual = aluno ?? "";
             return View();
         }
     }
