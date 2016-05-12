@@ -1,7 +1,7 @@
-﻿using LojaNinja.Models;
+﻿using LojaNinja.MVC.Models;
 using System.Web.Mvc;
 
-namespace LojaNinja.Controllers
+namespace LojaNinja.MVC.Controllers
 {
     public class PedidoController : Controller
     {
@@ -13,6 +13,12 @@ namespace LojaNinja.Controllers
 
         // GET: Pedido
         public ActionResult Novo()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Novo(PedidoViewModel pedido)
         {
             return View();
         }

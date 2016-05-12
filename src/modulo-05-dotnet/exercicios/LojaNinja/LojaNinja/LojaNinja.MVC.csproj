@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LojaNinja</RootNamespace>
-    <AssemblyName>LojaNinja</AssemblyName>
+    <RootNamespace>LojaNinja.MVC</RootNamespace>
+    <AssemblyName>LojaNinja.MVC</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -119,7 +119,6 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
@@ -152,8 +151,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Pedido.cs" />
-    <Compile Include="Models\TipoPagamento.cs" />
+    <Compile Include="Models\PedidoViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +172,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LojaNinja.Dominio\LojaNinja.Dominio.csproj">
+      <Project>{ea5e42de-5545-4db0-bcec-bc9d8fca8334}</Project>
+      <Name>LojaNinja.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LojaNinja.Repositorio\LojaNinja.Repositorio.csproj">
+      <Project>{e8c45911-22f7-4359-9641-70a650cdeae9}</Project>
+      <Name>LojaNinja.Repositorio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

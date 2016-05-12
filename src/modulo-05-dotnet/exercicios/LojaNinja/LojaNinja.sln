@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNinja", "LojaNinja\LojaNinja.csproj", "{8DF13852-C2E2-41B3-B2DF-5234EF8AA125}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNinja.MVC", "LojaNinja\LojaNinja.MVC.csproj", "{8DF13852-C2E2-41B3-B2DF-5234EF8AA125}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - UI", "1 - UI", "{99BB42F1-1039-4135-AAB3-7B2551B3DDF6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Dominio", "2 - Dominio", "{7B5128F6-1329-40EC-8B61-AA80F0F482F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infraestrutura", "3 - Infraestrutura", "{8F1CEB5F-44EB-4690-8C24-5232B8AA02F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNinja.Dominio", "LojaNinja.Dominio\LojaNinja.Dominio.csproj", "{EA5E42DE-5545-4DB0-BCEC-BC9D8FCA8334}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNinja.Test", "LojaNinja.Test\LojaNinja.Test.csproj", "{E3AE0B28-20DC-4BC6-A768-CA32FFD1CA03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNinja.Repositorio", "LojaNinja.Repositorio\LojaNinja.Repositorio.csproj", "{E8C45911-22F7-4359-9641-70A650CDEAE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +27,26 @@ Global
 		{8DF13852-C2E2-41B3-B2DF-5234EF8AA125}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DF13852-C2E2-41B3-B2DF-5234EF8AA125}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DF13852-C2E2-41B3-B2DF-5234EF8AA125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA5E42DE-5545-4DB0-BCEC-BC9D8FCA8334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5E42DE-5545-4DB0-BCEC-BC9D8FCA8334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5E42DE-5545-4DB0-BCEC-BC9D8FCA8334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5E42DE-5545-4DB0-BCEC-BC9D8FCA8334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3AE0B28-20DC-4BC6-A768-CA32FFD1CA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3AE0B28-20DC-4BC6-A768-CA32FFD1CA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3AE0B28-20DC-4BC6-A768-CA32FFD1CA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3AE0B28-20DC-4BC6-A768-CA32FFD1CA03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8C45911-22F7-4359-9641-70A650CDEAE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C45911-22F7-4359-9641-70A650CDEAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8C45911-22F7-4359-9641-70A650CDEAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C45911-22F7-4359-9641-70A650CDEAE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8DF13852-C2E2-41B3-B2DF-5234EF8AA125} = {99BB42F1-1039-4135-AAB3-7B2551B3DDF6}
+		{EA5E42DE-5545-4DB0-BCEC-BC9D8FCA8334} = {7B5128F6-1329-40EC-8B61-AA80F0F482F4}
+		{E3AE0B28-20DC-4BC6-A768-CA32FFD1CA03} = {7B5128F6-1329-40EC-8B61-AA80F0F482F4}
+		{E8C45911-22F7-4359-9641-70A650CDEAE9} = {8F1CEB5F-44EB-4690-8C24-5232B8AA02F5}
 	EndGlobalSection
 EndGlobal

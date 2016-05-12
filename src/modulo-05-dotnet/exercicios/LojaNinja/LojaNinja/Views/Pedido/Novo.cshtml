@@ -1,4 +1,4 @@
-﻿@model LojaNinja.Models.Pedido
+﻿@model LojaNinja.MVC.Models.Pedido
 
 @{
     ViewBag.Title = "Novo";
@@ -12,9 +12,7 @@
 
 
 @using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
+{    
     <div class="form-horizontal">        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -69,7 +67,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <button class="btn btn-primary btn-lg">Criar Pedido</button>
+                <button class="btn btn-primary">Criar Pedido</button>
             </div>
         </div>
     </div>
@@ -83,5 +81,5 @@
     <script src="~/scripts/jquery.validate.min.js"></script>
     <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/scripts/Datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="~/scripts/lojaNinja.js"></script>
+    <script src="~/scripts/LojaNinja.MVC.js"></script>
 }

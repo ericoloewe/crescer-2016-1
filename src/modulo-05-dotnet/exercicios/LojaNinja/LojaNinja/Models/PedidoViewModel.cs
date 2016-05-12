@@ -1,10 +1,11 @@
-﻿using System;
+﻿using LojaNinja.Dominio;
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace LojaNinja.Models
+namespace LojaNinja.MVC.Models
 {
-    public class Pedido
+    public class PedidoViewModel
     {
         [Required(ErrorMessage = "Nome do produto não informado!")]
         [DisplayName("Nome do produto")]        
@@ -20,6 +21,7 @@ namespace LojaNinja.Models
 
         [Required(ErrorMessage = "Forma de pagamento não informada!")]
         [DisplayName("Forma de pagamento")]
+        [EnumDataType(typeof(TipoPagamento))]
         public TipoPagamento TipoPagamento { get; set; }
 
         [Required(ErrorMessage = "Nome do cliente não informado!")]

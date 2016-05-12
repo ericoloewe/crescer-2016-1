@@ -1,4 +1,4 @@
-﻿namespace LojaNinja.Models
+﻿namespace LojaNinja.Dominio
 {
     public enum TipoPagamento
     {
