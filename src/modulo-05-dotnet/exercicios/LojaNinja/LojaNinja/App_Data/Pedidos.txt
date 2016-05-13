@@ -1,0 +1,1001 @@
+Número Pedido;Data Pedido;Data Desejo Entrega;Nome Produto;Valor Venda;Tipo Pagamento;Nome Cliente;Cidade;Estado;Urgente
+1;01/02/2009 06:17:15;01/02/2009 06:17;Kunai;1200;Mastercard;carolina;Basildon;England;true
+2;01/02/2009 04:53;01/02/2009 04:53;Kunai;1200;Visa;Betina;Parkville                   ;MO;true
+3;01/02/2009 13:08;01/02/2009 13:08;Shuriken;1200;Mastercard;Federica e Andrea;Astoria                     ;OR;true
+4;01/03/2009 14:44;01/03/2009 14:44;Kunai;1200;Visa;Gouya;Echuca;Victoria;true
+5;01/04/2009 20:11;01/04/2009 20:11;Shuriken;1200;Mastercard;Fleur;Peoria                      ;IL;true
+6;01/02/2009 20:09;01/02/2009 20:09;Shuriken;1200;Mastercard;adam;Martin                      ;TN;true
+7;01/04/2009 13:17;01/04/2009 13:17;Faca de Gaudério;1200;Mastercard;Nunes;São Leopoldo;Rio Grande do Sul;true
+8;01/04/2009 14:11;01/04/2009 14:11;Katana;1200;Visa;Aidan;Chatou;Ile-de-France;true
+9;01/05/2009 02:42;01/05/2009 02:42;Kunai;1200;Diners;Stacy;New York                    ;NY;true
+10;01/02/2009 09:16;01/02/2009 09:16;Kunai;1200;Mastercard;Sean ;Shavano Park                ;TX;true
+11;01/02/2009 14:18;01/02/2009 14:18;Shuriken;1200;Visa;Richard;Riverside                   ;NJ;true
+12;01/04/2009 01:05;01/04/2009 01:05;Kunai;1200;Diners;Leanne;Julianstown;Meath;true
+13;01/05/2009 11:37;01/05/2009 11:37;Shuriken;1200;Visa;Janet;Ottawa;Ontario;true
+14;01/02/2009 07:35;01/02/2009 07:35;Shuriken;1200;Diners;Hani;Salt Lake City              ;UT;true
+15;01/06/2009 12:56;01/06/2009 12:56;Katana;1200;Visa;Jeremy;Manchester;England;true
+16;01/01/2009 11:05;01/01/2009 11:05;Shuriken;1200;Diners;Janis;Ballynora;Cork;true
+17;01/05/2009 04:10;01/05/2009 04:10;Shuriken;1200;Mastercard;Nicola;Roodepoort;Gauteng;true
+18;01/06/2009 07:18;01/06/2009 07:18;Shuriken;1200;Visa;asuman;Chula Vista                 ;CA;true
+19;01/02/2009 01:11;01/02/2009 01:11;Shuriken;1200;Mastercard;Lena;Kuopio;Ita-Suomen Laani;true
+20;01/01/2009 02:24;01/01/2009 02:24;Shuriken;1200;Visa;Lisa;Sugar Land                  ;TX;true
+21;01/07/2009 08:08;01/07/2009 08:08;Shuriken;1200;Diners;Bryan Kerrene;New York                    ;NY;true
+22;01/02/2009 02:57;01/02/2009 02:57;Shuriken;1200;Visa;chris;London;England;true
+23;01/01/2009 20:21;01/01/2009 20:21;Shuriken;1200;Visa;Maxine;Morton                      ;IL;true
+24;01/08/2009 00:42;01/08/2009 00:42;Shuriken;1200;Visa;Family;Los Gatos                   ;CA;true
+25;01/08/2009 03:56;01/08/2009 03:56;Shuriken;1200;Mastercard;Katherine;New York                    ;NY;true
+26;01/08/2009 03:16;01/08/2009 03:16;Shuriken;1200;Mastercard;Linda;Miami                       ;FL;true
+27;01/08/2009 01:59;01/08/2009 01:59;Shuriken;1200;Mastercard;SYLVIA;Vesenaz;Geneve;true
+28;01/03/2009 09:03;01/03/2009 09:03;Shuriken;1200;Diners;Sheila;Brooklyn                    ;NY;true
+29;01/05/2009 13:17;01/05/2009 13:17;Shuriken;1200;Mastercard;Stephanie;Badhoevedorp;Noord-Holland;true
+30;01/06/2009 07:46;01/06/2009 07:46;Shuriken;1200;Amex;Kelly;Reston                      ;VA;true
+31;01/08/2009 16:24;01/08/2009 16:24;Shuriken;1200;Visa;jennifer;Phoenix                     ;AZ;true
+32;01/09/2009 06:39;01/09/2009 06:39;Shuriken;1200;Mastercard;Anneli;Houston                     ;TX;true
+33;01/07/2009 07:44;01/07/2009 07:44;Shuriken;1200;Mastercard;Marie;Ball Ground                 ;GA;true
+34;01/03/2009 13:24;01/03/2009 13:24;Shuriken;1200;Visa;Mehmet Fatih;Helsingor;Frederiksborg;true
+35;01/07/2009 20:15;01/07/2009 20:15;Shuriken;1200;Amex;Nicole;Houston                     ;TX;true
+36;01/09/2009 15:58;01/09/2009 15:58;Shuriken;1200;Mastercard;Sari;Newbury;England;true
+37;01/03/2009 13:11;01/03/2009 13:11;Shuriken;1200;Mastercard;simone;Kobenhavn;Kobenhavn;true
+38;01/10/2009 12:57;01/10/2009 12:57;Shuriken;1200;Amex;Vanessa;Sandy Springs               ;GA;true
+39;01/10/2009 14:43;01/10/2009 14:43;Shuriken;1200;Diners;Anupam;Kinsaley;Dublin;true
+40;01/10/2009 12:05;01/10/2009 12:05;Shuriken;1200;Visa;Karina;Fort Lauderdale             ;FL;true
+41;01/06/2009 01:20;01/06/2009 01:20;Shuriken;1200;Mastercard;Frank;Melbourne;Victoria;true
+42;01/10/2009 14:56;01/10/2009 14:56;Shuriken;1200;Visa;Angela;Ankeny                      ;IA;true
+43;01/07/2009 10:01;01/07/2009 10:01;Shuriken;1200;Visa;Darren;Pittsboro                   ;NC;true
+44;01/01/2009 01:26;01/01/2009 01:26;Shuriken;1200;Mastercard;Nikki;New Rochelle                ;NY;true
+45;01/11/2009 02:04;01/11/2009 02:04;Shuriken;1200;Visa;chris;Gold Coast;Queensland;true
+46;01/11/2009 14:17;01/11/2009 14:17;Shuriken;1200;Visa;Stephanie;Brussels;Brussels (Bruxelles);true
+47;01/10/2009 21:38;01/10/2009 21:38;Shuriken;1200;Visa;Anushka;Maple Ridge District Municipality;British Columbia;true
+48;01/07/2009 06:18;01/07/2009 06:18;Shuriken;1200;Mastercard;June ;Beachwood                   ;OH;true
+49;01/05/2009 00:31;01/05/2009 00:31;Shuriken;1200;Mastercard;Bonnie;Saltsjobaden;Stockholm;true
+50;01/02/2009 06:07;01/02/2009 06:07;Shuriken;1200;Visa;Cindy ;Kemble;England;true
+51;01/12/2009 03:25;01/12/2009 03:25;Shuriken;1200;Mastercard;chrissy;W Lebanon                   ;NH;true
+52;01/04/2009 13:56;01/04/2009 13:56;Shuriken;1200;Mastercard;Tamar;Headley;England;true
+53;01/12/2009 05:18;01/12/2009 05:18;Shuriken;1200;Mastercard;Bernadett;Southampton;England;true
+54;01/08/2009 15:16;01/08/2009 15:16;Shuriken;1200;Visa;Dottie;Woodsboro                   ;MD;true
+55;01/11/2009 11:33;01/11/2009 11:33;Shuriken;1200;Visa;Stefan;Stavanger;Rogaland;true
+56;01/07/2009 20:22;01/07/2009 20:22;Shuriken;1200;Visa;Gina;Red Deer;Alberta;true
+57;01/02/2009 22:00;01/02/2009 22:00;Shuriken;1200;Diners;Lynne;Memphis                     ;TN;true
+58;01/05/2009 13:52;01/05/2009 13:52;Shuriken;1200;Mastercard;Tammy;Morges;Vaud;true
+59;01/08/2009 20:32;01/08/2009 20:32;Shuriken;1200;Visa;Kim;Calgary;Alberta;true
+60;01/08/2009 13:34;01/08/2009 13:34;Shuriken;1200;Visa;Bruce;Belleville;Ontario;true
+61;01/11/2009 13:08;01/11/2009 13:08;Shuriken;1200;Visa;Rosa Maria;Cincinnati                  ;OH;true
+62;01/12/2009 19:04;01/12/2009 19:04;Shuriken;1000;Visa;Lydia;Comox;British Columbia;true
+63;01/12/2009 13:41;01/12/2009 13:41;Shuriken;1200;Visa;Eric;Gasperich;Luxembourg;true
+64;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1200;Mastercard;AnaPaula;Helens Bay;Northern Ireland;true
+65;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1200;Visa;Robin;Milan;Lombardy;true
+66;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1200;Visa;Gitte;Staten Island               ;NY;true
+67;01/08/2009 13:14;01/08/2009 13:14;Shuriken;1200;Visa;Dr. Claudia;Oslo;Oslo;true
+68;01/02/2009 11:41;01/02/2009 11:41;Shuriken;1200;Visa;Crystal;Farmington;Michigan;true
+69;01/07/2009 19:50;01/07/2009 19:50;Shuriken;1200;Diners;Delphine;Santa Monica                ;CA;true
+70;01/01/2009 20:28;01/01/2009 20:28;Shuriken;1200;Visa;nathalie;Calgary;Alberta;true
+71;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Mastercard;Lindi;Vancouver;British Columbia;true
+72;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1200;Mastercard;Kevin;Cheltenham;England;true
+73;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Visa;Clare;Keller                      ;VA;true
+74;01/02/2009 12:18;01/02/2009 12:18;Shuriken;1200;Visa;Alice;Nakskov;Storstrom;true
+75;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Mastercard;ZENA;Honolulu                    ;HI;true
+76;01/06/2009 17:15;01/06/2009 17:15;Shuriken;1200;Visa;Andrea;Bubuieci;Chisinau;true
+77;01/03/2009 13:56;01/03/2009 13:56;Shuriken;1200;Visa;Rennae;Amelia Island               ;FL;true
+78;01/04/2009 07:54;01/04/2009 07:54;Shuriken;1200;Visa;Gerhard;Alliston;Ontario;true
+79;01/12/2009 07:28;01/12/2009 07:28;Shuriken;1200;Amex;Megan;La Alberca;Murcia;true
+80;01/06/2009 15:15;01/06/2009 15:15;Shuriken;1200;Mastercard;Danielle;Rathgar;Dublin;true
+81;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Mastercard;Tod;Coral Gables                ;FL;true
+82;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Visa;Janaina;Miami                       ;FL;true
+83;01/06/2009 21:13;01/06/2009 21:13;Shuriken;1200;Visa;Kofi;Vancouver;British Columbia;true
+84;01/06/2014 20:48;01/06/2014 20:48;Shuriken;1200;Visa;Jennifer;Jumeira;Dubayy;true
+85;01/12/2013 19:48;01/12/2013 19:48;Shuriken;1200;Visa;Jolene ;Englewood                   ;CO;true
+86;01/06/2013 18:48;01/06/2013 18:48;Shuriken;1200;Mastercard;anne;Bournemouth;England;true
+87;01/12/2012 17:48;01/12/2012 17:48;Shuriken;1200;Mastercard;Alexis;Genoa                       ;IL;true
+88;01/06/2012 16:48;01/06/2012 16:48;Shuriken;1200;Visa;Dez;Al 'Adliyah;Al Manamah;true
+89;01/12/2011 15:48;01/12/2011 15:48;Shuriken;1200;Visa;Stephanie;Rouen;Upper Normandy;true
+90;01/06/2011 14:48;01/06/2011 14:48;Shuriken;1200;Visa;Melissa ;Parkland                    ;FL;true
+91;01/12/2010 13:48;01/12/2010 13:48;Shuriken;1200;Amex;CLARE;San Francisco               ;CA;true
+92;01/06/2010 12:48;01/06/2010 12:48;Shuriken;1200;Mastercard;catherine;Keller                      ;VA;true
+93;01/12/2009 11:48;01/12/2009 11:48;Shuriken;1200;Visa;Veronique ;Tsawwassen;British Columbia;true
+94;01/06/2009 10:48;01/06/2009 10:48;Shuriken;1200;Mastercard;Bruce and Camille;Clinton                     ;NJ;true
+95;01/06/2009 10:48;01/06/2009 10:48;Shuriken;1200;Mastercard;Ellen;Owensboro                   ;KY;true
+96;01/06/2009 10:48;01/06/2009 10:48;Shuriken;1200;Visa;Amy;Lakewood Village            ;TX;true
+97;01/06/2009 07:23;01/06/2009 07:23;Shuriken;1200;Visa;Anna;Okotoks;Alberta;true
+98;01/01/2009 05:04;01/01/2009 05:04;Shuriken;1200;Mastercard;Regina;Glimmen;Groningen;true
+99;01/02/2009 06:17;01/02/2009 06:17;Shuriken;1200;Visa;Heidi;Calgary;Alberta;true
+100;01/02/2009 04:53;01/02/2009 04:53;Shuriken;1200;Visa;Jessica;Kanata;Ontario;true
+101;01/02/2009 13:08;01/02/2009 13:08;Shuriken;1200;Diners;Petra;Bergen;Nordrhein-Westfalen;true
+102;01/03/2009 14:44;01/03/2009 14:44;Shuriken;1200;Visa;Brian;College Park                ;MD;true
+103;01/04/2009 20:11;01/04/2009 20:11;Shuriken;1200;Visa;Kenny;Kailua Kona                 ;HI;true
+104;01/02/2009 20:09;01/02/2009 20:09;Shuriken;1200;Amex;ayse;Redondo Beach               ;CA;true
+105;01/04/2009 13:17;01/04/2009 13:17;Shuriken;1200;Amex;Maria and Timothy;Fountain Hls                ;AZ;true
+106;01/04/2009 14:11;01/04/2009 14:11;Shuriken;1200;Visa;IMAN;Brisbane;Queensland;true
+107;01/05/2009 02:42;01/05/2009 02:42;Shuriken;2100;Mastercard;Gerald;Mahopac                     ;NY;true
+108;01/02/2009 09:16;01/02/2009 09:16;Katana;1200;Mastercard;Annelies;Ile-Perrot;Quebec;true
+109;01/02/2009 14:18;01/02/2009 14:18;Katana;1200;Amex;Jocelyn;Bruxelles;Brussels (Bruxelles);true
+110;01/04/2009 01:05;01/04/2009 01:05;Katana;1200;Visa;Kara;Chicago                     ;IL;true
+111;01/05/2009 11:37;01/05/2009 11:37;Katana;1200;Visa;Orsi;Rayford                     ;TX;true
+112;01/02/2009 07:35;01/02/2009 07:35;Katana;1200;Visa;Ben;Escondido                   ;CA;true
+113;01/06/2009 12:56;01/06/2009 12:56;Katana;1200;Visa;Sam;Tesvikiye;Istanbul;true
+114;01/01/2009 11:05;01/01/2009 11:05;Katana;1200;Visa;Filip and Teresa;Centurion;Gauteng;true
+115;01/05/2009 04:10;01/05/2009 04:10;Katana;1200;Visa;Grace ;York;England;true
+116;01/06/2009 07:18;01/06/2009 07:18;Katana;1200;Visa;Chelsey ;Ashburn                     ;VA;true
+117;01/02/2009 01:11;01/02/2009 01:11;Katana;1200;Amex;Charis;Los Angeles                 ;CA;true
+118;01/01/2009 02:24;01/01/2009 02:24;Katana;1200;Visa;Marlene;Edgewood                    ;WA;true
+119;01/07/2009 08:08;01/07/2009 08:08;Katana;1200;Visa;Fie;New York                    ;NY;true
+120;01/02/2009 02:57;01/02/2009 02:57;Katana;1200;Diners;Nicole ;Basingstoke;England;true
+121;01/01/2009 20:21;01/01/2009 20:21;Katana;1200;Diners;Linda;Den Haag;Zuid-Holland;true
+122;01/08/2009 00:42;01/08/2009 00:42;Katana;1200;Visa;Janet;Marietta                    ;GA;true
+123;01/08/2009 03:56;01/08/2009 03:56;Katana;1200;Mastercard;Jamie;Houston                     ;TX;true
+124;01/08/2009 03:16;01/08/2009 03:16;Katana;1200;Visa;Chad;West Orange                 ;NJ;true
+125;01/08/2009 01:59;01/08/2009 01:59;Katana;1200;Mastercard;sunny;Amsterdam;Noord-Holland;true
+126;01/03/2009 09:03;01/03/2009 09:03;Katana;1200;Visa;Anna;Downey                      ;CA;true
+127;01/05/2009 13:17;01/05/2009 13:17;Katana;1200;Diners;Roger;Urlingford;Kilkenny;true
+128;01/06/2009 07:46;01/06/2009 07:46;Katana;1200;Mastercard;Si;Holte;Kobenhavn;true
+129;01/08/2009 16:24;01/08/2009 16:24;Katana;1200;Visa;Sherri;Freienbach;Schwyz;true
+130;01/09/2009 06:39;01/09/2009 06:39;Katana;1200;Mastercard;Katherine;Hofheim am Taunus;Hessen;true
+131;01/07/2009 07:44;01/07/2009 07:44;Katana;1200;Mastercard;Clare;Lafayette                   ;CA;true
+132;01/03/2009 13:24;01/03/2009 13:24;Katana;1200;Amex;Campbell;Mushrif;;true
+133;01/07/2009 20:15;01/07/2009 20:15;Katana;1200;Visa;Ruth;Nashville                   ;AR;true
+134;01/09/2009 15:58;01/09/2009 15:58;Katana;1200;Visa;Doug;Bishop Auckland;England;true
+135;01/03/2009 13:11;01/03/2009 13:11;Katana;1200;Visa;Shailesh;Joppa;MD;true
+136;01/10/2009 12:57;01/10/2009 12:57;Katana;1200;Visa;Conrad;Joppa;MD;true
+137;01/10/2009 14:43;01/10/2009 14:43;Katana;1200;Diners;Alison;Hampton                     ;NJ;true
+138;01/10/2009 12:05;01/10/2009 12:05;Katana;1200;Mastercard;Tracy;Louisville                  ;KY;true
+139;01/06/2009 01:20;01/06/2009 01:20;Katana;1200;Visa;Kate;Broadlands                  ;VA;true
+140;01/10/2009 14:56;01/10/2009 14:56;Katana;1200;Diners;Sarka;Yellowknife;Northwest Territories;true
+141;01/07/2009 10:01;01/07/2009 10:01;Katana;1200;Visa;Klara;Spring Lake Park            ;MN;true
+142;01/01/2009 01:26;01/01/2009 01:26;Katana;1200;Mastercard;Andrew;Winnipeg;Manitoba;true
+143;01/11/2009 02:04;01/11/2009 02:04;Katana;1200;Visa;Vicki and Bill;Seattle                     ;WA;true
+144;01/11/2009 14:17;01/11/2009 14:17;Katana;1200;Mastercard;David;Deptford                    ;NJ;true
+145;01/10/2009 21:38;01/10/2009 21:38;Katana;1200;Mastercard;Antonella;Amsterdam;Noord-Holland;true
+146;01/07/2009 06:18;01/07/2009 06:18;Katana;1200;Visa;David;Alpharetta                  ;GA;true
+147;01/05/2009 00:31;01/05/2009 00:31;Katana;1200;Visa;Greg;Washington                  ;DC;true
+148;01/02/2009 06:07;01/02/2009 06:07;Katana;1200;Visa;Jannik ;Holmenkollen;Oslo;true
+149;01/12/2009 03:25;01/12/2009 03:25;Katana;1200;Visa;Sylvia;Zekeriyakoy;Istanbul;true
+150;01/04/2009 13:56;01/04/2009 13:56;Katana;1200;Amex;Bernadette;Washington                  ;DC;true
+151;01/12/2009 05:18;01/12/2009 05:18;Katana;1200;Diners;Denise;Montreal;Quebec;true
+152;01/08/2009 15:16;01/08/2009 15:16;Katana;1200;Visa;luciana;Athens                      ;GA;true
+153;01/11/2009 11:33;01/11/2009 11:33;Katana;1200;Diners;Maja;Hoschton                    ;GA;true
+154;01/07/2009 20:22;01/07/2009 20:22;Katana;1200;Visa;Kirstie;Royal Oak                   ;MI;true
+155;01/02/2009 22:00;01/02/2009 22:00;Katana;1200;Visa;Scott ;Royal Oak                   ;MI;true
+156;01/05/2009 13:52;01/05/2009 13:52;Katana;1200;Mastercard;Jammie;Belmont                     ;MA;true
+157;01/08/2009 20:32;01/08/2009 20:32;Katana;1200;Mastercard;Frank;Old Greenwich               ;CT;true
+158;01/08/2009 13:34;01/08/2009 13:34;Katana;1200;Mastercard;scott;Coconut Grove               ;FL;true
+159;01/11/2009 13:08;01/11/2009 13:08;Katana;1200;Visa;Jiri;Vienna                      ;VA;true
+160;01/12/2009 19:04;01/12/2009 19:04;Katana;1200;Visa;Dave and Amy;Norfolk                     ;VA;true
+161;01/12/2009 13:41;01/12/2009 13:41;Katana;1200;Mastercard;Rebecca;Norfolk                     ;VA;true
+162;01/11/2009 10:38;01/11/2009 10:38;Katana;1200;Visa;Melissa;Aberdeen;Scotland;true
+163;01/11/2009 10:38;01/11/2009 10:38;Katana;1200;Amex;jeremy;Charlestown;New South Wales;true
+164;01/11/2009 10:38;01/11/2009 10:38;Katana;1200;Visa;Randy;Wigan;England;true
+165;01/08/2009 13:14;01/08/2009 13:14;Katana;1200;Visa;Djeiny;Rockville                   ;MD;true
+166;01/02/2009 11:41;01/02/2009 11:41;Katana;1200;Mastercard;Andrea ;Shreveport                  ;LA;true
+167;01/07/2009 19:50;01/07/2009 19:50;Katana;1200;Amex;Joanna;Little Silver               ;NJ;true
+168;01/01/2009 20:28;01/01/2009 20:28;Katana;1200;Visa;Jessica;Abbey Town;England;true
+169;01/03/2009 15:22;01/03/2009 15:22;Katana;1200;Amex;alison;Mid City West               ;PA;true
+170;01/11/2009 10:38;01/11/2009 10:38;Katana;1200;Visa;malin;Atlanta;Georgia;true
+171;01/03/2009 15:22;01/03/2009 15:22;Katana;1200;Visa;Genevieve;Milton Keynes;England;true
+172;01/02/2009 12:18;01/02/2009 12:18;Katana;1200;Mastercard;Saraya;Dresden;Saxony;true
+173;01/03/2009 15:22;01/03/2009 15:22;Katana;1200;Mastercard;Anastasia;NYC                         ;NY;true
+174;01/06/2009 17:15;01/06/2009 17:15;Katana;1200;Visa;Elizabeth;The Grange;Queensland;true
+175;01/03/2009 13:56;01/03/2009 13:56;Katana;1200;Visa;Nicole;Brookline                   ;MA;true
+176;01/04/2009 07:54;01/04/2009 07:54;Katana;1200;Visa;Jeffrey;Montreal-Nord;Quebec;true
+177;01/12/2009 07:28;01/12/2009 07:28;Katana;1200;Mastercard;Blanca Gabriela ;Irving                      ;TX;true
+178;01/06/2009 15:15;01/06/2009 15:15;Katana;1200;Amex;Elisa;Ottawa Hills                ;OH;true
+179;01/03/2009 15:22;01/03/2009 15:22;Katana;1200;Visa;Bob;Sydney;New South Wales;true
+180;01/03/2009 15:22;01/03/2009 15:22;Katana;1200;Visa;Elizabeth;Wollongong;New South Wales;true
+181;01/06/2009 21:13;01/06/2009 21:13;Katana;1200;Amex;Cathy;Brooklyn                    ;NY;true
+182;01/06/2014 20:48;01/06/2014 20:48;Katana;1200;Visa;suzanne;Lemont                      ;IL;true
+183;01/12/2013 19:48;01/12/2013 19:48;Katana;1200;Mastercard;Cassandra;San Carlos                  ;CA;true
+184;01/06/2013 18:48;01/06/2013 18:48;Katana;1200;Mastercard;Jennifer;Chicago                     ;IL;true
+185;01/12/2012 17:48;01/12/2012 17:48;Katana;1200;Visa;nicole;Oslo;Oslo;true
+186;01/06/2012 16:48;01/06/2012 16:48;Katana;1200;Visa;Sean;Wantagh;NY;true
+187;01/12/2011 15:48;01/12/2011 15:48;Katana;1200;Mastercard;Morgan;Coomera;Queensland;true
+188;01/06/2011 14:48;01/06/2011 14:48;Katana;1200;Diners;Harriet;Fort Oglethorpe             ;GA;true
+189;01/12/2010 13:48;01/12/2010 13:48;Katana;1200;Mastercard;Janine;Corbin City                 ;NJ;true
+190;01/06/2010 12:48;01/06/2010 12:48;Katana;1200;Mastercard;Debora;Lakeside                    ;CA;true
+191;01/12/2009 11:48;01/12/2009 11:48;Katana;1200;Visa;Vishpala;Margate                     ;FL;true
+192;01/06/2009 10:48;01/06/2009 10:48;Katana;1200;Amex;Emer;South Palm Beach            ;FL;true
+193;01/06/2009 10:48;01/06/2009 10:48;Katana;1200;Diners;john;New York                    ;NY;true
+194;01/06/2009 10:48;01/06/2009 10:48;Katana;1200;Mastercard;lailani;Anchorage                   ;AK;true
+195;01/06/2009 07:23;01/06/2009 07:23;Katana;1200;Visa;Tricia;Castricum;Noord-Holland;true
+196;01/01/2009 05:04;01/01/2009 05:04;Katana;1200;Visa;Celina;North Brunswick             ;NJ;true
+197;01/02/2009 06:17;01/02/2009 06:17;Katana;1200;Visa;Patrick;Baytown                     ;TX;true
+198;01/02/2009 04:53;01/02/2009 04:53;Katana;790;Mastercard;Jacob;Winter Haven                ;FL;true
+199;01/02/2009 13:08;01/02/2009 13:08;Katana;820;Visa;elisabeth;Gonzaga Univ                ;WA;true
+200;01/03/2009 14:44;01/03/2009 14:44;Katana;850;Visa;Kevin ;London;England;true
+201;01/04/2009 20:11;01/04/2009 20:11;Katana;880;Mastercard;Liban;Stavanger;Rogaland;true
+202;01/02/2009 20:09;01/02/2009 20:09;Katana;910;Visa;Georgina;Portland                    ;OR;true
+203;01/04/2009 13:17;01/04/2009 13:17;Katana;940;Diners;Kellie;Staten Island               ;NY;true
+204;01/04/2009 14:11;01/04/2009 14:11;Katana;970;Mastercard;Terry;San Antonio                 ;TX;true
+205;01/05/2009 02:42;01/05/2009 02:42;Katana;1000;Visa;frauke;Horten;Vestfold;true
+206;01/02/2009 09:16;01/02/2009 09:16;Katana;1030;Visa;Simone;San Antonio                 ;TX;true
+207;01/02/2009 14:18;01/02/2009 14:18;Katana;1060;Visa;Hilde ;Princeville                 ;HI;true
+208;01/04/2009 01:05;01/04/2009 01:05;Katana;1090;Visa;Leah;Castleknock;Dublin;true
+209;01/05/2009 11:37;01/05/2009 11:37;Katana;1120;Visa;Laine;Castleknock;Dublin;true
+210;01/02/2009 07:35;01/02/2009 07:35;Katana;1150;Visa;kirsten;Bishops Stortford;England;true
+211;01/06/2009 12:56;01/06/2009 12:56;Katana;1180;Mastercard;Anna;Lafayette                   ;CA;true
+212;01/01/2009 11:05;01/01/2009 11:05;Katana;1210;Diners;Babs;Blackpool;England;true
+213;01/05/2009 04:10;01/05/2009 04:10;Katana;1240;Mastercard;Gerlinde;Hellerup;Kobenhavn;true
+214;01/06/2009 07:18;01/06/2009 07:18;Katana;1270;Mastercard;Hollyn;London;England;true
+215;01/02/2009 01:11;01/02/2009 01:11;Katana;1300;Visa;leiser;N Java                      ;NY;true
+216;01/01/2009 02:24;01/01/2009 02:24;Katana;1330;Amex;Lisa;Brulon;Pays de la Loire;true
+217;01/07/2009 08:08;01/07/2009 08:08;Katana;1200;Visa;Ann;Austin                      ;TX;true
+218;01/02/2009 02:57;01/02/2009 02:57;Katana;1200;Mastercard;Nichol Jane;Midland Park                ;NJ;true
+219;01/01/2009 20:21;01/01/2009 20:21;Katana;1200;Amex;Beatriz;Centerport                  ;NY;true
+220;01/08/2009 00:42;01/08/2009 00:42;Katana;1200;Mastercard;corina;Neustift am Walde;Vienna;true
+221;01/08/2009 03:56;01/08/2009 03:56;Katana;1200;Mastercard;manon;Neustift am Walde;Vienna;true
+222;01/08/2009 03:16;01/08/2009 03:16;Katana;1200;Diners;Isabelle;Shorewood                   ;MN;true
+223;01/08/2009 01:59;01/08/2009 01:59;Katana;1200;Visa;Lynne;Southlake                   ;TX;true
+224;01/03/2009 09:03;01/03/2009 09:03;Katana;1200;Mastercard;Doug;Huntington                  ;NY;true
+225;01/05/2009 13:17;01/05/2009 13:17;Katana;1200;Mastercard;AMY;The Woodlands               ;TX;true
+226;01/06/2009 07:46;01/06/2009 07:46;Katana;1200;Visa;Kim;Kelowna;British Columbia;true
+227;01/08/2009 16:24;01/08/2009 16:24;Katana;1200;Mastercard;HELIDA;White House                 ;TN;true
+228;01/09/2009 06:39;01/09/2009 06:39;Katana;1200;Visa;Cameron;Rungsted;Frederiksborg;true
+229;01/07/2009 07:44;01/07/2009 07:44;Katana;1200;Mastercard;Wendy;Lake Mahopac                ;NY;true
+230;01/03/2009 13:24;01/03/2009 13:24;Katana;1200;Mastercard;Tara;Killiney;Dublin;true
+231;01/07/2009 20:15;01/07/2009 20:15;Katana;1200;Amex;James;Guer;Brittany;true
+232;01/09/2009 15:58;01/09/2009 15:58;Katana;800;Amex;Heloise ;Arlington                   ;VA;true
+233;01/03/2009 13:11;01/03/2009 13:11;Katana;1200;Mastercard;Gabriel;Three Hills;Alberta;true
+234;01/10/2009 12:57;01/10/2009 12:57;Katana;1200;Visa;Jodie ;Great Falls;Virginia;true
+235;01/10/2009 14:43;01/10/2009 14:43;Katana;1200;Amex;Jeremy;London;England;true
+236;01/10/2009 12:05;01/10/2009 12:05;Katana;1200;Visa;Helga;Clontarf;Dublin;true
+237;01/06/2009 01:20;01/06/2009 01:20;Katana;1200;Visa;Eleanor;Vancouver;British Columbia;true
+238;01/10/2009 14:56;01/10/2009 14:56;Katana;1200;Diners;Miss;London;England;true
+239;01/07/2009 10:01;01/07/2009 10:01;Katana;1200;Visa;prof;Gladwyne                    ;PA;true
+240;01/01/2009 01:26;01/01/2009 01:26;Katana;1200;Mastercard;KeithMichelle;Houston                     ;TX;true
+241;01/11/2009 02:04;01/11/2009 02:04;Katana;1200;Visa;Kathryn;Cork;Cork;true
+242;01/11/2009 14:17;01/11/2009 14:17;Katana;1200;Diners;Veronique;Tenafly                     ;NJ;true
+243;01/10/2009 21:38;01/10/2009 21:38;Katana;1200;Visa;Erica;Leesburg                    ;VA;true
+244;01/07/2009 06:18;01/07/2009 06:18;Katana;1200;Visa;L;Alcona;Ontario;true
+245;01/05/2009 00:31;01/05/2009 00:31;Katana;1200;Mastercard;Diana;Kuala Lumpur;Kuala Lumpur;true
+246;01/02/2009 06:07;01/02/2009 06:07;Katana;1200;Mastercard;Emma;Sydney;New South Wales;true
+247;01/12/2009 03:25;01/12/2009 03:25;Katana;1200;Visa;Marina;Nerang;Queensland;true
+248;01/04/2009 13:56;01/04/2009 13:56;Katana;1200;Mastercard;Natalie ;Bryceville                  ;FL;true
+249;01/12/2009 05:18;01/12/2009 05:18;Katana;1200;Diners;Brenda;Saffron Walden;England;true
+250;01/08/2009 15:16;01/08/2009 15:16;Katana;1200;Diners;Nita;Sutton;Dublin;true
+251;01/11/2009 11:33;01/11/2009 11:33;Katana;1200;Mastercard;Marian;Durban;KwaZulu-Natal;true
+252;01/07/2009 20:22;01/07/2009 20:22;Katana;1200;Visa;Kevin;Berkeswell;England;true
+253;01/02/2009 22:00;01/02/2009 22:00;Katana;1200;Visa;cari;Dryden                      ;VA;true
+254;01/05/2009 13:52;01/05/2009 13:52;Katana;1200;Visa;Cassandra;Santry;Dublin;true
+255;01/08/2009 20:32;01/08/2009 20:32;Katana;1200;Amex;Christof and Heidi;Barcelona;Catalonia;true
+256;01/08/2009 13:34;01/08/2009 13:34;Katana;1200;Visa;Ina;Fayetteville                ;NC;true
+257;01/11/2009 13:08;01/11/2009 13:08;Katana;1200;Visa;Lisa;Anse Comeau;Quebec;true
+258;01/12/2009 19:04;01/12/2009 19:04;Katana;1200;Visa;Camille and Carmen;Thorlakshofn; ;true
+259;01/12/2009 13:41;01/12/2009 13:41;Katana;1200;Visa;Ginger;King City;Ontario;true
+260;01/11/2009 10:38;01/11/2009 10:38;Katana;1200;Visa;breon;Leighton Buzzard;England;true
+261;01/11/2009 10:38;01/11/2009 10:38;Katana;1200;Visa;Marion;Umea;Vasterbotten;true
+262;01/11/2009 10:38;01/11/2009 10:38;Katana;1200;Mastercard;Pia ;Sola;Rogaland;true
+263;01/08/2009 13:14;01/08/2009 13:14;Katana;1200;Visa;Dr. Donald;Stockton-on-Tees;England;true
+264;01/02/2009 11:41;01/02/2009 11:41;Katana;1200;Mastercard;Rebecca;Berlin;Berlin;true
+265;01/07/2009 19:50;01/07/2009 19:50;Katana;1200;Mastercard;Monique;Waldorf                     ;MD;true
+266;01/01/2009 20:28;01/01/2009 20:28;Katana;1200;Diners;lilia ;Brooklyn                    ;NY;true
+267;01/03/2009 15:22;01/03/2009 15:22;Katana;1200;Mastercard;Lainey;Lakeville                   ;MN;true
+268;01/11/2009 10:38;01/11/2009 10:38;Katana;1200;Mastercard;Charlene ;Vancouver;British Columbia;true
+269;01/03/2009 15:22;01/03/2009 15:22;Katana;1200;Amex;Fiona;Stamford                    ;CT;true
+270;01/02/2009 12:18;01/02/2009 12:18;Katana;1200;Mastercard;burt;Rathfarnham;Dublin;true
+271;01/03/2009 15:22;01/03/2009 15:22;Katana;1200;Mastercard;Stanford;Howell                      ;MI;true
+272;01/06/2009 17:15;01/06/2009 17:15;Katana;1200;Amex;ruth;Encinitas                   ;CA;true
+273;01/03/2009 13:56;01/03/2009 13:56;Katana;1200;Visa;Courtney;Atchison                    ;KS;true
+274;01/04/2009 07:54;01/04/2009 07:54;Katana;1200;Diners;Anthony;Victor                      ;NY;true
+275;01/12/2009 07:28;01/12/2009 07:28;Katana;1200;Visa;Eleanor;Fairbanks                   ;AK;true
+276;01/06/2009 15:15;01/06/2009 15:15;Katana;1200;Visa;GAIA;Soro;Vestsjalland;true
+277;01/03/2009 15:22;01/03/2009 15:22;Katana;1200;Mastercard;Zane;Warlingham;England;true
+278;01/03/2009 15:22;01/03/2009 15:22;Katana;1200;Mastercard;Beate;Hamburg;Hamburg;true
+279;01/06/2009 21:13;01/06/2009 21:13;Katana;1200;Amex;BALA;Accokeek                    ;MD;true
+280;01/06/2014 20:48;01/06/2014 20:48;Katana;1200;Visa;Mrs;Sunnyvale                   ;CA;true
+281;01/12/2013 19:48;01/12/2013 19:48;Katana;1200;Diners;Vanessa;Ithaca                      ;NY;true
+282;01/06/2013 18:48;01/06/2013 18:48;Katana;1200;Amex;Amanda;Houston                     ;TX;true
+283;01/12/2012 17:48;01/12/2012 17:48;Katana;1200;Mastercard;alex ;Farmingtn Hls               ;MI;true
+284;01/06/2012 16:48;01/06/2012 16:48;Katana;1200;Mastercard;T;Brooklyn                    ;NY;true
+285;01/12/2011 15:48;01/12/2011 15:48;Katana;1200;Mastercard;Alva and Martin;Great Falls                 ;VA;true
+286;01/06/2011 14:48;01/06/2011 14:48;Katana;1200;Visa;Anett;Gosport;England;true
+287;01/12/2010 13:48;01/12/2010 13:48;Katana;1200;Visa;KERRY;Sunnyvale                   ;CA;true
+288;01/06/2010 12:48;01/06/2010 12:48;Katana;1200;Visa;DeeDee;Songnae-dong;Soul-t'ukpyolsi;true
+289;01/12/2009 11:48;01/12/2009 11:48;Katana;1200;Visa;katie;Ruschlikon;Zurich;true
+290;01/06/2009 10:48;01/06/2009 10:48;Katana;1200;Visa;Marina;Minneapolis                 ;MN;true
+291;01/06/2009 10:48;01/06/2009 10:48;Katana;1200;Visa;camilla;Chicago                     ;IL;true
+292;01/06/2009 10:48;01/06/2009 10:48;Katana;1200;Visa;pirunkit;Petworth;England;true
+293;01/06/2009 07:23;01/06/2009 07:23;Katana;1200;Diners;Kathrin;Abu Dhabi;Abu Zaby;true
+294;01/01/2009 05:04;01/01/2009 05:04;Katana;1200;Mastercard;Kate;Stockholm;Stockholm;true
+295;01/02/2009 06:17;01/02/2009 06:17;Katana;1200;Mastercard;Maie;Queen Creek                 ;AZ;true
+296;01/02/2009 04:53;01/02/2009 04:53;Katana;1250;Mastercard;verena;Queen Creek                 ;AZ;true
+297;01/02/2009 13:08;01/02/2009 13:08;Katana;1200;Visa;Marie-Christine;Durham                      ;NC;true
+298;01/03/2009 14:44;01/03/2009 14:44;Katana;1200;Mastercard;Gabriella;Austin                      ;TX;true
+299;01/04/2009 20:11;01/04/2009 20:11;Katana;1200;Mastercard;valerie et nicolas;Glenn Dale                  ;MD;true
+300;01/02/2009 20:09;01/02/2009 20:09;Katana;1200;Visa;Nicole;Aardal;Sogn og Fjordane;true
+301;01/04/2009 13:17;01/04/2009 13:17;Katana;1200;Visa;Renee;Edinburg                    ;TX;true
+302;01/04/2009 14:11;01/04/2009 14:11;Katana;1200;Mastercard;Nicole;South Melbourne;Victoria;true
+303;01/05/2009 02:42;01/05/2009 02:42;Katana;1200;Mastercard;Joachim;Fortaleza;Ceara;true
+304;01/02/2009 09:16;01/02/2009 09:16;Katana;2310;Visa;Monica ;Weston                      ;CT;true
+305;01/02/2009 14:18;01/02/2009 14:18;Katana;3420;Visa;Nanci;Reading;England;true
+306;01/04/2009 01:05;01/04/2009 01:05;Katana;4530;Mastercard;Laura;Coconut Grove               ;FL;true
+307;01/05/2009 11:37;01/05/2009 11:37;Katana;1200;Visa;ciara and mike;London;England;true
+308;01/02/2009 07:35;01/02/2009 07:35;Katana;1200;Visa;Sarah;San Francisco               ;CA;true
+309;01/06/2009 12:56;01/06/2009 12:56;Fire Sword;1200;Amex;Paladin;Potomac Falls               ;VA;true
+310;01/01/2009 11:05;01/01/2009 11:05;Fire Sword;1200;Mastercard;Royal Paladin;Superior                    ;CO;true
+311;01/05/2009 04:10;01/05/2009 04:10;Fire Sword;1200;Mastercard;Master Sorcerer;London;England;true
+312;01/06/2009 07:18;01/06/2009 07:18;Fire Sword;1200;Mastercard;Elder Druid;Engleside                   ;VA;true
+313;01/02/2009 01:11;01/02/2009 01:11;Fire Sword;1200;Visa;Elite Knight;New Plymouth City;Taranaki;true
+314;01/01/2009 02:24;01/01/2009 02:24;Fire Sword;1200;Mastercard;nihan;Roanoke                     ;VA;true
+315;01/07/2009 08:08;01/07/2009 08:08;Beholder Shield;1200;Visa;Sorcerer;Norcross                    ;GA;true
+316;01/02/2009 02:57;01/02/2009 02:57;Corrente de Andrômeda;1200;Amex;Jonh;Sandy Plains                ;GA;true
+317;01/01/2009 20:21;01/01/2009 20:21;Corrente de Andrômeda;1200;Visa;Tracey;Saint Catharines;Ontario;true
+318;01/08/2009 00:42;01/08/2009 00:42;Beholder Shield;1200;Visa;Anja;Gainesville                 ;VA;true
+319;01/08/2009 03:56;01/08/2009 03:56;Mjolnir;1200;Diners;Thor;Nordstrand;Oslo;true
+320;01/08/2009 03:16;01/08/2009 03:16;Excalibur;1200;Visa;Arthur;Arlington                   ;MA;true
+321;01/08/2009 01:59;01/08/2009 01:59;Machado do Draven;1200;Diners;Draven;West Hills                  ;CA;true
+322;01/03/2009 09:03;01/03/2009 09:03;Pokebola;150;Mastercard;Ash;San Jose                    ;CA;true
+323;01/05/2009 13:17;01/05/2009 13:17;Braço Automail;1200;Visa;Edward;London;England;true
+324;01/06/2009 07:46;01/06/2009 07:46;Sabre de Luz;1200;Visa;Luke;Oak Park                    ;MI;true
+325;01/08/2009 16:24;01/08/2009 16:24;Tchaco de Madeira;1200;Visa;Bruce Lee;Terrell Hills               ;TX;true
+326;01/09/2009 06:39;01/09/2009 06:39;Diamond Sword;1200;Visa;Laura;Jumeira;Dubayy;true
+327;01/07/2009 07:44;01/07/2009 07:44;Serra Elétrica;1200;Visa;Jason;Falmouth                    ;VA;true
+328;01/03/2009 13:24;01/03/2009 13:24;Crossbow do Daryl;1200;Visa;Daryl;Lurgan;Northern Ireland;true
+329;01/07/2009 20:15;01/07/2009 20:15;Morfador Power Ranger;1200;Visa;Tommy;Richmond                    ;TX;true
+330;01/09/2009 15:58;01/09/2009 15:58;Pokebola;150;Mastercard;Celina;Den Haag;Zuid-Holland;true
+331;01/03/2009 13:11;01/03/2009 13:11;Pokebola;150;Diners;Heather;Ooltewah                    ;TN;true
+332;01/10/2009 12:57;01/10/2009 12:57;Pokebola;150;Mastercard;Kathryn;Pacific Beach               ;CA;true
+333;01/10/2009 14:43;01/10/2009 14:43;Diamond Sword;1200;Visa;Michele ;Austin                      ;TX;true
+334;01/10/2009 12:05;01/10/2009 12:05;Diamond Sword;1200;Visa;Craig;Seattle                     ;WA;true
+335;01/06/2009 01:20;01/06/2009 01:20;Diamond Sword;1200;Visa;Kim;Seattle                     ;WA;true
+336;01/10/2009 14:56;01/10/2009 14:56;Diamond Sword;1200;Amex;maria;Ottawa;Ontario;true
+337;01/07/2009 10:01;01/07/2009 10:01;Diamond Sword;1200;Visa;Elaine;Vienna                      ;VA;true
+338;01/01/2009 01:26;01/01/2009 01:26;Diamond Sword;1200;Visa;Madison;Torbay;Auckland;true
+339;01/11/2009 02:04;01/11/2009 02:04;Diamond Sword;1200;Visa;Amanda;Shenfield;England;true
+340;01/11/2009 14:17;01/11/2009 14:17;Diamond Sword;1200;Visa;Krista;Bergen;Hordaland;true
+341;01/10/2009 21:38;01/10/2009 21:38;Diamond Sword;1200;Visa;Sarah;Bolton;England;true
+342;01/07/2009 06:18;01/07/2009 06:18;Diamond Sword;1200;Mastercard;Sarah;Sandymount;Dublin;true
+343;01/05/2009 00:31;01/05/2009 00:31;Diamond Sword;1200;Visa;Christine;Antwerpen;Antwerpen;true
+344;01/02/2009 06:07;01/02/2009 06:07;Diamond Sword;1200;Amex;mary;Nacka;Stockholm;true
+345;01/12/2009 03:25;01/12/2009 03:25;Diamond Sword;1200;Visa;Helena;Fremont                     ;CA;true
+346;01/04/2009 13:56;01/04/2009 13:56;Diamond Sword;1200;Visa;nina;Warwick;Queensland;true
+347;01/12/2009 05:18;01/12/2009 05:18;Diamond Sword;1200;Amex;Mark;Holmdel                     ;NJ;true
+348;01/08/2009 15:16;01/08/2009 15:16;Diamond Sword;1200;Visa;alice and rudolf;Baltimore                   ;MD;true
+349;01/11/2009 11:33;01/11/2009 11:33;Diamond Sword;1200;Visa;Costanza;Saggart;Dublin;true
+350;01/07/2009 20:22;01/07/2009 20:22;Diamond Sword;1200;Mastercard;Yoko;Andover                     ;MA;true
+351;01/02/2009 22:00;01/02/2009 22:00;Diamond Sword;1200;Mastercard;Barbara;La Crescenta                ;CA;true
+352;01/05/2009 13:52;01/05/2009 13:52;Diamond Sword;1200;Mastercard;Kit;Suwanee                     ;GA;true
+353;01/08/2009 20:32;01/08/2009 20:32;Diamond Sword;1200;Amex;linda;Arlington                   ;VA;true
+354;01/08/2009 13:34;01/08/2009 13:34;Diamond Sword;1200;Mastercard;Christyna;Calgary;Alberta;true
+355;01/11/2009 13:08;01/11/2009 13:08;Diamond Sword;1200;Visa;Alicja ;Kenmore                     ;WA;true
+356;01/12/2009 19:04;01/12/2009 19:04;Diamond Sword;1200;Visa;Rachel;Fresno                      ;CA;true
+357;01/12/2009 13:41;01/12/2009 13:41;Diamond Sword;1200;Amex;Rachel;Atascadero                  ;CA;true
+358;01/11/2009 10:38;01/11/2009 10:38;Diamond Sword;1200;Visa;Jan;Barcelona;Catalonia;true
+359;01/11/2009 10:38;01/11/2009 10:38;Diamond Sword;1200;Diners;Karin;High Wycombe;England;true
+360;01/11/2009 10:38;01/11/2009 10:38;Diamond Sword;1200;Mastercard;Sharon;Ajax;Ontario;true
+361;01/08/2009 13:14;01/08/2009 13:14;Diamond Sword;1200;Mastercard;Anna;New York                    ;NY;true
+362;01/02/2009 11:41;01/02/2009 11:41;Diamond Sword;1200;Mastercard;Laura;Fairfield                   ;IA;true
+363;01/07/2009 19:50;01/07/2009 19:50;Tchaco de Madeira;1200;Visa;Yana;North Bay;Ontario;true
+364;01/01/2009 20:28;01/01/2009 20:28;Tchaco de Madeira;1200;Visa;Katherine;Marietta                    ;GA;true
+365;01/03/2009 15:22;01/03/2009 15:22;Tchaco de Madeira;1200;Diners;Therese;Clontarf;Dublin;true
+366;01/11/2009 10:38;01/11/2009 10:38;Tchaco de Madeira;1200;Amex;Francoise ;Danville                    ;PA;true
+367;01/03/2009 15:22;01/03/2009 15:22;Tchaco de Madeira;1200;Amex;Corinne;Anthem                      ;AZ;true
+368;01/02/2009 12:18;01/02/2009 12:18;Tchaco de Madeira;1200;Visa;Ec;Clonmel;Tipperary;true
+369;01/03/2009 15:22;01/03/2009 15:22;Tchaco de Madeira;1200;Visa;Carmen;Arlington                   ;VA;true
+370;01/06/2009 17:15;01/06/2009 17:15;Tchaco de Madeira;1200;Mastercard;Sandrine;Walnut Creek                ;CA;true
+371;01/03/2009 13:56;01/03/2009 13:56;Tchaco de Madeira;1200;Mastercard;asuncion ;Centennial                  ;CO;true
+372;01/04/2009 07:54;01/04/2009 07:54;Tchaco de Madeira;1200;Visa;Sophie;Newtown                     ;CT;true
+373;01/12/2009 07:28;01/12/2009 07:28;Tchaco de Madeira;1200;Amex;Henrietta;Vancouver;British Columbia;true
+374;01/06/2009 15:15;01/06/2009 15:15;Tchaco de Madeira;1200;Visa;DD;York;England;true
+375;01/03/2009 15:22;01/03/2009 15:22;Tchaco de Madeira;1200;Visa;Jennifer;Drogheda;Louth;true
+376;01/03/2009 15:22;01/03/2009 15:22;Tchaco de Madeira;1200;Visa;samuel;Saddle Brook                ;NJ;true
+377;01/06/2009 21:13;01/06/2009 21:13;Tchaco de Madeira;1200;Amex;Angelina  Patrick;San Diego                   ;CA;true
+378;01/06/2014 20:48;01/06/2014 20:48;Tchaco de Madeira;1200;Visa;Sven;Issaquah                    ;WA;true
+379;01/12/2013 19:48;01/12/2013 19:48;Tchaco de Madeira;1200;Visa;Toni;Bolton;England;true
+380;01/06/2013 18:48;01/06/2013 18:48;Tchaco de Madeira;1200;Visa;Patrick;Lexington                   ;MA;true
+381;01/12/2012 17:48;01/12/2012 17:48;Tchaco de Madeira;1200;Visa;jason;Altadena                    ;CA;true
+382;01/06/2012 16:48;01/06/2012 16:48;Tchaco de Madeira;250;Visa;Tabatha;Altadena                    ;CA;true
+383;01/12/2011 15:48;01/12/2011 15:48;Tchaco de Madeira;1200;Mastercard;Natasha;Pasadena                    ;CA;true
+384;01/06/2011 14:48;01/06/2011 14:48;Tchaco de Madeira;1200;Mastercard;Melinda;Buffalo Grove               ;IL;true
+385;01/12/2010 13:48;01/12/2010 13:48;Tchaco de Madeira;1200;Visa;Luc1nda;London;England;true
+386;01/06/2010 12:48;01/06/2010 12:48;Tchaco de Madeira;1200;Visa;Kim;Newcastle;Wicklow;true
+387;01/12/2009 11:48;01/12/2009 11:48;Kunai;1200;Amex;Britlyn ;Norwalk                     ;CT;true
+388;01/06/2009 10:48;01/06/2009 10:48;Kunai;1200;Diners;Adam;Besancon;Franche-Comte;true
+389;01/06/2009 10:48;01/06/2009 10:48;Shuriken;1200;Visa;Mimi;Monte-Carlo; ;true
+390;01/06/2009 10:48;01/06/2009 10:48;Kunai;1200;Visa;Liann;Monaco; ;true
+391;01/06/2009 07:23;01/06/2009 07:23;Shuriken;1200;Mastercard;Sarah;Floyds Knobs                ;IN;true
+392;01/01/2009 05:04;01/01/2009 05:04;Shuriken;1200;Diners;Naseer;London;England;true
+393;01/02/2009 06:17;01/02/2009 06:17;Kunai;1200;Amex;Caroline;Marietta                    ;GA;true
+394;01/02/2009 04:53;01/02/2009 04:53;Kunai;1800;Amex;Karena;Marietta                    ;GA;true
+395;01/02/2009 13:08;01/02/2009 13:08;Shuriken;1200;Amex;janet;Hon                         ;HI;true
+396;01/03/2009 14:44;01/03/2009 14:44;Kunai;1200;Visa;Sandra  Thierry  Zoe;Knoxville                   ;TN;true
+397;01/04/2009 20:11;01/04/2009 20:11;Shuriken;1200;Mastercard;Eleanor;Edinburgh;Scotland;true
+398;01/02/2009 20:09;01/02/2009 20:09;Shuriken;1200;Visa;Anna;Paris;Ile-de-France;true
+399;01/04/2009 13:17;01/04/2009 13:17;Kunai;1200;Visa;Cara ;Humble                      ;TX;true
+400;01/04/2009 14:11;01/04/2009 14:11;Kunai;1200;Visa;carolien;Mashpee                     ;MA;true
+401;01/05/2009 02:42;01/05/2009 02:42;Shuriken;1200;Mastercard;Ana;Hong Kong; ;true
+402;01/02/2009 09:16;01/02/2009 09:16;Kunai;1200;Visa;Patrick;Birmingham                  ;MI;true
+403;01/02/2009 14:18;01/02/2009 14:18;Shuriken;1200;Visa;Heidi;St Augustine                ;FL;true
+404;01/04/2009 01:05;01/04/2009 01:05;Shuriken;1200;Visa;Tom;Salt Lake City              ;UT;true
+405;01/05/2009 11:37;01/05/2009 11:37;Kunai;1200;Amex;Justine;Seattle                     ;WA;true
+406;01/02/2009 07:35;01/02/2009 07:35;Kunai;1200;Visa;isabel;Ruti;Zurich;true
+407;01/06/2009 12:56;01/06/2009 12:56;Shuriken;1200;Visa;Fatima;Rogers                      ;AR;true
+408;01/01/2009 11:05;01/01/2009 11:05;Kunai;1200;Visa;Judy;Dun Laoghaire;Dublin;true
+409;01/05/2009 04:10;01/05/2009 04:10;Shuriken;1200;Visa;Glenn;Perth;Scotland;true
+410;01/06/2009 07:18;01/06/2009 07:18;Shuriken;1200;Amex;Family in;London;England;true
+411;01/02/2009 01:11;01/02/2009 01:11;Kunai;1200;Visa;Lauren;Gries;Rhineland-Palatinate;true
+412;01/01/2009 02:24;01/01/2009 02:24;Kunai;1200;Visa;Jodi;Sutton Valence;England;true
+413;01/07/2009 08:08;01/07/2009 08:08;Shuriken;1200;Mastercard;simone;Lyngby;Kobenhavn;true
+414;01/02/2009 02:57;01/02/2009 02:57;Kunai;1200;Diners;Sonja;Alpine                      ;NJ;true
+415;01/01/2009 20:21;01/01/2009 20:21;Shuriken;1200;Mastercard;Shane;Zurich;Zurich;true
+416;01/08/2009 00:42;01/08/2009 00:42;Shuriken;1200;Mastercard;Cleo;Pacific Palisades           ;CA;true
+417;01/08/2009 03:56;01/08/2009 03:56;Kunai;1200;Diners;Benoit;Fort Saint James;British Columbia;true
+418;01/08/2009 03:16;01/08/2009 03:16;Kunai;1200;Amex;Claire;Versoix;Geneve;true
+419;01/08/2009 01:59;01/08/2009 01:59;Shuriken;1200;Visa;Claire;Trumansburg                 ;NY;true
+420;01/03/2009 09:03;01/03/2009 09:03;Kunai;1200;Visa;Lindsey;Kennett Square              ;PA;true
+421;01/05/2009 13:17;01/05/2009 13:17;Shuriken;1200;Visa;jennifer;Morro Bay                   ;CA;true
+422;01/06/2009 07:46;01/06/2009 07:46;Shuriken;1200;Visa;Amy;Parramatta;New South Wales;true
+423;01/08/2009 16:24;01/08/2009 16:24;Kunai;1200;Mastercard;Whitney;Dumbleton;England;true
+424;01/09/2009 06:39;01/09/2009 06:39;Kunai;1200;Visa;Astrid;Altlengbach;Lower Austria;true
+425;01/07/2009 07:44;01/07/2009 07:44;Shuriken;1200;Visa;jo;Ballincollig;Cork;true
+426;01/03/2009 13:24;01/03/2009 13:24;Kunai;1200;Visa;Michelle;Ballincollig;Cork;true
+427;01/07/2009 20:15;01/07/2009 20:15;Shuriken;1200;Mastercard;TG;Zagore;Stara Zagora;true
+428;01/09/2009 15:58;01/09/2009 15:58;Shuriken;1200;Mastercard;Emily;Vecmilgravis;Riga;true
+429;01/03/2009 13:11;01/03/2009 13:11;Kunai;1200;Visa;Sarah;Ornex;Rhone-Alpes;true
+430;01/10/2009 12:57;01/10/2009 12:57;Kunai;1200;Visa;sherry;Las Vegas                   ;NV;true
+431;01/10/2009 14:43;01/10/2009 14:43;Shuriken;1200;Mastercard;Carmela;Hannover;Lower Saxony;true
+432;01/10/2009 12:05;01/10/2009 12:05;Kunai;1200;Diners;Matt;N Woodmere                  ;NY;true
+433;01/06/2009 01:20;01/06/2009 01:20;Shuriken;1200;Visa;Karen;Madrid;Madrid;true
+434;01/10/2009 14:56;01/10/2009 14:56;Shuriken;1200;Visa;Joanne;Castlebar;Mayo;true
+435;01/07/2009 10:01;01/07/2009 10:01;Kunai;1200;Visa;Stephanie;Fairfax                     ;CA;true
+436;01/01/2009 01:26;01/01/2009 01:26;Kunai;1200;Visa;Hurst;Chandler                    ;AZ;true
+437;01/11/2009 02:04;01/11/2009 02:04;Shuriken;1200;Visa;Liza;Dammeron Valley             ;UT;true
+438;01/11/2009 14:17;01/11/2009 14:17;Kunai;1200;Mastercard;Michele;Buffalo                     ;NY;true
+439;01/10/2009 21:38;01/10/2009 21:38;Shuriken;1200;Amex;cath;Warwick                     ;NY;true
+440;01/07/2009 06:18;01/07/2009 06:18;Shuriken;1200;Amex;Andrea ;San Mateo                   ;CA;true
+441;01/05/2009 00:31;01/05/2009 00:31;Kunai;1200;Mastercard;Sabine;Milton Keynes;England;true
+442;01/02/2009 06:07;01/02/2009 06:07;Kunai;1200;Mastercard;Aideen and Jonathan;Kecskemet;Bacs-Kiskun;true
+443;01/12/2009 03:25;01/12/2009 03:25;Shuriken;1200;Visa;George;Nakskov;Storstrom;true
+444;01/04/2009 13:56;01/04/2009 13:56;Kunai;1200;Visa;Helen;Aloma                       ;FL;true
+445;01/12/2009 05:18;01/12/2009 05:18;Shuriken;1200;Diners;C;Chandler                    ;AZ;true
+446;01/08/2009 15:16;01/08/2009 15:16;Shuriken;1200;Visa;chris;Kjobenhavn;Staden Kobenhavn;true
+447;01/11/2009 11:33;01/11/2009 11:33;Kunai;1200;Visa;maggie;Stockton;England;true
+448;01/07/2009 20:22;01/07/2009 20:22;Kunai;1200;Amex;Mareike;Cumming                     ;GA;true
+449;01/02/2009 22:00;01/02/2009 22:00;Shuriken;1200;Visa;lamia;Little Compton              ;RI;true
+450;01/05/2009 13:52;01/05/2009 13:52;Kunai;1200;Visa;Madhu;Centennial                  ;CO;true
+451;01/08/2009 20:32;01/08/2009 20:32;Shuriken;1200;Visa;sandhya;Centennial                  ;CO;true
+452;01/08/2009 13:34;01/08/2009 13:34;Shuriken;1200;Amex;Kimberly;Herndon                     ;VA;true
+453;01/11/2009 13:08;01/11/2009 13:08;Kunai;1200;Visa;Tania;Vista                       ;CA;true
+454;01/12/2009 19:04;01/12/2009 19:04;Kunai;1200;Visa;andrea;Oostburg                    ;WI;true
+455;01/12/2009 13:41;01/12/2009 13:41;Shuriken;1200;Mastercard;John;Griffith;New South Wales;true
+456;01/11/2009 10:38;01/11/2009 10:38;Kunai;1200;Visa;Nona;South Jordan                ;UT;true
+457;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1200;Visa;Oswald;Tramore;Waterford;true
+458;01/11/2009 10:38;01/11/2009 10:38;Shuriken;900;Visa;Elyssa;Gdansk;Pomorskie;true
+459;01/08/2009 13:14;01/08/2009 13:14;Kunai;1200;Visa;michelle;Arklow;Wicklow;true
+460;01/02/2009 11:41;01/02/2009 11:41;Kunai;1200;Mastercard;Alicia;Lincoln                     ;NE;true
+461;01/07/2009 19:50;01/07/2009 19:50;Shuriken;1200;Mastercard;JP;Tierp;Uppsala;true
+462;01/01/2009 20:28;01/01/2009 20:28;Kunai;1200;Mastercard;sandra;Burr Oak                    ;IA;true
+463;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Visa;Olivia;Wheaton                     ;IL;true
+464;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1500;Visa;Annette ;Manhattan                   ;NY;true
+465;01/03/2009 15:22;01/03/2009 15:22;Kunai;1800;Visa;SUSAN;Oxford;England;true
+466;01/02/2009 12:18;01/02/2009 12:18;Kunai;2100;Visa;ashton;Exeter;England;true
+467;01/03/2009 15:22;01/03/2009 15:22;Shuriken;2400;Visa;Scott;Rungsted;Frederiksborg;true
+468;01/06/2009 17:15;01/06/2009 17:15;Kunai;2700;Visa;Lisa ;Borja;Bohol;true
+469;01/03/2009 13:56;01/03/2009 13:56;Shuriken;3000;Visa;Richard;Jamestown                   ;RI;true
+470;01/04/2009 07:54;01/04/2009 07:54;Shuriken;3300;Visa;Jasinta Jeanne;Owings Mills                ;MD;true
+471;01/12/2009 07:28;01/12/2009 07:28;Kunai;3600;Visa;Rachel;Hamilton;Ontario;true
+472;01/06/2009 15:15;01/06/2009 15:15;Kunai;3900;Amex;Cherish ;Anchorage                   ;AK;true
+473;01/03/2009 15:22;01/03/2009 15:22;Shuriken;4200;Visa;Shona ;Mornington;Meath;true
+474;01/03/2009 15:22;01/03/2009 15:22;Kunai;4500;Mastercard;Abikay;Fullerton                   ;CA;true
+475;01/06/2009 21:13;01/06/2009 21:13;Shuriken;4800;Amex;Abikay;Atlanta                     ;GA;true
+476;01/06/2014 20:48;01/06/2014 20:48;Shuriken;5100;Visa;amanda;Liverpool;England;true
+477;01/12/2013 19:48;01/12/2013 19:48;Kunai;5400;Amex;amanda;Las Vegas                   ;NV;true
+478;01/06/2013 18:48;01/06/2013 18:48;Kunai;1200;Visa;Stacy;Rochester Hills             ;MI;true
+479;01/12/2012 17:48;01/12/2012 17:48;Shuriken;1200;Visa;Ruangrote;Melbourne;Victoria;true
+480;01/06/2012 16:48;01/06/2012 16:48;Kunai;1200;Amex;pamela;Ayacucho;Buenos Aires;true
+481;01/12/2011 15:48;01/12/2011 15:48;Shuriken;1200;Visa;sangeeta;Vossevangen;Hordaland;true
+482;01/06/2011 14:48;01/06/2011 14:48;Shuriken;1200;Visa;Anja;Ferney-Voltaire;Rhone-Alpes;true
+483;01/12/2010 13:48;01/12/2010 13:48;Kunai;1200;Mastercard;Andrew;Sevilla;Andalucia;true
+484;01/06/2010 12:48;01/06/2010 12:48;Kunai;1200;Visa;Bato;Munchengosserstadt;Thuringia;true
+485;01/12/2009 11:48;01/12/2009 11:48;Shuriken;1200;Mastercard;Ailsa ;Lindenhurst                 ;NY;true
+486;01/06/2009 10:48;01/06/2009 10:48;Kunai;1200;Visa;Sophie;Bloomfield                  ;MI;true
+487;01/06/2009 10:48;01/06/2009 10:48;Shuriken;1200;Visa;Katrin;Calgary;Alberta;true
+488;01/06/2009 10:48;01/06/2009 10:48;Shuriken;1200;Visa;Tomasz;Klampenborg;Kobenhavn;true
+489;01/06/2009 07:23;01/06/2009 07:23;Kunai;1200;Visa;Elizabeth;Calne;England;true
+490;01/01/2009 05:04;01/01/2009 05:04;Kunai;1200;Mastercard;Nicole;Fayetteville                ;NC;true
+491;01/02/2009 06:17;01/02/2009 06:17;Shuriken;1200;Visa;Ryan;Simpsonville                ;SC;true
+492;01/02/2009 04:53;01/02/2009 04:53;Kunai;1200;Visa;Mary ;Auckland;Auckland;true
+493;01/02/2009 13:08;01/02/2009 13:08;Shuriken;1200;Diners;Aaron;Reading;England;true
+494;01/03/2009 14:44;01/03/2009 14:44;Shuriken;1200;Visa;Bertrand;North Caldwell              ;NJ;true
+495;01/04/2009 20:11;01/04/2009 20:11;Kunai;1200;Mastercard;Zoe;Coventry;England;true
+496;01/02/2009 20:09;01/02/2009 20:09;Kunai;1200;Mastercard;Trine Marie;Orillia;Ontario;true
+497;01/04/2009 13:17;01/04/2009 13:17;Shuriken;1200;Diners;Kim;Paris;Ile-de-France;true
+498;01/04/2009 14:11;01/04/2009 14:11;Kunai;1200;Visa;John ;San Jose                    ;CA;true
+499;01/05/2009 02:42;01/05/2009 02:42;Shuriken;1200;Visa;Rich;Ingelheim-Mitte;Rhineland-Palatinate;true
+500;01/02/2009 09:16;01/02/2009 09:16;Shuriken;1200;Diners;Kayla;Leamington Spa;England;true
+501;01/02/2009 14:18;01/02/2009 14:18;Kunai;1200;Visa;Richard and Comfort;Regensdorf;Zurich;true
+502;01/04/2009 01:05;01/04/2009 01:05;Kunai;1200;Visa;Eric;Melbourne;Victoria;true
+503;01/05/2009 11:37;01/05/2009 11:37;Shuriken;1200;Mastercard;Melissa;Geneve;Geneve;true
+504;01/02/2009 07:35;01/02/2009 07:35;Kunai;1200;Diners;Dawn;Vaucluse;New South Wales;true
+505;01/06/2009 12:56;01/06/2009 12:56;Shuriken;1200;Mastercard;Tamara;Klosterneuburg;Lower Austria;true
+506;01/01/2009 11:05;01/01/2009 11:05;Shuriken;1200;Visa;Ashley;Rancho Cordova              ;CA;true
+507;01/05/2009 04:10;01/05/2009 04:10;Kunai;1200;Visa;familly ;Creemore;Ontario;true
+508;01/06/2009 07:18;01/06/2009 07:18;Kunai;1200;Mastercard;Ken;Sidcup;England;true
+509;01/02/2009 01:11;01/02/2009 01:11;Shuriken;1200;Visa;Tori;Minneapolis                 ;MN;true
+510;01/01/2009 02:24;01/01/2009 02:24;Kunai;1200;Amex;Precious;Edmonton;Alberta;true
+511;01/07/2009 08:08;01/07/2009 08:08;Shuriken;1200;Visa;Michelle;Lyndoch;South Australia;true
+512;01/02/2009 02:57;01/02/2009 02:57;Shuriken;1200;Visa;Paula;Larchmont                   ;NY;true
+513;01/01/2009 20:21;01/01/2009 20:21;Kunai;1200;Visa;Stephanie;Saint Charles               ;IL;true
+514;01/08/2009 00:42;01/08/2009 00:42;Kunai;1200;Visa;kemp;Brentwood                   ;TN;true
+515;01/08/2009 03:56;01/08/2009 03:56;Shuriken;1200;Diners;Mona;Kelowna;British Columbia;true
+516;01/08/2009 03:16;01/08/2009 03:16;Kunai;1200;Visa;Caroline;Toronto;Ontario;true
+517;01/08/2009 01:59;01/08/2009 01:59;Shuriken;1200;Mastercard;Andrea;Brondby Strand;Kobenhavn;true
+518;01/03/2009 09:03;01/03/2009 09:03;Shuriken;1200;Mastercard;Pilar;Florence;Tuscany;true
+519;01/05/2009 13:17;01/05/2009 13:17;Kunai;1200;Visa;Lisa;Perth;Western Australia;true
+520;01/06/2009 07:46;01/06/2009 07:46;Kunai;1200;Amex;A;Saint Petersburg            ;FL;true
+521;01/08/2009 16:24;01/08/2009 16:24;Shuriken;1200;Mastercard;Yvette;Aubonne;Vaud;true
+522;01/09/2009 06:39;01/09/2009 06:39;Kunai;1200;Visa;Nicole;Mc Lean                     ;VA;true
+523;01/07/2009 07:44;01/07/2009 07:44;Shuriken;1200;Mastercard;Kelly;Hendersonville              ;TN;true
+524;01/03/2009 13:24;01/03/2009 13:24;Shuriken;1200;Mastercard;Samantha;Watford;England;true
+525;01/07/2009 20:15;01/07/2009 20:15;Kunai;1200;Visa;Caterina;Amsterdam;Noord-Holland;true
+526;01/09/2009 15:58;01/09/2009 15:58;Kunai;1200;Visa;Kate;Rochester Hills             ;MI;true
+527;01/03/2009 13:11;01/03/2009 13:11;Shuriken;1200;Mastercard;Tina;Anglesea;Victoria;true
+528;01/10/2009 12:57;01/10/2009 12:57;Kunai;1200;Visa;Emily;Killarney;New Providence;true
+529;01/10/2009 14:43;01/10/2009 14:43;Shuriken;1200;Amex;Maricel;Malibu                      ;CA;true
+530;01/10/2009 12:05;01/10/2009 12:05;Shuriken;1200;Visa;Patricia;Allen                       ;TX;true
+531;01/06/2009 01:20;01/06/2009 01:20;Kunai;1200;Mastercard;steve;Evires;Rhone-Alpes;true
+532;01/10/2009 14:56;01/10/2009 14:56;Kunai;1200;Amex;Darrah;Den Haag;Zuid-Holland;true
+533;01/07/2009 10:01;01/07/2009 10:01;Shuriken;1200;Visa;Sara;Perth City;Western Australia;true
+534;01/01/2009 01:26;01/01/2009 01:26;Kunai;1200;Visa;Erika;Redruth;England;true
+535;01/11/2009 02:04;01/11/2009 02:04;Shuriken;1200;Visa;Audrey;Bruxelles;Brussels (Bruxelles);true
+536;01/11/2009 14:17;01/11/2009 14:17;Shuriken;1200;Visa;Louise;London;England;true
+537;01/10/2009 21:38;01/10/2009 21:38;Kunai;1200;Diners;Karen;Montreal;Quebec;true
+538;01/07/2009 06:18;01/07/2009 06:18;Kunai;1200;Amex;Maki;Miami Beach                 ;FL;true
+539;01/05/2009 00:31;01/05/2009 00:31;Shuriken;1200;Visa;Peter;Shankill;Dublin;true
+540;01/02/2009 06:07;01/02/2009 06:07;Kunai;1200;Diners;Ashlee;Oxford;England;true
+541;01/12/2009 03:25;01/12/2009 03:25;Shuriken;1200;Mastercard;Anja;New York                    ;NY;true
+542;01/04/2009 13:56;01/04/2009 13:56;Shuriken;1200;Visa;Ellen Walton ;Melbourne;Victoria;true
+543;01/12/2009 05:18;01/12/2009 05:18;Kunai;1200;Mastercard;Jessica;Woodland Hills              ;CA;true
+544;01/08/2009 15:16;01/08/2009 15:16;Kunai;1200;Visa;Wouter and Andrea;Anchorage                   ;AK;true
+545;01/11/2009 11:33;01/11/2009 11:33;Shuriken;1200;Visa;Pam and Rob;Yorba Linda                 ;CA;true
+546;01/07/2009 20:22;01/07/2009 20:22;Kunai;1200;Visa;Elsa;Waiwera;Auckland;true
+547;01/02/2009 22:00;01/02/2009 22:00;Shuriken;1200;Amex;kathleen kane;Jamaica Plain               ;MA;true
+548;01/05/2009 13:52;01/05/2009 13:52;Shuriken;1200;Diners;Selene;Oslo;Oslo;true
+549;01/08/2009 20:32;01/08/2009 20:32;Kunai;1200;Visa;Christy;Setagaya;Tokyo;true
+550;01/08/2009 13:34;01/08/2009 13:34;Kunai;1200;Visa;Elyse;Bandon;Cork;true
+551;01/11/2009 13:08;01/11/2009 13:08;Shuriken;1200;Mastercard;Alexis;Ehingen an der Donau;Baden-Wurttemberg;true
+552;01/12/2009 19:04;01/12/2009 19:04;Kunai;1200;Visa;M George;Paris;Ile-de-France;true
+553;01/12/2009 13:41;01/12/2009 13:41;Shuriken;1200;Visa;cheryl;Beverly Hills               ;CA;true
+554;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1200;Amex;R;Danderyd;Stockholm;true
+555;01/11/2009 10:38;01/11/2009 10:38;Kunai;1200;Visa;Cindy;Glendora                    ;CA;true
+556;01/11/2009 10:38;01/11/2009 10:38;Kunai;1200;Visa;Ed;Nacka;Stockholm;true
+557;01/08/2009 13:14;01/08/2009 13:14;Shuriken;1200;Mastercard;Astrid;Canterbury;England;true
+558;01/02/2009 11:41;01/02/2009 11:41;Kunai;1200;Visa;Nicole;Neuchatel;Neuchatel;true
+559;01/07/2009 19:50;01/07/2009 19:50;Shuriken;1200;Visa;Maria Macarena;Billings                    ;MT;true
+560;01/01/2009 20:28;01/01/2009 20:28;Shuriken;1200;Visa;Maggie;Libertyville                ;IL;true
+561;01/03/2009 15:22;01/03/2009 15:22;Kunai;1200;Diners;Manoj;Boise                       ;ID;true
+562;01/11/2009 10:38;01/11/2009 10:38;Kunai;1200;Visa;Brenda;Rock Hill                   ;SC;true
+563;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Mastercard;Lizelle ;Mililani                    ;HI;true
+564;01/02/2009 12:18;01/02/2009 12:18;Kunai;1200;Visa;jacqueline;North Vancouver;British Columbia;true
+565;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Visa;Martin;Ludwigsburg;Baden-Wurttemberg;true
+566;01/06/2009 17:15;01/06/2009 17:15;Shuriken;1200;Mastercard;Dean;Rockingham;Western Australia;true
+567;01/03/2009 13:56;01/03/2009 13:56;Kunai;1200;Visa;VERBENA;Basel;Basel-Town;true
+568;01/04/2009 07:54;01/04/2009 07:54;Kunai;1200;Mastercard;Angel Marie;Den Haag;Zuid-Holland;true
+569;01/12/2009 07:28;01/12/2009 07:28;Shuriken;1200;Visa;olla;Westminster                 ;CO;true
+570;01/06/2009 15:15;01/06/2009 15:15;Kunai;1200;Visa;Sarah;Plan-les-Ouattes;Geneve;true
+571;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Visa;Esther;Stocksund;Stockholm;true
+572;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Diners;amy;Stuttgart;Baden-Wurttemberg;true
+573;01/06/2009 21:13;01/06/2009 21:13;Kunai;1200;Diners;Paul;Burnaby;British Columbia;true
+574;01/06/2014 20:48;01/06/2014 20:48;Kunai;1200;Mastercard;Sarah;Coppell                     ;TX;true
+575;01/12/2013 19:48;01/12/2013 19:48;Shuriken;1200;Visa;Beckie ;Ladera Ranch                ;CA;true
+576;01/06/2013 18:48;01/06/2013 18:48;Kunai;1200;Visa;Maryse;Rathfarnham;Dublin;true
+577;01/12/2012 17:48;01/12/2012 17:48;Shuriken;1200;Visa;Majken;Charlottenlund;Kobenhavn;true
+578;01/06/2012 16:48;01/06/2012 16:48;Shuriken;1200;Amex;Karen and Andrew;Munchen;Bayern;true
+579;01/12/2011 15:48;01/12/2011 15:48;Kunai;1200;Visa;Katerina;Firenze;Tuscany;true
+580;01/06/2011 14:48;01/06/2011 14:48;Kunai;1200;Mastercard;Mary;Baile Atha Bui;Meath;true
+581;01/12/2010 13:48;01/12/2010 13:48;Shuriken;1200;Visa;Oscar;Chamonix-Mont-Blanc;Rhone-Alpes;true
+582;01/06/2010 12:48;01/06/2010 12:48;Kunai;1200;Diners;Suejean;Gingins;Vaud;true
+583;01/12/2009 11:48;01/12/2009 11:48;Shuriken;1200;Amex;ann;Boca Raton                  ;FL;true
+584;01/06/2009 10:48;01/06/2009 10:48;Shuriken;1200;Amex;Kirsten;Melbourne;Victoria;true
+585;01/06/2009 10:48;01/06/2009 10:48;Kunai;1200;Visa;Dickson;Kemerburgaz;Istanbul;true
+586;01/06/2009 10:48;01/06/2009 10:48;Kunai;1200;Diners;Howard;Worcester;England;true
+587;01/06/2009 07:23;01/06/2009 07:23;Shuriken;1200;Visa;Dana;Thurles;Tipperary;true
+588;01/01/2009 05:04;01/01/2009 05:04;Kunai;1200;Mastercard;Nola;Den Haag;Zuid-Holland;true
+589;01/02/2009 06:17;01/02/2009 06:17;Shuriken;1200;Visa;Elizabeth;Cos Cob                     ;CT;true
+590;01/02/2009 04:53;01/02/2009 04:53;Shuriken;1200;Visa;Matt;Leicester;England;true
+591;01/02/2009 13:08;01/02/2009 13:08;Kunai;1200;Visa;Vanessa;Cornwall;Ontario;true
+592;01/03/2009 14:44;01/03/2009 14:44;Kunai;1200;Visa;Rowena;Cork;Cork;true
+593;01/04/2009 20:11;01/04/2009 20:11;Shuriken;1200;Visa;Catherine;Mount Forest;Ontario;true
+594;01/02/2009 20:09;01/02/2009 20:09;Kunai;1200;Mastercard;Sarah;Ridgefield                  ;CT;true
+595;01/04/2009 13:17;01/04/2009 13:17;Shuriken;1200;Visa;sorcha;Porto Alegre;Rio Grande do Sul;true
+596;01/04/2009 14:11;01/04/2009 14:11;Shuriken;1200;Visa;sorcha;Cartierville;Quebec;true
+597;01/05/2009 02:42;01/05/2009 02:42;Kunai;1200;Mastercard;Mary;Stuttgart;Baden-Wurttemberg;true
+598;01/02/2009 09:16;01/02/2009 09:16;Kunai;1200;Visa;Ronja;Manhattan                   ;NY;true
+599;01/02/2009 14:18;01/02/2009 14:18;Shuriken;1200;Visa;Nicola ;Sneem;Kerry;true
+600;01/04/2009 01:05;01/04/2009 01:05;Kunai;1200;Amex;BURCAK;Alpharetta                  ;GA;true
+601;01/05/2009 11:37;01/05/2009 11:37;Shuriken;1200;Visa;isabelle;Sainte-Therese-de-Blainville;Quebec;true
+602;01/02/2009 07:35;01/02/2009 07:35;Shuriken;1200;Mastercard;christy;Germantown                  ;TN;true
+603;01/06/2009 12:56;01/06/2009 12:56;Kunai;1200;Visa;Lilly;Castleknock;Dublin;true
+604;01/01/2009 11:05;01/01/2009 11:05;Kunai;1200;Diners;Mandy;Hono                        ;HI;true
+605;01/05/2009 04:10;01/05/2009 04:10;Shuriken;1200;Mastercard;Elena;New Rochelle                ;NY;true
+606;01/06/2009 07:18;01/06/2009 07:18;Kunai;1200;Visa;Lolarae;Calgary;Alberta;true
+607;01/02/2009 01:11;01/02/2009 01:11;Shuriken;1200;Mastercard;Lisa;South Waterford             ;ME;true
+608;01/01/2009 02:24;01/01/2009 02:24;Shuriken;1200;Mastercard;Nita and Trebor;Washington Township         ;OH;true
+609;01/07/2009 08:08;01/07/2009 08:08;Kunai;1200;Visa;Jenevieve;Guelph;Ontario;true
+610;01/02/2009 02:57;01/02/2009 02:57;Kunai;1200;Mastercard;Damian;Mettlach;Saarland;true
+611;01/01/2009 20:21;01/01/2009 20:21;Shuriken;1200;Mastercard;Lusell;Oberwil;Basel-Country;true
+612;01/08/2009 00:42;01/08/2009 00:42;Kunai;1200;Visa;Costanza;Beykoz;Istanbul;true
+613;01/08/2009 03:56;01/08/2009 03:56;Shuriken;1200;Visa;Vanessa;Arc-et-Senans;Franche-Comte;true
+614;01/08/2009 03:16;01/08/2009 03:16;Shuriken;1200;Diners;Evelyn;Grossbodungen;Thuringia;true
+615;01/08/2009 01:59;01/08/2009 01:59;Kunai;1200;Amex;Nicola;Bruxelles;Brussels (Bruxelles);true
+616;01/03/2009 09:03;01/03/2009 09:03;Kunai;1200;Visa;Simone;Kilcornan;Limerick;true
+617;01/05/2009 13:17;01/05/2009 13:17;Shuriken;1200;Mastercard;Elisabeth;Wilmington                  ;NC;true
+618;01/06/2009 07:46;01/06/2009 07:46;Kunai;1200;Visa;Kasey;Aix-en-Provence;Provence-Alpes-Cote d'Azur;true
+619;01/08/2009 16:24;01/08/2009 16:24;Shuriken;1200;Visa;James;Edmonton;Alberta;true
+620;01/09/2009 06:39;01/09/2009 06:39;Shuriken;1200;Visa;Alyssa;Antibes;Provence-Alpes-Cote d'Azur;true
+621;01/07/2009 07:44;01/07/2009 07:44;Kunai;1200;Visa;Reto;Seattle                     ;WA;true
+622;01/03/2009 13:24;01/03/2009 13:24;Kunai;1200;Amex;Joelle;Rowayton                    ;CT;true
+623;01/07/2009 20:15;01/07/2009 20:15;Shuriken;1200;Mastercard;Nicole;Simcoe;Ontario;true
+624;01/09/2009 15:58;01/09/2009 15:58;Kunai;1200;Mastercard;Alexandria;Lebanon                     ;PA;true
+625;01/03/2009 13:11;01/03/2009 13:11;Shuriken;1200;Mastercard;Elisabeth;Birkdale;Queensland;true
+626;01/10/2009 12:57;01/10/2009 12:57;Shuriken;1200;Visa;Ann;Brisbane;Queensland;true
+627;01/10/2009 14:43;01/10/2009 14:43;Kunai;1200;Visa;Olga;Strasbourg;Alsace;true
+628;01/10/2009 12:05;01/10/2009 12:05;Kunai;1200;Visa;Courtney;Suchdol;Prague;true
+629;01/06/2009 01:20;01/06/2009 01:20;Shuriken;1200;Visa;stacy;Stuttgart;Baden-Wurttemberg;true
+630;01/10/2009 14:56;01/10/2009 14:56;Kunai;1200;Visa;Saeko ;Warwick                     ;NY;true
+631;01/07/2009 10:01;01/07/2009 10:01;Shuriken;1200;Visa;Antje;Sacramento                  ;CA;true
+632;01/01/2009 01:26;01/01/2009 01:26;Shuriken;1200;Visa;janet;Blarney;Cork;true
+633;01/11/2009 02:04;01/11/2009 02:04;Kunai;1200;Visa;claire ;Ballyneety;Limerick;true
+634;01/11/2009 14:17;01/11/2009 14:17;Kunai;1200;Mastercard;Nathalie;Haymarket                   ;VA;true
+635;01/10/2009 21:38;01/10/2009 21:38;Shuriken;1200;Mastercard;Daria;George Town; ;true
+636;01/07/2009 06:18;01/07/2009 06:18;Kunai;1200;Visa;Judith L.;Scottsdale                  ;AZ;true
+637;01/05/2009 00:31;01/05/2009 00:31;Shuriken;1200;Visa;Audinet;Cambridge                   ;MA;true
+638;01/02/2009 06:07;01/02/2009 06:07;Shuriken;1200;Visa;William;Chalfont Saint Peter;England;true
+639;01/12/2009 03:25;01/12/2009 03:25;Kunai;1200;Diners;Tatjana and Martin;Birmingham;England;true
+640;01/04/2009 13:56;01/04/2009 13:56;Kunai;1200;Mastercard;Scott;Den Haag;Zuid-Holland;true
+641;01/12/2009 05:18;01/12/2009 05:18;Shuriken;1200;Mastercard;Andree;Newmarket;Cork;true
+642;01/08/2009 15:16;01/08/2009 15:16;Kunai;1200;Visa;Aziz;Irpin';Kiev;true
+643;01/11/2009 11:33;01/11/2009 11:33;Shuriken;1200;Visa;Fernando;Grosseto;Tuscany;true
+644;01/07/2009 20:22;01/07/2009 20:22;Shuriken;1200;Visa;Jo;Pembroke Pines              ;FL;true
+645;01/02/2009 22:00;01/02/2009 22:00;Kunai;1200;Visa;Joern;Waterford;Ontario;true
+646;01/05/2009 13:52;01/05/2009 13:52;Kunai;1200;Visa;Melissa;Chester                     ;CT;true
+647;01/08/2009 20:32;01/08/2009 20:32;Shuriken;1200;Mastercard;isabela;Reston                      ;VA;true
+648;01/08/2009 13:34;01/08/2009 13:34;Kunai;1200;Visa;Nacole;Milan;Lombardy;true
+649;01/11/2009 13:08;01/11/2009 13:08;Shuriken;1200;Diners;Jennifer;Vancouver;British Columbia;true
+650;01/12/2009 19:04;01/12/2009 19:04;Shuriken;1200;Diners;Mary;Alpharetta                  ;GA;true
+651;01/12/2009 13:41;01/12/2009 13:41;Kunai;1200;Visa;Lisa;Ringgold                    ;GA;true
+652;01/11/2009 10:38;01/11/2009 10:38;Kunai;1200;Diners;Debora ;Wall                        ;NJ;true
+653;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1200;Amex;Kristen;Los Gatos                   ;CA;true
+654;01/11/2009 10:38;01/11/2009 10:38;Kunai;1200;Mastercard;Malinda;Oxford;England;true
+655;01/08/2009 13:14;01/08/2009 13:14;Shuriken;1200;Amex;Sylvia;Alexandria                  ;VA;true
+656;01/02/2009 11:41;01/02/2009 11:41;Shuriken;1200;Visa;Jupiterlina Elika;Rome;Lazio;true
+657;01/07/2009 19:50;01/07/2009 19:50;Kunai;1200;Visa;Aniko;Random Lake                 ;WI;true
+658;01/01/2009 20:28;01/01/2009 20:28;Kunai;1200;Mastercard;Petra;San Francisco               ;CA;true
+659;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Mastercard;Heather;Baluan;General Santos;true
+660;01/11/2009 10:38;01/11/2009 10:38;Kunai;1200;Mastercard;Kim;Brussels;Brussels (Bruxelles);true
+661;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Amex;Ruby;Bedford Corners             ;NY;true
+662;01/02/2009 12:18;01/02/2009 12:18;Shuriken;1200;Visa;Novy ;Istanbul;Istanbul;true
+663;01/03/2009 15:22;01/03/2009 15:22;Kunai;1200;Mastercard;Tammy;Milford                     ;ME;true
+664;01/06/2009 17:15;01/06/2009 17:15;Kunai;1200;Visa;Alessandra;Vancouver;British Columbia;true
+665;01/03/2009 13:56;01/03/2009 13:56;Shuriken;1200;Mastercard;Cathy;Kidderminster;England;true
+666;01/04/2009 07:54;01/04/2009 07:54;Kunai;1200;Amex;dia;Claygate;England;true
+667;01/12/2009 07:28;01/12/2009 07:28;Shuriken;1200;Visa;Lauren;Laasby;Arhus;true
+668;01/06/2009 15:15;01/06/2009 15:15;Shuriken;1200;Visa;Line;Budaors;Pest;true
+669;01/03/2009 15:22;01/03/2009 15:22;Kunai;1200;Amex;Sean;London;England;true
+670;01/03/2009 15:22;01/03/2009 15:22;Kunai;1200;Diners;Sarah;Santo Domingo City;Distrito Nacional;true
+671;01/06/2009 21:13;01/06/2009 21:13;Shuriken;1200;Visa;Brian;Croton On Hudson            ;NY;true
+672;01/06/2014 20:48;01/06/2014 20:48;Kunai;1200;Mastercard;Lesa;Vespasiano;Minas Gerais;true
+673;01/12/2013 19:48;01/12/2013 19:48;Shuriken;1200;Mastercard;james;Nashville                   ;TN;true
+674;01/06/2013 18:48;01/06/2013 18:48;Shuriken;1200;Mastercard;loudon;Ottawa;Ontario;true
+675;01/12/2012 17:48;01/12/2012 17:48;Kunai;1200;Mastercard;Allison;Naples                      ;FL;true
+676;01/06/2012 16:48;01/06/2012 16:48;Kunai;1200;Mastercard;Surat;Bridgewater                 ;NJ;true
+677;01/12/2011 15:48;01/12/2011 15:48;Shuriken;1200;Diners;brian;Hagen;Lorraine;true
+678;01/06/2011 14:48;01/06/2011 14:48;Kunai;1200;Visa;Rachel;Taicheng;Guangdong;true
+679;01/12/2010 13:48;01/12/2010 13:48;Shuriken;1200;Mastercard;Hilde;Groningen;Groningen;true
+680;01/06/2010 12:48;01/06/2010 12:48;Shuriken;1200;Mastercard;Tarja;Villars;Vaud;true
+681;01/12/2009 11:48;01/12/2009 11:48;Kunai;1200;Visa;Megan;Huntersville                ;NC;true
+682;01/06/2009 10:48;01/06/2009 10:48;Kunai;1200;Visa;Katharina;Flower Mound                ;TX;true
+683;01/06/2009 10:48;01/06/2009 10:48;Shuriken;1200;Visa;Zaneta ;Rochester                   ;MI;true
+684;01/06/2009 10:48;01/06/2009 10:48;Kunai;1200;Visa;Jeannette;Dubai;Dubayy;true
+685;01/06/2009 07:23;01/06/2009 07:23;Shuriken;1200;Visa;Cherie;Columbus                    ;OH;true
+686;01/01/2009 05:04;01/01/2009 05:04;Shuriken;1200;Mastercard;Tracey;Harold's Cross;Dublin;true
+687;01/02/2009 06:17;01/02/2009 06:17;Kunai;1200;Diners;Scott ;Sag Harbor                  ;NY;true
+688;01/02/2009 04:53;01/02/2009 04:53;Kunai;1200;Visa;Frances;San Diego                   ;CA;true
+689;01/02/2009 13:08;01/02/2009 13:08;Shuriken;1200;Mastercard;Beatrice;Wilmington                  ;DE;true
+690;01/03/2009 14:44;01/03/2009 14:44;Kunai;1200;Amex;Alison;Issaquah                    ;WA;true
+691;01/04/2009 20:11;01/04/2009 20:11;Shuriken;1200;Visa;elaine;Phuket;Phuket;true
+692;01/02/2009 20:09;01/02/2009 20:09;Shuriken;1200;Visa;Chevonne;Athina;Attiki;true
+693;01/04/2009 13:17;01/04/2009 13:17;Kunai;1200;Visa;danielle;Geneve;Geneve;true
+694;01/04/2009 14:11;01/04/2009 14:11;Kunai;1200;Mastercard;Caroline and Jonathan;Chichester;England;true
+695;01/05/2009 02:42;01/05/2009 02:42;Shuriken;1200;Visa;manuela;Massagno;Ticino;true
+696;01/02/2009 09:16;01/02/2009 09:16;Kunai;1200;Visa;Carole;Cardiff;Wales;true
+697;01/02/2009 14:18;01/02/2009 14:18;Shuriken;1200;Visa;Hollie;San Diego                   ;CA;true
+698;01/04/2009 01:05;01/04/2009 01:05;Shuriken;1200;Visa;mike;La Louviere;Hainaut;true
+699;01/05/2009 11:37;01/05/2009 11:37;Kunai;1200;Mastercard;Malahat;Minneapolis                 ;MN;true
+700;01/02/2009 07:35;01/02/2009 07:35;Kunai;1200;Amex;Michaela;Mafra;Santa Catarina;true
+701;01/06/2009 12:56;01/06/2009 12:56;Shuriken;1200;Amex;Amy;Ashford;England;true
+702;01/01/2009 11:05;01/01/2009 11:05;Kunai;1200;Mastercard;Brandi;Edmonton;Alberta;true
+703;01/05/2009 04:10;01/05/2009 04:10;Shuriken;1200;Visa;erin;London;England;true
+704;01/06/2009 07:18;01/06/2009 07:18;Shuriken;1200;Diners;Tracy;Lucca;Tuscany;true
+705;01/02/2009 01:11;01/02/2009 01:11;Kunai;1200;Visa;Polyxene;Perth;Western Australia;true
+706;01/01/2009 02:24;01/01/2009 02:24;Kunai;1200;Diners;Andrea;Calgary;Alberta;true
+707;01/07/2009 08:08;01/07/2009 08:08;Shuriken;1200;Mastercard;Jessica;Chiefland                   ;FL;true
+708;01/02/2009 02:57;01/02/2009 02:57;Kunai;1200;Mastercard;David;Stavenger;Rogaland;true
+709;01/01/2009 20:21;01/01/2009 20:21;Shuriken;1200;Visa;Riche Lou;Newton                      ;MA;true
+710;01/08/2009 00:42;01/08/2009 00:42;Shuriken;1200;Mastercard;Chris;Den Haag;Zuid-Holland;true
+711;01/08/2009 03:56;01/08/2009 03:56;Kunai;1200;Diners;melanie;Santa Barbaraa;Heredia;true
+712;01/08/2009 03:16;01/08/2009 03:16;Kunai;1200;Visa;beatrice;Churra;Murcia;true
+713;01/08/2009 01:59;01/08/2009 01:59;Shuriken;1200;Mastercard;lorna;Castle Rock                 ;CO;true
+714;01/03/2009 09:03;01/03/2009 09:03;Kunai;1200;Amex;Tary;Zug;Zug;true
+715;01/05/2009 13:17;01/05/2009 13:17;Shuriken;1200;Visa;Julie ;Ashford;England;true
+716;01/06/2009 07:46;01/06/2009 07:46;Shuriken;1200;Amex;Julie ;Rockville                   ;MD;true
+717;01/08/2009 16:24;01/08/2009 16:24;Kunai;1200;Mastercard;Jerome;Madrid;Madrid;true
+718;01/09/2009 06:39;01/09/2009 06:39;Kunai;1200;Visa;Laleh;Aasgaardstrand;Vestfold;true
+719;01/07/2009 07:44;01/07/2009 07:44;Shuriken;1200;Visa;Michael;Milano;Lombardy;true
+720;01/03/2009 13:24;01/03/2009 13:24;Kunai;1200;Visa;Kerry;Anieres;Geneve;true
+721;01/07/2009 20:15;01/07/2009 20:15;Shuriken;1200;Mastercard;Veronique;Fresno                      ;TX;true
+722;01/09/2009 15:58;01/09/2009 15:58;Shuriken;1200;Visa;Sarah;Warwick;Quebec;true
+723;01/03/2009 13:11;01/03/2009 13:11;Kunai;1200;Diners;Simone;Watford;England;true
+724;01/10/2009 12:57;01/10/2009 12:57;Kunai;1200;Visa;Jackie;Waterford;Waterford;true
+725;01/10/2009 14:43;01/10/2009 14:43;Shuriken;1200;Visa;giovanna;Pruszkow;Mazowieckie;true
+726;01/10/2009 12:05;01/10/2009 12:05;Kunai;1200;Visa;Elizabeth;Hamilton;Hamilton;true
+727;01/06/2009 01:20;01/06/2009 01:20;Shuriken;1200;Mastercard;Maki;Montgomery                  ;TX;true
+728;01/10/2009 14:56;01/10/2009 14:56;Shuriken;1200;Amex;Anjan;Tokyo;Tokyo;true
+729;01/07/2009 10:01;01/07/2009 10:01;Kunai;1200;Mastercard;Sarah;Manteno                     ;IL;true
+730;01/01/2009 01:26;01/01/2009 01:26;Kunai;1200;Mastercard;Niamh;Benoni;Gauteng;true
+731;01/11/2009 02:04;01/11/2009 02:04;Shuriken;1200;Visa;Elaine;Tranby;Buskerud;true
+732;01/11/2009 14:17;01/11/2009 14:17;Kunai;1200;Diners;Elizabeth;Cork;Cork;true
+733;01/10/2009 21:38;01/10/2009 21:38;Shuriken;1200;Visa;Sara;Fort Lauderdale             ;FL;true
+734;01/07/2009 06:18;01/07/2009 06:18;Shuriken;1200;Visa;Kenneth;Arlington                   ;VA;true
+735;01/05/2009 00:31;01/05/2009 00:31;Kunai;1200;Mastercard;Fiona;Lake Ronkonkoma;NY;true
+736;01/02/2009 06:07;01/02/2009 06:07;Kunai;1200;Visa;Christian;Alexandria                  ;VA;true
+737;01/12/2009 03:25;01/12/2009 03:25;Shuriken;1200;Diners;jure;Lipari;Sicilia;true
+738;01/04/2009 13:56;01/04/2009 13:56;Kunai;1200;Amex;Elizabeth ;Bluffton                    ;SC;true
+739;01/12/2009 05:18;01/12/2009 05:18;Shuriken;1200;Amex;Juliann;Winter Spgs                 ;FL;true
+740;01/08/2009 15:16;01/08/2009 15:16;Shuriken;1200;Mastercard;Julie ;Chelmsford                  ;MA;true
+741;01/11/2009 11:33;01/11/2009 11:33;Kunai;1200;Mastercard;philippa katherine;Cabinteely;Dublin;true
+742;01/07/2009 20:22;01/07/2009 20:22;Kunai;1200;Visa;matthew;Cincinnati                  ;OH;true
+743;01/02/2009 22:00;01/02/2009 22:00;Shuriken;1200;Visa;Steven;Houston                     ;TX;true
+744;01/05/2009 13:52;01/05/2009 13:52;Kunai;1200;Amex;Angie;Rodeo                       ;CA;true
+745;01/08/2009 20:32;01/08/2009 20:32;Shuriken;1200;Mastercard;Lauren;Poughkeepsie                ;NY;true
+746;01/08/2009 13:34;01/08/2009 13:34;Shuriken;1200;Mastercard;Esther;Cincinnati                  ;OH;true
+747;01/11/2009 13:08;01/11/2009 13:08;Kunai;1200;Visa;Elizabeth;North Eastham               ;MA;true
+748;01/12/2009 19:04;01/12/2009 19:04;Kunai;1200;Mastercard;Detlev;Taby;Stockholm;true
+749;01/12/2009 13:41;01/12/2009 13:41;Shuriken;1200;Visa;Roza;Alcobendas;Madrid;true
+750;01/11/2009 10:38;01/11/2009 10:38;Kunai;1200;Mastercard;paula;Sammamish                   ;WA;true
+751;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1200;Visa;Kathryn;Waiau Pa;Auckland;true
+752;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1200;Mastercard;Isabelle;Ewa Beach                   ;HI;true
+753;01/08/2009 13:14;01/08/2009 13:14;Kunai;1200;Visa;Maureen;Statesville                 ;NC;true
+754;01/02/2009 11:41;01/02/2009 11:41;Kunai;1200;Visa;David;Kapaa                       ;HI;true
+755;01/07/2009 19:50;01/07/2009 19:50;Shuriken;1200;Diners;caterina;Burbank                     ;CA;true
+756;01/01/2009 20:28;01/01/2009 20:28;Kunai;1200;Visa;Alexia;Blackrock;Dublin;true
+757;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Visa;Gloria Gail ;Foxrock;Dublin;true
+758;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1200;Visa;Allison;Edinburgh;Scotland;true
+759;01/03/2009 15:22;01/03/2009 15:22;Kunai;1200;Diners;Phillip;San Antonio                 ;TX;true
+760;01/02/2009 12:18;01/02/2009 12:18;Kunai;1200;Visa;jingyan;Bristol                     ;RI;true
+761;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Mastercard;Selma;Greenville                  ;TX;true
+762;01/06/2009 17:15;01/06/2009 17:15;Kunai;1200;Visa;Doug and Tina;Pls Vrds Est                ;CA;true
+763;01/03/2009 13:56;01/03/2009 13:56;Shuriken;1200;Visa;Lauren;Hradec Kralove;East Bohemia;true
+764;01/04/2009 07:54;01/04/2009 07:54;Shuriken;1200;Visa;Jen;Maidstone;England;true
+765;01/12/2009 07:28;01/12/2009 07:28;Kunai;1200;Visa;gladys;Saint Albans;England;true
+766;01/06/2009 15:15;01/06/2009 15:15;Kunai;1200;Mastercard;Gustavo;Voluntari;Bucuresti;true
+767;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Visa;Erica;Nadur; ;true
+768;01/03/2009 15:22;01/03/2009 15:22;Kunai;1200;Diners;Hale;Morrison                    ;CO;true
+769;01/06/2009 21:13;01/06/2009 21:13;Shuriken;1210;Visa;Rosemary;Cobham;England;true
+770;01/06/2014 20:48;01/06/2014 20:48;Shuriken;1220;Visa;Darian;Izmir;Izmir;true
+771;01/12/2013 19:48;01/12/2013 19:48;Kunai;1230;Mastercard;Kevin;Hollywood                   ;CA;true
+772;01/06/2013 18:48;01/06/2013 18:48;Kunai;1240;Visa;Alyssa;Brighton;England;true
+773;01/12/2012 17:48;01/12/2012 17:48;Shuriken;1250;Mastercard;KELI;Worongary;Queensland;true
+774;01/06/2012 16:48;01/06/2012 16:48;Kunai;1260;Visa;Glen;Atlantida;Guatemala;true
+775;01/12/2011 15:48;01/12/2011 15:48;Shuriken;1270;Visa;T;El Escorial;Madrid;true
+776;01/06/2011 14:48;01/06/2011 14:48;Shuriken;1280;Visa;christal;Morrison                    ;CO;true
+777;01/12/2010 13:48;01/12/2010 13:48;Kunai;1290;Mastercard;Alex;Augusta                     ;GA;true
+778;01/06/2010 12:48;01/06/2010 12:48;Kunai;1200;Mastercard;smith;Lahti;Etela-Suomen Laani;true
+779;01/12/2009 11:48;01/12/2009 11:48;Shuriken;1200;Visa;Macy;Inner City;Vienna;true
+780;01/06/2009 10:48;01/06/2009 10:48;Kunai;1200;Visa;Hans-Joerg;Belfast;Northern Ireland;true
+781;01/06/2009 10:48;01/06/2009 10:48;Shuriken;1200;Diners;julie;Haverhill;England;true
+782;01/06/2009 10:48;01/06/2009 10:48;Shuriken;1200;Visa;Julia ;Madison                     ;WI;true
+783;01/06/2009 07:23;01/06/2009 07:23;Kunai;3600;Mastercard;Kelsi;Utrecht;Utrecht;true
+784;01/01/2009 05:04;01/01/2009 05:04;Kunai;1200;Diners;barbara;Hyderabad;Andhra Pradesh;true
+785;01/02/2009 06:17;01/02/2009 06:17;Shuriken;1200;Visa;Maria;Boyceville                  ;WI;true
+786;01/02/2009 04:53;01/02/2009 04:53;Kunai;1200;Visa;Bent Erik;Basauri;Pais Vasco;true
+787;01/02/2009 13:08;01/02/2009 13:08;Shuriken;1200;Visa;LAURENCE;Mickleton                   ;NJ;true
+788;01/03/2009 14:44;01/03/2009 14:44;Shuriken;1200;Amex;Heidi;Eindhoven;Noord-Brabant;true
+789;01/04/2009 20:11;01/04/2009 20:11;Kunai;3600;Visa;Gerd W ;Cahaba Heights              ;AL;true
+790;01/02/2009 20:09;01/02/2009 20:09;Kunai;3600;Visa;Sabine;London;England;true
+791;01/04/2009 13:17;01/04/2009 13:17;Shuriken;3600;Visa;James;Burpengary;Queensland;true
+792;01/04/2009 14:11;01/04/2009 14:11;Kunai;3600;Amex;Ritz;Pittsfield                  ;VT;true
+793;01/05/2009 02:42;01/05/2009 02:42;Shuriken;3600;Amex;Sylvia;Pittsfield                  ;VT;true
+794;01/02/2009 09:16;01/02/2009 09:16;Shuriken;3600;Visa;Anabela;Flossmoor                   ;IL;true
+795;01/02/2009 14:18;01/02/2009 14:18;Kunai;3600;Visa;Christiane ;Delray Beach                ;FL;true
+796;01/04/2009 01:05;01/04/2009 01:05;Kunai;3600;Diners;Baybars;Prince Albert;Saskatchewan;true
+797;01/05/2009 11:37;01/05/2009 11:37;Shuriken;3600;Mastercard;Deirdre;Lausanne;Vaud;true
+798;01/02/2009 07:35;01/02/2009 07:35;Kunai;3600;Mastercard;Valda;Irvine                      ;CA;true
+799;01/06/2009 12:56;01/06/2009 12:56;Shuriken;3600;Mastercard;Marcia;Telgte;Nordrhein-Westfalen;true
+800;01/01/2009 11:05;01/01/2009 11:05;Shuriken;3600;Visa;Cheryl;New Malden;England;true
+801;01/05/2009 04:10;01/05/2009 04:10;Kunai;3600;Visa;Therese;Los Angeles                 ;CA;true
+802;01/06/2009 07:18;01/06/2009 07:18;Kunai;3600;Visa;Abdul-L;New York                    ;NY;true
+803;01/02/2009 01:11;01/02/2009 01:11;Shuriken;3600;Visa;heidi;Saint Paul                  ;MN;true
+804;01/01/2009 02:24;01/01/2009 02:24;Kunai;3600;Visa;jiyoung;New York                    ;NY;true
+805;01/07/2009 08:08;01/07/2009 08:08;Shuriken;3600;Visa;Caren;Braunschweig;Lower Saxony;true
+806;01/02/2009 02:57;01/02/2009 02:57;Shuriken;3600;Visa;Kristen;Binningen;Basel-Country;true
+807;01/01/2009 20:21;01/01/2009 20:21;Kunai;3600;Visa;Bev;San Ramon                   ;CA;true
+808;01/08/2009 00:42;01/08/2009 00:42;Kunai;3600;Visa;Tiffany ;Paris;Ile-de-France;true
+809;01/08/2009 03:56;01/08/2009 03:56;Shuriken;3600;Mastercard;Patricia ;Portola Valley              ;CA;true
+810;01/08/2009 03:16;01/08/2009 03:16;Kunai;3600;Amex;Kaylee;Penngrove                   ;CA;true
+811;01/08/2009 01:59;01/08/2009 01:59;Shuriken;3600;Visa;STEPHANIE;Mona Vale;New South Wales;true
+812;01/03/2009 09:03;01/03/2009 09:03;Shuriken;3600;Visa;Rosemary;Jacksonville                ;FL;true
+813;01/05/2009 13:17;01/05/2009 13:17;Kunai;3600;Visa;ayelet;Malmo;Skane;true
+814;01/06/2009 07:46;01/06/2009 07:46;Kunai;3600;Visa;seemab;San Pawl tat-Targa; ;true
+815;01/08/2009 16:24;01/08/2009 16:24;Shuriken;3600;Amex;Lucien;Wiesbaden;Hessen;true
+816;01/09/2009 06:39;01/09/2009 06:39;Kunai;3600;Diners;Lesley;Cork;Cork;true
+817;01/07/2009 07:44;01/07/2009 07:44;Shuriken;3600;Visa;LAURIE;Guildford;England;true
+818;01/03/2009 13:24;01/03/2009 13:24;Shuriken;3600;Mastercard;Cindy;Englewood                   ;CO;true
+819;01/07/2009 20:15;01/07/2009 20:15;Kunai;3600;Mastercard;Elizabeth;Den Haag;Zuid-Holland;true
+820;01/09/2009 15:58;01/09/2009 15:58;Kunai;3600;Mastercard;Irene;Munich;Bayern;true
+821;01/03/2009 13:11;01/03/2009 13:11;Shuriken;3600;Mastercard;Jane;Biot;Provence-Alpes-Cote d'Azur;true
+822;01/10/2009 12:57;01/10/2009 12:57;Kunai;3600;Visa;shelby;Plantation                  ;FL;true
+823;01/10/2009 14:43;01/10/2009 14:43;Shuriken;3600;Visa;Trina;Overland                    ;KS;true
+824;01/10/2009 12:05;01/10/2009 12:05;Shuriken;3600;Visa;Jenna and Paul;Senatobia                   ;MS;true
+825;01/06/2009 01:20;01/06/2009 01:20;Kunai;3600;Mastercard;Jag;Saint-Cergues;Rhone-Alpes;true
+826;01/10/2009 14:56;01/10/2009 14:56;Kunai;3600;Visa;Maggie;Paris;Ile-de-France;true
+827;01/07/2009 10:01;01/07/2009 10:01;Shuriken;3600;Amex;Courtney;Mililani                    ;HI;true
+828;01/01/2009 01:26;01/01/2009 01:26;Kunai;3600;Mastercard;Jacqui;Scottsdale                  ;AZ;true
+829;01/11/2009 02:04;01/11/2009 02:04;Shuriken;3600;Mastercard;leanne;Clyde Hill                  ;WA;true
+830;01/11/2009 14:17;01/11/2009 14:17;Shuriken;3600;Mastercard;Anne-line;Zug;Zug;true
+831;01/10/2009 21:38;01/10/2009 21:38;Kunai;3600;Mastercard;Ulrika;Scottsdale                  ;AZ;true
+832;01/07/2009 06:18;01/07/2009 06:18;Kunai;3600;Amex;Pamela;Bellinzona;Ticino;true
+833;01/05/2009 00:31;01/05/2009 00:31;Shuriken;3600;Visa;cristina;Seattle                     ;WA;true
+834;01/02/2009 06:07;01/02/2009 06:07;Kunai;3600;Amex;ron ;Tsaritsyno;Moscow City;true
+835;01/12/2009 03:25;01/12/2009 03:25;Shuriken;3600;Amex;Elizabeth;Okotoks;Alberta;true
+836;01/04/2009 13:56;01/04/2009 13:56;Shuriken;3600;Amex;Brittany;Orlando                     ;FL;true
+837;01/12/2009 05:18;01/12/2009 05:18;Kunai;3600;Visa;Aline;Davis                       ;CA;true
+838;01/08/2009 15:16;01/08/2009 15:16;Kunai;3600;Visa;Debra;Toronto;Ontario;true
+839;01/11/2009 11:33;01/11/2009 11:33;Shuriken;3600;Amex;Ruth;Saskatoon;Saskatchewan;true
+840;01/07/2009 20:22;01/07/2009 20:22;Kunai;3600;Visa;Nicola;San Jose                    ;CA;true
+841;01/02/2009 22:00;01/02/2009 22:00;Shuriken;3600;Mastercard;PATRICK;Ban Khlong Sip;Krung Thep;true
+842;01/05/2009 13:52;01/05/2009 13:52;Shuriken;3600;Visa;Niki;Trelex;Vaud;true
+843;01/08/2009 20:32;01/08/2009 20:32;Kunai;3600;Amex;Laura;San Anselmo                 ;CA;true
+844;01/08/2009 13:34;01/08/2009 13:34;Kunai;3600;Visa;eva;Gisborne;Victoria;true
+845;01/11/2009 13:08;01/11/2009 13:08;Shuriken;3600;Visa;carol;Ann Arbor                   ;MI;true
+846;01/12/2009 19:04;01/12/2009 19:04;Kunai;3600;Visa;Family;Dubai;Dubayy;true
+847;01/12/2009 13:41;01/12/2009 13:41;Shuriken;3600;Visa;Michelle;Dubai;Dubayy;true
+848;01/11/2009 10:38;01/11/2009 10:38;Shuriken;3600;Visa;Kathryn;Kirriemuir;Scotland;true
+849;01/11/2009 10:38;01/11/2009 10:38;Kunai;3600;Visa;Geraldine;Brussels;Brussels (Bruxelles);true
+850;01/11/2009 10:38;01/11/2009 10:38;Kunai;3600;Mastercard;Tom;Killeen                     ;TX;true
+851;01/08/2009 13:14;01/08/2009 13:14;Shuriken;3600;Visa;Michael;Paris;Ile-de-France;true
+852;01/02/2009 11:41;01/02/2009 11:41;Kunai;3600;Visa;Pam;London;England;true
+853;01/07/2009 19:50;01/07/2009 19:50;Shuriken;3600;Mastercard;Pavel;London;England;true
+854;01/01/2009 20:28;01/01/2009 20:28;Shuriken;3600;Visa;Kendra;Toronto;Ontario;true
+855;01/03/2009 15:22;01/03/2009 15:22;Kunai;3600;Amex;Leila;Ponte San Nicolo;Veneto;true
+856;01/11/2009 10:38;01/11/2009 10:38;Kunai;3600;Visa;Derrick;North Bay;Ontario;true
+857;01/03/2009 15:22;01/03/2009 15:22;Shuriken;3600;Visa;Emillie;Eagan                       ;MN;true
+858;01/02/2009 12:18;01/02/2009 12:18;Kunai;3600;Mastercard;Kelly ;Vancouver;British Columbia;true
+859;01/03/2009 15:22;01/03/2009 15:22;Shuriken;3600;Amex;Michael;Los Angeles                 ;CA;true
+860;01/06/2009 17:15;01/06/2009 17:15;Shuriken;3600;Visa;Natasha;Milano;Lombardy;true
+861;01/03/2009 13:56;01/03/2009 13:56;Kunai;3600;Mastercard;Meredith;Kloten;Zurich;true
+862;01/04/2009 07:54;01/04/2009 07:54;Kunai;3600;Mastercard;Hanne;Phoenix                     ;MD;true
+863;01/12/2009 07:28;01/12/2009 07:28;Shuriken;3600;Diners;Therese;Pensacola                   ;FL;true
+864;01/06/2009 15:15;01/06/2009 15:15;Kunai;3600;Amex;Katie;Gava;Catalonia;true
+865;01/03/2009 15:22;01/03/2009 15:22;Shuriken;3600;Visa;george;Zurich;Zurich;true
+866;01/03/2009 15:22;01/03/2009 15:22;Shuriken;3600;Visa;Hanna Agla;Donauworth;Bayern;true
+867;01/06/2009 21:13;01/06/2009 21:13;Kunai;3600;Visa;Charlene ;Sebastopol                  ;CA;true
+868;01/06/2014 20:48;01/06/2014 20:48;Kunai;3600;Amex;Christophe;Temecula                    ;CA;true
+869;01/12/2013 19:48;01/12/2013 19:48;Shuriken;3600;Visa;Kees en Valesca;Scamander;Tasmania;true
+870;01/06/2013 18:48;01/06/2013 18:48;Kunai;3600;Visa;Eman;Penclawdd;Wales;true
+871;01/12/2012 17:48;01/12/2012 17:48;Shuriken;3600;Visa;Julia;Ede;Gelderland;true
+872;01/06/2012 16:48;01/06/2012 16:48;Shuriken;3600;Mastercard;Jyoti;Tunbridge Wells;England;true
+873;01/12/2011 15:48;01/12/2011 15:48;Kunai;3600;Visa;Keri;Issaquah                    ;WA;true
+874;01/06/2011 14:48;01/06/2011 14:48;Kunai;3600;Mastercard;don;Cagliari;Sardinia;true
+875;01/12/2010 13:48;01/12/2010 13:48;Shuriken;1200;Visa;Renee;Chaska                      ;MN;true
+876;01/06/2010 12:48;01/06/2010 12:48;Kunai;3600;Visa;minjeong;Bern;Bern;true
+877;01/12/2009 11:48;01/12/2009 11:48;Shuriken;3600;Visa;Charlotte;Sterling                    ;VA;true
+878;01/06/2009 10:48;01/06/2009 10:48;Shuriken;3600;Mastercard;Piret;Bunbury;Western Australia;true
+879;01/06/2009 10:48;01/06/2009 10:48;Kunai;3600;Amex;Olympe;Lidingo;Stockholm;true
+880;01/06/2009 10:48;01/06/2009 10:48;Kunai;3600;Amex;Monica;Villanova                   ;PA;true
+881;01/06/2009 07:23;01/06/2009 07:23;Shuriken;3600;Visa;Michael;Norrkoping;Ostergotland;true
+882;01/01/2009 05:04;01/01/2009 05:04;Kunai;3600;Visa;Kerry;Prague;Central Bohemia;true
+883;01/02/2009 06:17;01/02/2009 06:17;Shuriken;3600;Visa;VIOLETA;Silver Spring               ;MD;true
+884;01/02/2009 04:53;01/02/2009 04:53;Shuriken;3600;Visa;Melissa;Carouge;Geneve;true
+885;01/02/2009 13:08;01/02/2009 13:08;Kunai;3600;Mastercard;Karoline ;Powell River;British Columbia;true
+886;01/03/2009 14:44;01/03/2009 14:44;Kunai;3600;Mastercard;Jo ;Huntington Beach            ;CA;true
+887;01/04/2009 20:11;01/04/2009 20:11;Shuriken;3600;Visa;Astrid;Oslo;Oslo;true
+888;01/02/2009 20:09;01/02/2009 20:09;Kunai;3600;Visa;Stephanie;Hilversum;Noord-Holland;true
+889;01/04/2009 13:17;01/04/2009 13:17;Shuriken;3600;Visa;Scott;Lausanne;Vaud;true
+890;01/04/2009 14:11;01/04/2009 14:11;Shuriken;3600;Mastercard;Judy;Washington                  ;DC;true
+891;01/05/2009 02:42;01/05/2009 02:42;Kunai;3600;Visa;Charmain;Cartersburg                 ;IN;true
+892;01/02/2009 09:16;01/02/2009 09:16;Kunai;3600;Visa;Liz;Langnau;Zurich;true
+893;01/02/2009 14:18;01/02/2009 14:18;Shuriken;3600;Mastercard;Christiane;Mission;British Columbia;true
+894;01/04/2009 01:05;01/04/2009 01:05;Kunai;3600;Visa;Shiree;Clondalkin;Dublin;true
+895;01/05/2009 11:37;01/05/2009 11:37;Shuriken;3600;Visa;Jessica;Toronto;Ontario;true
+896;01/02/2009 07:35;01/02/2009 07:35;Shuriken;3600;Amex;Ghislaine;Ferney-Voltaire;Rhone-Alpes;true
+897;01/06/2009 12:56;01/06/2009 12:56;Kunai;3600;Visa;Christian;Mableton                    ;GA;true
+898;01/01/2009 11:05;01/01/2009 11:05;Kunai;3600;Mastercard;Jean;Arlington                   ;VA;true
+899;01/05/2009 04:10;01/05/2009 04:10;Shuriken;3600;Mastercard;Caroline;Begnins;Vaud;true
+900;01/06/2009 07:18;01/06/2009 07:18;Kunai;3600;Visa;Karen;Berikon;Aargau;true
+901;01/02/2009 01:11;01/02/2009 01:11;Shuriken;3600;Visa;Lisa;Ottawa;Ontario;true
+902;01/01/2009 02:24;01/01/2009 02:24;Shuriken;3600;Diners;elizabeth r;Winter Haven                ;FL;true
+903;01/07/2009 08:08;01/07/2009 08:08;Kunai;3600;Amex;Tulin;Cranberry Twp               ;PA;true
+904;01/02/2009 02:57;01/02/2009 02:57;Kunai;3600;Mastercard;Anthony;Toronto;Ontario;true
+905;01/01/2009 20:21;01/01/2009 20:21;Shuriken;3600;Visa;marie-louise;Sitka                       ;AK;true
+906;01/08/2009 00:42;01/08/2009 00:42;Kunai;3600;Mastercard;Tanya;Carcross;Yukon Territory;true
+907;01/08/2009 03:56;01/08/2009 03:56;Shuriken;3600;Visa;Stephen;Calgary;Alberta;true
+908;01/08/2009 03:16;01/08/2009 03:16;Shuriken;3600;Amex;John;Chicago                     ;IL;true
+909;01/08/2009 01:59;01/08/2009 01:59;Kunai;3600;Mastercard;Parth;Oegstgeest;Zuid-Holland;true
+910;01/03/2009 09:03;01/03/2009 09:03;Kunai;3600;Mastercard;Gloria Gail ;WalcProduct3ee;Tyrol;true
+911;01/05/2009 13:17;01/05/2009 13:17;Shuriken;3600;Mastercard;Cheryl;Hilton Head                 ;SC;true
+912;01/06/2009 07:46;01/06/2009 07:46;Kunai;3600;Mastercard;Triona;Swampscott                  ;MA;true
+913;01/08/2009 16:24;01/08/2009 16:24;Shuriken;3600;Diners;clara;Perth;Western Australia;true
+914;01/09/2009 06:39;01/09/2009 06:39;Shuriken;3600;Mastercard;Anke;Avalon;New South Wales;true
+915;01/07/2009 07:44;01/07/2009 07:44;Kunai;3600;Mastercard;TRICIA;Sydney;New South Wales;true
+916;01/03/2009 13:24;01/03/2009 13:24;Kunai;3600;Diners;esther;Huddersfield;England;true
+917;01/07/2009 20:15;01/07/2009 20:15;Shuriken;3600;Visa;Christiane;Black River;Black River;true
+918;01/09/2009 15:58;01/09/2009 15:58;Kunai;1200;Visa;Cormac;Freeport City;Freeport;true
+919;01/03/2009 13:11;01/03/2009 13:11;Shuriken;1200;Mastercard;Attie;Cypress                     ;CA;true
+920;01/10/2009 12:57;01/10/2009 12:57;Shuriken;1200;Visa;odile;Lititz                      ;PA;true
+921;01/10/2009 14:43;01/10/2009 14:43;Kunai;1200;Visa;gail ;London;England;true
+922;01/10/2009 12:05;01/10/2009 12:05;Kunai;1200;Visa;Niki;Chadds Ford                 ;PA;true
+923;01/06/2009 01:20;01/06/2009 01:20;Shuriken;3600;Visa;Danny;St Thomas                   ;VI;true
+924;01/10/2009 14:56;01/10/2009 14:56;Kunai;7500;Mastercard;Julianne;Navan;Meath;true
+925;01/07/2009 10:01;01/07/2009 10:01;Shuriken;7500;Visa;Kristyn;Kearns                      ;UT;true
+926;01/01/2009 01:26;01/01/2009 01:26;Shuriken;7500;Mastercard;Diana;Campinas;Sao Paulo;true
+927;01/11/2009 02:04;01/11/2009 02:04;Kunai;7500;Visa;Hans;Knoxville                   ;TN;true
+928;01/11/2009 14:17;01/11/2009 14:17;Kunai;7500;Visa;scott;Rogers                      ;AR;true
+929;01/10/2009 21:38;01/10/2009 21:38;Shuriken;7500;Visa;Michael;Pietermaritzburg;KwaZulu-Natal;true
+930;01/07/2009 06:18;01/07/2009 06:18;Kunai;7500;Visa;Karin;Olive Branch                ;MS;true
+931;01/05/2009 00:31;01/05/2009 00:31;Shuriken;1200;Visa;Jacob;Lindfield;New South Wales;true
+932;01/02/2009 06:07;01/02/2009 06:07;Shuriken;1200;Visa;Catherine;Hghlnds Ranch               ;CO;true
+933;01/12/2009 03:25;01/12/2009 03:25;Kunai;7500;Mastercard;Brona;Den Haag;Zuid-Holland;true
+934;01/04/2009 13:56;01/04/2009 13:56;Kunai;7500;Mastercard;Anita;Fresno                      ;TX;true
+935;01/12/2009 05:18;01/12/2009 05:18;Shuriken;7500;Diners;Michel;Lipari;Sicilia;true
+936;01/08/2009 15:16;01/08/2009 15:16;Kunai;7500;Diners;natalie;Lipari;Sicilia;true
+937;01/11/2009 11:33;01/11/2009 11:33;Shuriken;7500;Visa;Frank and Christelle;Valley Center               ;CA;true
+938;01/07/2009 20:22;01/07/2009 20:22;Shuriken;7500;Amex;Pamela;Skaneateles                 ;NY;true
+939;01/02/2009 22:00;01/02/2009 22:00;Kunai;7500;Mastercard;Amanda;Shreveport                  ;LA;true
+940;01/05/2009 13:52;01/05/2009 13:52;Kunai;1200;Visa;Georgia;Eagle                       ;ID;true
+941;01/08/2009 20:32;01/08/2009 20:32;Shuriken;1200;Mastercard;DOREEN;Madrid;Madrid;true
+942;01/08/2009 13:34;01/08/2009 13:34;Kunai;1200;Amex;Rhonda;Atlanta                     ;GA;true
+943;01/11/2009 13:08;01/11/2009 13:08;Shuriken;1200;Visa;Marie;Dickerson                   ;MD;true
+944;01/12/2009 19:04;01/12/2009 19:04;Shuriken;1200;Mastercard;Lisa;Princeton                   ;NJ;true
+945;01/12/2009 13:41;01/12/2009 13:41;Kunai;1200;Mastercard;Priska;Calgary;Alberta;true
+946;01/11/2009 10:38;01/11/2009 10:38;Kunai;1200;Visa;Katrine;North Tustin                ;CA;true
+947;01/11/2009 10:38;01/11/2009 10:38;Shuriken;1200;Amex;Lisa;Gurgaon;Haryana;true
+948;01/11/2009 10:38;01/11/2009 10:38;Kunai;1200;Visa;Sabrina;Rambouillet;Ile-de-France;true
+949;01/08/2009 13:14;01/08/2009 13:14;Shuriken;1200;Mastercard;Kim;London;England;true
+950;01/02/2009 11:41;01/02/2009 11:41;Shuriken;1200;Visa;anissa;Slough;England;true
+951;01/07/2009 19:50;01/07/2009 19:50;Kunai;1200;Mastercard;john;Glan-Munchweiler;Rhineland-Palatinate;true
+952;01/01/2009 20:28;01/01/2009 20:28;Kunai;1200;Diners;eugenia;Wisconsin Rapids            ;WI;true
+953;01/03/2009 15:22;01/03/2009 15:22;Shuriken;1200;Amex;alix;Tenafly                     ;NJ;true
+954;01/11/2009 10:38;01/11/2009 10:38;Kunai;1200;Mastercard;Lesleigh;Baden;Aargau;true
+955;01/03/2009 15:22;01/03/2009 15:22;Shuriken;3600;Visa;Miye;Downingtown                 ;PA;true
+956;01/02/2009 12:18;01/02/2009 12:18;Shuriken;1200;Diners;Heidi;MT Pleasant                 ;TX;true
+957;01/03/2009 15:22;01/03/2009 15:22;Kunai;1200;Mastercard;T;Veigy-Foncenex;Rhone-Alpes;true
+958;01/06/2009 17:15;01/06/2009 17:15;Kunai;3600;Visa;Daniele;Katy                        ;TX;true
+959;01/03/2009 13:56;01/03/2009 13:56;Shuriken;1200;Diners;luisa;Gorey; ;true
+960;01/04/2009 07:54;01/04/2009 07:54;Kunai;1200;Visa;Nadine;Belgrade                    ;MT;true
+961;01/12/2009 07:28;01/12/2009 07:28;Shuriken;1200;Mastercard;Tina;Calgary;Alberta;true
+962;01/06/2009 15:15;01/06/2009 15:15;Shuriken;1200;Diners;Damali;Toronto;Ontario;true
+963;01/03/2009 15:22;01/03/2009 15:22;Kunai;1200;Visa;Katherine;Corrales                    ;NM;true
+964;01/03/2009 15:22;01/03/2009 15:22;Kunai;1200;Visa;Karen;Austin                      ;TX;true
+965;01/06/2009 21:13;01/06/2009 21:13;Shuriken;1200;Visa;Mike;Aberdeen;Scotland;true
+966;01/06/2014 20:48;01/06/2014 20:48;Kunai;1200;Visa;Katrin;Zumikon;Zurich;true
+967;01/12/2013 19:48;01/12/2013 19:48;Shuriken;1200;Visa;Hale;Hawera;Taranaki;true
+968;01/06/2013 18:48;01/06/2013 18:48;Pokebola;1200;Visa;Marie;Winchester                  ;MA;true
+969;01/12/2012 17:48;01/12/2012 17:48;Kunai;1200;Visa;Charlene;Calgary;Alberta;true
+970;01/06/2012 16:48;01/06/2012 16:48;Kunai;1200;Visa;Orit;Dallas                      ;TX;true
+971;01/12/2011 15:48;01/12/2011 15:48;Shuriken;1200;Visa;Alan;Malahide;Dublin;true
+972;01/06/2011 14:48;01/06/2011 14:48;Kunai;3600;Mastercard;Anja Langer;Saint Paul                  ;MN;true
+973;01/12/2010 13:48;01/12/2010 13:48;Shuriken;1200;Visa;Lina;Edinburgh;Scotland;true
+974;01/06/2010 12:48;01/06/2010 12:48;Shuriken;1200;Amex;Larry;Naarden;Noord-Holland;true
+975;01/12/2009 11:48;01/12/2009 11:48;Kunai;1200;Visa;Jessica;Oldenburg;Lower Saxony;true
+976;01/06/2009 10:48;01/06/2009 10:48;Kunai;1200;Visa;Bea;Chicago                     ;IL;true
+977;01/06/2009 10:48;01/06/2009 10:48;Shuriken;1200;Visa;Diane;Djurgarden;Stockholm;true
+978;01/06/2009 10:48;01/06/2009 10:48;Kunai;3600;Mastercard;Louise;Balgach;St Gallen;true
+979;01/06/2009 07:23;01/06/2009 07:23;Shuriken;7500;Visa;Marion;Rennes;Brittany;true
+980;01/01/2009 05:04;01/01/2009 05:04;Shuriken;1200;Amex;Eric;Ely                         ;NV;true
+981;01/02/2009 06:17;01/02/2009 06:17;Kunai;1200;Amex;Miriane;Norfolk                     ;VA;true
+982;01/02/2009 04:53;01/02/2009 04:53;Pokebola;1200;Visa;Jeff;Houston                     ;TX;true
+983;01/02/2009 13:08;01/02/2009 13:08;Shuriken;1200;Diners;christina;Chepel;Budapest;true
+984;01/03/2009 14:44;01/03/2009 14:44;Kunai;1200;Mastercard;Shannon;Buffalo Grove               ;IL;true
+985;01/04/2009 20:11;01/04/2009 20:11;Shuriken;1200;Mastercard;Angela;Newburgh;Scotland;true
+986;01/02/2009 20:09;01/02/2009 20:09;Shuriken;1200;Visa;Angela;Vienna;Vienna;true
+987;01/04/2009 13:17;01/04/2009 13:17;Kunai;1200;Mastercard;Elaine;Vicenza;Veneto;true
+988;01/04/2009 14:11;01/04/2009 14:11;Kunai;1200;Visa;Helen;Mechanics Grove             ;PA;true
+989;01/05/2009 02:42;01/05/2009 02:42;Shuriken;1200;Diners;Hilde Karin;Las Vegas                   ;NV;true
+990;01/02/2009 09:16;01/02/2009 09:16;Kunai;1200;Visa;Sigrun;Nashville                   ;TN;true
+991;01/02/2009 14:18;01/02/2009 14:18;Shuriken;1200;Amex;Alfredo A;Las Vegas                   ;NV;true
+992;01/04/2009 01:05;01/04/2009 01:05;Shuriken;3600;Amex;Fatisha;Miami                       ;FL;true
+993;01/05/2009 11:37;01/05/2009 11:37;Kunai;1200;Visa;Nina;Silver Spring               ;MD;true
+994;01/02/2009 07:35;01/02/2009 07:35;Kunai;3600;Visa;Barbara;Kirriemuir;Scotland;true
+995;01/06/2009 12:56;01/06/2009 12:56;Shuriken;1200;Diners;Karen;Roquefort;Provence-Alpes-Cote d'Azur;true
+996;01/01/2009 11:05;01/01/2009 11:05;Kunai;1200;Visa;Rima;Mullingar;Westmeath;true
+997;01/05/2009 04:10;01/05/2009 04:10;Shuriken;1200;Visa;Dania;Munich;Bayern;true
+998;01/06/2009 07:18;01/06/2009 07:18;Pokebola;1200;Visa;John;Banbury;England;true
+999;12/05/2016 00:00:00;31/12/2016 00:00:00;Phasellus ullamcorper ipsum rutrum;999;Mastercard;Suspendisse non nisl sit;Mauris turpis nunc blandit;Duis arcu tortor suscipit;False
+1000;12/05/2016 00:00:00;31/12/2016 00:00:00;Phasellus ullamcorper ipsum rutrum;999;Mastercard;Suspendisse non nisl sit;Mauris turpis nunc blandit;Duis arcu tortor suscipit;False
