@@ -119,6 +119,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site\Pedidos\Detalhes.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
@@ -148,6 +149,7 @@
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\Site\default.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\Site\pedido.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -170,6 +172,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Pedido\Salvar.cshtml" />
     <Content Include="Views\Pedido\Detalhes.cshtml" />
+    <Content Include="Views\Pedido\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
