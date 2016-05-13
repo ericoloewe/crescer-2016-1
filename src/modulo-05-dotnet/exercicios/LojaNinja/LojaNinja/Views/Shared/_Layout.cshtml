@@ -25,11 +25,12 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a href="@Url.Action("Index", "Pedido")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Pedido <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="@Url.Action("Salvar", "Pedido")">Novo</a></li>
+                            <li><a href="@Url.Action("Index", "Pedido")">Lista</a></li>
                         </ul>
                     </li>
                 </ul>
