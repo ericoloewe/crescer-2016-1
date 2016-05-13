@@ -7,13 +7,15 @@ namespace LojaNinja.MVC.Models
 {
     public class PedidoViewModel
     {
+        [MinLength(0)]
+        public int Id { get; set; }
         [Required(ErrorMessage = "Nome do produto não informado!")]
         [DisplayName("Nome do produto")]        
         public string NomeProduto { get; set; }
 
         [Required(ErrorMessage = "Valor do produto não informado!")]
         [DisplayName("Valor do produto")]
-        public double ValorVenda { get; set; }
+        public decimal ValorVenda { get; set; }
 
         [Required(ErrorMessage = "Selecione a data de entrega desejada!")]
         [DisplayName("Data de entrega desejada")]
