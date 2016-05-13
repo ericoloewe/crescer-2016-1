@@ -1,21 +1,22 @@
-﻿@model LojaNinja.MVC.Models.Pedido
+﻿@model LojaNinja.MVC.Models.PedidoViewModel
 
 @{
-    ViewBag.Title = "Novo";
+    ViewBag.Title = "Novo Pedido";
 }
 
 @section Styles {
     <link href="~/Content/Datepicker/css/datepicker.min.css" rel="stylesheet" />
 }
 
-<h2>Novo Pedido</h2>
+<div class="page-header">
+    <h1>Novo Pedido <small>Cadastre um novo pedido a partir dessa pagina</small></h1>
+</div>
 
-
-@using (Html.BeginForm()) 
-{    
-    <div class="form-horizontal">        
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@using (Html.BeginForm("Salvar", "Pedido", FormMethod.Post, new { @class = "cadastro-de-pedidos" }))
+{
+    <div class="form-horizontal">
+        @Html.ValidationSummary(false, "", new { @class = "alert alert-danger" })
+        @Html.HiddenFor(model => model.Id)
 
         <div class="form-group">
             @Html.LabelFor(model => model.NomeProduto, new { @class = "control-label col-md-2" })
@@ -34,10 +35,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DataEntrega, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DataEntrega, new {@class = "control-label col-md-2"})
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.DataEntrega, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.DataEntrega, "", new { @class = "text-danger" })
+                @Html.TextBoxFor(model => model.DataEntrega, new {@class = "form-control", maxlength = "10" })
+                @Html.ValidationMessageFor(model => model.DataEntrega, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TipoPagamento, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.TipoPagamento, "Selecione uma forma de pagamento", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TipoPagamento, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -73,13 +82,13 @@
     </div>
 }
 
-@*<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>*@
+<div>
+    @Html.ActionLink("Voltar a lista", "Index")
+</div>
 
 @section Scripts {
     <script src="~/scripts/jquery.validate.min.js"></script>
     <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/scripts/Datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="~/scripts/LojaNinja.MVC.js"></script>
+    <script src="~/scripts/Site/default.js"></script>
 }
