@@ -15,12 +15,34 @@ namespace LojaNinja.MVC.Controllers
             return View();
         }
 
-        // GET: Pedido
-        public ActionResult Salvar()
+        // GET: /Pedido/Detalhes
+        public ActionResult Detalhes(int id)
         {
+            return View(_repositorio.ObterPedidoPorId(id));
+        }
+
+        // GET: /Pedido/Salvar
+        public ActionResult Salvar(int id = 0)
+        {
+            if (id > 0)
+            {
+                var pedido = _repositorio.ObterPedidoPorId(id);
+                return View(new PedidoViewModel()
+                {
+                    Id = pedido.Id,
+                    NomeCliente = pedido.NomeCliente,
+                    NomeProduto = pedido.NomeProduto,
+                    Cidade = pedido.Cidade,
+                    Estado = pedido.Estado,
+                    DataEntrega = pedido.DataEntrega,
+                    TipoPagamento = pedido.TipoPagamento,
+                    ValorVenda = pedido.ValorVenda
+                });
+            }
             return View();
         }
 
+        // POST: /Pedido/Salvar
         [HttpPost]
         public ActionResult Salvar(PedidoViewModel pedido)
         {
