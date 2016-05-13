@@ -4,69 +4,62 @@
     ViewBag.Title = "Detalhes";
 }
 
+@section Styles {
+    <link href="~/Content/Site/Pedidos/Detalhes.css" rel="stylesheet" />
+}
+
 <div class="page-header">
     <h1>Detalhes do pedido <small>Veja os detalhes do pedido a partir dessa pagina</small></h1>
 </div>
 
-<div>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.NomeProduto)
-        </dt>
-
-        <dd>
+<div class="row detalhes">
+    <div class="col-sm-8">
+        <h3>
+            <strong>
+                @Html.DisplayNameFor(model => model.NomeProduto):
+            </strong>
             @Html.DisplayFor(model => model.NomeProduto)
-        </dd>
+        </h3>
+        <p>
+            <strong>
+                @Html.DisplayNameFor(model => model.ValorVenda):
+            </strong>
+            @string.Format("{0:c}", Model.ValorVenda)
+            <br>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ValorVenda)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ValorVenda)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DataEntrega)
-        </dt>
-
-        <dd>
+            <strong>
+                @Html.DisplayNameFor(model => model.DataEntrega):
+            </strong>
             @Model.DataEntrega.ToShortDateString()
-        </dd>
+            <br>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DataPedido)
-        </dt>
-
-        <dd>
+            <strong>
+                @Html.DisplayNameFor(model => model.DataPedido):
+            </strong>
             @Model.DataPedido.ToShortDateString()
-        </dd>
+            <br>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NomeCliente)
-        </dt>
-
-        <dd>
+            <strong>
+                @Html.DisplayNameFor(model => model.NomeCliente):
+            </strong>
             @Html.DisplayFor(model => model.NomeCliente)
-        </dd>
+            <br>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cidade)
-        </dt>
-
-        <dd>
+            <strong>
+                @Html.DisplayNameFor(model => model.Cidade):
+            </strong>
             @Html.DisplayFor(model => model.Cidade)
-        </dd>
+            <br>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-
-        <dd>
+            <strong>
+                @Html.DisplayNameFor(model => model.Estado):
+            </strong>
             @Html.DisplayFor(model => model.Estado)
-        </dd>
-
-    </dl>
+        </p>
+    </div>
+    <div class="col-sm-4 @(Model.Urgente ? "urgente" : "nao-urgente")">
+        <span class="glyphicon glyphicon-flag" data-toggle="tooltip" data-placement="right" title="Pedido urgente!"></span>
+    </div>
 </div>
 <p>
     @Html.ActionLink("Editar", "Salvar", new { id = Model.Id }) |
