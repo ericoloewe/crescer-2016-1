@@ -1,0 +1,10 @@
+﻿
+.tabela-de-pedidos {}    
+
+    .tabela-de-pedidos .acoes {
+        width: 170px;
+    }
+
+    .tabela-de-pedidos .urgente {
+        text-align: center;
+    }

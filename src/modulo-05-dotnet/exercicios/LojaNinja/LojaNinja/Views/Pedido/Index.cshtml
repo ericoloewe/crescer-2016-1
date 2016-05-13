@@ -1,0 +1,82 @@
+﻿@model IEnumerable<LojaNinja.Dominio.Pedido>
+
+@{
+    ViewBag.Title = "Lista de Pedidos";
+}
+
+@section Styles {
+    <link href="~/Content/Site/Pedidos/Index.css" rel="stylesheet" />
+}
+
+<div class="page-header">
+    @Html.ActionLink("Criar novo pedido", "Salvar",new {}, new { @class = "btn btn-primary btn-lg pull-right" })
+    <h1>@ViewBag.Title</h1>
+</div>
+
+<table class="table table-bordered table-hover tabela-de-pedidos">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeProduto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorVenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataEntrega)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataPedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Urgente)
+        </th>
+        <th class="acoes"></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeProduto)
+        </td>
+        <td>
+            @string.Format("{0:c}", item.ValorVenda)
+        </td>
+        <td>
+            @item.DataEntrega.ToShortDateString()
+        </td>
+        <td>
+            @item.DataPedido.ToShortDateString()
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td class="urgente">
+            <i class="glyphicon @(item.Urgente ? "glyphicon-thumbs-up" : "glyphicon-thumbs-down")"></i>
+        </td>
+        <td>
+            <a href="@Url.Action("Salvar", new {id = item.Id})" class="btn btn-default btn-xs">
+                <i class="glyphicon glyphicon-pencil"></i> Editar
+            </a> |
+            <a href="@Url.Action("Detalhes", new {id = item.Id})" class="btn btn-default btn-xs">
+                <i class="glyphicon glyphicon-search"></i> Detalhes
+            </a>
+        </td>
+    </tr>
+}
+
+</table>

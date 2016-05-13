@@ -12,7 +12,7 @@ namespace LojaNinja.MVC.Controllers
         // GET: Pedido
         public ActionResult Index()
         {
-            return View();
+            return View(_repositorio.ObterPedidos());
         }
 
         // GET: /Pedido/Detalhes
