@@ -128,11 +128,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
     <None Include="scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Content\Datepicker\css\datepicker.css" />
     <Content Include="Content\Datepicker\css\datepicker.min.css" />
     <Content Include="scripts\Datepicker\js\bootstrap-datepicker.js" />
     <Content Include="scripts\Datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="scripts\Datepicker\js\bootstrap-datepicker.pt-BR.js" />
     <Content Include="scripts\jquery-2.2.3.js" />
     <Content Include="scripts\jquery-2.2.3.min.js" />
     <Content Include="scripts\jquery-2.2.3.min.map" />
@@ -141,12 +146,13 @@
     <Content Include="scripts\jquery.validate.min.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="scripts\lojaNinja.js" />
+    <Content Include="scripts\Site\default.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Content Include="Content\Site\default.css" />
     <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -162,7 +168,8 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Pedido\Novo.cshtml" />
+    <Content Include="Views\Pedido\Salvar.cshtml" />
+    <Content Include="Views\Pedido\Detalhes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
