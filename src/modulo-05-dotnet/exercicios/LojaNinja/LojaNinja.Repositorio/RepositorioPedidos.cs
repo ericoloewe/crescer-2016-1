@@ -3,31 +3,35 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace LojaNinja.Repositorio
 {
     public class RepositorioPedidos
     {
-        private const string PATH_ARQUIVO = @"C:\Users\erico.loewe\Documents\crescer-2016-1\src\modulo-05-dotnet\exercicios\LojaNinja\LojaNinja\App_Data\Pedidos.txt";
+        private readonly List<Pedido> _listaDePedidos = new List<Pedido>();
+        private const string PATH_ARQUIVO = @"B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\LojaNinja\LojaNinja\App_Data\Pedidos.txt";
+        //private const string PATH_ARQUIVO = @"C:\Users\erico.loewe\Documents\crescer-2016-1\src\modulo-05-dotnet\exercicios\LojaNinja\LojaNinja\App_Data\Pedidos.txt";
+
+        public RepositorioPedidos()
+        {
+            _listaDePedidos.AddRange(PegarPedidosDoArquivo());
+        }
 
         public List<Pedido> ObterPedidos()
         {
-            var linhasArquivo = File.ReadAllLines(PATH_ARQUIVO).ToList();
-
-            return ConverteLinhasEmPedidos(linhasArquivo);
+            return _listaDePedidos;
         }
 
         public Pedido ObterPedidoPorId(int id)
         {
-            return DeLinhaStringParaPedido(
-                        File.ReadAllLines(PATH_ARQUIVO)
-                                .ToList()
-                                    .FirstOrDefault(x => Convert.ToInt32(x.Split(';')[0]) == id));
+            return _listaDePedidos.FirstOrDefault(p => p.Id == id);
         }
 
         public void IncluirPedido(Pedido pedido)
         {
-            throw new NotImplementedException();
+            _listaDePedidos.Add(pedido);
+            AddPedidoAoArquivo(pedido);
         }
 
         public void AtualizarPedido(Pedido pedido)
@@ -40,16 +44,27 @@ namespace LojaNinja.Repositorio
             throw new NotImplementedException();
         }
 
-        private List<Pedido> ConverteLinhasEmPedidos(List<string> linhasArquivo)
+        private void AddPedidoAoArquivo(Pedido pedido)
         {
+            using (var sw = new StreamWriter(PATH_ARQUIVO, true))
+            {
+                string id = string.Format("{0}", _listaDePedidos.Max(p => p.Id) + 1);
+                sw.Write(pedido.ToString().Replace("##ID##", id));
+            }
+        }
+
+        private List<Pedido> PegarPedidosDoArquivo()
+        {
+            var linhasArquivo = File.ReadAllLines(PATH_ARQUIVO).ToList();
+
             //Remove linha do cabeçalho
             linhasArquivo.RemoveAt(0);
 
             //Retorna lista de produtos
-            return linhasArquivo.Select(linha => DeLinhaStringParaPedido(linha)).ToList();
+            return linhasArquivo.Select(ConverteDeLinhaStringParaPedido).ToList();
         }
 
-        private Pedido DeLinhaStringParaPedido(string linha)
+        private Pedido ConverteDeLinhaStringParaPedido(string linha)
         {
             var id = Convert.ToInt32(linha.Split(';')[0]);
             var dataPedido = Convert.ToDateTime(linha.Split(';')[1]);
