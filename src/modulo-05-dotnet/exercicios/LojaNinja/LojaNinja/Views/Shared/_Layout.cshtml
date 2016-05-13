@@ -6,12 +6,13 @@
     <title>@ViewBag.Title - Loja Ninja</title>
 
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site/default.css" rel="stylesheet" />
     @RenderSection("Styles", false)
 
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -19,7 +20,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Loja Ninja", "Novo", "Pedido", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Loja Ninja", "Index", "Pedido", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -28,7 +29,7 @@
                             Pedido <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="@Url.Action("Novo", "Pedido")">Novo</a></li>
+                            <li><a href="@Url.Action("Salvar", "Pedido")">Novo</a></li>
                         </ul>
                     </li>
                 </ul>
