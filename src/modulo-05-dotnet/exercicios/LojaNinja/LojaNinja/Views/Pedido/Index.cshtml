@@ -13,92 +13,88 @@
     <h1>@ViewBag.Title</h1>
 </div>
 
-<div class="panel panel-default">
-    <!-- Default panel contents -->
-    <div class="panel-heading">Lista de Pedidos</div>
-    <div class="panel-body">
-        <div class="row">
-            <div class="col-sm-10">
-                <div class="input-group">
-                    <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-search"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Username">
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <button class="btn btn-primary">Buscar</button>
+@using(Html.BeginForm("Index", "Pedido", FormMethod.Get, new { @class = "well" })) { 
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                </span>
+                <input type="text" class="form-control" name="geral" placeholder="Digite algo que deseja pesquisar.">
             </div>
         </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary">Buscar pedido</button>
+        </div>
     </div>
+}
 
-    <!-- Table -->
-    <table class="table table-bordered table-hover tabela-de-pedidos">
+<!-- Table -->
+<table class="table table-bordered table-hover tabela-de-pedidos">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeProduto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorVenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataEntrega)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataPedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Urgente)
+        </th>
+        <th class="acoes"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeProduto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ValorVenda)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataEntrega)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataPedido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeCliente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Urgente)
-            </th>
-            <th class="acoes"></th>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeProduto)
+            </td>
+            <td>
+                @string.Format("{0:c}", item.ValorVenda)
+            </td>
+            <td>
+                @item.DataEntrega.ToShortDateString()
+            </td>
+            <td>
+                @item.DataPedido.ToShortDateString()
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td class="urgente">
+                <i class="glyphicon @(item.Urgente ? "glyphicon-thumbs-up" : "glyphicon-thumbs-down")"></i>
+            </td>
+            <td>
+                <a href="@Url.Action("Salvar", new {id = item.Id})" class="btn btn-default btn-xs">
+                    <i class="glyphicon glyphicon-pencil"></i> Editar
+                </a> |
+                <a href="@Url.Action("Detalhes", new {id = item.Id})" class="btn btn-default btn-xs">
+                    <i class="glyphicon glyphicon-search"></i> Detalhes
+                </a>
+            </td>
         </tr>
+    }
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NomeProduto)
-                </td>
-                <td>
-                    @string.Format("{0:c}", item.ValorVenda)
-                </td>
-                <td>
-                    @item.DataEntrega.ToShortDateString()
-                </td>
-                <td>
-                    @item.DataPedido.ToShortDateString()
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NomeCliente)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cidade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Estado)
-                </td>
-                <td class="urgente">
-                    <i class="glyphicon @(item.Urgente ? "glyphicon-thumbs-up" : "glyphicon-thumbs-down")"></i>
-                </td>
-                <td>
-                    <a href="@Url.Action("Salvar", new {id = item.Id})" class="btn btn-default btn-xs">
-                        <i class="glyphicon glyphicon-pencil"></i> Editar
-                    </a> |
-                    <a href="@Url.Action("Detalhes", new {id = item.Id})" class="btn btn-default btn-xs">
-                        <i class="glyphicon glyphicon-search"></i> Detalhes
-                    </a>
-                </td>
-            </tr>
-        }
-
-    </table>
-</div>
+</table>

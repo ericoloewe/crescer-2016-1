@@ -1,4 +1,5 @@
-﻿using LojaNinja.MVC.Models;
+﻿using System.Collections.Generic;
+using LojaNinja.MVC.Models;
 using System.Web.Mvc;
 using LojaNinja.Dominio;
 using LojaNinja.Repositorio;
@@ -10,9 +11,21 @@ namespace LojaNinja.MVC.Controllers
         private readonly RepositorioPedidos _repositorio = new RepositorioPedidos();
 
         // GET: Pedido
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Index(string cliente = null, string produto = null, string geral = null)
         {
-            return View(_repositorio.ObterPedidos());
+            List<Pedido> pedidos;
+
+            if (cliente != null)
+                pedidos = _repositorio.ObterPedidoPorCliente(cliente);
+            else if (produto != null)
+                pedidos = _repositorio.ObterPedidoPorProduto(produto);
+            else if (geral != null)
+                pedidos = _repositorio.ObterPedidoQueContenha(geral);
+            else
+                pedidos = _repositorio.ObterPedidos();
+
+            return View(pedidos);
         }
 
         // GET: /Pedido/Detalhes

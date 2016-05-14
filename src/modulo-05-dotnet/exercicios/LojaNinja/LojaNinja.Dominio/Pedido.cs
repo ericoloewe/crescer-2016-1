@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace LojaNinja.Dominio
 {
@@ -91,6 +92,13 @@ namespace LojaNinja.Dominio
         private void DefineUrgenciaDoPedido(double diasRestantesParaConcluirEntrega)
         {
             Urgente = diasRestantesParaConcluirEntrega < 7;
+        }
+
+        public bool Contem(string str)
+        {
+            string strCompleta = string.Format("{0};{1};{2};{3:c};{4};{5};{6};{7};{8};{9}", DataPedido.ToShortDateString(), DataEntrega.ToShortDateString(), NomeProduto, ValorVenda, TipoPagamento, NomeCliente, Cidade, Estado, Urgente, Id);
+            return strCompleta.Contains(str) ||
+                    strCompleta.IndexOf(str, StringComparison.InvariantCultureIgnoreCase) >= 0;
         }
 
         public override string ToString()
