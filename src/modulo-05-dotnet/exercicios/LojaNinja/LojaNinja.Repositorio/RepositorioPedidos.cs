@@ -56,7 +56,10 @@ namespace LojaNinja.Repositorio
 
         public void ExcluirPedido(int id)
         {
-            throw new NotImplementedException();
+            var linhasArquivo = PegarPedidosDoArquivoEmLinhas();
+            var linhaDoPedido = linhasArquivo.IndexOf(linhasArquivo.FirstOrDefault(l => ConverteDeLinhaStringParaPedido(l).Id == id));
+            linhasArquivo.RemoveAt(linhaDoPedido);
+            File.WriteAllLines(PATH_ARQUIVO, linhasArquivo);
         }
 
         private void AddPedidoAoArquivo(Pedido pedido)

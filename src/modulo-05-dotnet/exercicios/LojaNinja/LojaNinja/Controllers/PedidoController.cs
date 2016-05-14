@@ -75,5 +75,12 @@ namespace LojaNinja.MVC.Controllers
 
             return View(pedido);
         }
+
+        public ActionResult Deletar(int id)
+        {
+            var produtoAntigo = _repositorio.ObterPedidoPorId(id);
+            _repositorio.ExcluirPedido(id);
+            return View(produtoAntigo);
+        }
     }
 }

@@ -2,9 +2,11 @@
 .tabela-de-pedidos {}    
 
     .tabela-de-pedidos .acoes {
-        width: 170px;
+        width: 245px;
     }
 
     .tabela-de-pedidos .urgente {
         text-align: center;
+        font-size: 20px;
+        vertical-align: middle;
     }

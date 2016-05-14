@@ -1,0 +1,57 @@
+﻿@model LojaNinja.Dominio.Pedido
+
+@{
+    ViewBag.Title = "Produto deletado";
+    ViewBag.SubTitle = string.Format("O produto {0} foi deletado com sucesso", Model.NomeProduto);
+}
+
+<div class="page-header">
+    <h1>@ViewBag.Title <small>@ViewBag.SubTitle</small>
+    </h1>
+</div>
+
+<h3>
+    Detalhes do produto deletado
+</h3>
+<p>
+    <strong>
+        @Html.DisplayNameFor(model => model.NomeProduto):
+    </strong>
+    @Html.DisplayFor(model => model.NomeProduto)
+    <br>
+
+    <strong>
+        @Html.DisplayNameFor(model => model.ValorVenda):
+    </strong>
+    @string.Format("{0:c}", Model.ValorVenda)
+    <br>
+
+    <strong>
+        @Html.DisplayNameFor(model => model.DataEntrega):
+    </strong>
+    @Model.DataEntrega.ToShortDateString()
+    <br>
+
+    <strong>
+        @Html.DisplayNameFor(model => model.DataPedido):
+    </strong>
+    @Model.DataPedido.ToShortDateString()
+    <br>
+
+    <strong>
+        @Html.DisplayNameFor(model => model.NomeCliente):
+    </strong>
+    @Html.DisplayFor(model => model.NomeCliente)
+    <br>
+
+    <strong>
+        @Html.DisplayNameFor(model => model.Cidade):
+    </strong>
+    @Html.DisplayFor(model => model.Cidade)
+    <br>
+
+    <strong>
+        @Html.DisplayNameFor(model => model.Estado):
+    </strong>
+    @Html.DisplayFor(model => model.Estado)
+</p>

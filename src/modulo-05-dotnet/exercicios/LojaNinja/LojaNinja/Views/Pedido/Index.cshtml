@@ -87,6 +87,9 @@
                 <i class="glyphicon @(item.Urgente ? "glyphicon-thumbs-up" : "glyphicon-thumbs-down")"></i>
             </td>
             <td>
+                <a href="@Url.Action("Deletar", new {id = item.Id})" class="btn btn-default btn-xs">
+                    <i class="glyphicon glyphicon-remove"></i> Deletar
+                </a> |
                 <a href="@Url.Action("Salvar", new {id = item.Id})" class="btn btn-default btn-xs">
                     <i class="glyphicon glyphicon-pencil"></i> Editar
                 </a> |
