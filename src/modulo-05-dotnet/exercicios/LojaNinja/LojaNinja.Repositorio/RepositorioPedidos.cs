@@ -64,28 +64,33 @@ namespace LojaNinja.Repositorio
         {
             using (var sw = new StreamWriter(PATH_ARQUIVO, true))
             {
-                string id = string.Format("{0}", _listaDePedidos.Max(p => p.Id) + 1);
+                var id = string.Format("{0}", _listaDePedidos.Max(p => p.Id) + 1);
                 sw.Write(pedido.ToString().Replace("##ID##", id));
             }
         }
 
         private void AtualizarPedidoNoArquivo(Pedido pedido)
         {
-            var linhasArquivo = File.ReadAllLines(PATH_ARQUIVO).ToList();
-            var linhaDoPedido = linhasArquivo.IndexOf(linhasArquivo.FirstOrDefault(l => Convert.ToInt32(l.Split(';')[0]) == pedido.Id));
-            linhasArquivo[linhaDoPedido] = pedido.ToString();
-            File.AppendAllLines(PATH_ARQUIVO, linhasArquivo);
+            var linhasArquivo = PegarPedidosDoArquivoEmLinhas();
+            var linhaDoPedido = linhasArquivo.IndexOf(linhasArquivo.FirstOrDefault(l => ConverteDeLinhaStringParaPedido(l).Id == pedido.Id));
+            linhasArquivo[linhaDoPedido] = pedido.ToString().Replace("##ID##", string.Format("{0}", pedido.Id));
+            File.WriteAllLines(PATH_ARQUIVO, linhasArquivo);
         }
 
         private List<Pedido> PegarPedidosDoArquivo()
+        {
+            //Retorna lista de produtos
+            return PegarPedidosDoArquivoEmLinhas().Select(ConverteDeLinhaStringParaPedido).ToList();
+        }
+
+        private List<string> PegarPedidosDoArquivoEmLinhas()
         {
             var linhasArquivo = File.ReadAllLines(PATH_ARQUIVO).ToList();
 
             //Remove linha do cabeçalho
             linhasArquivo.RemoveAt(0);
 
-            //Retorna lista de produtos
-            return linhasArquivo.Select(ConverteDeLinhaStringParaPedido).ToList();
+            return linhasArquivo;
         }
 
         private Pedido ConverteDeLinhaStringParaPedido(string linha)

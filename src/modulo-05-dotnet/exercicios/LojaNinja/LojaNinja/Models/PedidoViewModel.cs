@@ -7,7 +7,6 @@ namespace LojaNinja.MVC.Models
 {
     public class PedidoViewModel
     {
-        [MinLength(0)]
         public int Id { get; set; }
         [Required(ErrorMessage = "Nome do produto não informado!")]
         [DisplayName("Nome do produto")]        

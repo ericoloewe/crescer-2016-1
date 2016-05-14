@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Globalization;
 
 namespace LojaNinja.Dominio
 {
@@ -13,7 +12,6 @@ namespace LojaNinja.Dominio
         public Pedido(DateTime dataEntregaDesejada, string nomeProduto, decimal valor, TipoPagamento tipoPagamento, string nomeCliente, string cidade, string estado, int id = 0)
         {
             Id = id;
-            DataEntrega = dataEntregaDesejada;
             NomeProduto = nomeProduto;
             ValorVenda = valor;
             TipoPagamento = tipoPagamento;
@@ -21,9 +19,11 @@ namespace LojaNinja.Dominio
             Cidade = cidade;
             Estado = estado;
 
-            //DateTime.Now contaria as horas, minutos e segundos, isso inviabliziaria algumas validações a seguir
-            DataPedido = DateTime.Today;
-            
+            // Uma data de pedido não é alterada!
+            if (id == 0) //DateTime.Now contaria as horas, minutos e segundos, isso inviabliziaria algumas validações a seguir
+                DataPedido = DateTime.Today;
+
+            DataEntrega = dataEntregaDesejada;
             var diasRestantesParaConcluirEntrega = dataEntregaDesejada.Subtract(DataPedido).TotalDays;
             ValidaPossibilidadeEntrega(diasRestantesParaConcluirEntrega);
             DefineUrgenciaDoPedido(diasRestantesParaConcluirEntrega);

@@ -1,7 +1,18 @@
 ﻿@model LojaNinja.MVC.Models.PedidoViewModel
 
 @{
-    ViewBag.Title = "Novo Pedido";
+    if (Model == null)
+    {
+        ViewBag.Title = "Novo Pedido";
+        ViewBag.SubTitle = "Cadastre um novo pedido a partir dessa pagina";
+        ViewBag.Btn = "Criar Pedido";
+    }
+    else
+    {
+        ViewBag.Title = "Editar Pedido";
+        ViewBag.SubTitle = "Edite um pedido a partir dessa pagina";
+        ViewBag.Btn = "Salvar Pedido";
+    }
 }
 
 @section Styles {
@@ -9,7 +20,7 @@
 }
 
 <div class="page-header">
-    <h1>Novo Pedido <small>Cadastre um novo pedido a partir dessa pagina</small></h1>
+    <h1>@ViewBag.Title <small>@ViewBag.SubTitle</small></h1>
 </div>
 
 @using (Html.BeginForm("Salvar", "Pedido", FormMethod.Post, new { @class = "cadastro-de-pedidos" }))
@@ -37,7 +48,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DataEntrega, new {@class = "control-label col-md-2"})
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.DataEntrega, new {@class = "form-control", maxlength = "10" })
+                @Html.TextBoxFor(model => model.DataEntrega, "{0:d}", new {@class = "form-control", maxlength = "10" })
                 @Html.ValidationMessageFor(model => model.DataEntrega, "", new {@class = "text-danger"})
             </div>
         </div>
@@ -76,7 +87,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <button class="btn btn-primary">Criar Pedido</button>
+                <button class="btn btn-primary">@ViewBag.Btn</button>
             </div>
         </div>
     </div>
