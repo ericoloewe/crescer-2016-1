@@ -23,9 +23,24 @@ namespace LojaNinja.Repositorio
             return _listaDePedidos;
         }
 
+        public List<Pedido> ObterPedidoQueContenha(string str)
+        {
+            return _listaDePedidos.Where(p => p.Contem(str)).ToList();
+        }
+
         public Pedido ObterPedidoPorId(int id)
         {
             return _listaDePedidos.FirstOrDefault(p => p.Id == id);
+        }
+
+        public List<Pedido> ObterPedidoPorProduto(string produto)
+        {
+            return _listaDePedidos.Where(p => p.NomeProduto == produto).ToList();
+        }
+
+        public List<Pedido> ObterPedidoPorCliente(string cliente)
+        {
+            return _listaDePedidos.Where(p => p.NomeCliente == cliente).ToList();
         }
 
         public void IncluirPedido(Pedido pedido)
@@ -36,7 +51,8 @@ namespace LojaNinja.Repositorio
 
         public void AtualizarPedido(Pedido pedido)
         {
-            throw new NotImplementedException();
+            _listaDePedidos[pedido.Id] = pedido;
+            AtualizarPedidoNoArquivo(pedido);
         }
 
         public void ExcluirPedido(int id)
@@ -51,6 +67,14 @@ namespace LojaNinja.Repositorio
                 string id = string.Format("{0}", _listaDePedidos.Max(p => p.Id) + 1);
                 sw.Write(pedido.ToString().Replace("##ID##", id));
             }
+        }
+
+        private void AtualizarPedidoNoArquivo(Pedido pedido)
+        {
+            var linhasArquivo = File.ReadAllLines(PATH_ARQUIVO).ToList();
+            var linhaDoPedido = linhasArquivo.IndexOf(linhasArquivo.FirstOrDefault(l => Convert.ToInt32(l.Split(';')[0]) == pedido.Id));
+            linhasArquivo[linhaDoPedido] = pedido.ToString();
+            File.AppendAllLines(PATH_ARQUIVO, linhasArquivo);
         }
 
         private List<Pedido> PegarPedidosDoArquivo()
