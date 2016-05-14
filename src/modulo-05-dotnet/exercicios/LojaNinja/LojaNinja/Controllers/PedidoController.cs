@@ -69,9 +69,11 @@ namespace LojaNinja.MVC.Controllers
                     _repositorio.AtualizarPedido(
                         new Pedido(pedido.DataEntrega, pedido.NomeProduto, pedido.ValorVenda,
                             pedido.TipoPagamento, pedido.NomeCliente, pedido.Cidade, pedido.Estado, pedido.Id));
+
+                return RedirectToAction("Index");
             }
 
-            return RedirectToAction("Index");
+            return View(pedido);
         }
     }
 }
