@@ -3,11 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace LojaNinja.Repositorio
 {
-    public class RepositorioPedidos
+    public class RepositorioPedidos : IRepositorioPedidos
     {
         private readonly List<Pedido> _listaDePedidos = new List<Pedido>();
         private const string PATH_ARQUIVO = @"B:\Erico\Documents\Repos\crescer-2016-1\src\modulo-05-dotnet\exercicios\LojaNinja\LojaNinja\App_Data\Pedidos.txt";
