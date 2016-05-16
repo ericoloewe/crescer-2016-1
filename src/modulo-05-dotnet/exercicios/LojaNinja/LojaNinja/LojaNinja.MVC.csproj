@@ -155,6 +155,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Filters\LojaNinjaToken.cs" />
+    <Compile Include="Models\UsuarioViewModel.cs" />
+    <Compile Include="Services\ServicoDeSessao.cs" />
     <Content Include="Content\Site\default.css" />
     <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />

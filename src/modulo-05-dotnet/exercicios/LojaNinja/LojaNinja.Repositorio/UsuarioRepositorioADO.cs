@@ -27,7 +27,7 @@ namespace LojaNinja.Repositorio
 
                 SqlDataReader leitor = comando.ExecuteReader();
                 if(leitor.Read())
-                    return new Usuario(int.Parse(leitor["id"].ToString()), leitor["nome"].ToString(), leitor["senha"].ToString());
+                    return new Usuario(int.Parse(leitor["id"].ToString()), leitor["nome"].ToString(), leitor["email"].ToString(), leitor["senha"].ToString());
             }
             throw new ArgumentException("Usuario não encontrado.");
         }

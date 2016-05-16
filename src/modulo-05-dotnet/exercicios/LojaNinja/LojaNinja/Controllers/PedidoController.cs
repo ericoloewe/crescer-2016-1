@@ -8,7 +8,12 @@ namespace LojaNinja.MVC.Controllers
 {
     public class PedidoController : Controller
     {
-        private readonly IPedidoRepositorio _repositorio = new PedidoRepositorio();
+        private readonly PedidoServico _pedidoServico;
+
+        public PedidoController()
+        {
+            _pedidoServico = new PedidoServico(new PedidoRepositorio());
+        }
 
         // GET: Pedido
         [HttpGet]
@@ -17,13 +22,13 @@ namespace LojaNinja.MVC.Controllers
             List<Pedido> pedidos;
 
             if (cliente != null)
-                pedidos = _repositorio.ObterPedidoPorCliente(cliente);
+                pedidos = _pedidoServico.ObterPedidoPorCliente(cliente);
             else if (produto != null)
-                pedidos = _repositorio.ObterPedidoPorProduto(produto);
+                pedidos = _pedidoServico.ObterPedidoPorProduto(produto);
             else if (geral != null)
-                pedidos = _repositorio.ObterPedidoQueContenha(geral);
+                pedidos = _pedidoServico.ObterPedidoQueContenha(geral);
             else
-                pedidos = _repositorio.ObterPedidos();
+                pedidos = _pedidoServico.ObterPedidos();
 
             return View(pedidos);
         }
@@ -31,7 +36,7 @@ namespace LojaNinja.MVC.Controllers
         // GET: /Pedido/Detalhes
         public ActionResult Detalhes(int id)
         {
-            return View(_repositorio.ObterPedidoPorId(id));
+            return View(_pedidoServico.ObterPedidoPorId(id));
         }
 
         // GET: /Pedido/Salvar
@@ -39,7 +44,7 @@ namespace LojaNinja.MVC.Controllers
         {
             if (id > 0)
             {
-                var pedido = _repositorio.ObterPedidoPorId(id);
+                var pedido = _pedidoServico.ObterPedidoPorId(id);
                 return View(new PedidoViewModel()
                 {
                     Id = pedido.Id,
@@ -62,11 +67,11 @@ namespace LojaNinja.MVC.Controllers
             if (ModelState.IsValid)
             {
                 if (pedido.Id == 0)
-                    _repositorio.IncluirPedido(
+                    _pedidoServico.IncluirPedido(
                         new Pedido(pedido.DataEntrega, pedido.NomeProduto, pedido.ValorVenda,
                             pedido.TipoPagamento, pedido.NomeCliente, pedido.Cidade, pedido.Estado));
                 else
-                    _repositorio.AtualizarPedido(
+                    _pedidoServico.AtualizarPedido(
                         new Pedido(pedido.DataEntrega, pedido.NomeProduto, pedido.ValorVenda,
                             pedido.TipoPagamento, pedido.NomeCliente, pedido.Cidade, pedido.Estado, pedido.Id));
 
@@ -78,8 +83,8 @@ namespace LojaNinja.MVC.Controllers
 
         public ActionResult Deletar(int id)
         {
-            var produtoAntigo = _repositorio.ObterPedidoPorId(id);
-            _repositorio.ExcluirPedido(id);
+            var produtoAntigo = _pedidoServico.ObterPedidoPorId(id);
+            _pedidoServico.ExcluirPedido(id);
             return View(produtoAntigo);
         }
     }
