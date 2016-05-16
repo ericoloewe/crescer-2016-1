@@ -8,7 +8,7 @@ namespace LojaNinja.MVC.Controllers
 {
     public class PedidoController : Controller
     {
-        private readonly IRepositorioPedidos _repositorio = new RepositorioPedidos();
+        private readonly IPedidoRepositorio _repositorio = new PedidoRepositorio();
 
         // GET: Pedido
         [HttpGet]

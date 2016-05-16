@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using LojaNinja.Dominio;
 
-namespace LojaNinja.Repositorio
+namespace LojaNinja.Dominio
 {
-    public interface IRepositorioPedidos
+    public interface IPedidoRepositorio
     {
         List<Pedido> ObterPedidos();
         List<Pedido> ObterPedidoQueContenha(string str);
