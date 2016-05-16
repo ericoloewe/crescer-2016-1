@@ -1,0 +1,26 @@
+﻿@model BaseAulaSeguranca.Models.Login.LoginViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Página Principal</h2>
+
+@using (Html.BeginForm("Entrar", "Login", FormMethod.Post, new { @class = "form" }))
+{
+    <!-- Este carinha aqui que gera o token de segurança do form. -->
+    @Html.AntiForgeryToken()
+    <div>
+        @Html.ValidationSummary(excludePropertyErrors: false)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email) <br />
+        @Html.TextBoxFor(m => m.Email) 
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Senha) <br />
+        @Html.PasswordFor(m => m.Senha)
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Entrar" />
+    </div>
+}
