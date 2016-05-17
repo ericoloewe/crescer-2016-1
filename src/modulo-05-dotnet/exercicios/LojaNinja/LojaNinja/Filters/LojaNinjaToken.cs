@@ -1,4 +1,4 @@
-﻿using LojaNinja.MVC.Models;
+﻿using System.Linq;
 using LojaNinja.MVC.Services;
 using System.Web;
 using System.Web.Mvc;
@@ -8,11 +8,11 @@ namespace LojaNinja.MVC.Filters
 {
     public class LojaNinjaToken : AuthorizeAttribute
     {
-        private readonly string[] _permissoesRequeridas = null;
+        private readonly string[] _permissoesRequeridas;
 
         public LojaNinjaToken()
         {
-            _permissoesRequeridas = string.IsNullOrWhiteSpace(this.Roles) ?
+            _permissoesRequeridas = string.IsNullOrWhiteSpace(Roles) ?
                                         null :
                                         Roles.Split(',');
         }
@@ -21,24 +21,9 @@ namespace LojaNinja.MVC.Filters
         {
             get
             {
-                UsuarioViewModel usuarioLogado = ServicoDeSessao.UsuarioLogado;
-
-                if (_permissoesRequeridas != null)
-                {
-                    foreach (string permissao in _permissoesRequeridas)
-                    {
-                        if (usuarioLogado.TemPermissao(permissao))
-                        {
-                            return true;
-                        }
-                    }
-                }
-                else
-                {
-                    return true;
-                }
-
-                return false;
+                var usuarioLogado = ServicoDeSessao.UsuarioLogado;
+                return _permissoesRequeridas == null || 
+                        _permissoesRequeridas.Any(permissao => usuarioLogado.TemPermissao(permissao));
             }
         }
 
@@ -49,7 +34,7 @@ namespace LojaNinja.MVC.Filters
 
         public override void OnAuthorization(AuthorizationContext filterContext)
         {
-            bool estaAutenticadoEAutorizado = this.AuthorizeCore(filterContext.HttpContext);
+            bool estaAutenticadoEAutorizado = AuthorizeCore(filterContext.HttpContext);
 
             if (!estaAutenticadoEAutorizado)
             {

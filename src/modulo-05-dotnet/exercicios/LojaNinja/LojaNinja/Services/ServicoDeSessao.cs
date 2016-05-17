@@ -11,15 +11,9 @@ namespace LojaNinja.MVC.Services
         private const string COOKIE_AUTENTICACAO = "COOKIE_AUTENTICACAO";
         private const string USUARIO_LOGADO = "USUARIO_LOGADO";
 
-        private static Dictionary<string, string> _usuariosLogados = new Dictionary<string, string>();
+        private static readonly Dictionary<string, string> _usuariosLogados = new Dictionary<string, string>();
 
-        public static UsuarioViewModel UsuarioLogado
-        {
-            get
-            {
-                return (UsuarioViewModel)HttpContext.Current.Session[USUARIO_LOGADO];
-            }
-        }
+        public static UsuarioViewModel UsuarioLogado => (UsuarioViewModel)HttpContext.Current.Session[USUARIO_LOGADO];
 
         public static bool EstaLogado
         {
@@ -27,7 +21,7 @@ namespace LojaNinja.MVC.Services
             {
                 if (UsuarioLogado != null)
                 {
-                    HttpCookie cookieDeAutenticacao = HttpContext.Current.Request.Cookies.Get(COOKIE_AUTENTICACAO);
+                    var cookieDeAutenticacao = HttpContext.Current.Request.Cookies.Get(COOKIE_AUTENTICACAO);
 
                     return _usuariosLogados.Any(
                                 u => u.Key.Equals(cookieDeAutenticacao.Value)

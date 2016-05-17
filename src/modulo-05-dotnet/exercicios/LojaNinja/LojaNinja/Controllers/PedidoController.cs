@@ -2,10 +2,12 @@
 using LojaNinja.MVC.Models;
 using System.Web.Mvc;
 using LojaNinja.Dominio;
+using LojaNinja.MVC.Filters;
 using LojaNinja.Repositorio;
 
 namespace LojaNinja.MVC.Controllers
 {
+    [LojaNinjaToken]
     public class PedidoController : Controller
     {
         private readonly PedidoServico _pedidoServico;
@@ -62,6 +64,7 @@ namespace LojaNinja.MVC.Controllers
 
         // POST: /Pedido/Salvar
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Salvar(PedidoViewModel pedido)
         {
             if (ModelState.IsValid)
