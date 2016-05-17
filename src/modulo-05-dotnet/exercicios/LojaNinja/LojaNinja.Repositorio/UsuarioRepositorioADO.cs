@@ -3,21 +3,16 @@ using System;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Transactions;
+using LojaNinja.Repositorio.Extensions;
 
 namespace LojaNinja.Repositorio
 {
-    public class UsuarioRepositorioADO : IUsuarioRepositorio
+    public class UsuarioRepositorioADO : RepositorioBase, IUsuarioRepositorio
     {
-        private readonly string _stringConexao;
-        public UsuarioRepositorioADO()
-        {
-            _stringConexao = ConfigurationManager.ConnectionStrings["LojaNinja"].ConnectionString;
-        }
-        
         public Usuario BuscarUsuarioPorAutenticacao(string email, string senha)
         {
-            string sql = "SELECT * FROM Usuarios WHERE email=@p_email and senha=@p_senha";
-            using (var db = new SqlConnection(_stringConexao))
+            const string sql = "SELECT * FROM Usuario WHERE email=@p_email and senha=@p_senha";
+            using (var db = new SqlConnection(ConnectionString))
             {
                 var comando = new SqlCommand(sql, db);
                 comando.Parameters.Add(new SqlParameter("p_email", email));
@@ -25,11 +20,45 @@ namespace LojaNinja.Repositorio
 
                 db.Open();
 
-                SqlDataReader leitor = comando.ExecuteReader();
+                var leitor = comando.ExecuteReader();
                 if(leitor.Read())
-                    return new Usuario(int.Parse(leitor["id"].ToString()), leitor["nome"].ToString(), leitor["email"].ToString(), leitor["senha"].ToString());
+                    return new Usuario(leitor.ParseInt("id"), leitor["nome"].ToString(), leitor["email"].ToString(), leitor["senha"].ToString());
             }
             throw new ArgumentException("Usuario não encontrado.");
+        }
+
+        public void CadastrarUsuario(Usuario usuario)
+        {
+            using (var scope = new TransactionScope())
+            {
+                using (var db = new SqlConnection(ConnectionString))
+                {
+                    try
+                    {
+                        const string sql = "INSERT INTO Usuario (nome, email, senha) VALUES('@p_nome', '@p_email', '@p_senha')";
+
+                        var comando = new SqlCommand(sql, db);
+                        comando.Parameters.Add(new SqlParameter("p_nome", usuario.Nome));
+                        comando.Parameters.Add(new SqlParameter("p_email", usuario.Email));
+                        comando.Parameters.Add(new SqlParameter("p_senha", usuario.Senha));
+
+                        db.Open();
+
+                        var linhasAfetadas = comando.ExecuteNonQuery();
+
+                        if (linhasAfetadas != 1)
+                        {
+                            throw new Exception("Não foi possivel realizar o cadastro de usuarios.");
+                        }
+
+                        scope.Complete();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+                }
+            }
         }
     }
 }
