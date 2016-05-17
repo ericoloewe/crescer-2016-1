@@ -1,10 +1,11 @@
-﻿using System;
+﻿using LojaNinja.Dominio.Services;
+using System.Collections.Generic;
 
 namespace LojaNinja.Dominio
 {
     public class Usuario
     {
-        public Usuario(string nome, string email, string senha, int id = 0, string[] permissoes = null)
+        public Usuario(string nome, string email, string senha, int id = 0, IList<Permissao> permissoes = null)
         {
             Id = id;
             Nome = nome;
@@ -25,6 +26,12 @@ namespace LojaNinja.Dominio
         public string Nome { get; private set; }
         public string Email { get; private set; }
         public string Senha { get; private set; }
-        public string[] Permissoes { get; private set; }
+
+        public IList<Permissao> Permissoes { get; set; }
+
+        public void CriptografarSenha()
+        {
+            Senha = CriptografiaServico.Criptografar(Senha);
+        }
     }
 }
