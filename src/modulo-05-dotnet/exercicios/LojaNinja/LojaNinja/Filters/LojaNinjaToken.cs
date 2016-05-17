@@ -8,13 +8,13 @@ namespace LojaNinja.MVC.Filters
 {
     public class LojaNinjaToken : AuthorizeAttribute
     {
-        private readonly string[] _permissoesRequeridas;
-
-        public LojaNinjaToken()
-        {
-            _permissoesRequeridas = string.IsNullOrWhiteSpace(Roles) ?
+        private string[] _permissoesRequeridas {
+            get
+            {
+                return string.IsNullOrWhiteSpace(Roles) ?
                                         null :
                                         Roles.Split(',');
+            }
         }
 
         private bool TemAutorizacao
