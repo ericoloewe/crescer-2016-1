@@ -22,20 +22,29 @@ Pedido.prototype.contains = function(str) {
 };
 
 Pedido.prototype.paraTrTabela = function() {
-    return $("<tr>").append($("<td>").text(this.NomeProduto))
+    return $("<tr>").attr("data-pedido-id", this.Id)
+                        .append($("<td>").text(this.NomeProduto))
                         .append($("<td>").text(this.ValorVenda))
                         .append($("<td>").text(this.DataEntrega))
                         .append($("<td>").text(this.DataPedido))
                         .append($("<td>").text(this.NomeCliente))
                         .append($("<td>").text(this.Estado))
                         .append($("<td>").text(this.Cidade))
-                        .append($("<td>").text(this.DataEntrega));
-};
-
-Array.prototype.paraTrsTabela = function() {
-    return this.map(function(pedido) {
-        return pedido.paraTrTabela();
-    });
+                        .append($("<td>").addClass("urgente").html($("<i>").addClass("glyphicon glyphicon-thumbs-" + (this.Urgente ? "up" : "down"))))
+                        .append($("<td>").append($("<a>").attr("href", "/Pedido/Deletar/" + this.Id)
+                                                            .addClass("btn btn-default btn-xs")
+                                                            .append($("<i>").addClass("glyphicon glyphicon-remove"))
+                                                            .append(" Excluir"))
+                                         .append(" | ")
+                                         .append($("<a>").attr("href", "/Pedido/Salvar/" + this.Id)
+                                                            .addClass("btn btn-default btn-xs")
+                                                            .append($("<i>").addClass("glyphicon glyphicon-pencil"))
+                                                            .append(" Editar"))
+                                         .append(" | ")
+                                         .append($("<a>").attr("href", "/Pedido/Detalhes/" + this.Id)
+                                                            .addClass("btn btn-default btn-xs")
+                                                            .append($("<i>").addClass("glyphicon glyphicon-search"))
+                                                            .append(" Detalhes")));
 };
 
 String.prototype.contains = function(substring) {
@@ -122,10 +131,11 @@ String.prototype.contains = function(substring) {
             this.listaDePedidos = lista;
         },
 
-        preencherTabela: function(pedidos) {
-            //this.$tabelaPedidos.find("tr td")
-            //                    .parent()
-            //                    .html(pedidos.paraTrsTabela());
+        preencherTabela: function (pedidos) {
+            this.$tabelaPedidos.find("tbody")
+                                .html(pedidos.map(function (pedido) {
+                                    return pedido.paraTrTabela();
+                                }));
         }
     };
 
