@@ -1,0 +1,59 @@
+﻿@model LojaNinja.MVC.Models.CadastroUsuarioViewModel
+
+@{
+    ViewBag.Title = "Cadastre-se";
+    ViewBag.SubTitle = "Registre-se como um usuario para ter acesso a aplicação";
+}
+
+<div class="page-header">
+    <h1>@ViewBag.Title <small>@ViewBag.SubTitle</small>
+    </h1>
+</div>
+
+@using (Html.BeginForm("Cadastro", "Usuario", FormMethod.Post, new { @class = "cadastro-de-usuario" }))
+{
+    <div class="form-horizontal">
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(false, "", new { @class = "alert alert-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Nome, new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.Nome, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Senha, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Senha, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ConfirmaSenha, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ConfirmaSenha, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ConfirmaSenha, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button class="btn btn-primary">Cadastre-se</button>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script src="~/scripts/jquery.validate.min.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
+}

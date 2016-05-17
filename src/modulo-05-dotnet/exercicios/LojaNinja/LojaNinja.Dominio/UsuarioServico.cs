@@ -5,11 +5,16 @@ namespace LojaNinja.Dominio
 {
     public class UsuarioServico
     {
-        private IUsuarioRepositorio _usuarioRepositorio;
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
 
         public UsuarioServico(IUsuarioRepositorio usuarioRepositorio)
         {
             _usuarioRepositorio = usuarioRepositorio;
+        }
+
+        public void CadastrarUsuario(Usuario usuario)
+        {
+            _usuarioRepositorio.CadastrarUsuario(usuario);
         }
 
         public Usuario BuscarUsuarioPorAutenticacao(string email, string senha)
