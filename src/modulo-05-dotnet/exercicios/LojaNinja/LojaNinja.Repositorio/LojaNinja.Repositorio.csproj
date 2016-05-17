@@ -47,7 +47,6 @@
     <Compile Include="PedidoRepositorio.cs" />
     <Compile Include="RepositorioBase.cs" />
     <Compile Include="UsuarioRepositorio.cs" />
-    <Compile Include="UsuarioRepositorioADO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LojaNinja.Dominio\LojaNinja.Dominio.csproj">

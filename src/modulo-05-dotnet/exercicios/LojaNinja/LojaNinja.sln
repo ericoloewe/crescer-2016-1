@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNinja.Test", "LojaNinja
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNinja.Repositorio", "LojaNinja.Repositorio\LojaNinja.Repositorio.csproj", "{E8C45911-22F7-4359-9641-70A650CDEAE9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNinja.Repositorio.ADO", "LojaNinja.Repositorio.ADO\LojaNinja.Repositorio.ADO.csproj", "{174E70A6-6DC1-4D35-8C6D-E437E5CD07EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNinja.Repositorio.EF", "LojaNinja.Repositorio.EF\LojaNinja.Repositorio.EF.csproj", "{DCED1617-3624-4C11-BD92-82CE824DCBB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{E8C45911-22F7-4359-9641-70A650CDEAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8C45911-22F7-4359-9641-70A650CDEAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8C45911-22F7-4359-9641-70A650CDEAE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174E70A6-6DC1-4D35-8C6D-E437E5CD07EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174E70A6-6DC1-4D35-8C6D-E437E5CD07EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174E70A6-6DC1-4D35-8C6D-E437E5CD07EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174E70A6-6DC1-4D35-8C6D-E437E5CD07EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCED1617-3624-4C11-BD92-82CE824DCBB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCED1617-3624-4C11-BD92-82CE824DCBB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCED1617-3624-4C11-BD92-82CE824DCBB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCED1617-3624-4C11-BD92-82CE824DCBB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +60,7 @@ Global
 		{EA5E42DE-5545-4DB0-BCEC-BC9D8FCA8334} = {7B5128F6-1329-40EC-8B61-AA80F0F482F4}
 		{E3AE0B28-20DC-4BC6-A768-CA32FFD1CA03} = {7B5128F6-1329-40EC-8B61-AA80F0F482F4}
 		{E8C45911-22F7-4359-9641-70A650CDEAE9} = {8F1CEB5F-44EB-4690-8C24-5232B8AA02F5}
+		{174E70A6-6DC1-4D35-8C6D-E437E5CD07EC} = {8F1CEB5F-44EB-4690-8C24-5232B8AA02F5}
+		{DCED1617-3624-4C11-BD92-82CE824DCBB2} = {8F1CEB5F-44EB-4690-8C24-5232B8AA02F5}
 	EndGlobalSection
 EndGlobal
