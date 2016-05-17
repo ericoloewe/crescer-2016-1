@@ -42,8 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\SqlDataReaderExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PedidoRepositorio.cs" />
+    <Compile Include="RepositorioBase.cs" />
     <Compile Include="UsuarioRepositorio.cs" />
     <Compile Include="UsuarioRepositorioADO.cs" />
   </ItemGroup>
