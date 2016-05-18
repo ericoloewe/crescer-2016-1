@@ -1,4 +1,5 @@
 ﻿using LojaNinja.Dominio;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace LojaNinja.MVC.Models
         public string Nome { get; set; }
         [DataType(DataType.Password)]
         public string Senha { get; set; }
-        public string[] Permissoes { get; set; }
+        public IList<Permissao> Permissoes { get; set; }
 
         public bool TemPermissao(string permissao)
         {

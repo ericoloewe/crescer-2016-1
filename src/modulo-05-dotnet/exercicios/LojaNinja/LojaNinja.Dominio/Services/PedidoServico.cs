@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LojaNinja.Dominio
+namespace LojaNinja.Dominio.Services
 {
     public class PedidoServico
     {

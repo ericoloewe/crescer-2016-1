@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using LojaNinja.Dominio;
 using LojaNinja.MVC.Filters;
 using LojaNinja.Repositorio;
+using LojaNinja.Dominio.Services;
 
 namespace LojaNinja.MVC.Controllers
 {

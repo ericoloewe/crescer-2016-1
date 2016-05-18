@@ -5,7 +5,8 @@ using LojaNinja.MVC.Extensions;
 using LojaNinja.MVC.Filters;
 using LojaNinja.MVC.Models;
 using LojaNinja.MVC.Services;
-using LojaNinja.Repositorio;
+using LojaNinja.Repositorio.ADO;
+using LojaNinja.Dominio.Services;
 
 namespace LojaNinja.MVC.Controllers
 {

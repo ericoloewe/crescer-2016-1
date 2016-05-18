@@ -1,14 +1,20 @@
 ﻿using LojaNinja.Dominio;
 using System;
-using System.Configuration;
 using System.Data.SqlClient;
 using System.Transactions;
 using LojaNinja.Repositorio.Extensions;
 
-namespace LojaNinja.Repositorio
+namespace LojaNinja.Repositorio.ADO
 {
     public class UsuarioRepositorioADO : RepositorioBase, IUsuarioRepositorio
     {
+        private readonly PermissaoRepositorioADO _permissaoRepositorio;
+
+        public UsuarioRepositorioADO()
+        {
+            _permissaoRepositorio = new PermissaoRepositorioADO();
+        }
+
         public Usuario BuscarUsuarioPorAutenticacao(string email, string senha)
         {
             const string sql = "SELECT * FROM Usuario WHERE email=@p_email and senha=@p_senha";
@@ -35,7 +41,7 @@ namespace LojaNinja.Repositorio
                 {
                     try
                     {
-                        const string sql = "INSERT INTO Usuario (nome, email, senha) VALUES('@p_nome', '@p_email', '@p_senha')";
+                        const string sql = "INSERT INTO Usuario (nome, email, senha) VALUES (@p_nome, @p_email, @p_senha)";
 
                         var comando = new SqlCommand(sql, db);
                         comando.Parameters.Add(new SqlParameter("p_nome", usuario.Nome));
@@ -48,7 +54,41 @@ namespace LojaNinja.Repositorio
 
                         if (linhasAfetadas != 1)
                         {
-                            throw new Exception("Não foi possivel realizar o cadastro de usuarios.");
+                            throw new Exception("Não foi possivel realizar o cadastro do usuario.");
+                        }
+
+                        scope.Complete();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+                }
+            }
+            CadastrarPermissaoAoUsuario(BuscarUsuarioPorAutenticacao(usuario.Email, usuario.Senha), _permissaoRepositorio.BuscarPermissaoPorNome("COMUM"));
+        }
+
+        private void CadastrarPermissaoAoUsuario(Usuario usuario, Permissao permissao)
+        {
+            using (var scope = new TransactionScope())
+            {
+                using (var db = new SqlConnection(ConnectionString))
+                {
+                    try
+                    {
+                        const string sql = "INSERT INTO UsuarioPermissao (usuario_id, permissao_id) VALUES (@p_usuario_id, @p_permissao_id)";
+
+                        var comando = new SqlCommand(sql, db);
+                        comando.Parameters.Add(new SqlParameter("p_usuario_id", usuario.Id));
+                        comando.Parameters.Add(new SqlParameter("p_permissao_id", permissao.Id));
+
+                        db.Open();
+
+                        var linhasAfetadas = comando.ExecuteNonQuery();
+
+                        if (linhasAfetadas != 1)
+                        {
+                            throw new Exception("Não foi possivel realizar o cadastro da permissao ao usuario.");
                         }
 
                         scope.Complete();
