@@ -1,0 +1,41 @@
+﻿@using CdZ.MVC.Services
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Custom/principal.css" rel="stylesheet" />
+</head>
+<body>
+
+    @if (ServicoDeSessao.EstaLogado)
+    {
+        <header>
+            <div class="container-fluid">
+                <div class="pull-right">
+                    Bem Vindo <b>@ServicoDeSessao.UsuarioLogado.Nome</b> (<a href="/Login/Loggout">Sair</a>)
+                </div>
+            </div>
+        </header>
+    }
+    
+
+    <h1 class="site-title">Dakishimeta kokoro no kosumo</h1>
+    <div class="container"> 
+        @RenderBody()
+    </div>
+
+    <script src="~/Scripts/jquery-2.2.3.min.js"></script> 
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    @RenderSection("scripts", false)   
+</body>
+</html>
