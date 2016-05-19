@@ -68,6 +68,23 @@ namespace LojaNinja.Repositorio.ADO
             CadastrarPermissaoAoUsuario(BuscarUsuarioPorAutenticacao(usuario.Email, usuario.Senha), _permissaoRepositorio.BuscarPermissaoPorNome("COMUM"));
         }
 
+        public Usuario BuscarUsuarioPorId(int id)
+        {
+            const string sql = "SELECT * FROM Usuario WHERE id=@p_id";
+            using (var db = new SqlConnection(ConnectionString))
+            {
+                var comando = new SqlCommand(sql, db);
+                comando.Parameters.Add(new SqlParameter("p_id", id));
+
+                db.Open();
+
+                var leitor = comando.ExecuteReader();
+                if (leitor.Read())
+                    return new Usuario(leitor.ParseInt("id"), leitor["nome"].ToString(), leitor["email"].ToString(), leitor["senha"].ToString());
+            }
+            throw new ArgumentException("Usuario não encontrado.");
+        }
+
         private void CadastrarPermissaoAoUsuario(Usuario usuario, Permissao permissao)
         {
             using (var scope = new TransactionScope())
