@@ -19,6 +19,13 @@ namespace LojaNinja.MVC.Controllers
             _usuarioServico = new UsuarioServico(new UsuarioRepositorioADO());
         }
 
+        // GET: /Usuario/Logout
+        [HttpPost]
+        public ActionResult Sair()
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
         // GET: /Usuario/Login
         [AllowAnonymous]
         public ActionResult Login()
@@ -77,6 +84,11 @@ namespace LojaNinja.MVC.Controllers
         {
             var usuario = _usuarioServico.BuscarUsuarioPorAutenticacao("comum@teste.com", "abc123");
             return View();
+        }
+
+        public ActionResult Detalhes(int id)
+        {
+            return View(_usuarioServico.BuscarUsuarioPorId(id));
         }
     }
 }

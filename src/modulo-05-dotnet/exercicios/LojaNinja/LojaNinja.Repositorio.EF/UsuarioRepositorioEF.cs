@@ -21,5 +21,13 @@ namespace LojaNinja.Repositorio.EF
                 db.SaveChanges();
             }
         }
+
+        public Usuario BuscarUsuarioPorId(int id)
+        {
+            using (var db = new LojaNinjaContext())
+            {
+                return db.Usuario.FirstOrDefault(u => id.Equals(u.Id));
+            }
+        }
     }
 }

@@ -23,5 +23,10 @@
 
             return usuarioEncontrado;
         }
+
+        public Usuario BuscarUsuarioPorId(int id)
+        {
+            return _usuarioRepositorio.BuscarUsuarioPorId(id);
+        }
     }
 }

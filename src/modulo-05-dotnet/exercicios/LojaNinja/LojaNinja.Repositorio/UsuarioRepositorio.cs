@@ -26,5 +26,10 @@ namespace LojaNinja.Repositorio
         {
             throw new System.NotImplementedException();
         }
+
+        public Usuario BuscarUsuarioPorId(int id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
