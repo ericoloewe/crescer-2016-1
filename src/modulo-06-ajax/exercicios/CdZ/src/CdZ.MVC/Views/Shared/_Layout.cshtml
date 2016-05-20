@@ -1,0 +1,56 @@
+﻿@using CdZ.MVC.Services
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Custom/principal.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.2.3.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <div id="spinner" style="display: none; position: fixed; width:100%; height:100%; background: rgba(0,0,0,.5) url(http://i.imgur.com/Q3obLBL.gif) center center no-repeat;"></div>
+    @if (ServicoDeSessao.EstaLogado)
+    {
+        <header>
+            <div class="container-fluid">
+                <div class="pull-right">
+                    Bem Vinda(o) <b>@ServicoDeSessao.UsuarioLogado.Nome</b> (<a href="/Login/Loggout">Sair</a>)
+                </div>
+            </div>
+        </header>
+    }
+    
+
+    <h1 class="site-title">Dakishimeta kokoro no kosumo</h1>
+    <div class="container"> 
+        @RenderBody()
+    </div>
+    <script>
+        $(document)
+            .ajaxSend(function () {
+                $('#spinner').show();
+            })
+            .ajaxComplete(function () {
+                $('#spinner').hide();
+            })
+            .ajaxError(function () {
+                console.log('Tratador de erros genérico.', arguments);
+            });
+
+        $.ajaxSetup({
+            timeout: 2000
+        });
+
+    </script>
+    @RenderSection("scripts", false)   
+</body>
+</html>
