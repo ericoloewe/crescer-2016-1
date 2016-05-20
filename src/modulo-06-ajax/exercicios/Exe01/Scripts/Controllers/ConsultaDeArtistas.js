@@ -37,7 +37,7 @@
         carregarAlbunsDoArtista: function (artista) {
             var self = this;
             App.ServicoDeBuscaDoSpotify
-                    .buscarAlbunsDoArtista(artista, {
+                    .appendImagensDosAlbunsDoArtista(artista, {
                         tamanhoDaImagem: 300,
                         $templateDaImagem: self.templateDaCapa(),
                         $OndeColocarTemplate: self.$lista

@@ -1,25 +1,10 @@
 (function () {
     window.App = window.App || {};
 
-    App.ServicoDeBuscaDoSpotify = {        
-        buscarAlbunsDoIronMaiden: function() {
-            var URL = "https://api.spotify.com/v1/artists/6mdiAmATAx73kdxrNrnlao/albums?limit=50";
-            
-            return $.ajax({
-                url: URL
-            }).fail(function(error) {
-                console.error(error);
-                App.Mensagem.erro("Problemas ao buscar lista do spotify");
-            });
-        },
-        
-        
-        appendImagensDosAlbunsDoIronMaiden: function(configuracoes) {
+    App.ServicoDeBuscaDoSpotify = {   
+        appendImagensDosAlbunsDoArtista: function(artista, configuracoes) {
             var self = this;
-            this.buscarAlbunsDoIronMaiden()
-                        .done(function(data) {
-                            self.aplicarConfiguracoes(data, configuracoes);
-                        });
+            this.buscarAlbunsDoArtista(artista, configuracoes);
         },
         
         buscarAlbunsDoArtista: function(artista, configuracoes) {

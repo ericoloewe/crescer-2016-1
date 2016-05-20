@@ -25,7 +25,7 @@
         carregarAlbuns: function () {
             var self = this;
             App.ServicoDeBuscaDoSpotify
-                    .appendImagensDosAlbunsDoIronMaiden({
+                    .appendImagensDosAlbunsDoArtista("Iron maiden",{
                         tamanhoDaImagem: 300,
                         $templateDaImagem: self.templateDaCapa(),
                         $OndeColocarTemplate: self.$lista
