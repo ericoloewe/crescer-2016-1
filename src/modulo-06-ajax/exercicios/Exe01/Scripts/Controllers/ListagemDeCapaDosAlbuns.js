@@ -11,7 +11,7 @@
         },
         
         criarElementos: function () {
-            $("body").prepend(
+            $(".content").prepend(
                 $("<div>").addClass("container").append(
                     $("<div>").addClass("lista-de-capas-dos-albuns").addClass("row")
                 )
@@ -25,7 +25,7 @@
         carregarAlbuns: function () {
             var self = this;
             App.ServicoDeBuscaDoSpotify
-                    .imagensDosAlbunsDoIronMaiden({
+                    .appendImagensDosAlbunsDoIronMaiden({
                         tamanhoDaImagem: 300,
                         $templateDaImagem: self.templateDaCapa(),
                         $OndeColocarTemplate: self.$lista
