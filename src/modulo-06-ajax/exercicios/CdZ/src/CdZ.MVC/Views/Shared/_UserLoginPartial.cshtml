@@ -1,0 +1,23 @@
+﻿@using CdZ.MVC.Services
+@if (ServicoDeSessao.EstaLogado)
+{
+    using (Html.BeginForm("Loggout", "Login", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a>@string.Format("Olá {0}!", ServicoDeSessao.UsuarioLogado.Nome)</a>
+            </li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Sair</a></li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Cadastrar-se", "Cadastro", "Usuario")</li>
+        <li>@Html.ActionLink("Entrar", "Index", "Login")</li>
+    </ul>
+}
+

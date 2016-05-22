@@ -7,20 +7,21 @@
 <div class="container">
     <div class="page-header">
         <h1>Lista de cavaleiros</h1>
+        <button class="btn btn-primary btn-lg pull-right" id="btnCriarAleatorio">Criar hard-coded!</button>
+        <button class="btn btn-primary btn-lg pull-right" id="btnCriar">Criar</button>
+        <div class="clearfix"></div>
     </div>
-
 </div>
 
-    <ul id="cavaleiros"></ul>
-    <div id="feedback"></div>
-    <button id="btnCriar">Criar hard-coded!</button>
-
-    <script>
+<script>
     var urlCavaleiroGet = '@Url.Action("Get")';
     var urlCavaleiroPost = '@Url.Action("Post")';
-    </script>
+</script>
 
-    @section scripts {
-        <script src="~/Scripts/Services/ServicoDeCavaleiros.js"></script>
-        <script src="~/Scripts/Views/Cavaleiro/Index.js"></script>
-    }
+@section scripts {
+    <script src="~/Scripts/Models/Cavaleiro.js"></script>
+    <script src="~/Scripts/Services/ServicoDeMensagem.js"></script>
+    <script src="~/Scripts/Services/ServicoDeCavaleiros.js"></script>
+    <script src="~/Scripts/Controllers/CavaleiroController.js"></script>
+    <script src="~/Scripts/Views/Cavaleiro/Index.js"></script>
+}
