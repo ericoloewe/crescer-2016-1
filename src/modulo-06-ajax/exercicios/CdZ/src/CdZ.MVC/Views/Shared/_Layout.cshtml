@@ -11,10 +11,11 @@
     <title>@ViewBag.Title</title>
 
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/Site/default.css" rel="stylesheet" />
+    <link href="~/Content/Site/default.css" rel="stylesheet"/>
+    @RenderSection("styles", false)
 </head>
 <body>
-    <div id="spinner" style="display: none; position: fixed; width:100%; height:100%; background: rgba(0,0,0,.5) url(http://i.imgur.com/Q3obLBL.gif) center center no-repeat;"></div>
+    <div id="spinner"></div>
 
     <div class="navbar navbar-default navbar-static-top">
         <div class="container">
@@ -39,11 +40,13 @@
         @RenderBody()
     </div>
     <script src="~/Scripts/jquery-2.2.3.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/Scripts/Custom/Initial.js"></script>
     <script src="~/Scripts/Services/ServicoDeMensagem.js"></script>
     <script src="~/Scripts/Services/ServicoDeNotificacao.js"></script>
+    <script src="~/Scripts/Services/ServicoDeConversao.js"></script>
     @RenderSection("scripts", false)
 </body>
 </html>

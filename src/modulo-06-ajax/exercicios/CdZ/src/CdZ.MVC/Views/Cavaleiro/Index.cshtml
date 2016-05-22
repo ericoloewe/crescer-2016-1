@@ -2,11 +2,99 @@
     ViewBag.Title = "Lista de Cavaleiros";
 }
 
+@section styles {
+    <link href="~/Content/Site/Cavaleiro/Index.css" rel="stylesheet" />
+}
+
 <div class="container">
     <div class="page-header">
         <button class="btn btn-primary btn-lg pull-right" id="btnCriarAleatorio">Criar hard-coded!</button>
-        <button class="btn btn-primary btn-lg pull-right" id="btnCriar">Criar</button>
+        <button class="btn btn-primary btn-lg pull-right" id="btnCriar" data-toggle="modal" data-target="#modal-cavaleiro" data-form-title="Cadastrar novo cavaleiro">Criar</button>
         <h1>Lista de cavaleiros</h1>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-cavaleiro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <form form-cavaleiro>
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" class="form-control" name="nome" id="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipoSanguineo">Tipo sanguíneo:</label>
+                            <select class="form-control" name="tipoSanguineo" id="tipoSanguineo" required>
+                                <option>Selecione</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="AB">AB</option>
+                                <option value="O">O</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dataNascimento">Data de Nascimento:</label>
+                            <input type="text" class="form-control" name="dataNascimento" id="dataNascimento" maxlength="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="altura">Altura:</label>
+                            <input type="number" class="form-control" name="altura" id="altura" min="0" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="peso">Peso:</label>
+                            <input type="number" class="form-control" name="peso" id="peso" min="0" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signo">Signo:</label>
+                            <select class="form-control" name="signo" id="signo" required>
+                                <option>Selecione</option>
+                                <option value="Áries">Áries</option>
+                                <option value="Touro">Touro</option>
+                                <option value="Gêmeos">Gêmeos</option>
+                                <option value="Câncer">Câncer</option>
+                                <option value="Leão">Leão</option>
+                                <option value="Virgem">Virgem</option>
+                                <option value="Libra">Libra</option>
+                                <option value="Escorpião">Escorpião</option>
+                                <option value="Sagitário">Sagitário</option>
+                                <option value="Capricórnio">Capricórnio</option>
+                                <option value="Aquário">Aquário</option>
+                                <option value="Peixes">Peixes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="localNascimento">Local de Nascimento:</label>
+                            <input type="text" class="form-control" name="localNascimento" id="localNascimento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="localTreinamento">Local de Treinamento:</label>
+                            <input type="text" class="form-control" name="localTreinamento" id="localTreinamento">
+                        </div>
+                        <div class="form-group">
+                            <label for="golpes">Golpes:</label>
+                            <a class="add-golpe"><i class="glyphicon glyphicon-plus"></i> Adicionar golpe</a>
+                            <div class="golpes row" id="golpes">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="imagens">Imagens:</label>
+                            <a class="add-imagem"><i class="glyphicon glyphicon-plus"></i> Adicionar imagem</a>
+                            <div class="imagens row" id="imagens">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" btn-submit>Salvar Alterações</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -17,6 +105,8 @@
 
 @section scripts {
     <script src="~/Scripts/Models/Cavaleiro.js"></script>
+    <script src="~/Scripts/Models/Imagem.js"></script>
+    <script src="~/Scripts/Models/Local.js"></script>
     <script src="~/Scripts/Services/ServicoDeCavaleiros.js"></script>
     <script src="~/Scripts/Controllers/CavaleiroController.js"></script>
     <script src="~/Scripts/Views/Cavaleiro/Index.js"></script>
