@@ -101,6 +101,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site\Cavaleiro\Index.css" />
     <Content Include="Content\Site\default.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -129,6 +130,7 @@
     <Content Include="Scripts\Models\Cavaleiro.js" />
     <Content Include="Scripts\Services\ServicoDeCavaleiros.js" />
     <Content Include="Scripts\Services\ServicoDeMensagem.js" />
+    <Content Include="Scripts\Services\ServicoDeNotificacao.js" />
     <Content Include="Scripts\Views\Cavaleiro\Index.js" />
     <Content Include="Web.config" />
   </ItemGroup>
