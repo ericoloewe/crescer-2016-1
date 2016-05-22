@@ -5,7 +5,7 @@
     App.ListaDeCavaleirosView = {
         iniciar: function() {
             var self = this;
-            console.log("ok");
+
             this.atualizarLista();
             this.criarListaDeCavaleiros();
             this.buscarElementos();
@@ -55,7 +55,6 @@
         },
 
         atualizarLista: function() {
-            console.log("Atualizando...");
             App.ListaDeCavaleirosController.atualizarCavaleiros();
         },
 

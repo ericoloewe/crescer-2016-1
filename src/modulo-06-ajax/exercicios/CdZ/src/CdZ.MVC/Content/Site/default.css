@@ -1,0 +1,6 @@
+﻿
+.page-header {}
+
+    .page-header > .btn.btn-primary.btn-lg.pull-right {
+        margin-left: 10px;
+    }

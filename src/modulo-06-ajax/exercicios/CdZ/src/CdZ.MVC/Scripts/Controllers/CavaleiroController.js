@@ -12,7 +12,6 @@
                 .buscarCavaleiros()
                 .done(function (response) {
                     self.addCavaleiroNovos(response.data);
-                    console.log("...");
                 })
                 .fail(function (response) {
                     console.error(":(");
@@ -24,13 +23,18 @@
         addCavaleiroNovos: function (cavaleiros) {
             var self = this;
 
-            cavaleiros.filter(function(cavaleiroNovo) {
-                return !self.cavaleiros.some(function (cavaleiro) {
+            var cavaleirosAAdicionar = cavaleiros.filter(function(cavaleiroNovo) {
+                return !self.cavaleiros.some(function(cavaleiro) {
                     return cavaleiro.Id === cavaleiroNovo.Id;
                 });
-            }).forEach(function(cavaleiro) {
+            });
+
+            cavaleirosAAdicionar.forEach(function (cavaleiro) {
                 self.addCavaleiro(cavaleiro);
             });
+
+            if (cavaleirosAAdicionar.length > 0)
+                App.ServicoDeNotificacao.notificar(String.format("{0} novos cavaleiros foram adicionados!", cavaleirosAAdicionar.length));
         },
 
         addCavaleiro: function (cavaleiro) {
