@@ -2,10 +2,10 @@
 
 $(document)
     .ajaxSend(function() {
-        $("#spinner").show();
+        $("#spinner").addClass("active");
     })
     .ajaxComplete(function() {
-        $("#spinner").hide();
+        $("#spinner").removeClass("active");
     })
     .ajaxError(function() {
         console.log("Tratador de erros genérico.", arguments);
