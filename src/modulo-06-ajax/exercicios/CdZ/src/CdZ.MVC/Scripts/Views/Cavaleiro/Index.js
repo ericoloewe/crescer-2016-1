@@ -6,7 +6,6 @@
         iniciar: function () {
             var self = this;
             this.atualizarLista();
-            this.paginacaoDaLista();
             this.buscarElementos();
             this.vincularEventos();
 
@@ -21,14 +20,8 @@
             this.$listaDeCavaleiros = $(".lista-de-cavaleiros");
         },
 
-        paginacaoDaLista: function() {
-            $("[paginacao]").find()
-        },
-
         desvicularEventos: function() {
             this.$listaDeCavaleiros.find(".cavaleiro").find("[editar-cavaleiro], [deletar-cavaleiro], [detalhes-cavaleiro]").unbind("click");
-
-            $("[paginacao]").unbind("click");
         },
 
         vincularEventos: function() {
@@ -281,6 +274,34 @@
         }
     };
 
+    App.PaginacaoDaListaDeCavaleirosView = {
+        paginaAtual: 0,
+
+        iniciar: function () {
+            this.buscarElementos();
+            this.vincularEventos();
+        },
+
+        buscarElementos: function() {
+            this.$paginacao = $("[paginacao]");
+        },
+
+        vincularEventos: function() {
+
+        },
+
+        criarPaginacao: function (quantidadeDePaginas) {
+            var $paginacao = $();
+            for (var i = 0; i < quantidadeDePaginas; i++) {
+                $paginacao.add($("<li>").prepend("<a>").text(i));
+            }
+            this.$paginacao
+                    .find("[paginacao-anterior]")
+                    .after($paginacao);
+        }
+    };
+
     App.ListaDeCavaleirosView.iniciar();
     App.CadastroDeCavaleirosView.iniciar();
+    App.PaginacaoDaListaDeCavaleirosView.iniciar();
 })();

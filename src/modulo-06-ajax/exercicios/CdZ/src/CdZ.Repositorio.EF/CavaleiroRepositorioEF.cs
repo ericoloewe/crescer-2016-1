@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System;
 
 namespace CdZ.Repositorio.EF
 {
@@ -85,6 +86,15 @@ namespace CdZ.Repositorio.EF
                  */
                 db.Entry<Cavaleiro>(pedido).State = EntityState.Modified;
                 db.SaveChanges();
+            }
+        }
+
+        public int QuantidadeDeCavaleiros()
+        {
+            using (var db = new ContextoDeDados())
+            {
+                //TODO: paginar
+                return db.Cavaleiro.Count();
             }
         }
     }

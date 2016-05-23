@@ -134,6 +134,7 @@
     <Content Include="Scripts\Services\ServicoDeConversao.js" />
     <Content Include="Scripts\Services\ServicoDeMensagem.js" />
     <Content Include="Scripts\Services\ServicoDeNotificacao.js" />
+    <Content Include="Scripts\Services\ServicoDePaginacao.js" />
     <Content Include="Scripts\Views\Cavaleiro\Index.js" />
     <Content Include="Web.config" />
   </ItemGroup>

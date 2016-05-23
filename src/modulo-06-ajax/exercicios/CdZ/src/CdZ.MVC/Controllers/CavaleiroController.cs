@@ -27,6 +27,12 @@ namespace CdZ.MVC.Controllers
             return Json(new { data = _cavaleiros.Todos(pagina) }, JsonRequestBehavior.AllowGet);
         }
 
+        [HttpGet]
+        public JsonResult QuantidadeDeCavaleiros()
+        {
+            return Json(_cavaleiros.QuantidadeDeCavaleiros(), JsonRequestBehavior.AllowGet);
+        }
+
         [HttpPost]
         public JsonResult Post(CavaleiroViewModel cavaleiro)
         {

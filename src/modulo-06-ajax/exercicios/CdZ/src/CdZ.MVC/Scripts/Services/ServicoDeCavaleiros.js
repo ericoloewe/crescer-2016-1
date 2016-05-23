@@ -6,11 +6,11 @@
         urlBuscarTodosCavaleiros: "/Cavaleiro/Get",
         urlCriarNovoCavaleiro: "/Cavaleiro/Post",
         urlDeletarCavaleiro: "/Cavaleiro/Delete",
+        urlBuscarQuantidadeDeCavaleiros: "/Cavaleiro/QuantidadeDeCavaleiros",
 
         buscarCavaleiros: function (pagina) {
-            var self = this;
             return $.ajax({
-                url: self.urlBuscarTodosCavaleiros,
+                url: this.urlBuscarTodosCavaleiros,
                 type: "GET",
                 data: {
                     pagina: pagina
@@ -18,10 +18,16 @@
             });
         },
 
-        deletarCavaleiros: function (idCavaleiro) {
-            var self = this;
+        quantidadeDeCavaleiros: function (pagina) {
             return $.ajax({
-                url: self.urlDeletarCavaleiro,
+                url: this.urlBuscarQuantidadeDeCavaleiros,
+                type: "GET"
+            });
+        },
+
+        deletarCavaleiros: function (idCavaleiro) {
+            return $.ajax({
+                url: this.urlDeletarCavaleiro,
                 type: "DELETE",
                 data: {
                     id: idCavaleiro
@@ -30,9 +36,8 @@
         },
 
         criarCavaleiro: function (cavaleiro) {
-            var self = this;
             return $.ajax({
-                url: self.urlCriarNovoCavaleiro,
+                url: this.urlCriarNovoCavaleiro,
                 type: "POST",
                 data: {
                     Nome: cavaleiro.Nome,

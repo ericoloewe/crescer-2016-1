@@ -4,13 +4,27 @@
 
     App.CavaleiroController = {
         cavaleiros: Array(),
-        paginaAtual: 0,
+        servicoPaginacao: new ServicoDePaginacao(undefined, 5),
+
+        inicializarPaginacao: function () {
+            var self = this;
+            App.ServicoDeCavaleiros
+                .quantidadeDeCavaleiros()
+                .done(function (quantidadeDeCavaleiros) {
+                    self.servicoPaginacao.QuantidadeDeItens = quantidadeDeCavaleiros;
+                    App.PaginacaoDaListaDeCavaleirosView.criarPaginacao(self.servicoPaginacao.quantidadeDePaginas());
+                })
+                .fail(function () {
+                    App.Mensagem.erro(response.Message);
+                    console.log(response);
+                });
+        },
 
         atualizarCavaleiros: function () {
             var self = this;
 
             App.ServicoDeCavaleiros
-                .buscarCavaleiros(this.paginaAtual)
+                .buscarCavaleiros(this.servicoPaginacao.PaginaAtual)
                 .done(function (response) {
                     self.addCavaleiroNovos(response.data);
                 })
@@ -73,4 +87,6 @@
             })[0];
         }
     };
+
+    App.CavaleiroController.inicializarPaginacao();
 })();

@@ -9,5 +9,6 @@ namespace CdZ.Dominio
         IEnumerable<Cavaleiro> Todos(int pagina);
         void Excluir(int id);
         void Atualizar(Cavaleiro cavaleiro);
+        int QuantidadeDeCavaleiros();
     }
 }
