@@ -2,7 +2,7 @@
 (function() {
     window.App = window.App || {};
 
-    App.ListaDeCavaleirosController = {
+    App.CavaleiroController = {
         cavaleiros: Array(),
 
         atualizarCavaleiros: function () {
@@ -38,7 +38,7 @@
         },
 
         addCavaleiro: function (cavaleiro) {
-            this.cavaleiros.push(new Cavaleiro(cavaleiro.Id, cavaleiro.Nome, cavaleiro.AlturaCm, cavaleiro.Signo, cavaleiro.TipoSanguineo, cavaleiro.DataNascimento, cavaleiro.Golpes, cavaleiro.LocalNascimento, cavaleiro.LocalTreinamento, cavaleiro.Imagens));
+            this.cavaleiros.push(new Cavaleiro(cavaleiro.Id, cavaleiro.Nome, cavaleiro.AlturaCm, cavaleiro.PesoLb, cavaleiro.Signo, cavaleiro.TipoSanguineo, cavaleiro.DataNascimento, cavaleiro.Golpes, cavaleiro.LocalNascimento, cavaleiro.LocalTreinamento, cavaleiro.Imagens));
             App.ListaDeCavaleirosView.criarDivCavaleiro(cavaleiro);
         },
 
