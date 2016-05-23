@@ -32,12 +32,20 @@ namespace CdZ.Repositorio.EF
             }
         }
 
-        public IEnumerable<Cavaleiro> Todos()
+        public IEnumerable<Cavaleiro> Todos(int pagina)
         {
+            const int NUMERO_DE_ITEMS_POR_PAGINA = 5;
             using (var db = new ContextoDeDados())
             {
                 //TODO: paginar
-                return db.Cavaleiro.Include(c => c.Imagens).ToList();
+                return db.Cavaleiro
+                                .Include(c => c.Imagens)
+                                .Include(c => c.LocalNascimento)
+                                .Include(c => c.LocalTreinamento)
+                                .Include(c => c.Golpes)
+                                .ToList()
+                                .Skip(pagina * NUMERO_DE_ITEMS_POR_PAGINA)
+                                .Take(NUMERO_DE_ITEMS_POR_PAGINA);
             }
         }
 

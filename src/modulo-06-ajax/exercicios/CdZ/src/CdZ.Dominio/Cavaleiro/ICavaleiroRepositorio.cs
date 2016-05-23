@@ -6,7 +6,7 @@ namespace CdZ.Dominio
     {
         int Adicionar(Cavaleiro cavaleiro);
         Cavaleiro Buscar(int id);
-        IEnumerable<Cavaleiro> Todos();
+        IEnumerable<Cavaleiro> Todos(int pagina);
         void Excluir(int id);
         void Atualizar(Cavaleiro cavaleiro);
     }
