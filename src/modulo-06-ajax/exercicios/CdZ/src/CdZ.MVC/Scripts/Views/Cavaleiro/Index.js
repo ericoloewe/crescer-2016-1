@@ -3,13 +3,17 @@
     window.App = window.App || {};
 
     App.ListaDeCavaleirosView = {
-        iniciar: function() {
+        iniciar: function () {
+            var self = this;
             this.atualizarLista();
             this.criarListaDeCavaleiros();
             this.buscarElementos();
             this.vincularEventos();
 
-            setInterval(this.atualizarLista, 5000);
+            setInterval(function() {
+                self.atualizarLista();
+                self.vincularEventos();
+            }, 5000);
         },
 
         buscarElementos() {
@@ -23,10 +27,23 @@
 
         vincularEventos: function() {
             var self = this;
+
+            $(".cavaleiro").on("click", function () {
+                console.log($(this).data("id-cavaleiro"));
+                App.CadastroDeCavaleirosView
+                    .$form
+                        .prepend(
+                            App.CadastroDeCavaleirosView
+                                    .$form.find("#Id")
+                                        .val($(this).data("id-cavaleiro"))
+                                );
+                App.CadastroDeCavaleirosView.$modalCavaleiro.modal("show");
+            });
         },
 
         atualizarLista: function() {
-            App.ListaDeCavaleirosController.atualizarCavaleiros();
+            App.CavaleiroController.atualizarCavaleiros();
+            this.$listaDeCavaleiros = $(".lista-de-cavaleiros");
         },
 
         criarDivCavaleiro: function(cavaleiro) {
@@ -71,29 +88,22 @@
         vincularEventos: function () {
             var self = this;
             this.$btnCriarAleatorio.click(function () {
-                App.ListaDeCavaleirosController.criarCavaleiro({
-                    Nome: "Xiru " + new Date().getTime(),
-                    AlturaCm: 187,
-                    Signo: 7,
-                    TipoSanguineo: 1,
-                    DataNascimento: new Date(),
-                    Golpes: ["Cólera do Dragão", "Cólera dos 100 dragões"],
-                    LocalNascimento: {
-                        Texto: "Beijing"
-                    },
-                    LocalTreinamento: {
-                        Texto: "5 picos de rosan"
-                    },
-                    Imagens: [
-                        {
-                            Url: "http://images.uncyc.org/pt/3/37/Shiryumestrepokemon.jpg",
-                            IsThumb: true
-                        }, {
-                            Url: "http://images.uncyc.org/pt/thumb/5/52/Shyryugyarados.jpg/160px-Shyryugyarados.jpg",
-                            IsThumb: false
-                        }
+                App.CavaleiroController.criarCavaleiro(new Cavaleiro(
+                    undefined,
+                    "Xiru " + new Date().getTime(),
+                    1.80,
+                    80,
+                    7,
+                    1,
+                    new Date(),
+                     ["Cólera do Dragão", "Cólera dos 100 dragões"],
+                    new Local(undefined, "Beijing"),
+                    new Local(undefined, "5 picos de rosan"),
+                    [
+                        new Image(undefined, "http://images.uncyc.org/pt/3/37/Shiryumestrepokemon.jpg", true),
+                        new Image(undefined, "http://images.uncyc.org/pt/thumb/5/52/Shyryugyarados.jpg/160px-Shyryugyarados.jpg", false)
                     ]
-                });
+                ));
             });
 
             this.$modalCavaleiro.modal({
@@ -107,9 +117,9 @@
             });
 
             this.$btnSubmit.click(function (e) {
-                var cavaleiro = App.Converte.doFormParaUmCavaleiro(self.$form);
-                console.log(cavaleiro);
-                App.ListaDeCavaleirosController.criarCavaleiro(cavaleiro);
+                var cavaleiro = self.doFormParaUmCavaleiro(self.$form);
+
+                App.CavaleiroController.criarCavaleiro(cavaleiro);
 
                 return e.preventDefault();
             });
@@ -151,6 +161,40 @@
 
                 return e.preventDefault();
             });
+        },
+
+        doFormParaUmCavaleiro: function ($cavaleiro) {
+            // Obtém o objeto nativo Form através da posição 0 no objeto jQuery e cria um FormData a partir dele
+            var cavaleiroForm = new FormData($cavaleiro[0]);
+            var imagens = new Array();
+            $cavaleiro.find(".imagens .imagem").each(function () {
+                imagens.push(new Imagem(
+                                    undefined,
+                                    $(this).find("input[type=text]").val(),
+                                    $(this).find("input[type=checkbox]").is(":checked")
+                                )
+                            );
+            });
+
+            var cavaleiro =  new Cavaleiro(
+                cavaleiroForm.get("id") === null ? undefined : cavaleiroForm.get("id"),
+                cavaleiroForm.get("nome"),
+                undefined,
+                undefined,
+                cavaleiroForm.get("signo"),
+                cavaleiroForm.get("tipoSanguineo"),
+                undefined,
+                cavaleiroForm.getAll("golpes[]"),
+                new Local(undefined, cavaleiroForm.get("localNascimento")),
+                new Local(undefined, cavaleiroForm.get("localTreinamento")),
+                imagens
+            );
+
+            cavaleiro.setDataNascimento(cavaleiroForm.get("dataNascimento"));
+            cavaleiro.setAltura(cavaleiroForm.get("altura"));
+            cavaleiro.setPeso(cavaleiroForm.get("peso"));
+
+            return cavaleiro;
         }
     };
 
