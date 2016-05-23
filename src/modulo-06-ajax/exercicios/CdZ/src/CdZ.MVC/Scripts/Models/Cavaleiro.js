@@ -46,8 +46,10 @@ Cavaleiro.prototype = {
     },
 
     thumbnail: function () {
-        return this.Imagens.filter(function (img) {
+        var thumb = this.Imagens.filter(function (img) {
             return img.IsThumb === true;
         })[0];
+
+        return thumb !== undefined ? thumb : new Imagem(undefined, "https://flipagram.com/assets/resources/img/fg-avatar-anonymous-user-retina.png", true);
     }
 };
