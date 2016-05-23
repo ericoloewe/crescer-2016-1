@@ -31,6 +31,7 @@ namespace CdZ.Repositorio.EF
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Permissao> Permissao { get; set; }
         public DbSet<Cavaleiro> Cavaleiro { get; set; }
+        public DbSet<Local> Local { get; set; }
 
         /*
          * Fazemos um override neste método porque vamos adicionar comportamentos
@@ -43,6 +44,8 @@ namespace CdZ.Repositorio.EF
              * por padrão as tabelas no plural.
              */
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Entity<Cavaleiro>().HasMany(_ => _.Golpes).WithRequired();
+            modelBuilder.Entity<Cavaleiro>().HasMany(_ => _.Imagens).WithRequired();
             base.OnModelCreating(modelBuilder);
         }
 
