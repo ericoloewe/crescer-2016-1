@@ -128,7 +128,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Models\Cavaleiro.js" />
+    <Content Include="Scripts\Models\Imagem.js" />
+    <Content Include="Scripts\Models\Local.js" />
     <Content Include="Scripts\Services\ServicoDeCavaleiros.js" />
+    <Content Include="Scripts\Services\ServicoDeConversao.js" />
     <Content Include="Scripts\Services\ServicoDeMensagem.js" />
     <Content Include="Scripts\Services\ServicoDeNotificacao.js" />
     <Content Include="Scripts\Views\Cavaleiro\Index.js" />
