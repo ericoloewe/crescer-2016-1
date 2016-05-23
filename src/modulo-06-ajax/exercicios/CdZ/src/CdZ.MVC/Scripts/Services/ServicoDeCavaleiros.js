@@ -13,12 +13,14 @@
 
         criarCavaleiro: function (cavaleiro) {
             var self = this;
+            console.log(cavaleiro);
             return $.ajax({
                 url: self.urlCriarNovoCavaleiro,
                 type: "POST",
                 data: {
                     Nome: cavaleiro.Nome,
                     AlturaCm: cavaleiro.AlturaCm,
+                    PesoLb: cavaleiro.PesoLb,
                     Signo: cavaleiro.Signo,
                     TipoSanguineo: cavaleiro.TipoSanguineo,
                     DataNascimento: cavaleiro.DataNascimento,
