@@ -4,12 +4,13 @@
 
     App.CavaleiroController = {
         cavaleiros: Array(),
+        paginaAtual: 0,
 
         atualizarCavaleiros: function () {
             var self = this;
 
             App.ServicoDeCavaleiros
-                .buscarCavaleiros()
+                .buscarCavaleiros(this.paginaAtual)
                 .done(function (response) {
                     self.addCavaleiroNovos(response.data);
                 })
@@ -23,6 +24,7 @@
         addCavaleiroNovos: function (cavaleiros) {
             var self = this;
             var ehPrimeiraVezQueEstaRodando = this.cavaleiros.length === 0;
+
             var cavaleirosAAdicionar = cavaleiros.filter(function(cavaleiroNovo) {
                 return !self.cavaleiros.some(function(cavaleiro) {
                     return cavaleiro.Id === cavaleiroNovo.Id;
@@ -38,12 +40,22 @@
         },
 
         addCavaleiro: function (cavaleiro) {
-            this.cavaleiros.push(new Cavaleiro(cavaleiro.Id, cavaleiro.Nome, cavaleiro.AlturaCm, cavaleiro.PesoLb, cavaleiro.Signo, cavaleiro.TipoSanguineo, cavaleiro.DataNascimento, cavaleiro.Golpes, cavaleiro.LocalNascimento, cavaleiro.LocalTreinamento, cavaleiro.Imagens));
-            App.ListaDeCavaleirosView.criarDivCavaleiro(cavaleiro);
+            var cavaleiroAAdicionar = new Cavaleiro(cavaleiro.Id, cavaleiro.Nome, cavaleiro.AlturaCm, cavaleiro.PesoLb, cavaleiro.Signo, cavaleiro.TipoSanguineo, undefined, cavaleiro.Golpes, cavaleiro.LocalNascimento, cavaleiro.LocalTreinamento, cavaleiro.Imagens);
+            cavaleiroAAdicionar.setDataNascimentoDoFormatoServidor(cavaleiro.DataNascimento);
+            this.cavaleiros.push(cavaleiroAAdicionar);
+            App.ListaDeCavaleirosView.criarDivCavaleiro(cavaleiroAAdicionar);
         },
 
         deletarCavaleiro: function (idCavaleiro) {
-            //TODO:
+            App.ServicoDeCavaleiros
+                .deletarCavaleiros(idCavaleiro)
+                .done(function (response) {
+                    App.ListaDeCavaleirosView.removerCavaleiroDaTela(idCavaleiro);
+                })
+                .fail(function (response) {
+                    console.log(response);
+                    App.Mensagem.erro(response.Message);
+                });
         },
 
         criarCavaleiro: function(cavaleiro) {
@@ -53,6 +65,12 @@
                     console.log(response);
                     App.Mensagem.erro(response.Message);
                 });
+        },
+
+        buscarCavaleiroPorId: function (cavaleiroId) {
+            return this.cavaleiros.filter(function (cavaleiro) {
+                return cavaleiro.Id === cavaleiroId;
+            })[0];
         }
     };
 })();

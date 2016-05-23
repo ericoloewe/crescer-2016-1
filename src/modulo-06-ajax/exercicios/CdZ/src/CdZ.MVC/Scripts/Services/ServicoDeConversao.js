@@ -11,6 +11,14 @@
             return null;
         },
 
+        deDataServidorParaPadraoISO: function (data) {
+            return new Date(parseInt(data.substr(6)))
+        },
+
+        dePadraoISOParaDataBr: function(data) {
+            return data.toISOString().substr(0, 10).split('-').reverse().join('/');
+        },
+
         deMetrosParaCentimetros: function (altura) {
             return parseFloat(altura) * 100;
         },

@@ -6,12 +6,13 @@
         iniciar: function () {
             var self = this;
             this.atualizarLista();
-            this.criarListaDeCavaleiros();
+            this.paginacaoDaLista();
             this.buscarElementos();
             this.vincularEventos();
 
             setInterval(function() {
                 self.atualizarLista();
+                self.desvicularEventos();
                 self.vincularEventos();
             }, 5000);
         },
@@ -20,24 +21,34 @@
             this.$listaDeCavaleiros = $(".lista-de-cavaleiros");
         },
 
-        criarListaDeCavaleiros: function() {
-            var $listaDeImagens = $("<div>").addClass("lista-de-cavaleiros").addClass("row");
-            $("body > .container").append($listaDeImagens);
+        paginacaoDaLista: function() {
+            $("[paginacao]").find()
+        },
+
+        desvicularEventos: function() {
+            this.$listaDeCavaleiros.find(".cavaleiro").find("[editar-cavaleiro], [deletar-cavaleiro], [detalhes-cavaleiro]").unbind("click");
+
+            $("[paginacao]").unbind("click");
         },
 
         vincularEventos: function() {
             var self = this;
 
-            $(".cavaleiro").on("click", function () {
-                console.log($(this).data("id-cavaleiro"));
+            this.$listaDeCavaleiros.find(".cavaleiro").find("[editar-cavaleiro]").click(function () {
                 App.CadastroDeCavaleirosView
-                    .$form
-                        .prepend(
-                            App.CadastroDeCavaleirosView
-                                    .$form.find("#Id")
-                                        .val($(this).data("id-cavaleiro"))
-                                );
-                App.CadastroDeCavaleirosView.$modalCavaleiro.modal("show");
+                    .prepararEditarCavaleiro($(this).parent().parent().data("id-cavaleiro"));
+            });
+
+            this.$listaDeCavaleiros.find(".cavaleiro").find("[deletar-cavaleiro]").click(function () {
+                if (confirm("Deseja realmente deletar esse cavaleiro"))
+                    App.CavaleiroController.deletarCavaleiro($(this).parent().parent().data("id-cavaleiro"));
+            });
+
+            this.$listaDeCavaleiros.find(".cavaleiro").find("[detalhes-cavaleiro]").click(function () {
+                // TODO:
+            });
+
+            $("[paginacao]").on("click", function () {
             });
         },
 
@@ -47,27 +58,48 @@
         },
 
         criarDivCavaleiro: function(cavaleiro) {
-            var self = this;
+            this.$listaDeCavaleiros.find("tbody").append(
+                $("<tr>").attr("data-id-cavaleiro", cavaleiro.Id)
+                    .addClass("cavaleiro")
+                    .append($("<td>").append(
+                                $("<img>").attr("alt", cavaleiro.Nome)
+                                    .attr("src", cavaleiro.thumbnail().Url).addClass("img-thumbnail"))
+                            )
+                    .append($("<td>").append(
+                                cavaleiro.Nome
+                            ))
+                    .append($("<td>").append(
+                                cavaleiro.dataNascimentoNoFormatoBr()
+                            ))
+                    .append($("<td>").append(
+                                $("<button>")
+                                    .attr("deletar-cavaleiro", "")
+                                    .addClass("btn btn-default btn-xs")
+                                    .text(" Deletar")
+                                    .prepend($("<i>").addClass("glyphicon glyphicon-remove"))
+                                )
+                                .append(" | ")
+                                .append(
+                                    $("<button>")
+                                        .attr("editar-cavaleiro", "")
+                                        .addClass("btn btn-default btn-xs")
+                                        .text(" Editar")
+                                        .prepend($("<i>").addClass("glyphicon glyphicon-pencil"))
+                                )
+                                .append(" | ")
+                                .append(
+                                    $("<button>")
+                                        .attr("detalhes-cavaleiro", "")
+                                        .addClass("btn btn-default btn-xs")
+                                        .text(" Detalhes")
+                                        .prepend($("<i>").addClass("glyphicon glyphicon-search"))
+                                )
+                            )
+            );
+        },
 
-            if (cavaleiro.Imagens.length !== 0) {
-                cavaleiro.Imagens.forEach(function(imagem, i) {
-                    self.$listaDeCavaleiros.append(
-                        $("<div>").attr("data-id-cavaleiro", cavaleiro.Id)
-                        .addClass("col-sm-2")
-                        .addClass("cavaleiro")
-                        .prepend($("<a>").addClass("glyphicon")
-                            .addClass("glyphicon-remove")
-                            .attr("deletar-cavaleiro", "")
-                            .attr("href", ""))
-                        .append($("<img>").attr("alt", cavaleiro.Nome)
-                            .attr("src", imagem.Url).addClass("img-thumbnail"))
-                    );
-                });
-            } else
-                self.$listaDeCavaleiros.append(
-                    $("<div>").attr("data-id-cavaleiro", cavaleiro.Id)
-                    .addClass("col-sm-2")
-                    .addClass("cavaleiro").prepend($("<h4>").text(cavaleiro.Nome)));
+        removerCavaleiroDaTela: function(idCavaleiro) {
+            this.$listaDeCavaleiros.find(String.format("[data-id-cavaleiro='{0}']", idCavaleiro)).remove();
         }
     };
 
@@ -87,6 +119,7 @@
 
         vincularEventos: function () {
             var self = this;
+
             this.$btnCriarAleatorio.click(function () {
                 App.CavaleiroController.criarCavaleiro(new Cavaleiro(
                     undefined,
@@ -96,13 +129,13 @@
                     7,
                     1,
                     new Date(),
-                     ["Cólera do Dragão", "Cólera dos 100 dragões"],
+                    new Array("Cólera do Dragão", "Cólera dos 100 dragões"),
                     new Local(undefined, "Beijing"),
                     new Local(undefined, "5 picos de rosan"),
-                    [
+                    new Array(
                         new Image(undefined, "http://images.uncyc.org/pt/3/37/Shiryumestrepokemon.jpg", true),
                         new Image(undefined, "http://images.uncyc.org/pt/thumb/5/52/Shyryugyarados.jpg/160px-Shyryugyarados.jpg", false)
-                    ]
+                    )
                 ));
             });
 
@@ -116,7 +149,16 @@
                 $(this).find(".modal-title").text(title);
             });
 
+            this.$modalCavaleiro.on("hidden.bs.modal", function (event) {
+                self.clearForm();
+            });
+
             this.$btnSubmit.click(function (e) {
+                self.$form.find("button[type='submit']").trigger("click");
+                return e.preventDefault();
+            });
+
+            this.$form.on("submit", function () {
                 var cavaleiro = self.doFormParaUmCavaleiro(self.$form);
 
                 App.CavaleiroController.criarCavaleiro(cavaleiro);
@@ -125,39 +167,13 @@
             });
 
             this.$form.find(".add-golpe").click(function (e) {
-                $(".golpes").prepend(
-                    $("<div>").addClass("col-sm-4")
-                                .prepend(
-                                    $("<input>").attr("type", "text")
-                                                    .addClass("form-control")
-                                                    .attr("name", "golpes[]")
-                                )
-                );
+                $(".golpes").prepend(self.createGolpeInput());
 
                 return e.preventDefault();
             });
 
             this.$form.find(".add-imagem").click(function (e) {
-                var $inputText = $("<div>").addClass("col-sm-8");
-                var $inputCheck = $("<div>").addClass("col-sm-4");
-                $inputText.prepend(
-                    $("<input>").attr("type", "text")
-                                    .addClass("form-control")
-                                    .attr("name", "urls[]")
-                );
-
-                $inputCheck.prepend(
-                    $("<label>").prepend("É thumbnail?").prepend(
-                            $("<input>").attr("type", "checkbox").attr("name", "isThumb[]")
-                    )
-                );
-
-                $(".imagens").prepend($("<div>")
-                                .addClass("imagem")
-                                .addClass("col-sm-6")
-                                .prepend($inputCheck)
-                                .prepend($inputText)
-                );
+                $(".imagens").prepend(self.createImgInput());
 
                 return e.preventDefault();
             });
@@ -190,11 +206,78 @@
                 imagens
             );
 
-            cavaleiro.setDataNascimento(cavaleiroForm.get("dataNascimento"));
+            cavaleiro.setDataNascimentoDoFormatoBr(cavaleiroForm.get("dataNascimento"));
             cavaleiro.setAltura(cavaleiroForm.get("altura"));
             cavaleiro.setPeso(cavaleiroForm.get("peso"));
 
             return cavaleiro;
+        },
+
+        prepararEditarCavaleiro: function (cavaleiroId) {
+            this.preencherFormComCavaleiro(App.CavaleiroController.buscarCavaleiroPorId(cavaleiroId))
+
+            this.$modalCavaleiro.modal("show");
+        },
+
+        preencherFormComCavaleiro: function (cavaleiro) {
+            var self = this;
+            this.$form.find("#Id").val(cavaleiro.Id);
+            this.$form.find("#nome").val(cavaleiro.Nome);
+            this.$form.find("#tipoSanguineo").val(cavaleiro.TipoSanguineo);
+            this.$form.find("#dataNascimento").val(cavaleiro.dataNascimentoNoFormatoBr());
+            this.$form.find("#altura").val(cavaleiro.AlturaCm);
+            this.$form.find("#peso").val(cavaleiro.PesoLb);
+            this.$form.find("#signo").val(cavaleiro.Signo);
+            this.$form.find("#localNascimento").val(cavaleiro.LocalNascimento.Texto);
+            this.$form.find("#localTreinamento").val(cavaleiro.LocalTreinamento.Texto);
+
+            cavaleiro.Golpes.forEach(function (golpe) {
+                self.$form.find("#golpes").append(self.createGolpeInput(golpe.Nome));
+            });
+
+            cavaleiro.Imagens.forEach(function (img) {
+                self.$form.find("#imagens").append(self.createImgInput(img));
+            });
+        },
+
+        createGolpeInput: function (golpe) {
+            return $("<div>").addClass("col-sm-4")
+                                .prepend(
+                                    $("<input>").attr("type", "text")
+                                                    .addClass("form-control")
+                                                    .attr("name", "golpes[]").val(golpe)
+                                );
+        },
+
+        createImgInput: function (img) {
+            var $inputText = $("<div>").addClass("col-sm-8");
+            var $inputCheck = $("<div>").addClass("col-sm-4");
+            $inputText.prepend(
+                $("<input>").attr("type", "text")
+                                .addClass("form-control")
+                                .attr("name", "urls[]").val(img === undefined ? null :  img.Url)
+            );
+
+            $inputCheck.prepend(
+                $("<label>").prepend("É thumbnail?").prepend(
+                        $("<input>")
+                            .attr("type", "checkbox")
+                            .attr("name", "isThumb[]")
+                            .attr("checked", img === undefined ? null : img.IsThumb)
+                )
+            );
+
+            return $("<div>")
+                            .addClass("imagem")
+                            .addClass("col-sm-6")
+                            .prepend($inputCheck)
+                            .prepend($inputText);
+        },
+
+        clearForm: function () {
+            this.$form[0].reset();
+            this.$form.find("#golpes").empty();
+            this.$form.find("#imagens").empty();
         }
     };
 

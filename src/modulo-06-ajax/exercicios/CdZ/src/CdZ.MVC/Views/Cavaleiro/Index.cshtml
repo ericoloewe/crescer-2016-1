@@ -13,6 +13,42 @@
         <h1>Lista de cavaleiros</h1>
     </div>
 
+    <table class="lista-de-cavaleiros table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Imagem
+                </th>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Data Nascimento
+                </th>
+                <th>
+                    Ações
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <nav paginacao>
+        <ul class="pagination">
+            <li paginacao-anterior>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li paginacao-proximo>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
     <!-- Modal -->
     <div class="modal fade" id="modal-cavaleiro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -88,6 +124,7 @@
                             <div class="imagens row" id="imagens">
                             </div>
                         </div>
+                        <button type="submit" hidden></button>
                     </form>
                 </div>
                 <div class="modal-footer">

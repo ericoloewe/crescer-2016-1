@@ -5,15 +5,32 @@
     App.ServicoDeCavaleiros = {
         urlBuscarTodosCavaleiros: "/Cavaleiro/Get",
         urlCriarNovoCavaleiro: "/Cavaleiro/Post",
+        urlDeletarCavaleiro: "/Cavaleiro/Delete",
 
-        buscarCavaleiros: function () {
+        buscarCavaleiros: function (pagina) {
             var self = this;
-            return $.ajax({ url: self.urlBuscarTodosCavaleiros, type: "GET" });
+            return $.ajax({
+                url: self.urlBuscarTodosCavaleiros,
+                type: "GET",
+                data: {
+                    pagina: pagina
+                }
+            });
+        },
+
+        deletarCavaleiros: function (idCavaleiro) {
+            var self = this;
+            return $.ajax({
+                url: self.urlDeletarCavaleiro,
+                type: "DELETE",
+                data: {
+                    id: idCavaleiro
+                }
+            });
         },
 
         criarCavaleiro: function (cavaleiro) {
             var self = this;
-            console.log(cavaleiro);
             return $.ajax({
                 url: self.urlCriarNovoCavaleiro,
                 type: "POST",

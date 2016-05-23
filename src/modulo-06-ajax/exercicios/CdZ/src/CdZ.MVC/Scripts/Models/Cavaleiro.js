@@ -17,8 +17,16 @@ var Cavaleiro = function (id, nome, alturaEmM, pesoEmKg, signo, tipoSanguineo, d
 };
 
 Cavaleiro.prototype = {
-    setDataNascimento: function(dataNascimentoFormatoBr) {
-        this.DataNascimento = App.Converte.deDataBrParaPadraoISO(dataNascimentoFormatoBr);
+    setDataNascimentoDoFormatoServidor: function (dataNascimento) {
+        this.DataNascimento = App.Converte.deDataServidorParaPadraoISO(dataNascimento);
+    },
+
+    setDataNascimentoDoFormatoBr: function (dataNascimento) {
+        this.DataNascimento = App.Converte.deDataBrParaPadraoISO(dataNascimento);
+    },
+
+    dataNascimentoNoFormatoBr: function() {
+        return App.Converte.dePadraoISOParaDataBr(this.DataNascimento);
     },
 
     setAltura: function (alturaEmM) {
@@ -30,12 +38,16 @@ Cavaleiro.prototype = {
     },
 
     setPeso: function (pesoEmKg) {
-        console.log(App.Converte.deKgParaLibras(pesoEmKg));
-        debugger;
         this.PesoLb = App.Converte.deKgParaLibras(pesoEmKg);
     },
 
     pesoEmKg: function() {
         return App.Converte.deLibrasParaKg(this.PesoLb);
+    },
+
+    thumbnail: function () {
+        return this.Imagens.filter(function (img) {
+            return img.IsThumb === true;
+        })[0];
     }
 };
