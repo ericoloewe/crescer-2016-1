@@ -15,9 +15,14 @@
                     App.PaginacaoDaListaDeCavaleirosView.criarPaginacao(self.servicoPaginacao.quantidadeDePaginas());
                 })
                 .fail(function () {
-                    App.Mensagem.erro(response.Message);
+                    App.Mensagem.erro(response);
                     console.log(response);
                 });
+        },
+
+        irAPagina: function(pagina) {
+            this.servicoPaginacao.definePagina(pagina);
+            this.atualizarCavaleiros();
         },
 
         atualizarCavaleiros: function () {
@@ -26,7 +31,7 @@
             App.ServicoDeCavaleiros
                 .buscarCavaleiros(this.servicoPaginacao.PaginaAtual)
                 .done(function (response) {
-                    self.addCavaleiroNovos(response.data);
+                    self.addCavaleirosNovos(response.data);
                 })
                 .fail(function (response) {
                     console.error(":(");
@@ -35,7 +40,7 @@
                 });
         },
 
-        addCavaleiroNovos: function (cavaleiros) {
+        addCavaleirosNovos: function (cavaleiros) {
             var self = this;
             var ehPrimeiraVezQueEstaRodando = this.cavaleiros.length === 0;
 
@@ -44,10 +49,14 @@
                     return cavaleiro.Id === cavaleiroNovo.Id;
                 });
             });
-
-            cavaleirosAAdicionar.forEach(function (cavaleiro) {
-                self.addCavaleiro(cavaleiro);
-            });
+            
+            if (cavaleirosAAdicionar.length > 0) {
+                this.cavaleiros = new Array();
+                App.ListaDeCavaleirosView.esvaziarLista();
+                cavaleiros.forEach(function (cavaleiro) {
+                    self.addCavaleiro(cavaleiro);
+                });
+            }
 
             if (cavaleirosAAdicionar.length > 0 && !ehPrimeiraVezQueEstaRodando)
                 App.ServicoDeNotificacao.notificar(String.format("{0} novos cavaleiros foram adicionados!", cavaleirosAAdicionar.length), "Novo Cavaleiro", "http://fdata.over-blog.com/1/92/30/28/avatar-blog-1040706665-tmpphpTQzPov.jpg");

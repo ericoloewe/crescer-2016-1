@@ -40,9 +40,6 @@
             this.$listaDeCavaleiros.find(".cavaleiro").find("[detalhes-cavaleiro]").click(function () {
                 // TODO:
             });
-
-            $("[paginacao]").on("click", function () {
-            });
         },
 
         atualizarLista: function() {
@@ -93,6 +90,10 @@
 
         removerCavaleiroDaTela: function(idCavaleiro) {
             this.$listaDeCavaleiros.find(String.format("[data-id-cavaleiro='{0}']", idCavaleiro)).remove();
+        },
+
+        esvaziarLista: function() {
+            this.$listaDeCavaleiros.find("tbody").empty();
         }
     };
 
@@ -113,8 +114,8 @@
         vincularEventos: function () {
             var self = this;
 
-            this.$btnCriarAleatorio.click(function () {
-                App.CavaleiroController.criarCavaleiro(new Cavaleiro(
+            this.$btnCriarAleatorio.on("click", function () {
+                var cavaleiro = new Cavaleiro(
                     undefined,
                     "Xiru " + new Date().getTime(),
                     1.80,
@@ -126,10 +127,11 @@
                     new Local(undefined, "Beijing"),
                     new Local(undefined, "5 picos de rosan"),
                     new Array(
-                        new Image(undefined, "http://images.uncyc.org/pt/3/37/Shiryumestrepokemon.jpg", true),
-                        new Image(undefined, "http://images.uncyc.org/pt/thumb/5/52/Shyryugyarados.jpg/160px-Shyryugyarados.jpg", false)
+                        new Imagem(undefined, "http://images.uncyc.org/pt/3/37/Shiryumestrepokemon.jpg", true),
+                        new Imagem(undefined, "http://images.uncyc.org/pt/thumb/5/52/Shyryugyarados.jpg/160px-Shyryugyarados.jpg", false)
                     )
-                ));
+                );
+                App.CavaleiroController.criarCavaleiro(cavaleiro);
             });
 
             this.$modalCavaleiro.modal({
@@ -279,7 +281,6 @@
 
         iniciar: function () {
             this.buscarElementos();
-            this.vincularEventos();
         },
 
         buscarElementos: function() {
@@ -287,17 +288,56 @@
         },
 
         vincularEventos: function() {
+            var self = this;
+            this.$paginacao.find("[data-pagina-index]").click(function(e) {
+                App.CavaleiroController.irAPagina($(this).data("pagina-index"));
+                self.ajustarPaginacao();
 
+                return e.preventDefault();
+            });
         },
 
         criarPaginacao: function (quantidadeDePaginas) {
             var $paginacao = $();
+
             for (var i = 0; i < quantidadeDePaginas; i++) {
-                $paginacao.add($("<li>").prepend("<a>").text(i));
+                $paginacao = $paginacao.add(
+                                            $("<li>")
+                                                .attr("data-pagina-index", i)
+                                                .prepend(
+                                                    $("<a>")
+                                                        .attr("href", "")
+                                                        .text(i + 1)
+                                                )
+                                            );
             }
+
             this.$paginacao
                     .find("[paginacao-anterior]")
                     .after($paginacao);
+
+            this.$paginacao.find("[paginacao-anterior]").addClass("disabled");
+            this.$paginacao.find("[data-pagina-index=0]").addClass("active");
+
+            this.vincularEventos();
+        },
+
+        ajustarPaginacao: function() {
+            var pagAtual = App.CavaleiroController.servicoPaginacao.PaginaAtual;
+            var maxPaginas = App.CavaleiroController.servicoPaginacao.quantidadeDePaginas() - 1;
+
+            this.limparPaginacao();
+
+            this.$paginacao.find(String.format("[data-pagina-index={0}]", pagAtual)).addClass("active");
+            if(pagAtual === maxPaginas)
+                this.$paginacao.find("[paginacao-proxima]").addClass("disabled");
+            else if(pagAtual === 0)
+                this.$paginacao.find("[paginacao-anterior]").addClass("disabled");
+        },
+
+        limparPaginacao: function() {
+            this.$paginacao.find("[data-pagina-index]").removeClass("active");
+            this.$paginacao.find("[paginacao-anterior], [paginacao-proxima]").removeClass("disabled");
         }
     };
 
