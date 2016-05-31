@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3D13E17F-D8D3-B7CE-F6A1-4AC168374B3A" name="Concurso">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:07:09 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Concurso" id="68D01C12-DEC6-B742-2151-78F2DA125D36">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:10:24 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data" id="4F610369-BA69-5311-65E7-3700A957803E">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:09:26 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PremioBruto" id="D3CF458E-61BB-1F9F-39F3-559849CBA530">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:10:59 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id" id="52BBAA6C-CAAD-7D90-6A28-5CFC8593C54F">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 18:02:39 UTC</createdTime>
+<generatorID>10B09974-CA5B-D31B-38FD-67B2B7A41D1E</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="84BDFC47-1D74-DAE8-4AE9-69066DBA68AF" name="Concurso PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:10:46 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>52BBAA6C-CAAD-7D90-6A28-5CFC8593C54F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

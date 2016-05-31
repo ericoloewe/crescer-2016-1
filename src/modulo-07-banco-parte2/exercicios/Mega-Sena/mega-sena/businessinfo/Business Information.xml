@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="77845D96-29E2-6F18-A38F-91DEE4D22579">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:06:10 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

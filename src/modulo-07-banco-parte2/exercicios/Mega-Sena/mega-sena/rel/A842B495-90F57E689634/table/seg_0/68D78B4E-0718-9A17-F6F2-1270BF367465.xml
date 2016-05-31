@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="68D78B4E-0718-9A17-F6F2-1270BF367465" name="Aposta">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>23473475-F50F-D07E-EB49-B6EF6DDCBB06</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="D3EACEA5-F0D1-89AC-9559-77D71F2BD6C1">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:39:52 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="QuantidadeNumeros" id="E62F2616-4D7C-E29B-1D0D-851150177764">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>9DF844B1-8ABF-3F42-0FDA-3105C49DAD93</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>6</beginValue>
+<endValue>15</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="Data" id="4A58FE1F-AF82-7313-A7EB-06B84F5610DF">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>157E910A-69A6-24CA-91B2-BEE4C00ED292</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EhBolao" id="32AC03E1-49DB-3AD8-CCAA-2A9ACD4FCD44">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>65FD08D4-DBB0-ABFF-1EF3-1137DFCD15A0</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Concurso_Id" id="9D2F34C6-D93B-BAFA-A6CA-6688FE336A12">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:52:59 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="95084803-83D3-C2D8-1B1B-C13C5270D1A4" referredColumn="10B09974-CA5B-D31B-38FD-67B2B7A41D1E"/>
+</associations>
+</Column>
+<Column name="Numero_Id" id="C96D4C18-51C2-0CC4-E95E-E483F8920FFF">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>4CCCFAF4-3689-82AA-C68E-34F0B78708EB</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="47C0967A-718F-72DE-078E-7E65AF7A2A07" referredColumn="E841E277-6AEE-ACC9-3203-87D8ED65DBB2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1143EAA0-0446-8C67-B5EF-5712DB0E9CD1" name="Aposta_PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:39:51 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="D3EACEA5-F0D1-89AC-9559-77D71F2BD6C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7ACC3918-74C4-CC1F-5A73-350C912572C8" name="Aposta_Id_UN">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 18:09:05 UTC</createdTime>
+<generatorID>CEA57D95-DB6D-9D18-3257-38BEAAE552A2</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D3EACEA5-F0D1-89AC-9559-77D71F2BD6C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="480973E8-0668-D142-27F6-270FC87EC3A7" name="Aposta_Concurso_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>351FEA62-11EA-69DF-173B-3B557D8ECB64</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D2F34C6-D93B-BAFA-A6CA-6688FE336A12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E41D62A6-C3CF-0373-487B-01E396A6B370" name="Aposta_Numero_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 18:17:58 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C96D4C18-51C2-0CC4-E95E-E483F8920FFF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

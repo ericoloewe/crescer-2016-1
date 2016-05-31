@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EF91F2F4-66CE-DC83-DCBF-14D41A4BCCFE" name="Ganhador">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>62FE19EC-CE21-67AE-3A47-064B8A433314</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="55CB2DEA-AFB8-87CD-F5D8-BA674CE92C7B">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:53:47 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QuantidadeDeAcertos" id="52F7EB57-A0E2-1695-0C07-61F9E5FDE18C">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>9086EAA7-2E8C-8771-3060-92BD32539A25</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ValorDoPremio" id="A52B68CC-1949-B0F2-D794-16C0AB6E65E2">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>BFF93BC2-CC53-C73B-E5FE-AF8EF77C9F1D</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Aposta_Id" id="85C382CE-0456-28C6-6FBE-35E2685B0A9F">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:39:52 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0EC68B2-860A-88CA-03AC-6C2A3134CB6B" referredColumn="D3EACEA5-F0D1-89AC-9559-77D71F2BD6C1"/>
+</associations>
+</Column>
+<Column name="Concurso_Id" id="2D44FB8F-4BE9-F90C-4944-42928A938B16">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:52:59 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D6F7AA13-4B59-02F1-3677-5E4FB6A57149" referredColumn="10B09974-CA5B-D31B-38FD-67B2B7A41D1E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="08232CDD-8EAB-F85E-A51E-C34C455E7574" name="Ganhador_PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:53:47 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="55CB2DEA-AFB8-87CD-F5D8-BA674CE92C7B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27248886-4CF5-79BE-1425-098AB81D26E8" name="Ganhador_Concurso_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>F397D523-DECB-845F-2E46-B6B0DD882736</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D44FB8F-4BE9-F90C-4944-42928A938B16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D02ACB12-27A4-8DD4-D6D8-4452CC6027ED" name="Ganhador_Aposta_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:39:52 UTC</createdTime>
+<generatorID>C8ECA272-934F-47C9-A009-F160B538CAAB</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85C382CE-0456-28C6-6FBE-35E2685B0A9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

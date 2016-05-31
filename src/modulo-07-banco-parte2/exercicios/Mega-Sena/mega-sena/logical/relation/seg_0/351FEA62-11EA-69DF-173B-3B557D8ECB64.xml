@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Aposta Concurso FK" directorySegmentName="seg_0" id="351FEA62-11EA-69DF-173B-3B557D8ECB64">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:20:07 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="true"/>
+</engineerTo>
+<sourcePk>84BDFC47-1D74-DAE8-4AE9-69066DBA68AF</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3D13E17F-D8D3-B7CE-F6A1-4AC168374B3A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>23473475-F50F-D07E-EB49-B6EF6DDCBB06</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

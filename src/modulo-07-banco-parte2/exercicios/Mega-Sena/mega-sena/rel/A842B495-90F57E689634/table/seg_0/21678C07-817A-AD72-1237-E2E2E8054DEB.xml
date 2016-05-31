@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="21678C07-817A-AD72-1237-E2E2E8054DEB" name="Concurso">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>3D13E17F-D8D3-B7CE-F6A1-4AC168374B3A</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="10B09974-CA5B-D31B-38FD-67B2B7A41D1E">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:52:59 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Concurso" id="A82F59FE-3837-DE51-C230-6D3D4F5A798A">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>68D01C12-DEC6-B742-2151-78F2DA125D36</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data" id="EC1256CD-8A98-A7E3-23AA-362EB59701AD">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>4F610369-BA69-5311-65E7-3700A957803E</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PremioBruto" id="6CED2A44-4E68-0324-2AFE-20ED3BAC0E67">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>D3CF458E-61BB-1F9F-39F3-559849CBA530</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5953ABC4-3065-81EC-849E-1F7FDD0A33A5" name="Concurso_PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>84BDFC47-1D74-DAE8-4AE9-69066DBA68AF</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="10B09974-CA5B-D31B-38FD-67B2B7A41D1E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Ganhador Concurso FK" directorySegmentName="seg_0" id="F397D523-DECB-845F-2E46-B6B0DD882736">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:20:47 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="true"/>
+</engineerTo>
+<sourcePk>84BDFC47-1D74-DAE8-4AE9-69066DBA68AF</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3D13E17F-D8D3-B7CE-F6A1-4AC168374B3A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>62FE19EC-CE21-67AE-3A47-064B8A433314</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

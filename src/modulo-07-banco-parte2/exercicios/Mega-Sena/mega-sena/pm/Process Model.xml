@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="A9D86D88-7018-B161-F8A4-49191A6B75F4">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:06:09 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

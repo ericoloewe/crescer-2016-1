@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="95084803-83D3-C2D8-1B1B-C13C5270D1A4" containerWithKeyObject="68D78B4E-0718-9A17-F6F2-1270BF367465" localFKIndex="480973E8-0668-D142-27F6-270FC87EC3A7" name="Aposta_Concurso_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:22:42 UTC</createdTime>
+<generatorID>351FEA62-11EA-69DF-173B-3B557D8ECB64</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>21678C07-817A-AD72-1237-E2E2E8054DEB</referredTableID>
+<keyObject>5953ABC4-3065-81EC-849E-1F7FDD0A33A5</keyObject>
+<referredKeyID>5953ABC4-3065-81EC-849E-1F7FDD0A33A5</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

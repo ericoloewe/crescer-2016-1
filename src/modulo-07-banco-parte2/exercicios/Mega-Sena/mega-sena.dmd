@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="mega-sena" id="7118BF3E-E14E-7E4D-E0D7-60C3A0EB57BD" version="3.5">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 17:06:07 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>7118BF3E-E14E-7E4D-E0D7-60C3A0EB57BD</designId>
+</OSDM_Design>

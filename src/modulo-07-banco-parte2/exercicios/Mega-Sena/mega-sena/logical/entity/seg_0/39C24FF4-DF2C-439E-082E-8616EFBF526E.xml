@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="39C24FF4-DF2C-439E-082E-8616EFBF526E" name="Numero">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 18:02:39 UTC</createdTime>
+<generatorID>2EBB5426-A9A0-86E5-5EC6-220E613B1E0F</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="6F8152A2-40A5-C2F6-3C5E-A3D712AA467D">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 18:02:39 UTC</createdTime>
+<generatorID>E841E277-6AEE-ACC9-3203-87D8ED65DBB2</generatorID>
+<ownerDesignName>mega-sena</ownerDesignName>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Valor" id="5A315880-81ED-BEE7-F3A1-3B8D200DC2D6">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 18:02:49 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="QuantidadeNumeros" id="FD516D0E-AA76-3A13-AA63-A112173EA895">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 18:05:58 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="368AC811-54AA-CB4A-D5CD-540E4A347202" name="ValorAposta PK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 18:04:44 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A842B495-F095-503C-30DF-90F57E689634" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6F8152A2-40A5-C2F6-3C5E-A3D712AA467D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
