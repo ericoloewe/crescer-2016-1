@@ -53,6 +53,24 @@
 <ownDataTypeParameters>,12,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Tipo" id="944F9F14-033E-531A-2A1A-A9363998A22B">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-05-31 18:45:05 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<listOfValues>
+<valueDef value="AcumaladoProximo" description=""/>
+<valueDef value="AcumuladoFinal" description=""/>
+<valueDef value="Mega" description=""/>
+<valueDef value="Quadra" description=""/>
+<valueDef value="Quina" description=""/>
+</listOfValues>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="5953ABC4-3065-81EC-849E-1F7FDD0A33A5" name="Concurso_PK">
