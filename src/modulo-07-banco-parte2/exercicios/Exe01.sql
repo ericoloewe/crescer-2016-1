@@ -81,11 +81,13 @@ AND prod.IDPRODUTO = :pIDPRODUTO;
 /*
  * Exe 08 - Utilizando de funções de agrupamento (aggregation function), faça uma consulta que liste agrupando por ano e mês a quantidade de pedidos comprados, a quantidade de produtos distintos comprados, o valor total dos pedidos, o menor valor de um pedido, o maior valor de um pedido e valor médio de um pedido.
  */
-Select COUNT(ped.IDPEDIDO), COUNT(prod.IDPRODUTO), SUM(ped.VALORPEDIDO), MIN(ped.VALORPEDIDO), MAX(ped.VALORPEDIDO), AVG(ped.VALORPEDIDO)
-FROM PEDIDO ped
+Select TO_CHAR(ped.DATAENTREGA, 'MM-YYYY') as Data, COUNT(ped.IDPEDIDO), 
+        COUNT(prod.IDPRODUTO), SUM(ped.VALORPEDIDO), MIN(ped.VALORPEDIDO), 
+        MAX(ped.VALORPEDIDO), AVG(ped.VALORPEDIDO)
+From PEDIDO ped
 Inner Join PEDIDOITEM pedit
 On pedit.IDPEDIDO = ped.IDPEDIDO
 Inner Join Produto prod
 On prod.IDPRODUTO = pedit.IDPRODUTO
-GROUP BY 
-  TO_CHAR(ped.DATAENTREGA, 'YYYY'), TO_CHAR(ped.DATAENTREGA, 'MM');
+Group By TO_CHAR(ped.DATAENTREGA, 'MM-YYYY')
+Order By TO_CHAR(ped.DATAENTREGA, 'MM-YYYY');
