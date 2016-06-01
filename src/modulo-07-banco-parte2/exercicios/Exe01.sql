@@ -18,8 +18,8 @@ Where TO_CHAR(DATAPEDIDO, 'YYYY') = '2016' and TO_CHAR(DATAPEDIDO, 'MM') = '05';
  */
  Select *
  From CLIENTE
- Where RAZAOSOCIAL like '%ltda%'
-  or NOME like '%ltda%';
+ Where lower(RAZAOSOCIAL) like '%ltda%'
+  or lower(NOME) like '%ltda%';
   
 /*
  * Exe 04 - Crie (insira) um novo registro na tabela de Produto, com as seguintes informações:
@@ -57,37 +57,31 @@ Where p.IDPRODUTO Not In (
  * Exe 06 - Liste todos os pedidos de um determinado cliente, considere que sempre que for executar esta consulta será informado o IDCliente como parâmetro. Deverão ser listados: Data do Pedido, Produto, Quantide, Valor Unitário, e valor total.
  */
 Select ped.DATAPEDIDO, prod.NOME, pedit.QUANTIDADE, prod.PRECOVENDA as ValorUnitario, ped.VALORPEDIDO as ValorTotal
-From CLIENTE cli
-Inner Join Pedido ped
-On cli.IDCLIENTE = ped.IDCLIENTE
+From Pedido ped
 Inner Join PEDIDOITEM pedit
 On ped.IDPEDIDO = pedit.IDPEDIDO
 Inner Join PRODUTO prod
 On pedit.IDPRODUTO = prod.IDPRODUTO
-Where cli.IDCLIENTE = :pIDCLIENTE;
+Where ped.IDCLIENTE = :pIDCLIENTE;
 
 /*
  * Exe 07 - Faça uma consulta que receba um parâmetro sendo o IDProduto e liste a quantidade de itens na tabela PedidoItem com este IDProduto foram vendidos no último ano (desde janeiro/2016).
  */
-Select COUNT(pedit.IDPEDIDOITEM)
-From PRODUTO prod
-Inner Join PEDIDOITEM pedit
-On prod.IDPRODUTO = pedit.IDPRODUTO
+Select SUM(nvl(pedit.QUANTIDADE, 0))
+From PEDIDOITEM pedit
 Inner Join PEDIDO ped
 On pedit.IDPEDIDO = ped.IDPEDIDO
 Where ped.DATAPEDIDO >= TO_DATE('2016-01', 'YYYY-MM')
-AND prod.IDPRODUTO = :pIDPRODUTO;
+AND pedit.IDPRODUTO = :pIDPRODUTO;
 
 /*
  * Exe 08 - Utilizando de funções de agrupamento (aggregation function), faça uma consulta que liste agrupando por ano e mês a quantidade de pedidos comprados, a quantidade de produtos distintos comprados, o valor total dos pedidos, o menor valor de um pedido, o maior valor de um pedido e valor médio de um pedido.
  */
-Select TO_CHAR(ped.DATAENTREGA, 'MM-YYYY') as Data, COUNT(ped.IDPEDIDO), 
-        COUNT(prod.IDPRODUTO), SUM(ped.VALORPEDIDO), MIN(ped.VALORPEDIDO), 
-        MAX(ped.VALORPEDIDO), AVG(ped.VALORPEDIDO)
+Select TO_CHAR(ped.DATAENTREGA, 'MM-YYYY') as ANO_MES, COUNT(distinct ped.IDPEDIDO), 
+        COUNT(distinct pedit.IDPRODUTO), SUM(ped.VALORPEDIDO), MIN(ped.VALORPEDIDO), 
+        MAX(ped.VALORPEDIDO), ROUND(AVG(ped.VALORPEDIDO), 2) as MEDIA
 From PEDIDO ped
 Inner Join PEDIDOITEM pedit
 On pedit.IDPEDIDO = ped.IDPEDIDO
-Inner Join Produto prod
-On prod.IDPRODUTO = pedit.IDPRODUTO
 Group By TO_CHAR(ped.DATAENTREGA, 'MM-YYYY')
-Order By TO_CHAR(ped.DATAENTREGA, 'MM-YYYY');
+Order By ANO_MES;
