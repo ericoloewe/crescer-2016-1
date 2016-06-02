@@ -39,3 +39,24 @@ END;
 
 -- Testes
 Select DATA_ULTIMO_PEDIDO_CLIENTE(:pIdCliente) From dual;
+
+/*
+ *  3) Crie uma função que receba por parâmetro o IDProduto e o período (mês e ano) e retorne a quantidade (total) desde produtos vendidos no período (considere todos os dias do mês).
+ */
+ 
+CREATE OR REPLACE FUNCTION PRODUTOS_VENDIDOS_NO_MES (pIDPRODUTO in PRODUTO.IDPRODUTO%Type, pPeriodo in VARCHAR2) RETURN PEDIDOITEM.QUANTIDADE%TYPE AS
+vQuantidadeVendidaNoPeriodo PEDIDOITEM.QUANTIDADE%TYPE;
+BEGIN
+    Select Sum(pedit.QUANTIDADE)
+    Into vQuantidadeVendidaNoPeriodo
+    From PEDIDOITEM pedit
+    Inner Join PEDIDO ped
+    On ped.IDPEDIDO = pedit.IDPEDIDO
+    WHERE  TO_CHAR(ped.DATAPEDIDO, 'mm/yyyy') = pPeriodo
+      AND pedit.IDPRODUTO = pIDPRODUTO;
+    
+    Return vQuantidadeVendidaNoPeriodo;
+END;
+
+-- Testes
+Select PRODUTOS_VENDIDOS_NO_MES(1, '01/2015') From dual;
