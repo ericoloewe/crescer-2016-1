@@ -18,29 +18,29 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Valor" id="3772F86D-462B-2B9A-BCF5-A844C92F63AF">
+<Column name="NumeroApostado" id="3772F86D-462B-2B9A-BCF5-A844C92F63AF">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-05-31 18:09:05 UTC</createdTime>
 <generatorID>5A315880-81ED-BEE7-F3A1-3B8D200DC2D6</generatorID>
 <ownerDesignName>mega-sena</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT026</logicalDatatype>
-<dataTypePrecision>12</dataTypePrecision>
-<dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="QuantidadeNumeros" id="41918E4E-B197-0646-F4FD-601163C5FBEB">
+<Column name="Aposta_Id" id="66E9C494-580B-EF4F-EE8D-ECDF04ACEC5B">
 <createdBy>erico.loewe</createdBy>
-<createdTime>2016-05-31 18:09:05 UTC</createdTime>
-<generatorID>FD516D0E-AA76-3A13-AA63-A112173EA895</generatorID>
+<createdTime>2016-06-02 18:04:29 UTC</createdTime>
 <ownerDesignName>mega-sena</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5EAA6A8A-632F-40CC-8CC0-7785F2D55D73" referredColumn="D3EACEA5-F0D1-89AC-9559-77D71F2BD6C1"/>
+</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -63,6 +63,19 @@
 <indexState>Unique Plain Index</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <relationGeneratorID>1330E16E-B03B-4727-DAC3-A2710804139F</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="E841E277-6AEE-ACC9-3203-87D8ED65DBB2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="02312423-A56E-2C43-0E6A-31C173489E0B" name="Numero_Aposta_FK">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-06-02 18:05:22 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66E9C494-580B-EF4F-EE8D-ECDF04ACEC5B"/>
+</indexColumnUsage>
 </ind_PK_UK>
 </indexes>
 </Table>

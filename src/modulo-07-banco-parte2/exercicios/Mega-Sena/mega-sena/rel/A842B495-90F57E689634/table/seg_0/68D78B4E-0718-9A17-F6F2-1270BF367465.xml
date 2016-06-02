@@ -21,6 +21,16 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <isSurrogateColumn>true</isSurrogateColumn>
 </Column>
+<Column name="Valor" id="97420946-27F4-E80F-0FF5-6531EF6ED33A">
+<createdBy>erico.loewe</createdBy>
+<createdTime>2016-06-02 18:09:18 UTC</createdTime>
+<ownerDesignName>mega-sena</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="QuantidadeNumeros" id="E62F2616-4D7C-E29B-1D0D-851150177764">
 <createdBy>erico.loewe</createdBy>
 <createdTime>2016-05-31 17:22:42 UTC</createdTime>
@@ -75,20 +85,6 @@
 <colAssociation fkAssociation="95084803-83D3-C2D8-1B1B-C13C5270D1A4" referredColumn="10B09974-CA5B-D31B-38FD-67B2B7A41D1E"/>
 </associations>
 </Column>
-<Column name="Numero_Id" id="C96D4C18-51C2-0CC4-E95E-E483F8920FFF">
-<createdBy>erico.loewe</createdBy>
-<createdTime>2016-05-31 17:22:42 UTC</createdTime>
-<generatorID>4CCCFAF4-3689-82AA-C68E-34F0B78708EB</generatorID>
-<ownerDesignName>mega-sena</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="47C0967A-718F-72DE-078E-7E65AF7A2A07" referredColumn="E841E277-6AEE-ACC9-3203-87D8ED65DBB2"/>
-</associations>
-</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="1143EAA0-0446-8C67-B5EF-5712DB0E9CD1" name="Aposta_PK">
@@ -121,16 +117,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="9D2F34C6-D93B-BAFA-A6CA-6688FE336A12"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="E41D62A6-C3CF-0373-487B-01E396A6B370" name="Aposta_Numero_FK">
-<createdBy>erico.loewe</createdBy>
-<createdTime>2016-05-31 18:17:58 UTC</createdTime>
-<ownerDesignName>mega-sena</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="C96D4C18-51C2-0CC4-E95E-E483F8920FFF"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
