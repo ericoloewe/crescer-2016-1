@@ -1,19 +1,19 @@
-create or replace type intArray AS VARRAY(15) of int;
+create or replace type intArray AS VARRAY(15) of number;
 
 create or replace function QUANTIDADE_DE_ACERTOS(pApostaId INTEGER) return integer as
  vAcertos integer;
  vExiste integer;
- vNumerosDaAposta intArray;
-begin
-  vAcertos := 0;
-  vNumerosDaAposta := intArray(5, 10, 12, 22, 28, 48);
-  
-  for i in 1 .. vNumerosDaAposta.count loop
-    select COUNT(1)
+ CURSOR C_NumerosAposta is
+    select NUMERO
     into vExiste
     from NUMERO_APOSTA
-    where IDAPOSTA = pApostaId
-      and NUMERO = vNumerosDaAposta(i);
+    where IDAPOSTA = pApostaId;
+begin
+  vAcertos := 0;
+  
+  for reg in C_NumerosAposta loop
+    select count(1) into vExiste from dual
+    where reg.NUMERO in (5, 10, 12, 22, 28, 48);
     if(vExiste > 0) then 
       vAcertos := vAcertos + 1; 
     end if;
