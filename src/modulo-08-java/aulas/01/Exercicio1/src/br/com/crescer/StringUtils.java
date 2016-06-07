@@ -6,10 +6,7 @@
 package br.com.crescer;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 
 /**
  *
@@ -22,7 +19,10 @@ public class StringUtils {
         ArrayList<Estados> estadosOrdenados = new ArrayList<>();
         Collections.addAll(estadosOrdenados, Estados.values());
         
-        estadosOrdenados.sort((Estados estado1, Estados estado2) -> estado1.getNome().compareTo(estado2.getNome()));
+        estadosOrdenados.sort(
+            (Estados estado1, Estados estado2) 
+                -> estado1.getNome().compareTo(estado2.getNome())
+        );
         
         for(Estados estado : estadosOrdenados) {            
             str.append(estado.getNome());
@@ -30,6 +30,6 @@ public class StringUtils {
         }
         
         str.deleteCharAt(str.length() - 1);
-        System.out.println(str.toString());
+        System.out.println(str);
     }
 }
