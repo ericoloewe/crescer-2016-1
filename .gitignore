@@ -271,3 +271,5 @@ paket-files/
 *.sln.iml
 /src/modulo-08-java/aulas/01/Exercicio1/nbproject/private/
 /src/modulo-08-java/aulas/01/Exercicio1/build/
+/src/modulo-08-java/exercicios/Exe01/nbproject/
+/src/modulo-08-java/exercicios/Exe01/target/
