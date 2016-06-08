@@ -1,0 +1,5 @@
+08/06/2016 16:33:03;ericoloewe;teste
+08/06/2016 16:33:07;ericoloewe;teste
+08/06/2016 16:45:00;ericoloewe;teste2
+08/06/2016 16:45:38;ericoloewe;teste4
+08/06/2016 16:46:57;ericoloewe;teste
