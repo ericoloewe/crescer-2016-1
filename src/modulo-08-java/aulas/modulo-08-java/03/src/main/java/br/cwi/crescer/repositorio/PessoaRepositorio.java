@@ -83,13 +83,13 @@ public class PessoaRepositorio implements IPessoa {
     }
 
     public List<Pessoa> findNome(String nome) {
-        final String query = "select * from PESSOA where NM_PESSOA = ?";
+        final String query = "select * from PESSOA where NM_PESSOA like ?";
         final List<Pessoa> pessoas = new ArrayList<Pessoa>();
                 
         try (final Connection connection = ConnectionUtils.getConnection();
              final PreparedStatement ps = connection.prepareStatement(query)) 
         {
-            ps.setString(1, nome);
+            ps.setString(1, String.format("%%%s%%", nome));
             try(final ResultSet rs = ps.executeQuery()) {
                 while(rs.next()) {
                     pessoas.add(new Pessoa(rs.getLong("ID_PESSOA"), rs.getString("NM_PESSOA")));
