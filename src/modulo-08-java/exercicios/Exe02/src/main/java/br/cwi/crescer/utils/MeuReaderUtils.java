@@ -6,6 +6,7 @@
 package br.cwi.crescer.utils;
 
 import br.cwi.crescer.repositorio.IO;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,7 +14,7 @@ import br.cwi.crescer.repositorio.IO;
  */
 public class MeuReaderUtils {
     public boolean rodar(String comando) {  
-        String[] partes = comando.split(" ");
+        String[] partes = comando.split("\\$\\{|\\}");
         
         switch(partes[0].trim().toLowerCase()) {
             case "ler": {
@@ -28,8 +29,12 @@ public class MeuReaderUtils {
     }
 
     private void ler(String arquivo) {
-        for(String linha : IO.lerTodoArquivo(arquivo)) {
-            System.out.println(linha);
-        }        
+        if(IO.tipoArquivo(arquivo).equalsIgnoreCase(".txt")) {
+            for(String linha : IO.lerTodoArquivo(arquivo)) {
+                System.out.println(linha);
+            }       
+        } else {
+            System.out.println("Extensão não suportada.");            
+        }
     }
 }

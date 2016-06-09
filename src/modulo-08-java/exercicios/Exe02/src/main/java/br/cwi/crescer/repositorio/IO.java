@@ -6,15 +6,16 @@
 package br.cwi.crescer.repositorio;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
+import java.io.Writer;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -62,8 +63,8 @@ public class IO {
     }
 
     public static ArrayList<String> lerTodoArquivo(String arquivo) {
-        if(!new File(arquivo).exists())
-            throw new InvalidParameterException("Este metodo somente renomeia arquivos");
+        if(!existe(arquivo))
+            throw new InvalidParameterException("Este metodo somente le arquivos");
         
         Reader reader = null;
         BufferedReader bufferReader = null;
@@ -96,5 +97,37 @@ public class IO {
     
     public static String tipoArquivo(String arquivo) {
         return arquivo.substring(arquivo.lastIndexOf("."), arquivo.length());
+    }
+
+    public static void escreverTodoArquivo(String arquivo, String conteudo) {
+        if(!existe(arquivo))
+            throw new InvalidParameterException("Este metodo somente escreve em arquivos");
+        
+        Writer writer = null;
+        BufferedWriter bufferWriter = null;
+        try {
+            writer = new FileWriter(arquivo);
+            bufferWriter = new BufferedWriter(writer);                    
+            bufferWriter.write(conteudo);
+            bufferWriter.flush();
+            writer.flush();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                if(writer != null)
+                    writer.close();
+                if(bufferWriter != null)
+                    bufferWriter.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }            
+        }
+    }
+    
+    public static boolean existe(String arquivo) {
+        return new File(arquivo).exists();
     }
 }
