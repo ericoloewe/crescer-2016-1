@@ -5,6 +5,11 @@
     <artifactId>Exe01</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
+    <parent>
+        <groupId>br.cwi.crescer</groupId>
+        <artifactId>modulo-08-java-exercicios</artifactId>
+        <version>1.0.0</version>
+    </parent>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
