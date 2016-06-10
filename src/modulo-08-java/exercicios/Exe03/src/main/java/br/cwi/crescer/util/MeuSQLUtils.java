@@ -72,6 +72,9 @@ public class MeuSQLUtils {
     }
     
     public void importarDeArquivo(String caminhoDoArquivo, String nomeTabela, String formatoDoArquivo) {
+        if(!File.tipo(caminhoDoArquivo).equalsIgnoreCase(".csv"))
+            throw new InvalidParameterException("Este metodo somente executa arquivos .csv");
+        
         String[] campos = formatoDoArquivo.split(";");        
         
         for(String linha : File.lerTodo(caminhoDoArquivo)) {
@@ -97,6 +100,9 @@ public class MeuSQLUtils {
     }
     
     public void exportarParaArquivo(String caminhoDoArquivo, String nomeTabela, String formatoDoArquivo) {
+        if(!File.tipo(caminhoDoArquivo).equalsIgnoreCase(".csv"))
+            throw new InvalidParameterException("Este metodo somente executa arquivos .csv");
+        
         String[] campos = formatoDoArquivo.split(";");
         StringBuilder csv = new StringBuilder();
         ArrayList<HashMap<String, String>> tabela = this.executarQuerySql(String.format("select * from %s", nomeTabela));
