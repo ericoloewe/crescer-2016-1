@@ -6,11 +6,13 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>../Exe01</module>
-        <module>../Exe02</module>
-        <module>../Exe03</module>
+        <module>Exe01</module>
+        <module>Exe02</module>
+        <module>Exe03</module>
     </modules>
-    <properties>
+    <properties> 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 </project>
