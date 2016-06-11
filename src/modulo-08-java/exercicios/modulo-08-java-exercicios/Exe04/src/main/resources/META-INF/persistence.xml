@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="CRESCER16" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>br.cwi.crescer.entity.Cidade</class>
+    <class>br.cwi.crescer.entity.Cliente</class>
+    <class>br.cwi.crescer.entity.Material</class>
+    <class>br.cwi.crescer.entity.Pedido</class>
+    <class>br.cwi.crescer.entity.PedidoItem</class>
+    <class>br.cwi.crescer.entity.Pessoa</class>
+    <class>br.cwi.crescer.entity.Produto</class>
+    <class>br.cwi.crescer.entity.ProdutoMaterial</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+      <property name="javax.persistence.jdbc.user" value="CRESCER16"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.password" value="CRESCER16"/>
+      <property name="javax.persistence.schema-generation.database.action" value="none"/>
+      <property name="hibernate.show_sql" value="true"></property>
+      <property name="hibernate.format_sql" value="true"></property>
+    </properties>
+  </persistence-unit>
+</persistence>

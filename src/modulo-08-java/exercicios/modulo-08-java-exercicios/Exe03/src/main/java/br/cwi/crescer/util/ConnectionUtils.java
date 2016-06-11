@@ -12,7 +12,7 @@ import java.sql.SQLException;
 /**
  *
  * @author Érico de Souza Loewe
- */
+ */ 
 public class ConnectionUtils {
     // Oracle Thin 
     // jdbc:oracle:thin:@<HOST>:<PORT>:<SID>

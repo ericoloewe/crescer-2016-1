@@ -6,23 +6,22 @@
 package br.cwi.crescer.util;
  
 import br.cwi.crescer.repositorio.File;
-import com.sun.istack.internal.logging.Logger;
 import java.security.InvalidParameterException;
-import java.sql.Connection;
+import java.sql.Connection; 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Érico de Souza Loewe
  */
 public class MeuSQLUtils {
-    private static final Logger LOGGER = Logger.getLogger(MeuSQLUtils.class);
+    private static final Logger LOGGER = Logger.getLogger(MeuSQLUtils.class.getName());
     
     private void executarInstrucaoSql(String instrucao) {
         try (final Connection connection = ConnectionUtils.getConnection();

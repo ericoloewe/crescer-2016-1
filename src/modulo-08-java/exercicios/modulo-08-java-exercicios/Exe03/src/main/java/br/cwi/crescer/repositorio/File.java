@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package br.cwi.crescer.repositorio;
- 
-import com.sun.istack.internal.logging.Logger;
+
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
+import java.io.BufferedWriter; 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -16,13 +15,14 @@ import java.io.Reader;
 import java.io.Writer;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Érico de Souza Loewe
  */
 public class File {
-    private static final Logger LOGGER = Logger.getLogger(File.class);
+    private static final Logger LOGGER = Logger.getLogger(File.class.getName());
     
     public static void criar(String caminhoDoArquivo) {
         try {
