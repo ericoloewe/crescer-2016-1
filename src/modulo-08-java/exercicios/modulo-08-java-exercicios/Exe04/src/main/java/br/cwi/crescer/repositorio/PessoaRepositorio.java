@@ -7,6 +7,7 @@ package br.cwi.crescer.repositorio;
 
 import br.cwi.crescer.entity.Pessoa;
 import java.util.List;
+import javax.persistence.EntityTransaction;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -19,8 +20,11 @@ public class PessoaRepositorio implements Repositorio<Pessoa> {
     @Override
     public Long adicionar(Pessoa pessoa) {
         DbConnection.conectar();
+        EntityTransaction transaction = DbConnection.getEntityManager().getTransaction();
+        transaction.begin();
         Session session = DbConnection.getEntityManager().unwrap(Session.class);
         session.save(pessoa);
+        DbConnection.getEntityManager().getTransaction().commit();
         DbConnection.desconectar();
         return pessoa.getId();
     }
