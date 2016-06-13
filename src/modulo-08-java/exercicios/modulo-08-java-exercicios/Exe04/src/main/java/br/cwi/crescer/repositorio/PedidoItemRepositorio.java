@@ -14,36 +14,22 @@ import org.hibernate.Session;
  *
  * @author Érico de Souza Loewe
  */
-public class PedidoItemRepositorio implements Repositorio<PedidoItem> {
+public class PedidoItemRepositorio extends RepositorioBase<PedidoItem> implements Repositorio<PedidoItem> {
 
-    @Override
-    public Long adicionar(PedidoItem pedidoItem) {
-        DbConnection.conectar();
-        Session session = DbConnection.getEntityManager().unwrap(Session.class);
-        session.save(pedidoItem);
-        DbConnection.desconectar();
-        return pedidoItem.getId();
+    public void adicionar(PedidoItem pedidoItem) {
+        super.adicionar(pedidoItem);
     }
 
-    @Override
-    public void atualizar(PedidoItem obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void atualizar(PedidoItem pedidoItem) {
+        super.atualizar(pedidoItem);
     }
 
-    @Override
-    public void deletar(Long obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void deletar(Long idPedidoItem) {
+        super.deletar(idPedidoItem);
     }
 
     @Override
     public List<PedidoItem> listar() {
-        List<PedidoItem> pedidoItems;
-        DbConnection.conectar();
-        Session session = DbConnection.getEntityManager().unwrap(Session.class);
-        Query query = session.createQuery("select p from PedidoItem p");
-        pedidoItems = query.list();
-        DbConnection.desconectar();
-        
-        return pedidoItems;
+        return super.listar("PedidoItem");
     }
 }

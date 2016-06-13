@@ -14,36 +14,21 @@ import org.hibernate.Session;
  *
  * @author Érico de Souza Loewe
  */
-public class ProdutoRepositorio implements Repositorio<Produto> {
+public class ProdutoRepositorio extends RepositorioBase<Produto> implements Repositorio<Produto> {
 
-    @Override
-    public Long adicionar(Produto produto) {
-        DbConnection.conectar();
-        Session session = DbConnection.getEntityManager().unwrap(Session.class);
-        session.save(produto);
-        DbConnection.desconectar();
-        return produto.getId();
+    public void adicionar(Produto produto) {
+        super.adicionar(produto);
     }
 
-    @Override
-    public void atualizar(Produto obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void atualizar(Produto produto) {
+        super.atualizar(produto);
     }
 
-    @Override
-    public void deletar(Long obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void deletar(Long idProduto) {
+        super.deletar(idProduto);
     }
 
-    @Override
     public List<Produto> listar() {
-        List<Produto> produtos;
-        DbConnection.conectar();
-        Session session = DbConnection.getEntityManager().unwrap(Session.class);
-        Query query = session.createQuery("select p from Produto p");
-        produtos = query.list();
-        DbConnection.desconectar();
-        
-        return produtos;
+        return super.listar("Produto");
     }
 }

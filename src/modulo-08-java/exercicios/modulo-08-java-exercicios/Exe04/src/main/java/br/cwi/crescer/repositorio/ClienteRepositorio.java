@@ -5,6 +5,7 @@
  */
 package br.cwi.crescer.repositorio;
 
+import br.cwi.crescer.entity.Cidade;
 import br.cwi.crescer.entity.Cliente;
 import java.util.List;
 import org.hibernate.Query;
@@ -14,37 +15,23 @@ import org.hibernate.Session;
  *
  * @author Érico de Souza Loewe
  */
-public class ClienteRepositorio implements Repositorio<Cliente> {
+public class ClienteRepositorio extends RepositorioBase<Cliente> implements Repositorio<Cliente> {
 
-    @Override
-    public Long adicionar(Cliente cliente) {
-        DbConnection.conectar();
-        Session session = DbConnection.getEntityManager().unwrap(Session.class);
-        session.save(cliente);
-        DbConnection.desconectar();
-        return cliente.getId();
+    public void adicionar(Cliente cliente) {
+        super.adicionar(cliente);
     }
 
-    @Override
-    public void atualizar(Cliente obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void atualizar(Cliente cliente) {
+        super.atualizar(cliente);
     }
 
-    @Override
-    public void deletar(Long obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void deletar(Long idCliente) {
+        super.deletar(idCliente);
     }
 
     @Override
     public List<Cliente> listar() {
-        List<Cliente> clientes;
-        DbConnection.conectar();
-        Session session = DbConnection.getEntityManager().unwrap(Session.class);
-        Query query = session.createQuery("select c from Cliente c");
-        clientes = query.list();
-        DbConnection.desconectar();
-        
-        return clientes;
+        return super.listar("Cliente");
     }
     
 }

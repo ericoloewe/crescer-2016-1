@@ -14,36 +14,21 @@ import org.hibernate.Session;
  *
  * @author Érico de Souza Loewe
  */
-public class MaterialRepositorio implements Repositorio<Material> {
+public class MaterialRepositorio extends RepositorioBase<Material> implements Repositorio<Material> {
 
-    @Override
-    public Long adicionar(Material material) {
-        DbConnection.conectar();
-        Session session = DbConnection.getEntityManager().unwrap(Session.class);
-        session.save(material);
-        DbConnection.desconectar();
-        return material.getId();
+    public void adicionar(Material material) {
+        super.adicionar(material);
     }
 
-    @Override
-    public void atualizar(Material obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void atualizar(Material material) {
+        super.atualizar(material);
     }
 
-    @Override
-    public void deletar(Long obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void deletar(Long idMaterial) {
+        super.deletar(idMaterial);
     }
 
-    @Override
     public List<Material> listar() {
-        List<Material> materiais;
-        DbConnection.conectar();
-        Session session = DbConnection.getEntityManager().unwrap(Session.class);
-        Query query = session.createQuery("select m from Material m");
-        materiais = query.list();
-        DbConnection.desconectar();
-        
-        return materiais;
+        return super.listar("Material");
     }
 }

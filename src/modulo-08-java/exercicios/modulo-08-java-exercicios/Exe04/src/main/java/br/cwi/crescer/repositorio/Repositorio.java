@@ -12,7 +12,7 @@ import java.util.List;
  * @author Érico de Souza Loewe
  */
 public interface Repositorio<T extends Object> {
-    Long adicionar(T obj);
+    void adicionar(T obj);
     void atualizar(T obj);
     void deletar(Long obj);
     List<T> listar();

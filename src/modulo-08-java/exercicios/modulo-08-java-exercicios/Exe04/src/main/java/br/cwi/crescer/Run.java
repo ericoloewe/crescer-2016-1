@@ -12,11 +12,12 @@ import br.cwi.crescer.repositorio.*;
  *
  * @author Érico de Souza Loewe
  */
-public class Run {    
+public class Run {
     public static void main(String[] args) {
         PessoaRepositorio repo = new PessoaRepositorio();
         Pessoa pessoa = new Pessoa();
         pessoa.setNome("Teste");
-        repo.adicionar(pessoa);
+//        repo.adicionar(pessoa);
+        repo.exportarDadosCsv(Pessoa.class, "teste.csv");
     }
 }

@@ -7,43 +7,26 @@ package br.cwi.crescer.repositorio;
 
 import br.cwi.crescer.entity.Cidade;
 import java.util.List;
-import org.hibernate.Query;
-import org.hibernate.Session;
 
 /**
  *
  * @author Érico de Souza Loewe
  */
-public class CidadeRepositorio implements Repositorio<Cidade> {
+public class CidadeRepositorio extends RepositorioBase<Cidade> implements Repositorio<Cidade> {
     
-    @Override
-    public Long adicionar(Cidade cidade) {
-        DbConnection.conectar();
-        Session session = DbConnection.getEntityManager().unwrap(Session.class);
-        session.save(cidade);
-        DbConnection.desconectar();
-        return cidade.getId();
+    public void adicionar(Cidade cidade) {
+        super.adicionar(cidade);
     }
 
-    @Override
     public void atualizar(Cidade cidade) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        super.atualizar(cidade);
     }
 
-    @Override
     public void deletar(Long cidadeId) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        super.deletar(cidadeId);
     }
 
-    @Override
     public List<Cidade> listar() {
-        List<Cidade> cidades;
-        DbConnection.conectar();
-        Session session = DbConnection.getEntityManager().unwrap(Session.class);
-        Query query = session.createQuery("select c from Cidade c");
-        cidades = query.list();
-        DbConnection.desconectar();
-        
-        return cidades;
+        return super.listar("Cidade");
     }
 }
