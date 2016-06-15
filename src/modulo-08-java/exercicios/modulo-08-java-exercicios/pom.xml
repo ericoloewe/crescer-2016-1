@@ -10,6 +10,7 @@
         <module>Exe02</module>
         <module>Exe03</module>
         <module>Exe04</module>
+        <module>Exe05</module>
     </modules>
     <properties> 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
