@@ -1,0 +1,22 @@
+/* 
+    Created on : 15/06/2016, 20:23:59
+    Author     : Érico de Souza Loewe
+*/
+
+body {
+    background-color: #ededed;
+}
+
+.jumbotron {
+    background-color: #fff;
+    box-shadow: 0px 0px 15px 1px rgba(170,170,170,0.75);
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+    .navbar-brand img {
+        height: 40px;
+        margin-top: -10px; 
+    }
