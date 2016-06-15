@@ -8,8 +8,10 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:genericpage>
-    <jsp:attribute name="styles"></jsp:attribute>
-    <jsp:attribute name="scripts"></jsp:attribute>
+    <jsp:attribute name="styles">
+    </jsp:attribute>
+    <jsp:attribute name="scripts">
+    </jsp:attribute>
     <jsp:body>
         
     </jsp:body>
