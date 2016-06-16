@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <!--   
+                <h:outputStylesheet library="css" name="bootstrap.min.css" />
+                <h:outputStylesheet library="css" name="bootstrap-theme.min.css" />
+                <h:outputStylesheet library="fonts" name="glyphicons-halflings-regular.woff" />
+                <h:outputStylesheet library="fonts" name="glyphicons-halflings-regular.ttf" />
+                <h:outputScript library="js" name="jquery.min.js"/>
+        -->
+        <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
+        <h:outputStylesheet library="css" name="default.css" />
+        <h:outputScript library="js" name="bootstrap.min.js"/>
+        
+        <title>
+            <ui:insert name="page.title">
+                <h:outputText value="#{bundle['page.template.title']}"/>
+            </ui:insert>
+        </title>
+        
+    </h:head>
+    <h:body>
+        <h:form> 
+            <ui:insert name="page.header">
+                <ui:include src="header.xhtml"/>
+            </ui:insert>
+            <div class="container">
+                <ui:insert name="page.messages">
+                    <div class="messages">
+                        <h:messages infoClass="alert alert-success" errorClass="alert alert-danger"/>
+                    </div>
+                </ui:insert>
+                <ui:insert name="page.content"></ui:insert>
+            </div>
+        </h:form>
+    </h:body>
+</html>

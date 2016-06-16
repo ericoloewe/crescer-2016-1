@@ -1,0 +1,35 @@
+/* 
+    Created on : Jun 15, 2016, 5:10:38 PM
+    Author     : Carlos H. Nonnemacher
+*/
+
+body {
+    background-color: #f9f9f9;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-top: -10px; 
+} 
+
+.panel-heading > .glyphicon  {
+    margin-right: 10px;
+}
+
+.messages > ul  {
+    list-style-type: none;
+    margin: 0px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.messages > ul > li {
+    margin-bottom: 5px;
+    content: " (" attr(href) ")";
+}
+
+.glyphicon{ margin: 0px 3px;}
