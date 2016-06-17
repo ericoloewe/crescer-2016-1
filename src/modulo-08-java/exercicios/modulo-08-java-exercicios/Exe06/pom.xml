@@ -12,6 +12,7 @@
     
     <modules>
       <module>crescer-web</module>
+        <module>crescer-entity</module>
     </modules>
     
     <properties>
