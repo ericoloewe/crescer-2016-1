@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <body>
+
+        <ui:composition template="./../../template/searchTemplate.xhtml">
+
+            <ui:define name="search.header">
+                <h:outputText value="#{bundle['page.pessoa.search']}"/>
+            </ui:define>
+
+            <ui:define name="search.filters">
+                <div class="form-group">
+                    <h:outputLabel for="nome" value="#{bundle['page.pessoa.name']}"/>
+                    <h:inputText  id="nome" label="#{bundle['page.pessoa.name']}" value="#{pessoaController.entity.nome}" styleClass="form-control"/>
+                </div>
+                <div class="form-group">
+                    <div class="btn-group btn-group-sm">
+                        <h:commandButton action="#{pessoaController.find}" value="#{bundle['page.search.find']}" styleClass="btn btn-default">
+                            <f:ajax render="@form" execute="@form"/>
+                        </h:commandButton>
+                        <h:commandLink action="novo" styleClass="btn btn-success">
+                            <h:outputText value="#{bundle['page.search.new']}" />
+                        </h:commandLink>
+                    </div>
+                </div>
+            </ui:define>
+
+            <ui:define name="search.results">
+                <ui:param name="pessoas" value="#{pessoaController.list}"/>
+                <h:outputText value="#{bundle['page.search.results.empty']}" rendered="#{empty pessoas}" />
+                <h:dataTable value="#{pessoas}" var="p" styleClass="table table-hover table-striped" rendered="#{not empty pessoas}">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle['page.pessoa.id']}"/>
+                        </f:facet>
+                        <h:outputText value="#{p.id}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle['page.pessoa.name']}"/>
+                        </f:facet>
+                        <h:outputText value="#{p.nome}"/>
+                    </h:column>
+                </h:dataTable>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
