@@ -1,0 +1,1 @@
+var springApp = angular.module('springApp', []);

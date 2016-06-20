@@ -18,6 +18,6 @@ public class PessoaController {
     @RequestMapping(value = "/pessoa")
     String toIndex(Model model) {
         model.addAttribute("name", "Érico de Souza Loewe");
-        return "index";
+        return "pessoa/listar";
     }
 }

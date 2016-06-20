@@ -1,0 +1,14 @@
+{
+    "elements": {},
+    "attributes": {
+        "layout:decorator": {
+            "context": "html"
+        },
+        "aria-expanded": {
+            "context": "a"
+        },
+        "layout:fragment": {
+            "context": "div"
+        }
+    }
+}

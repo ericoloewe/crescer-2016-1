@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html layout:decorator="layout">
+    <head>
+        <title>Lista de Pessoas</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body> 
+        <div layout:fragment="content" ng-controller="pessoasController">
+            <div class="default-background" >
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOME</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="pessoa in pessoas">
+                            <td>
+                                {{pessoa.id}}
+                            </td>
+                            <td>
+                                {{pessoa.nome}}
+                            </td>
+                            <td>
+                                <button type="text" ng-click="deletar(pessoa)" class="btn btn-default btn-xs">Deletar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

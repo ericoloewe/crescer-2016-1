@@ -1,0 +1,76 @@
+/* 
+    Created on : 15/06/2016, 20:23:59
+    Author     : Érico de Souza Loewe
+*/
+
+body {
+    background-color: #ededed;
+}
+
+.default-background {
+    padding: 5px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 15px 1px rgba(170,170,170,0.75);
+}
+
+.navbar {
+    border-radius: 0;
+    box-shadow: 0px 5px 15px 0px rgba(170,170,170,0.75);
+}
+
+    .navbar-brand {
+        height: 60px;
+        padding: 20px 20px;
+        color: #CCCCCC;
+    }
+    
+        .navbar-brand img {
+            height: 40px;
+            margin-top: -10px; 
+            -webkit-filter: invert(30%);
+            filter: invert(30%);
+        }
+        
+        .navbar-brand img:hover,
+        .navbar-brand img:focus {
+            -webkit-filter: invert(60%);
+            filter: invert(60%);
+        }
+
+    .navbar-white .navbar-brand:hover,
+    .navbar-white .navbar-brand:focus {
+        color: #666666;
+    }
+    
+    .navbar-brand .navbar-text {
+        color: #CCCCCC;
+    }
+        
+        .navbar-brand .navbar-nav > li > a {
+            color: #CCCCCC;
+        }
+        .navbar-brand .navbar-nav > li > a:hover,
+        .navbar-brand .navbar-nav > li > a:focus {
+            color: #666666;
+        }
+
+#javax_faces_developmentstage_messages {
+    display: none;
+}
+
+.messages {}
+
+    .messages ul {
+        padding: 0;
+    }
+        .messages li {
+            list-style: none;
+        }
+        
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
