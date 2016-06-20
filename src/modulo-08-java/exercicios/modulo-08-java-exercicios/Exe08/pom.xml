@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>br.cwi.crescer</groupId>
-    <artifactId>modulo-08-java-exercicios</artifactId>
-    <version>1.0.0</version>
+    <parent>
+        <groupId>br.cwi.crescer</groupId>
+        <artifactId>modulo-08-java-exercicios</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    
+    <artifactId>Exe08</artifactId>
     <packaging>pom</packaging>
+    
     <modules>
-        <module>Exe01</module>
-        <module>Exe02</module>
-        <module>Exe03</module>
-        <module>Exe04</module>
-        <module>Exe05</module>
-        <module>Exe06</module>
-        <module>Exe08</module>
+        <module>crescer-entity</module>
+        <module>spring-crescer-web</module>
     </modules>
-    <properties> 
+    
+    <name>Exe08</name>
+    
+    <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
