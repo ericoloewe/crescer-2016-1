@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <!--/*  Each token will be replaced by their respective titles in the resulting page. */-->
+        <title layout:title-pattern="Titulo"></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <!--/* Standard layout can be mixed with Layout Dialect */-->
+
+        <header id="header" th:include="header"></header>
+
+        <div class="container">
+            <div layout:fragment="content">
+                <h1>Static content for prototyping purposes only</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent scelerisque neque neque, ac elementum quam dignissim interdum.
+                    Phasellus et placerat elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent scelerisque neque neque, ac elementum quam dignissim interdum.
+                    Phasellus et placerat elit.
+                </p>
+            </div>
+            <!--      <div th:replace="fragments/footer :: footer">&copy; 2014 The Static Templates</div>-->
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
