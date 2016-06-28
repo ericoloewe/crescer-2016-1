@@ -4,14 +4,18 @@ var ServicoDeMapa = function (view) {
     this.view = view;
     this.mapa = null;
     this.geocoder = new google.maps.Geocoder();
+    this.directionsService = new google.maps.DirectionsService;
+    this.directionsDisplay = new google.maps.DirectionsRenderer;
 };
 
 ServicoDeMapa.prototype = {
     novoMapa: function ($mapa) {
         this.mapa = new google.maps.Map($mapa[0], {
             center: { lat: -34.397, lng: 150.644 },
-            zoom: 8
+            zoom: 10
         });
+
+        this.directionsDisplay.setMap(this.mapa);
 
         return this.mapa;
     },
@@ -63,7 +67,28 @@ ServicoDeMapa.prototype = {
         // TODO:
     },
 
-    buscarLocalizacao: function (localizacao) {
-        return this.geocoder.geocode({'address': localizacao.endereco});
+    buscarLocalizacao: function (endereco) {
+        return $.ajax({
+            method: "GET",
+            url: "https://maps.googleapis.com/maps/api/geocode/json",
+            data: {
+                address: endereco
+            }
+        })
+    },
+
+    criarRota: function (origem, destino) {
+        var self = this;
+        this.directionsService.route({
+            origin: origem,
+            destination: destino,
+            travelMode: google.maps.TravelMode.DRIVING
+        }, function (response, status) {
+            if (status === google.maps.DirectionsStatus.OK) {
+                self.directionsDisplay.setDirections(response);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        })
     }
 };
